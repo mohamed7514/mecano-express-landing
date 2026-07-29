@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Remorquage Mécano Express — site web
 
-## Getting Started
+Site bilingue (FR/EN) pour Mécano Express, garage et service de remorquage à Aylmer (Gatineau), QC. Next.js 16 (App Router, Turbopack), React 19, Tailwind v4.
 
-First, run the development server:
+## Démarrer
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site tourne en `/fr` (défaut) et `/en`. `proxy.ts` redirige `/` vers la bonne langue selon le navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variables d'environnement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copier `.env.example` vers `.env.local` et remplir quand les comptes sont prêts :
 
-## Learn More
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` — Google Analytics 4
+- `NEXT_PUBLIC_GOOGLE_ADS_ID` / `NEXT_PUBLIC_GOOGLE_ADS_CALL_CONVERSION_LABEL` — suivi de conversion Google Ads (appels)
 
-To learn more about Next.js, take a look at the following resources:
+Tant qu'ils sont vides, aucun script analytics n'est chargé — pas d'erreur, pas d'appel réseau.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Où vivent les contenus
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `lib/business.ts` — nom, adresse, téléphone, heures, zones desservies (source unique, utilisée partout : footer, JSON-LD, sitemap).
+- `lib/services.ts` — les 9 fiches services (remorquage + 8 services mécaniques), FR/EN.
+- `lib/dictionary.ts` — tous les textes d'interface partagés (nav, boutons, sections).
+- `Keywords/` — mots-clés et annonces Google Ads déjà préparés pour les campagnes "Remorquage Outaouais" et "Garage Mecanique Outaouais". Les pages `/garage-gatineau` et `/remorquage-gatineau` (`app/[locale]/`) sont les landing pages dédiées à ces deux campagnes — leur contenu doit rester aligné avec ces mots-clés/annonces.
 
-## Deploy on Vercel
+## Photos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Le site fonctionne sans photos réelles (bandeaux de marque en attendant). Pour ajouter les vraies photos, déposer les fichiers avec ces noms exacts dans `public/photos/` — ils s'affichent automatiquement, sans toucher au code :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+public/photos/hero-repair.jpg      (paysage, ~4:3 — hero de /garage-gatineau)
+public/photos/shop-exterior.jpg    (4:3)
+public/photos/shop-interior.jpg    (4:3)
+public/photos/gallery-1..6.jpg     (1:1, optionnel)
+public/photos/team-1.jpg           (4:5, optionnel)
+```
+
+## Avis clients
+
+`lib/testimonials.ts` est vide par défaut et la section correspondante ne s'affiche pas tant qu'il n'y a pas de vrais avis (jamais inventés). Ajouter les avis Google réels (prénom, quartier, texte, note) dans ce fichier pour les faire apparaître.
+
+## Build
+
+```bash
+npm run build
+```

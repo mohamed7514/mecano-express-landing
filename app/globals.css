@@ -1,26 +1,157 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ------------------------------------------------------------------ *
+ *  Mécano Express — design system
+ *  Colors pixel-sampled directly from public/logo.png (badge black,
+ *  medallion orange, chrome wrench grey) so the site matches the
+ *  brand mark exactly, not an approximation.
+ * ------------------------------------------------------------------ */
+@theme {
+  --color-ink: #0a0a0a;
+  --color-graphite-950: #000000;
+  --color-graphite-900: #0d0d0d;
+  --color-graphite-800: #171717;
+  --color-graphite-700: #232323;
+  --color-steel-500: #5b6672;
+  --color-steel-400: #7c8794;
+  --color-steel-300: #a7b0bb;
+  --color-steel-200: #d5dbe1;
+  --color-steel-100: #eef1f4;
+  --color-paper: #f7f9fb;
+
+  --color-accent: #fe7700;
+  --color-accent-hover: #d86500;
+  --color-accent-soft: #fff1e6;
+
+  --color-chrome: #a5a6a4;
+  --color-chrome-soft: #d8d9d7;
+
+  --color-signal-good: #2f855a;
+
+  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius: 0.625rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Display headings use Archivo with a tighter, more industrial setting */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Subtle grid texture for dark sections */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Visible keyboard focus everywhere */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Pulsing glow for the primary call CTA — neutralized automatically by
+   the prefers-reduced-motion rule above. */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(254, 119, 0, 0.55); }
+  50% { box-shadow: 0 0 0 14px rgba(254, 119, 0, 0); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0%, 100% { transform: rotate(0); }
+  10%, 30%, 50%, 70%, 90% { transform: rotate(-10deg); }
+  20%, 40%, 60%, 80% { transform: rotate(10deg); }
+}
+.animate-ring {
+  animation: ring 1.5s ease-in-out infinite;
+}
+
+@keyframes text-fade-loop {
+  0%, 35% { opacity: 0; }
+  40%, 95% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.animate-text-fade-loop {
+  animation: text-fade-loop 8s infinite ease-in-out;
+  animation-delay: -7s;
+}
+
+@keyframes premium-jump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.animate-premium-jump {
+  animation: premium-jump 4s ease-in-out infinite;
+}
+
+/* Scroll-reveal utility — pure CSS scroll-driven animation, no JS at all.
+ * Elements are fully visible by default (the only state search-engine
+ * crawlers, no-JS clients, and unsupported browsers ever see); browsers
+ * that support animation-timeline additionally get a subtle fade+rise as
+ * the element enters the viewport. This can never leave real conversion
+ * content (service cards, campaign links) invisible the way a JS-gated
+ * IntersectionObserver toggle could if the script were slow, blocked, or
+ * the element never re-entered view during automated rendering.
+ */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+  }
+  @keyframes reveal-in {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* Angled section edge echoing the logo's ribbon/badge geometry — used to
+   break up flat rectangular section boundaries on hero blocks. */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+}
+@media (min-width: 640px) {
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  }
+}
+
+/* Slanted button style for the Call to Action */
+.clip-slant {
+  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0% 100%);
 }
