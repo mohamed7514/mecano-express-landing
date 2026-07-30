@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { locales, type Locale } from "@/lib/i18n";
+import { getServiceBySlug } from "@/lib/services";
 
 export function LanguageSwitcher({
   locale,
@@ -15,7 +16,16 @@ export function LanguageSwitcher({
 
   function pathFor(target: Locale) {
     const segments = pathname.split("/");
+    const currentLocale = segments[1] as Locale;
     segments[1] = target; // replace the locale segment
+
+    // /services/[slug] uses a different slug per locale (e.g.
+    // changement-huile <-> oil-change) — swap it too, or the link 404s.
+    if (segments[2] === "services" && segments[3]) {
+      const service = getServiceBySlug(segments[3], currentLocale);
+      if (service) segments[3] = service[target].slug;
+    }
+
     return segments.join("/") || `/${target}`;
   }
 

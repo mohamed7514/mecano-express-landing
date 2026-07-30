@@ -38,15 +38,26 @@ function isOpenNow(): boolean {
   );
 }
 
-export function OpenStatusBadge({ dict, className = "" }: { dict: Dictionary; className?: string }) {
-  const [open, setOpen] = useState<boolean | null>(null);
+export function OpenStatusBadge({
+  dict,
+  className = "",
+  alwaysOpen = false,
+}: {
+  dict: Dictionary;
+  className?: string;
+  /** Towing/roadside assistance runs 24/7, independent of the garage's
+   * posted hours — skips the clock check and always shows as available. */
+  alwaysOpen?: boolean;
+}) {
+  const [open, setOpen] = useState<boolean | null>(alwaysOpen ? true : null);
 
   useEffect(() => {
+    if (alwaysOpen) return;
     const update = () => setOpen(isOpenNow());
     update();
     const id = setInterval(update, 60_000);
     return () => clearInterval(id);
-  }, []);
+  }, [alwaysOpen]);
 
   if (open === null) {
     return <span className={`inline-block h-8 ${className}`} aria-hidden="true" />;
@@ -61,7 +72,11 @@ export function OpenStatusBadge({ dict, className = "" }: { dict: Dictionary; cl
       } ${className}`}
     >
       <span className={`h-2 w-2 shrink-0 rounded-full ${open ? "bg-signal-good" : "bg-steel-400"}`} />
-      {open ? dict.openStatus.openNow : `${dict.openStatus.closedNow} — ${dict.openStatus.closedNote}`}
+      {alwaysOpen
+        ? dict.openStatus.available247
+        : open
+          ? dict.openStatus.openNow
+          : `${dict.openStatus.closedNow} — ${dict.openStatus.closedNote}`}
     </span>
   );
 }

@@ -26,14 +26,15 @@ export const business = {
   },
   mapUrl:
     "https://www.google.com/maps/place/remorquage+mecano+express/@45.4317677,-75.8195226,17z/data=!4m6!3m5!1s0x4cce0367c0682445:0x6ab7318c984c4874!8m2!3d45.4317301!4d-75.8169691",
-  // Mon–Sat 9:00–17:00
+  // Garage hours: Mon–Sat 9:00–18:00. Towing/roadside assistance is
+  // separate and available 24/7 — see OpenStatusBadge's alwaysOpen prop.
   hours: [
-    { days: [1, 2, 3, 4, 5, 6], opens: "09:00", closes: "17:00" },
+    { days: [1, 2, 3, 4, 5, 6], opens: "09:00", closes: "18:00" },
   ],
   areasServed: ["Aylmer", "Hull", "Gatineau", "Buckingham", "Ottawa"],
 } as const;
 
 export const hoursLabel: Record<Locale, string> = {
-  fr: "Lun – Sam : 9h à 17h",
-  en: "Mon – Sat: 9 AM to 5 PM",
+  fr: "Lun – Sam : 9h à 18h",
+  en: "Mon – Sat: 9 AM to 6 PM",
 };

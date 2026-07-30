@@ -142,6 +142,7 @@ export default async function RemorquageGatineauPage({
         description={c.subtitle}
         image={{ kind: "static", src: "/remorquage.webp" }}
         trustBar={c.trustBar}
+        alwaysOpen
       />
 
       <Testimonials locale={l} />

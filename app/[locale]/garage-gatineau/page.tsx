@@ -6,10 +6,9 @@ import { business } from "@/lib/business";
 import { mechanicIntents } from "@/lib/mechanicIntents";
 import { CallButton } from "@/components/CallButton";
 import { ServiceJsonLd } from "@/components/JsonLd";
-import { Photo } from "@/components/PhotoPlaceholder";
-import { BrandBurst } from "@/components/BrandBurst";
 import { Reveal } from "@/components/Reveal";
-import { CheckIcon, ArrowIcon } from "@/components/Icons";
+import { ArrowIcon } from "@/components/Icons";
+import { SplitHero } from "@/components/sections/SplitHero";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -30,6 +29,8 @@ const copy: Record<
     metaDescription: string;
     eyebrow: string;
     h1: string;
+    heroTitle: string;
+    heroHighlight: string;
     subtitle: string;
     trustBar: string[];
     ctaCardTitle: string;
@@ -42,6 +43,8 @@ const copy: Record<
       "Garage mécanique à Aylmer et Gatineau. Diagnostic honnête, prix confirmé avant travaux, technicien certifié, estimé gratuit. Sans rendez-vous. Appelez le (819) 921-7869.",
     eyebrow: "Garage & mécanique · Aylmer, Gatineau",
     h1: "Garage à Aylmer et Gatineau",
+    heroTitle: "Garage à",
+    heroHighlight: "Aylmer & Gatineau",
     subtitle:
       "Diagnostic honnête, prix confirmé avant tout travail. Votre garage de quartier, sans frais cachés.",
     trustBar: ["Estimé gratuit", "Technicien certifié", "Aucun frais caché", "Rendez-vous rapide"],
@@ -55,6 +58,8 @@ const copy: Record<
       "Auto repair garage in Aylmer and Gatineau. Honest diagnostic, price confirmed before work, certified technician, free estimate. Walk-in welcome. Call (819) 921-7869.",
     eyebrow: "Garage & mechanic · Aylmer, Gatineau",
     h1: "Garage in Aylmer & Gatineau",
+    heroTitle: "Garage in",
+    heroHighlight: "Aylmer & Gatineau",
     subtitle:
       "Honest diagnostic, price confirmed before any work. Your neighborhood garage, no hidden fees.",
     trustBar: ["Free estimate", "Certified technician", "No hidden fees", "Fast appointment"],
@@ -106,48 +111,15 @@ export default async function GarageGatineauPage({
         serviceType={l === "fr" ? "Réparation automobile" : "Auto repair"}
       />
 
-      {/* Hero */}
-      <section className="clip-diagonal relative overflow-hidden bg-graphite-950 pb-14 text-white sm:pb-20">
-        <div className="bg-grid absolute inset-0 opacity-60" aria-hidden="true" />
-        <BrandBurst className="absolute inset-0 h-full w-full" />
-        <div className="absolute -right-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-accent/20 blur-[110px]" aria-hidden="true" />
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-24">
-          <div>
-            <span className="inline-flex items-center gap-2 border-l-2 border-accent bg-white/5 py-1 pl-3 pr-4 text-xs font-bold uppercase tracking-widest text-steel-200">
-              {c.eyebrow}
-            </span>
-            <h1 className="font-display mt-6 text-4xl font-extrabold uppercase leading-[1.0] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              {c.h1}
-            </h1>
-            <p className="mt-5 max-w-lg text-lg leading-relaxed text-steel-300">{c.subtitle}</p>
-
-            <div className="mt-8">
-              <CallButton label={dict.cta.callNow} showNumber size="xl" className="w-full sm:w-auto" />
-            </div>
-
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2.5">
-              {c.trustBar.map((t) => (
-                <li key={t} className="flex items-center gap-2 text-sm font-medium text-steel-200">
-                  <CheckIcon width={17} height={17} className="text-accent" />
-                  {t}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <Reveal>
-            <Photo
-              name="hero-repair.jpg"
-              alt=""
-              fill={false}
-              width={640}
-              height={480}
-              preload
-              className="aspect-[4/3] w-full animate-premium-jump rounded-2xl border border-white/10 object-cover"
-            />
-          </Reveal>
-        </div>
-      </section>
+      <SplitHero
+        dict={dict}
+        tag={c.eyebrow}
+        title={c.heroTitle}
+        highlight={c.heroHighlight}
+        description={c.subtitle}
+        image={{ kind: "photo", name: "mecanique.webp" }}
+        trustBar={c.trustBar}
+      />
 
       <Testimonials locale={l} />
 

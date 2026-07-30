@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { Dictionary } from "@/lib/dictionary";
-import { CallButton } from "@/components/CallButton";
 import { OpenStatusBadge } from "@/components/OpenStatusBadge";
 import { CheckIcon } from "@/components/Icons";
 import { Photo } from "@/components/PhotoPlaceholder";
@@ -22,6 +21,7 @@ export function SplitHero({
   description,
   image,
   trustBar,
+  alwaysOpen = false,
 }: {
   dict: Dictionary;
   breadcrumb?: React.ReactNode;
@@ -31,6 +31,8 @@ export function SplitHero({
   description: string;
   image: HeroImage;
   trustBar?: string[];
+  /** Towing pages run 24/7, independent of the garage's posted hours. */
+  alwaysOpen?: boolean;
 }) {
   return (
     <section className="flex min-h-[70vh] flex-col bg-graphite-950 pt-20 text-white lg:min-h-[80vh] lg:flex-row lg:pt-24">
@@ -83,15 +85,11 @@ export function SplitHero({
           <p className="text-lg leading-relaxed text-steel-200">{description}</p>
 
           <div className="mt-6">
-            <OpenStatusBadge dict={dict} />
-          </div>
-
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <CallButton label={dict.cta.callNow} showNumber size="xl" pulse className="w-full sm:w-auto" />
+            <OpenStatusBadge dict={dict} alwaysOpen={alwaysOpen} />
           </div>
 
           {trustBar && trustBar.length > 0 && (
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2.5 border-t border-white/10 pt-8">
+            <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2.5 border-t border-white/10 pt-6">
               {trustBar.map((t) => (
                 <li key={t} className="flex items-center gap-2 text-sm font-medium text-steel-200">
                   <CheckIcon width={17} height={17} className="text-accent" />

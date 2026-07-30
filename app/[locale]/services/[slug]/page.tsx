@@ -91,6 +91,7 @@ export default async function ServiceDetailPage({
             ? { kind: "static", src: "/remorquage.webp" }
             : { kind: "photo", name: "mecanique.webp" }
         }
+        alwaysOpen={service.category === "towing"}
       />
 
       {/* Body */}

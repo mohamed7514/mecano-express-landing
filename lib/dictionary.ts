@@ -54,7 +54,7 @@ export type Dictionary = {
   };
   footer: { rights: string; tagline: string; nav: string; hours: string; contact: string; privacy: string };
   serviceDetail: { included: string; ctaTitle: string; ctaText: string; back: string };
-  openStatus: { openNow: string; closedNow: string; closedNote: string };
+  openStatus: { openNow: string; closedNow: string; closedNote: string; available247: string };
   campaignSplit: {
     eyebrow: string;
     towingTitle: string;
@@ -173,6 +173,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       openNow: "Ouvert maintenant — on répond tout de suite",
       closedNow: "Fermé pour l'instant",
       closedNote: "Laissez un message, on vous rappelle dès l'ouverture",
+      available247: "Disponible 24h/24, 7 jours sur 7",
     },
     campaignSplit: {
       eyebrow: "Deux services, une équipe",
@@ -292,6 +293,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       openNow: "Open now — we're answering calls",
       closedNow: "Closed for now",
       closedNote: "Leave a message, we'll call you back when we open",
+      available247: "Available 24/7",
     },
     campaignSplit: {
       eyebrow: "Two services, one team",

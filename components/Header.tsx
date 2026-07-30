@@ -167,17 +167,20 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <LanguageSwitcher locale={locale} dark={true} />
         </nav>
 
-        <button
-          type="button"
-          className="grid h-10 w-10 place-items-center rounded-lg border border-white/20 text-white md:hidden"
-          aria-label="Menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-            {open ? <path d="M6 6l12 12M18 6 6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-          </svg>
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher locale={locale} dark={true} />
+          <button
+            type="button"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-white/20 text-white"
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+              {open ? <path d="M6 6l12 12M18 6 6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -283,9 +286,6 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 </Link>
               )
             )}
-            <div className="py-2">
-              <LanguageSwitcher locale={locale} dark={true} />
-            </div>
             <div className="mt-2 flex items-center justify-between gap-3 border-t border-white/10 pt-3">
               <CallButton label={dict.cta.callNow} size="sm" />
             </div>

@@ -82,6 +82,7 @@ export default async function TowingIntentPage({
         description={c.subtitle}
         image={intent.heroImage}
         trustBar={c.trustBar}
+        alwaysOpen
       />
 
       <Testimonials locale={l} />
