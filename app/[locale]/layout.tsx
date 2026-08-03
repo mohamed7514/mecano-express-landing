@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
 import { FloatingCallButton } from "@/components/FloatingCallButton";
+import { GoogleTagManagerScript, GoogleTagManagerNoscript } from "@/components/GoogleTagManager";
 
 export const viewport: Viewport = {
   themeColor: "#000000",
@@ -80,7 +81,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${archivo.variable} ${inter.variable}`}>
+      <head>
+        <GoogleTagManagerScript />
+      </head>
       <body>
+        <GoogleTagManagerNoscript />
         <Analytics />
         <LocalBusinessJsonLd locale={locale} />
         <Header locale={locale} dict={dict} />
