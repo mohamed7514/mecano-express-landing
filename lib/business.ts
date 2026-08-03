@@ -8,7 +8,7 @@ import type { Locale } from "./i18n";
 export const business = {
   name: "Mécano Express",
   legalName: "Remorquage Mécano Express",
-  domain: "https://www.remorquagemecanoexpress.ca",
+  domain: "https://garagemecanoexpress.ca",
   phone: "+18199217869",
   phoneDisplay: "(819) 921-7869",
   email: "info@remorquagemecanoexpress.ca",

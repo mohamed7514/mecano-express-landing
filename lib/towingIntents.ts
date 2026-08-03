@@ -156,7 +156,7 @@ export const towingIntents: TowingIntent[] = [
       eyebrow: "Remorquage · Outaouais",
       h1: "Remorquage partout en Outaouais, pas juste à Gatineau",
       heroTitle: "Remorquage",
-      heroHighlight: "en Outaouais",
+      heroHighlight: "Hull & Buckingham",
       subtitle:
         "Chelsea, Cantley, Val-des-Monts, Buckingham ou Hull — peu importe le secteur, on vous localise et on envoie une remorqueuse. Prix confirmé avant le départ.",
       trustBar: ["Tout l'Outaouais couvert", "Prix confirmé au téléphone", "Camion en route en minutes"],
@@ -205,7 +205,7 @@ export const towingIntents: TowingIntent[] = [
       eyebrow: "Towing · Outaouais",
       h1: "Towing across the Outaouais, not just Gatineau",
       heroTitle: "Towing",
-      heroHighlight: "Across Outaouais",
+      heroHighlight: "Hull & Buckingham",
       subtitle:
         "Chelsea, Cantley, Val-des-Monts, Buckingham or Hull — wherever you are, we locate you and dispatch a tow truck. Price confirmed before we leave.",
       trustBar: ["All of Outaouais covered", "Price confirmed by phone", "Truck dispatched in minutes"],
@@ -403,10 +403,10 @@ export const towingIntents: TowingIntent[] = [
       metaTitle: "Towing Near Me — Fast, Real Response | Mécano Express",
       metaDescription:
         "Tow truck near you, available day and night. A real person answers, truck dispatched fast. Call (819) 921-7869.",
-      eyebrow: "Towing near you",
-      h1: "A tow truck near you, available right now",
+      eyebrow: "Towing near me",
+      h1: "A tow truck near me, available right now",
       heroTitle: "Towing",
-      heroHighlight: "Near You",
+      heroHighlight: "Near Me",
       subtitle:
         "Wherever you're stuck, we locate you and send the closest available truck. A real person answers — not a voicemail box.",
       trustBar: ["Closest truck dispatched", "A real person answers", "Available day and night"],
@@ -652,10 +652,10 @@ export const towingIntents: TowingIntent[] = [
       metaTitle: "Survoltage de batterie à Gatineau | Mécano Express",
       metaDescription:
         "Batterie à plat ? Service de survoltage et aide au démarrage sur place à Gatineau et Aylmer. Rapide, sans tracas. (819) 921-7869.",
-      eyebrow: "Survoltage · Batterie",
-      h1: "Batterie à plat ? Survoltage sur place en quelques minutes",
-      heroTitle: "Survoltage",
-      heroHighlight: "Batterie",
+      eyebrow: "Booster · Survoltage Batterie",
+      h1: "Batterie à plat ? Booster et survoltage sur place en quelques minutes",
+      heroTitle: "Booster",
+      heroHighlight: "de Batterie",
       subtitle:
         "Voiture qui ne démarre pas, surtout par temps froid ? On vient booster votre batterie directement où vous êtes.",
       trustBar: ["Intervention rapide", "Aide au démarrage sur place", "Prix confirmé au téléphone"],

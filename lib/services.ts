@@ -686,9 +686,9 @@ export const services: Service[] = [
     fr: {
       name: "Carrosserie",
       slug: "carrosserie",
-      tagline: "Réparation de carrosserie et de rouille",
+      tagline: "Réparation de carrosserie voiture",
       intro:
-        "Un pare-chocs abîmé, une bosse ou de la rouille qui perce la tôle ? Notre atelier répare la carrosserie pour redonner à votre véhicule une apparence propre et éviter que les dommages ne s'aggravent.",
+        "Réparation de carrosserie voiture : pare-chocs abîmé, bosse ou rouille qui perce la tôle. Notre atelier répare la carrosserie pour redonner à votre véhicule une apparence propre et éviter que les dommages ne s'aggravent.",
       points: [
         "Réparation de pare-chocs et de bosses",
         "Traitement et réparation de rouille",
@@ -718,21 +718,21 @@ export const services: Service[] = [
       ],
     },
     en: {
-      name: "Auto Body",
+      name: "Body Shop",
       slug: "auto-body",
-      tagline: "Body and rust repair",
+      tagline: "Body shop — dent and rust repair",
       intro:
-        "A damaged bumper, a dent or rust eating through the metal? Our shop repairs the bodywork to give your vehicle a clean look again and stop the damage from spreading.",
+        "Looking for a body shop? A damaged bumper, a dent or rust eating through the metal — our shop repairs the bodywork to give your vehicle a clean look again and stop the damage from spreading.",
       points: [
         "Bumper and dent repair",
         "Rust treatment and repair",
         "Panel straightening",
         "Honest estimate before any work",
       ],
-      metaTitle: "Auto Body Repair in Aylmer (Gatineau) | Mécano Express",
+      metaTitle: "Body Shop in Aylmer (Gatineau) | Mécano Express",
       metaDescription:
-        "Auto body, dent and rust repair in Aylmer. Bumpers, panel straightening, rust treatment. Honest estimate. (819) 921-7869.",
-      faqTitle: "Frequently Asked Questions About Auto Body Repair",
+        "Body shop for dent and rust repair in Aylmer. Bumpers, panel straightening, rust treatment. Honest estimate. (819) 921-7869.",
+      faqTitle: "Frequently Asked Questions About Our Body Shop",
       faq: [
         {
           question: "Is it worth repairing rust or should I replace the panel?",

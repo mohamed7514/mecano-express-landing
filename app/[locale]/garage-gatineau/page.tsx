@@ -46,7 +46,7 @@ const copy: Record<
     heroTitle: "Garage à",
     heroHighlight: "Aylmer & Gatineau",
     subtitle:
-      "Diagnostic honnête, prix confirmé avant tout travail. Votre garage de quartier, sans frais cachés.",
+      "Votre garagiste de quartier à Gatineau. Diagnostic honnête, prix confirmé avant tout travail, sans frais cachés.",
     trustBar: ["Estimé gratuit", "Technicien certifié", "Aucun frais caché", "Rendez-vous rapide"],
     ctaCardTitle: "Besoin d'une réparation ?",
     ctaCardText:

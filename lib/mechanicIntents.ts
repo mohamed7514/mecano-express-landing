@@ -279,12 +279,12 @@ export const mechanicIntents: MechanicIntent[] = [
       ],
     },
     en: {
-      metaTitle: "Mechanic Near You in Gatineau | Mécano Express",
+      metaTitle: "Mechanic Near Me in Gatineau | Mécano Express",
       metaDescription:
-        "Looking for a mechanic near you? Honest garage in Aylmer, walk-in welcome, price confirmed before work. Call (819) 921-7869.",
-      eyebrow: "Mechanic nearby",
+        "Looking for a mechanic near me? Honest garage in Aylmer, walk-in welcome, price confirmed before work. Call (819) 921-7869.",
+      eyebrow: "Mechanic near me",
       heroTitle: "Mechanic",
-      heroHighlight: "Near You",
+      heroHighlight: "Near Me",
       subtitle: "A real neighborhood garage, not a chain. Honest diagnostic, price confirmed before any work, walk-in welcome.",
       trustBar: ["Neighborhood garage", "Walk-in welcome", "Price confirmed before work"],
       reasonsTitle: "Why choose us over a chain",
@@ -304,8 +304,8 @@ export const mechanicIntents: MechanicIntent[] = [
       ],
       ctaCardTitle: "Need a mechanic you can trust?",
       ctaCardText: "Call us or drop by at 879 chemin Vanier in Aylmer.",
-      serviceName: "Mechanic near you",
-      faqTitle: "Frequently Asked Questions — Mechanic Near You",
+      serviceName: "Mechanic near me",
+      faqTitle: "Frequently Asked Questions — Mechanic Near Me",
       faq: [
         {
           question: "What sets you apart from a dealership?",
@@ -461,12 +461,12 @@ export const mechanicIntents: MechanicIntent[] = [
       ],
     },
     en: {
-      metaTitle: "Brake Shop Near You in Aylmer | Mécano Express",
+      metaTitle: "Brake Shop Near Me in Aylmer | Mécano Express",
       metaDescription:
-        "Brake repair near you in Aylmer and Gatineau. Complete diagnostic, pads, rotors. Walk-in welcome. Call (819) 921-7869.",
-      eyebrow: "Brakes · Near You",
+        "Brake repair near me in Aylmer and Gatineau. Complete diagnostic, pads, rotors. Walk-in welcome. Call (819) 921-7869.",
+      eyebrow: "Brakes · Near Me",
       heroTitle: "Brake Repair",
-      heroHighlight: "Near You",
+      heroHighlight: "Near Me",
       subtitle: "Noise or vibration when braking? We inspect your brakes quickly and give you a clear price before any repair.",
       trustBar: ["Fast diagnostic", "Price confirmed before work", "Walk-in welcome"],
       reasonsTitle: "Why come to us for your brakes",
@@ -486,8 +486,8 @@ export const mechanicIntents: MechanicIntent[] = [
       ],
       ctaCardTitle: "Brakes making noise?",
       ctaCardText: "Don't take chances — call us for a quick inspection.",
-      serviceName: "Brake repair near you",
-      faqTitle: "Frequently Asked Questions — Brakes Near You",
+      serviceName: "Brake repair near me",
+      faqTitle: "Frequently Asked Questions — Brakes Near Me",
       faq: [
         {
           question: "How much does a brake inspection cost?",
