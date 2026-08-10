@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/dictionary";
 import { business } from "@/lib/business";
 import { towingIntents, getTowingIntentContent } from "@/lib/towingIntents";
 import { CallButton } from "@/components/CallButton";
+import { CheckIcon } from "@/components/Icons";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { BrandBurst } from "@/components/BrandBurst";
 import { Reveal } from "@/components/Reveal";
@@ -84,6 +85,34 @@ export default async function TowingIntentPage({
         trustBar={c.trustBar}
         alwaysOpen
       />
+
+      {/* Price/quote panel — answers "how much" head-on with the
+          free-quote-by-phone message, placed right under the hero so the
+          price intent is satisfied immediately. Only rendered when the
+          intent provides priceQuote (currently the "prix" page). */}
+      {c.priceQuote && (
+        <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
+          <Reveal>
+            <div className="rounded-3xl border border-accent/20 bg-accent/5 p-8 sm:p-10">
+              <h2 className="font-display text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">
+                {c.priceQuote.title}
+              </h2>
+              <p className="mt-3 max-w-2xl leading-relaxed text-steel-500">{c.priceQuote.text}</p>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {c.priceQuote.points.map((point) => (
+                  <li key={point} className="flex items-start gap-2.5 text-sm font-medium">
+                    <CheckIcon width={18} height={18} className="mt-0.5 shrink-0 text-accent" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8">
+                <CallButton label={dict.cta.callNow} showNumber size="lg" pulse />
+              </div>
+            </div>
+          </Reveal>
+        </section>
+      )}
 
       <Testimonials locale={l} />
 
