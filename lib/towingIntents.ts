@@ -261,60 +261,60 @@ export const towingIntents: TowingIntent[] = [
     group: "situation",
     heroImage: { kind: "static", src: "/remorquage.webp" },
     fr: {
-      metaTitle: "Prix d'un remorquage à Gatineau — Devis gratuit au téléphone | Mécano Express",
+      metaTitle: "Remorquage moins cher à Gatineau — On bat le prix | Mécano Express",
       metaDescription:
-        "Combien coûte un remorquage ? On vous donne le tarif par téléphone avant d'envoyer le camion — un prix final, sans surprise, souvent moins cher. (819) 921-7869.",
-      eyebrow: "Prix · Remorquage",
-      h1: "Combien coûte un remorquage ? On vous le dit avant d'envoyer le camion",
-      heroTitle: "Prix d'un remorquage",
+        "Vous trouvez moins cher ? On bat le prix. Devis gratuit confirmé au téléphone en 2 minutes, prix final sans frais caché. Remorquage 24h/24. (819) 921-7869.",
+      eyebrow: "Meilleur prix · Remorquage",
+      h1: "Remorquage moins cher à Gatineau — on bat le prix",
+      heroTitle: "Remorquage moins cher",
       heroHighlight: "à Gatineau",
       subtitle:
-        "Dites-nous où vous êtes et où vous allez : on calcule le prix pour remorquer votre voiture et on vous le donne au téléphone. Pas un « à partir de » — le prix que vous entendez est le prix final.",
-      trustBar: ["Devis gratuit par téléphone", "Le prix final, pas un estimé", "Aucune surprise sur la facture"],
-      reasonsTitle: "Le tarif d'un remorquage, clair et honnête",
+        "Vous trouvez moins cher ailleurs ? On bat le prix. Dites-nous où vous êtes et où vous allez : on vous confirme le prix au téléphone en 2 minutes — prix final, aucun frais caché.",
+      trustBar: ["On bat le prix, garanti", "Devis gratuit en 2 minutes", "Aucun frais caché"],
+      reasonsTitle: "Le tarif d'un remorquage à Gatineau — et on bat la concurrence",
       reasons: [
         {
-          title: "Un vrai prix, pas une fourchette",
-          text: "On calcule le coût selon votre position et votre destination avant d'envoyer qui que ce soit — pas une estimation vague au rabais.",
+          title: "On bat le prix",
+          text: "Vous trouvez un tarif plus bas pour le même remorquage ? Appelez-nous : on s'aligne ou on fait mieux. Réponse honnête, comparer ne prend qu'un appel.",
         },
         {
-          title: "Rien n'est ajouté à l'arrivée",
-          text: "Le montant confirmé au téléphone est celui que vous payez. Pas de frais surprise, pas de négociation sur place.",
+          title: "Aucun frais caché",
+          text: "Le montant confirmé au téléphone est le prix final. Pas de surprise sur la facture, rien d'ajouté à l'arrivée.",
         },
         {
-          title: "Souvent moins cher — comparez en un appel",
-          text: "Prenez trente secondes pour comparer notre prix à celui d'un autre remorqueur. Réponse honnête, pas de jeu de devinettes.",
+          title: "Un devis en 2 minutes",
+          text: "Donnez-nous votre position et votre destination : on calcule votre prix et on vous le donne tout de suite, gratuitement.",
         },
       ],
       priceQuote: {
         title: "Combien coûte un remorquage à Gatineau ?",
-        text: "Un seul appel suffit : on vous donne le prix pour remorquer votre voiture par téléphone, avant d'envoyer le camion. Pas un estimé, pas une fourchette — le prix que vous entendez est le prix final, sans surprise sur la facture. Et c'est souvent moins cher : comparez-nous en trente secondes.",
+        text: "Un simple appel suffit : on vous donne le prix pour remorquer votre voiture en 2 minutes, confirmé au téléphone avant d'envoyer le camion. Et si vous trouvez moins cher ailleurs, on bat le prix. Le montant annoncé est le prix final — aucun frais caché.",
         points: [
-          "Devis gratuit par téléphone, tout de suite",
-          "Un seul prix, final — pas un « à partir de »",
-          "Aucune surprise sur la facture",
-          "Souvent moins cher — comparez en un appel",
+          "On bat le prix : trouvez moins cher, on s'aligne",
+          "Devis gratuit confirmé au téléphone en 2 minutes",
+          "Prix final, aucun frais caché — promis",
+          "Remorquage sécuritaire et fiable, 24h/24",
         ],
       },
-      ctaCardTitle: "Vous voulez connaître le prix avant tout ?",
-      ctaCardText: "Un appel suffit — on vous donne un prix clair, tout de suite.",
+      ctaCardTitle: "Vous voulez le meilleur prix ?",
+      ctaCardText: "Un appel suffit — prix confirmé en 2 minutes, et on bat la concurrence.",
       serviceName: "Devis de remorquage",
       faqTitle: "Questions fréquentes — Prix d'un remorquage",
       faq: [
         {
           question: "Combien coûte le remorquage d'une voiture ?",
           answer:
-            "Le coût dépend surtout de votre position et de la distance jusqu'à la destination. Plutôt qu'une fourchette vague, on calcule votre prix et on vous le confirme par téléphone avant d'envoyer le camion — c'est gratuit et sans engagement.",
+            "Le coût dépend surtout de votre position et de la distance jusqu'à la destination. On calcule votre prix et on vous le confirme au téléphone en 2 minutes — gratuitement et sans engagement.",
         },
         {
-          question: "Le remorquage est-il moins cher chez vous ?",
+          question: "Battez-vous vraiment le prix des autres remorqueurs ?",
           answer:
-            "Souvent, oui — mais le mieux est de comparer. Un simple appel vous donne notre prix final, sans engagement, à mettre côte à côte avec un autre remorqueur.",
+            "Oui. Si vous avez un prix plus bas pour le même remorquage, appelez-nous : on s'aligne ou on fait mieux. Comparer ne prend qu'un simple appel.",
         },
         {
-          question: "Y a-t-il des frais supplémentaires le soir ou la fin de semaine ?",
+          question: "Y a-t-il des frais cachés ou des surprises sur la facture ?",
           answer:
-            "On vous donne le tarif final au téléphone selon l'heure et la situation — pas de surprise à l'arrivée, même la nuit ou la fin de semaine.",
+            "Non. Le prix confirmé au téléphone est le prix final, même le soir ou la fin de semaine — aucun frais ajouté à l'arrivée.",
         },
         {
           question: "Puis-je payer par carte ?",
@@ -323,60 +323,60 @@ export const towingIntents: TowingIntent[] = [
       ],
     },
     en: {
-      metaTitle: "Towing Cost in Gatineau — Free Quote by Phone | Mécano Express",
+      metaTitle: "Cheaper Towing in Gatineau — We Beat the Price | Mécano Express",
       metaDescription:
-        "How much does a tow cost? We give you the price by phone before the truck leaves — one final price, no surprises, often cheaper. Call (819) 921-7869.",
-      eyebrow: "Price · Towing",
-      h1: "How much does a tow cost? We tell you before the truck leaves",
-      heroTitle: "Towing cost",
+        "Found it cheaper? We beat the price. Free quote confirmed by phone in 2 minutes, final price with no hidden fees. Towing 24/7. Call (819) 921-7869.",
+      eyebrow: "Best price · Towing",
+      h1: "Cheaper towing in Gatineau — we beat the price",
+      heroTitle: "Cheaper towing",
       heroHighlight: "in Gatineau",
       subtitle:
-        "Tell us where you are and where you're headed: we work out the price to tow your car and give it to you on the phone, not a \"starting at\". The price you hear is the final price.",
-      trustBar: ["Free quote by phone", "The final price, not an estimate", "No surprise on the bill"],
-      reasonsTitle: "Towing pricing, clear and honest",
+        "Found a lower price elsewhere? We beat it. Tell us where you are and where you're headed: we confirm your price by phone in 2 minutes — final price, no hidden fees.",
+      trustBar: ["We beat the price", "Free quote in 2 minutes", "No hidden fees"],
+      reasonsTitle: "Towing rates in Gatineau — and we beat the competition",
       reasons: [
         {
-          title: "A real price, not a range",
-          text: "We calculate the cost based on your location and destination before sending anyone — not a vague lowball estimate.",
+          title: "We beat the price",
+          text: "Found a lower rate for the same tow? Call us: we'll match it or do better. An honest answer, comparing is just one call.",
         },
         {
-          title: "Nothing gets added on arrival",
-          text: "The amount confirmed on the phone is what you pay. No surprise fees, no haggling on site.",
+          title: "No hidden fees",
+          text: "The amount confirmed on the phone is the final price. No surprise on the bill, nothing added on arrival.",
         },
         {
-          title: "Often cheaper — compare with one call",
-          text: "Take thirty seconds to compare our price to another tow company's. An honest answer, no guessing games.",
+          title: "A quote in 2 minutes",
+          text: "Give us your location and destination: we work out your price and give it to you right away, for free.",
         },
       ],
       priceQuote: {
         title: "How much does a tow cost in Gatineau?",
-        text: "One call is all it takes: we give you the price to tow your car by phone, before the truck leaves. Not an estimate, not a range — the price you hear is the final price, with no surprise on the bill. And it's often cheaper: compare us in thirty seconds.",
+        text: "One call is all it takes: we give you the price to tow your car in 2 minutes, confirmed by phone before the truck leaves. And if you find it cheaper elsewhere, we beat the price. The amount quoted is the final price — no hidden fees.",
         points: [
-          "Free quote by phone, right away",
-          "One price, final — not a \"starting at\"",
-          "No surprise on the bill",
-          "Often cheaper — compare in one call",
+          "We beat the price: find it cheaper, we match it",
+          "Free quote confirmed by phone in 2 minutes",
+          "Final price, no hidden fees — promised",
+          "Safe, reliable towing, 24/7",
         ],
       },
-      ctaCardTitle: "Want to know the price first?",
-      ctaCardText: "One call is all it takes — we'll give you a clear price right away.",
+      ctaCardTitle: "Want the best price?",
+      ctaCardText: "One call is all it takes — price confirmed in 2 minutes, and we beat the competition.",
       serviceName: "Towing quote",
       faqTitle: "Frequently Asked Questions — Towing Cost",
       faq: [
         {
           question: "How much does it cost to tow a car?",
           answer:
-            "The cost mainly depends on your location and the distance to the destination. Instead of a vague range, we work out your price and confirm it by phone before the truck leaves — free and with no obligation.",
+            "The cost mainly depends on your location and the distance to the destination. We work out your price and confirm it by phone in 2 minutes — free and with no obligation.",
         },
         {
-          question: "Is your towing cheaper?",
+          question: "Do you really beat other tow companies' prices?",
           answer:
-            "Often, yes — but the best way is to compare. One quick call gives you our final price, with no obligation, to put side by side with another tow company.",
+            "Yes. If you have a lower price for the same tow, call us: we'll match it or do better. Comparing takes just one call.",
         },
         {
-          question: "Are there extra fees at night or on weekends?",
+          question: "Are there hidden fees or surprises on the bill?",
           answer:
-            "We give you the final price by phone based on the time and situation — no surprise on arrival, even at night or on weekends.",
+            "No. The price confirmed by phone is final, even at night or on weekends — nothing added on arrival.",
         },
         {
           question: "Can I pay by card?",
