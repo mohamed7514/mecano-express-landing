@@ -4,7 +4,17 @@ import { business, hoursLabel } from "@/lib/business";
 import { CallButton } from "@/components/CallButton";
 import { PhoneIcon, PinIcon, ClockIcon } from "@/components/Icons";
 
-export function ContactSection({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+export function ContactSection({
+  locale,
+  dict,
+  alwaysOpen = false,
+}: {
+  locale: Locale;
+  dict: Dictionary;
+  /** Towing pages run 24/7 — show the availability label instead of the
+   * garage's posted hours and the walk-in note. */
+  alwaysOpen?: boolean;
+}) {
   const a = business.address;
   return (
     <section className="relative overflow-hidden bg-graphite-900 text-white" id="contact">
@@ -47,8 +57,8 @@ export function ContactSection({ locale, dict }: { locale: Locale; dict: Diction
               <ClockIcon width={22} height={22} className="mt-0.5 shrink-0 text-accent" />
               <div>
                 <dt className="text-sm font-medium text-steel-400">{dict.contact.hours}</dt>
-                <dd className="font-semibold">{hoursLabel[locale]}</dd>
-                <dd className="text-sm text-steel-400">{dict.contact.hoursNote}</dd>
+                <dd className="font-semibold">{alwaysOpen ? dict.openStatus.available247 : hoursLabel[locale]}</dd>
+                {!alwaysOpen && <dd className="text-sm text-steel-400">{dict.contact.hoursNote}</dd>}
               </div>
             </div>
           </dl>

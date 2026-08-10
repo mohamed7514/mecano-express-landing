@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { Locale } from "@/lib/i18n";
 import { type Dictionary } from "@/lib/dictionary";
 import { hoursLabel } from "@/lib/business";
@@ -10,6 +13,12 @@ import { PinIcon, ClockIcon } from "./Icons";
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const addr = business.address;
+  // Towing/roadside assistance runs 24/7, unlike the garage's posted hours.
+  // The footer is shared across every page via the layout, so we detect the
+  // towing context from the URL (remorquage-gatineau, remorquage/[intent] and
+  // the towing service detail page — slug "remorquage" in FR, "towing" in EN).
+  const pathname = usePathname();
+  const isTowing = /\/(remorquage|towing)\b/.test(pathname);
   const footerServices = [
     ...services.filter((s) => s.category === "towing"),
     ...services.filter((s) => s.category !== "towing"),
@@ -67,7 +76,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             </li>
             <li className="flex items-start gap-2.5">
               <ClockIcon width={18} height={18} className="mt-0.5 shrink-0 text-accent" />
-              <span>{hoursLabel[locale]}</span>
+              <span>{isTowing ? dict.openStatus.available247 : hoursLabel[locale]}</span>
             </li>
           </ul>
         </div>

@@ -211,7 +211,7 @@ export default async function RemorquageGatineauPage({
         </Reveal>
       </section>
 
-      <ContactSection locale={l} dict={dict} />
+      <ContactSection locale={l} dict={dict} alwaysOpen />
     </div>
   );
 }

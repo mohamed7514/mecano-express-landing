@@ -128,7 +128,7 @@ export default async function TowingIntentPage({
         </Reveal>
       </section>
 
-      <ContactSection locale={l} dict={dict} />
+      <ContactSection locale={l} dict={dict} alwaysOpen />
     </div>
   );
 }
