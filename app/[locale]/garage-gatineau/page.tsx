@@ -11,6 +11,7 @@ import { ArrowIcon } from "@/components/Icons";
 import { SplitHero } from "@/components/sections/SplitHero";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyUs } from "@/components/sections/WhyUs";
+import { AreaServed } from "@/components/sections/AreaServed";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 
@@ -28,7 +29,6 @@ const copy: Record<
     metaTitle: string;
     metaDescription: string;
     eyebrow: string;
-    h1: string;
     heroTitle: string;
     heroHighlight: string;
     subtitle: string;
@@ -38,31 +38,29 @@ const copy: Record<
   }
 > = {
   fr: {
-    metaTitle: "Garage à Aylmer, Gatineau — Diagnostic honnête, prix confirmé | Mécano Express",
+    metaTitle: "Garage à Gatineau — Diagnostic honnête, prix confirmé | Mécano Express",
     metaDescription:
-      "Garage mécanique à Aylmer et Gatineau. Diagnostic honnête, prix confirmé avant travaux, technicien certifié, estimé gratuit. Sans rendez-vous. Appelez le (819) 921-7869.",
-    eyebrow: "Garage & mécanique · Aylmer, Gatineau",
-    h1: "Garage à Aylmer et Gatineau",
-    heroTitle: "Garage à",
-    heroHighlight: "Aylmer & Gatineau",
+      "Garage mécanique à Gatineau (secteur Aylmer). Diagnostic honnête, prix confirmé avant travaux, garantie 1 an, technicien certifié. Sans rendez-vous. Appelez le (819) 921-7869.",
+    eyebrow: "Garage & mécanique · Gatineau",
+    heroTitle: "Garage",
+    heroHighlight: "à Gatineau",
     subtitle:
-      "Votre garagiste de quartier à Gatineau. Diagnostic honnête, prix confirmé avant tout travail, sans frais cachés.",
-    trustBar: ["Estimé gratuit", "Technicien certifié", "Aucun frais caché", "Rendez-vous rapide"],
+      "Votre garagiste de quartier à Gatineau, secteur Aylmer. Diagnostic honnête, prix confirmé avant tout travail, garantie 1 an sur pièces.",
+    trustBar: ["Garantie 1 an sur pièces", "Technicien certifié", "Prix confirmé avant travaux", "Sans rendez-vous"],
     ctaCardTitle: "Besoin d'une réparation ?",
     ctaCardText:
       "Passez nous voir sans rendez-vous ou appelez pour une estimation honnête, prix confirmé avant tout travail.",
   },
   en: {
-    metaTitle: "Garage in Aylmer, Gatineau — Honest Diagnostic, Upfront Pricing | Mécano Express",
+    metaTitle: "Garage in Gatineau — Honest Diagnostic, Upfront Pricing | Mécano Express",
     metaDescription:
-      "Auto repair garage in Aylmer and Gatineau. Honest diagnostic, price confirmed before work, certified technician, free estimate. Walk-in welcome. Call (819) 921-7869.",
-    eyebrow: "Garage & mechanic · Aylmer, Gatineau",
-    h1: "Garage in Aylmer & Gatineau",
-    heroTitle: "Garage in",
-    heroHighlight: "Aylmer & Gatineau",
+      "Auto repair garage in Gatineau (Aylmer area). Honest diagnostic, price confirmed before work, 1-year warranty, certified technician. Walk-in welcome. Call (819) 921-7869.",
+    eyebrow: "Garage & mechanic · Gatineau",
+    heroTitle: "Garage",
+    heroHighlight: "in Gatineau",
     subtitle:
-      "Honest diagnostic, price confirmed before any work. Your neighborhood garage, no hidden fees.",
-    trustBar: ["Free estimate", "Certified technician", "No hidden fees", "Fast appointment"],
+      "Your neighborhood garage in Gatineau, Aylmer area. Honest diagnostic, price confirmed before any work, 1-year warranty on parts.",
+    trustBar: ["1-year warranty on parts", "Certified technician", "Price confirmed before work", "Walk-in welcome"],
     ctaCardTitle: "Need a repair?",
     ctaCardText:
       "Drop in without an appointment or call for an honest estimate, price confirmed before any work.",
@@ -126,6 +124,11 @@ export default async function GarageGatineauPage({
       <ServicesGrid locale={l} dict={dict} filter="repair" />
 
       <WhyUs dict={dict} />
+
+      {/* Gatineau-first area coverage — real, original content answering
+          the "garage à Gatineau" intent directly, placed before the /garage/*
+          hub links so the page reads as a destination, not just a directory. */}
+      <AreaServed dict={dict} areas={["Gatineau", "Hull", "Aylmer", "Buckingham"]} />
 
       {/* Garage hub — surfaces the ad-landing pages under /garage/* that
           otherwise have no link from normal site navigation, grouped by
