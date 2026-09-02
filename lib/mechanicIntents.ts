@@ -67,7 +67,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "Passez quand ça vous convient, on s'occupe de votre véhicule rapidement.",
         },
       ],
-      areas: ["Aylmer", "Deschênes", "Lucerne", "Secteur Vanier"],
+      areas: ["Aylmer", "Secteur Vanier", "Gatineau", "Hull"],
       ctaCardTitle: "Besoin d'un garage à Aylmer ?",
       ctaCardText: "Passez nous voir au 879 chemin Vanier ou appelez pour un diagnostic honnête.",
       serviceName: "Garage à Aylmer",
@@ -113,7 +113,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "Drop in whenever it suits you, we take care of your vehicle quickly.",
         },
       ],
-      areas: ["Aylmer", "Deschênes", "Lucerne", "Vanier area"],
+      areas: ["Aylmer", "Vanier area", "Gatineau", "Hull"],
       ctaCardTitle: "Need a garage in Aylmer?",
       ctaCardText: "Drop by at 879 chemin Vanier or call for an honest diagnostic.",
       serviceName: "Garage in Aylmer",
@@ -235,35 +235,46 @@ export const mechanicIntents: MechanicIntent[] = [
     group: "situation",
     heroImage: { kind: "photo", name: "mecanique.webp" },
     fr: {
-      metaTitle: "Mécanicien près de chez vous à Gatineau | Mécano Express",
+      metaTitle: "Mécanicien près de chez vous — 879 chemin Vanier, Aylmer | Mécano Express",
       metaDescription:
-        "Cherchez un mécanicien près de chez vous ? Garage honnête à Aylmer, sans rendez-vous, prix confirmé avant travaux. (819) 921-7869.",
+        "Mécanicien près de chez vous au 879 chemin Vanier, secteur Vanier à Aylmer — à quelques minutes de Gatineau et Hull. Sans rendez-vous, prix confirmé avant travaux. (819) 921-7869.",
       eyebrow: "Mécanicien à proximité",
       heroTitle: "Mécanicien",
       heroHighlight: "Près de Vous",
       subtitle:
-        "Un vrai garage de quartier, pas une chaîne. Diagnostic honnête, prix confirmé avant tout travail, sans rendez-vous.",
-      trustBar: ["Garage de quartier", "Sans rendez-vous", "Prix confirmé avant travaux"],
+        "On est au 879 chemin Vanier, secteur Vanier à Aylmer — à quelques minutes de Gatineau et de Hull. Un vrai garage de quartier, pas une chaîne : diagnostic honnête, prix confirmé avant tout travail, sans rendez-vous.",
+      trustBar: ["879 chemin Vanier, Aylmer", "Sans rendez-vous", "Prix confirmé avant travaux"],
       reasonsTitle: "Pourquoi nous choisir plutôt qu'une chaîne",
       reasons: [
         {
-          title: "Un mécanicien, pas un vendeur",
-          text: "On vous explique le problème clairement, sans vous pousser à acheter ce qui n'est pas nécessaire.",
+          title: "À quelques minutes de chez vous",
+          text: "Notre garage est au 879 chemin Vanier, secteur Vanier à Aylmer, avec stationnement sur place — facile d'accès depuis Gatineau, Hull et tout le secteur ouest.",
         },
         {
-          title: "Sans rendez-vous",
-          text: "Passez quand ça vous convient, on s'occupe de vous rapidement.",
+          title: "Un mécanicien, pas un vendeur",
+          text: "On vous explique le problème clairement, sans vous pousser à acheter ce qui n'est pas nécessaire.",
         },
         {
           title: "Prix confirmé avant travaux",
           text: "Vous savez ce que ça va coûter avant qu'on touche à votre véhicule.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Besoin d'un mécanicien de confiance ?",
       ctaCardText: "Appelez-nous ou passez au 879 chemin Vanier à Aylmer.",
       serviceName: "Mécanicien près de vous",
       faqTitle: "Questions fréquentes — Mécanicien près de vous",
       faq: [
+        {
+          question: "Où êtes-vous situés exactement ?",
+          answer:
+            "Au 879 chemin Vanier, secteur Vanier à Aylmer, avec stationnement sur place. On est à quelques minutes du centre de Gatineau, de Hull et de tout le secteur ouest.",
+        },
+        {
+          question: "Quels secteurs desservez-vous ?",
+          answer:
+            "Aylmer, le secteur Vanier, Gatineau, Hull et Buckingham. Si vous n'êtes pas sûr, appelez-nous — on vous le confirme en trente secondes.",
+        },
         {
           question: "Qu'est-ce qui vous différencie d'un concessionnaire ?",
           answer: "Un prix plus honnête, un service sans rendez-vous, et une explication claire de chaque réparation.",
@@ -279,34 +290,46 @@ export const mechanicIntents: MechanicIntent[] = [
       ],
     },
     en: {
-      metaTitle: "Mechanic Near Me in Gatineau | Mécano Express",
+      metaTitle: "Mechanic Near Me — 879 chemin Vanier, Aylmer | Mécano Express",
       metaDescription:
-        "Looking for a mechanic near me? Honest garage in Aylmer, walk-in welcome, price confirmed before work. Call (819) 921-7869.",
+        "Mechanic near you at 879 chemin Vanier, Vanier area in Aylmer — minutes from Gatineau and Hull. Walk-in welcome, price confirmed before work. Call (819) 921-7869.",
       eyebrow: "Mechanic near me",
       heroTitle: "Mechanic",
       heroHighlight: "Near Me",
-      subtitle: "A real neighborhood garage, not a chain. Honest diagnostic, price confirmed before any work, walk-in welcome.",
-      trustBar: ["Neighborhood garage", "Walk-in welcome", "Price confirmed before work"],
+      subtitle:
+        "We're at 879 chemin Vanier, Vanier area in Aylmer — minutes from Gatineau and Hull. A real neighborhood garage, not a chain: honest diagnostic, price confirmed before any work, walk-in welcome.",
+      trustBar: ["879 chemin Vanier, Aylmer", "Walk-in welcome", "Price confirmed before work"],
       reasonsTitle: "Why choose us over a chain",
       reasons: [
         {
-          title: "A mechanic, not a salesperson",
-          text: "We explain the problem clearly, without pushing you to buy what you don't need.",
+          title: "Minutes away from you",
+          text: "Our garage is at 879 chemin Vanier, Vanier area in Aylmer, with on-site parking — easy to reach from Gatineau, Hull and the whole west end.",
         },
         {
-          title: "Walk-in welcome",
-          text: "Drop in whenever it suits you, we take care of you quickly.",
+          title: "A mechanic, not a salesperson",
+          text: "We explain the problem clearly, without pushing you to buy what you don't need.",
         },
         {
           title: "Price confirmed before work",
           text: "You know what it'll cost before we touch your vehicle.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Need a mechanic you can trust?",
       ctaCardText: "Call us or drop by at 879 chemin Vanier in Aylmer.",
       serviceName: "Mechanic near me",
       faqTitle: "Frequently Asked Questions — Mechanic Near Me",
       faq: [
+        {
+          question: "Where exactly are you located?",
+          answer:
+            "At 879 chemin Vanier, Vanier area in Aylmer, with on-site parking. We're minutes from downtown Gatineau, Hull and the whole west end.",
+        },
+        {
+          question: "Which areas do you serve?",
+          answer:
+            "Aylmer, the Vanier area, Gatineau, Hull and Buckingham. Not sure if you're in range? Call us — we'll confirm in thirty seconds.",
+        },
         {
           question: "What sets you apart from a dealership?",
           answer: "A more honest price, walk-in service, and a clear explanation of every repair.",
@@ -350,6 +373,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "Même qualité de travail et d'équipement certifié, à un prix beaucoup plus abordable.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Vous voulez un prix honnête ?",
       ctaCardText: "Appelez-nous, on vous donne une estimation claire avant de commencer.",
       serviceName: "Garage honnête et prix clair",
@@ -393,6 +417,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "Same quality of work and certified equipment, at a much more affordable price.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Want an honest price?",
       ctaCardText: "Call us, we'll give you a clear estimate before starting.",
       serviceName: "Honest garage, clear pricing",
@@ -441,6 +466,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "Vous savez le coût exact avant qu'on touche à votre véhicule.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Vos freins font du bruit ?",
       ctaCardText: "Ne prenez pas de risque — appelez-nous pour une inspection rapide.",
       serviceName: "Réparation de freins près de vous",
@@ -484,6 +510,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "You know the exact cost before we touch your vehicle.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Brakes making noise?",
       ctaCardText: "Don't take chances — call us for a quick inspection.",
       serviceName: "Brake repair near me",
@@ -532,6 +559,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "Un bruit de frein qui persiste mérite une vérification rapide — mieux vaut prévenir.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Vos freins grincent depuis un moment ?",
       ctaCardText: "Ne l'ignorez pas — une inspection rapide peut vous éviter une facture plus grosse.",
       serviceName: "Diagnostic de freins qui grincent",
@@ -575,6 +603,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "A persistent brake noise deserves a quick check — better safe than sorry.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Brakes been squeaking for a while?",
       ctaCardText: "Don't ignore it — a quick inspection can save you a bigger bill later.",
       serviceName: "Squeaking brake diagnostic",
@@ -623,6 +652,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "La plupart des changements de plaquettes se font en une heure ou moins.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Plaquettes à changer ?",
       ctaCardText: "Appelez-nous pour un devis gratuit et rapide.",
       serviceName: "Changement de plaquettes de frein",
@@ -666,6 +696,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "Most pad replacements are done in an hour or less.",
         },
       ],
+      areas: ["Gatineau", "Aylmer", "Hull", "Buckingham"],
       ctaCardTitle: "Pads need changing?",
       ctaCardText: "Call us for a fast, free quote.",
       serviceName: "Brake pad replacement",

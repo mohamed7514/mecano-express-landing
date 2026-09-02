@@ -11,6 +11,8 @@ import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { serviceIcons, CheckIcon, ArrowIcon } from "@/components/Icons";
 import { SplitHero } from "@/components/sections/SplitHero";
 import { FAQ } from "@/components/sections/FAQ";
+import { AreaServed } from "@/components/sections/AreaServed";
+import { ContactSection } from "@/components/sections/ContactSection";
 
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -90,6 +92,13 @@ export default async function ServiceDetailPage({
           service.category === "towing"
             ? { kind: "static", src: "/remorquage.webp" }
             : { kind: "photo", name: "mecanique.webp" }
+        }
+        // Repair services are walk-in shop work, so the shop's trust points
+        // apply. Towing has its own 24/7 badge and none of these fit it.
+        trustBar={
+          service.category === "towing"
+            ? undefined
+            : [dict.badges.walkIn, dict.badges.openSat, dict.badges.local]
         }
         alwaysOpen={service.category === "towing"}
       />
@@ -240,7 +249,14 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
+      <AreaServed dict={dict} areas={["Gatineau", "Aylmer", "Hull", "Buckingham"]} />
+
       <FAQ title={c.faqTitle} items={c.faq} />
+
+      {/* NAP + map. These pages are Ads landing pages too, and the intent
+          pages that score better on Landing Page Experience all carry this
+          block — transparency is one of Google's stated LPE criteria. */}
+      <ContactSection locale={l} dict={dict} alwaysOpen={service.category === "towing"} />
     </>
   );
 }

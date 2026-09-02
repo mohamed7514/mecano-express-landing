@@ -3,9 +3,11 @@ import Link from "next/link";
 import { isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 import { business } from "@/lib/business";
+import type { FAQItem } from "@/lib/faq";
 import { mechanicIntents } from "@/lib/mechanicIntents";
 import { CallButton } from "@/components/CallButton";
-import { ServiceJsonLd } from "@/components/JsonLd";
+import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { FAQ } from "@/components/sections/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { ArrowIcon } from "@/components/Icons";
 import { SplitHero } from "@/components/sections/SplitHero";
@@ -35,6 +37,8 @@ const copy: Record<
     trustBar: string[];
     ctaCardTitle: string;
     ctaCardText: string;
+    faqTitle: string;
+    faq: FAQItem[];
   }
 > = {
   fr: {
@@ -50,6 +54,34 @@ const copy: Record<
     ctaCardTitle: "Besoin d'une réparation ?",
     ctaCardText:
       "Passez nous voir sans rendez-vous ou appelez pour une estimation honnête, prix confirmé avant tout travail.",
+    faqTitle: "Questions fréquentes — Garage à Gatineau",
+    faq: [
+      {
+        question: "Faut-il prendre rendez-vous ?",
+        answer:
+          "Non, on accepte les visites sans rendez-vous du lundi au samedi. Pour une réparation plus longue, un appel avant nous permet de vous réserver du temps.",
+      },
+      {
+        question: "Où êtes-vous situés à Gatineau ?",
+        answer:
+          "Au 879 chemin Vanier, secteur Aylmer à Gatineau — accès facile depuis Hull, Aylmer et tout l'ouest de Gatineau.",
+      },
+      {
+        question: "Donnez-vous le prix avant de commencer les travaux ?",
+        answer:
+          "Oui. On inspecte, on vous explique ce qui doit vraiment être fait, et on vous confirme le prix avant de commencer. Aucun frais caché sur la facture.",
+      },
+      {
+        question: "Offrez-vous une garantie sur les réparations ?",
+        answer:
+          "Oui, une garantie d'un an sur les pièces et la main-d'œuvre, sur l'ensemble de nos réparations.",
+      },
+      {
+        question: "Quels services faites-vous au garage ?",
+        answer:
+          "Freins, pneus, changement d'huile, diagnostic électronique, suspension et alignement, climatisation, échappement, transmission et carrosserie.",
+      },
+    ],
   },
   en: {
     metaTitle: "Garage in Gatineau — Honest Diagnostic, Upfront Pricing | Mécano Express",
@@ -64,6 +96,34 @@ const copy: Record<
     ctaCardTitle: "Need a repair?",
     ctaCardText:
       "Drop in without an appointment or call for an honest estimate, price confirmed before any work.",
+    faqTitle: "Frequently Asked Questions — Garage in Gatineau",
+    faq: [
+      {
+        question: "Do I need an appointment?",
+        answer:
+          "No, we take walk-ins Monday through Saturday. For a longer repair, a quick call ahead lets us set aside time for you.",
+      },
+      {
+        question: "Where are you located in Gatineau?",
+        answer:
+          "At 879 chemin Vanier, Aylmer area in Gatineau — easy access from Hull, Aylmer and all of western Gatineau.",
+      },
+      {
+        question: "Do you give the price before starting work?",
+        answer:
+          "Yes. We inspect, explain what actually needs doing, and confirm the price before we start. No hidden fees on the bill.",
+      },
+      {
+        question: "Do you offer a warranty on repairs?",
+        answer:
+          "Yes, a one-year warranty on parts and labor, across all our repairs.",
+      },
+      {
+        question: "What services do you offer at the garage?",
+        answer:
+          "Brakes, tires, oil changes, electronic diagnostics, suspension and alignment, air conditioning, exhaust, transmission and body work.",
+      },
+    ],
   },
 };
 
@@ -108,6 +168,7 @@ export default async function GarageGatineauPage({
         url={`${business.domain}/${l}/garage-gatineau`}
         serviceType={l === "fr" ? "Réparation automobile" : "Auto repair"}
       />
+      <FAQJsonLd items={c.faq} />
 
       <SplitHero
         dict={dict}
@@ -194,6 +255,8 @@ export default async function GarageGatineauPage({
           </div>
         </div>
       </section>
+
+      <FAQ title={c.faqTitle} items={c.faq} />
 
       {/* Secondary CTA before contact */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6">
