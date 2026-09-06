@@ -10,6 +10,7 @@ import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { FAQ } from "@/components/sections/FAQ";
 import { Reveal } from "@/components/Reveal";
 import { ArrowIcon } from "@/components/Icons";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { SplitHero } from "@/components/sections/SplitHero";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyUs } from "@/components/sections/WhyUs";
@@ -42,9 +43,9 @@ const copy: Record<
   }
 > = {
   fr: {
-    metaTitle: "Garage à Gatineau — Diagnostic honnête, prix confirmé | Mécano Express",
+    metaTitle: "Garage à Gatineau — Diagnostic honnête, prix confirmé",
     metaDescription:
-      "Garage mécanique à Gatineau (secteur Aylmer). Diagnostic honnête, prix confirmé avant travaux, garantie 1 an, technicien certifié. Sans rendez-vous. Appelez le (819) 921-7869.",
+      "Garage mécanique à Gatineau (secteur Aylmer). Diagnostic honnête, prix confirmé avant travaux, garantie 1 an. Sans rendez-vous : (819) 921-7869.",
     eyebrow: "Garage & mécanique · Gatineau",
     heroTitle: "Garage",
     heroHighlight: "à Gatineau",
@@ -84,9 +85,9 @@ const copy: Record<
     ],
   },
   en: {
-    metaTitle: "Garage in Gatineau — Honest Diagnostic, Upfront Pricing | Mécano Express",
+    metaTitle: "Garage in Gatineau — Honest Diagnostic, Upfront Price",
     metaDescription:
-      "Auto repair garage in Gatineau (Aylmer area). Honest diagnostic, price confirmed before work, 1-year warranty, certified technician. Walk-in welcome. Call (819) 921-7869.",
+      "Auto repair garage in Gatineau (Aylmer area). Honest diagnostic, price confirmed before work, 1-year warranty. Walk-in: (819) 921-7869.",
     eyebrow: "Garage & mechanic · Gatineau",
     heroTitle: "Garage",
     heroHighlight: "in Gatineau",
@@ -140,7 +141,7 @@ export async function generateMetadata({
     description: c.metaDescription,
     alternates: {
       canonical: `/${l}/garage-gatineau`,
-      languages: { fr: "/fr/garage-gatineau", en: "/en/garage-gatineau", "x-default": "/fr/garage-gatineau" },
+      languages: { "fr-CA": "/fr/garage-gatineau", "en-CA": "/en/garage-gatineau", "x-default": "/fr/garage-gatineau" },
     },
     openGraph: {
       title: c.metaTitle,
@@ -172,11 +173,22 @@ export default async function GarageGatineauPage({
 
       <SplitHero
         dict={dict}
+        breadcrumb={
+          <Breadcrumb
+            items={[
+              { name: dict.nav.home, url: `/${l}` },
+              { name: dict.nav.mechanicCategory, url: `/${l}/garage-gatineau` },
+            ]}
+          />
+        }
         tag={c.eyebrow}
         title={c.heroTitle}
         highlight={c.heroHighlight}
         description={c.subtitle}
         image={{ kind: "photo", name: "mecanique.webp" }}
+        imageAlt={l === "fr"
+          ? "Mécanicien au travail au garage Mécano Express, Aylmer (Gatineau)"
+          : "Mechanic at work in the Mécano Express garage, Aylmer (Gatineau)"}
         trustBar={c.trustBar}
       />
 

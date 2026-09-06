@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { locales, isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { business } from "@/lib/business";
+import { business, towingStartingPrice } from "@/lib/business";
 import { towingIntents, getTowingIntentContent } from "@/lib/towingIntents";
 import { CallButton } from "@/components/CallButton";
 import { CheckIcon } from "@/components/Icons";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { RelatedLinks } from "@/components/sections/RelatedLinks";
 import { BrandBurst } from "@/components/BrandBurst";
 import { Reveal } from "@/components/Reveal";
 import { SplitHero } from "@/components/sections/SplitHero";
@@ -36,11 +38,17 @@ export async function generateMetadata({
   return {
     title: content.metaTitle,
     description: content.metaDescription,
+    // Ads-only near-duplicates stay crawlable (follow) so they pass link
+    // equity on, but out of the index so they can't compete with the page
+    // that actually owns the intent. See TowingIntent.indexable.
+    ...(result.intent.indexable === false
+      ? { robots: { index: false, follow: true } }
+      : {}),
     alternates: {
       canonical: `/${l}/remorquage/${intent}`,
       languages: {
-        fr: `/fr/remorquage/${intent}`,
-        en: `/en/remorquage/${intent}`,
+        "fr-CA": `/fr/remorquage/${intent}`,
+        "en-CA": `/en/remorquage/${intent}`,
         "x-default": `/fr/remorquage/${intent}`,
       },
     },
@@ -72,16 +80,34 @@ export default async function TowingIntentPage({
         description={c.metaDescription}
         url={`${business.domain}/${l}/remorquage/${slug}`}
         serviceType={c.serviceName}
+        available247
+        startingPrice={
+          // Only the price intent states a figure on the page, and the schema
+          // must not claim more than the page does.
+          c.priceQuote
+            ? { amount: towingStartingPrice.amount, currency: towingStartingPrice.currency }
+            : undefined
+        }
       />
       <FAQJsonLd items={c.faq} />
 
       <SplitHero
         dict={dict}
+        breadcrumb={
+          <Breadcrumb
+            items={[
+              { name: dict.nav.home, url: `/${l}` },
+              { name: dict.nav.towingCategory, url: `/${l}/remorquage-gatineau` },
+              { name: c.serviceName, url: `/${l}/remorquage/${slug}` },
+            ]}
+          />
+        }
         tag={c.eyebrow}
         title={c.heroTitle}
         highlight={c.heroHighlight}
         description={c.subtitle}
         image={intent.heroImage}
+        imageAlt={`${c.serviceName} — Mécano Express, Aylmer (Gatineau)`}
         trustBar={c.trustBar}
         alwaysOpen
       />
@@ -114,6 +140,32 @@ export default async function TowingIntentPage({
         </section>
       )}
 
+      {/* Cost drivers — the price intent asks "how much", and the quote panel
+          above answers "call us". This gives the visitor something concrete to
+          take away without inventing a figure. See TowingIntentContent.priceFactors. */}
+      {c.priceFactors && (
+        <section className="mx-auto max-w-5xl px-4 pb-14 sm:px-6">
+          <Reveal>
+            <h2 className="font-display text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">
+              {c.priceFactors.title}
+            </h2>
+            <p className="mt-3 max-w-2xl leading-relaxed text-steel-500">{c.priceFactors.intro}</p>
+            <dl className="mt-8 grid gap-6 sm:grid-cols-3">
+              {c.priceFactors.items.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-steel-200 bg-white p-6 shadow-sm"
+                >
+                  <dt className="font-display text-lg font-bold">{item.title}</dt>
+                  <dd className="mt-2 text-sm leading-relaxed text-steel-500">{item.text}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-6 text-sm font-semibold text-ink">{c.priceFactors.footnote}</p>
+          </Reveal>
+        </section>
+      )}
+
       <Testimonials locale={l} />
 
       {/* Reason section — the "why us" argument specific to this intent */}
@@ -141,6 +193,16 @@ export default async function TowingIntentPage({
       {c.areas && <AreaServed dict={dict} areas={c.areas} />}
 
       <FAQ title={c.faqTitle} items={c.faq} />
+
+      <RelatedLinks
+        title={l === "fr" ? "Autres services de remorquage" : "Other towing services"}
+        links={towingIntents
+          .filter((other) => other.slug !== slug)
+          .map((other) => ({
+            href: `/${l}/remorquage/${other.slug}`,
+            label: other[l].serviceName,
+          }))}
+      />
 
       {/* Secondary CTA before contact */}
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">

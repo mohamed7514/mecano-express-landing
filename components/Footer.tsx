@@ -7,6 +7,8 @@ import { type Dictionary } from "@/lib/dictionary";
 import { hoursLabel } from "@/lib/business";
 import { business } from "@/lib/business";
 import { services } from "@/lib/services";
+import { towingIntents } from "@/lib/towingIntents";
+import { mechanicIntents } from "@/lib/mechanicIntents";
 import { Logo } from "./Logo";
 import { CallButton } from "./CallButton";
 import { PinIcon, ClockIcon } from "./Icons";
@@ -25,6 +27,54 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   ].slice(0, 5);
   return (
     <footer className="bg-graphite-900 text-steel-300">
+      {/* Intent-page links. The header's services dropdown only mounts its
+          links on hover, so without this block every /remorquage/* and
+          /garage/* page had a single inbound internal link. The footer is in
+          the layout, so these ship on all 60+ pages. */}
+      <div className="border-b border-white/10">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 sm:grid-cols-2">
+          <div>
+            <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white">
+              {dict.nav.towingCategory}
+            </h3>
+            <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+              <li>
+                <Link href={`/${locale}/remorquage-gatineau`} className="hover:text-white">
+                  {locale === "fr" ? "Remorquage à Gatineau" : "Towing in Gatineau"}
+                </Link>
+              </li>
+              {towingIntents.map((intent) => (
+                <li key={intent.slug}>
+                  <Link href={`/${locale}/remorquage/${intent.slug}`} className="hover:text-white">
+                    {intent[locale].serviceName}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white">
+              {dict.nav.mechanicCategory}
+            </h3>
+            <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+              <li>
+                <Link href={`/${locale}/garage-gatineau`} className="hover:text-white">
+                  {locale === "fr" ? "Garage à Gatineau" : "Garage in Gatineau"}
+                </Link>
+              </li>
+              {mechanicIntents.map((intent) => (
+                <li key={intent.slug}>
+                  <Link href={`/${locale}/garage/${intent.slug}`} className="hover:text-white">
+                    {intent[locale].serviceName}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <Logo dark size="md" />

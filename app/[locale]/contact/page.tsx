@@ -24,7 +24,7 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical: `/${l}/contact`,
-      languages: { fr: "/fr/contact", en: "/en/contact", "x-default": "/fr/contact" },
+      languages: { "fr-CA": "/fr/contact", "en-CA": "/en/contact", "x-default": "/fr/contact" },
     },
     openGraph: { title, description, url: `${business.domain}/${l}/contact` },
   };
@@ -38,5 +38,16 @@ export default async function ContactPage({
   const { locale } = await params;
   const l: Locale = isLocale(locale) ? locale : defaultLocale;
   const dict = getDictionary(l);
-  return <ContactSection locale={l} dict={dict} />;
+  return (
+    <ContactSection
+      locale={l}
+      dict={dict}
+      as="h1"
+      title={
+        l === "fr"
+          ? "Nous joindre — garage à Aylmer, Gatineau"
+          : "Contact us — garage in Aylmer, Gatineau"
+      }
+    />
+  );
 }

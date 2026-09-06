@@ -14,7 +14,7 @@ export async function generateMetadata({
     title,
     alternates: {
       canonical: `/${l}/confidentialite`,
-      languages: { fr: "/fr/confidentialite", en: "/en/confidentialite", "x-default": "/fr/confidentialite" },
+      languages: { "fr-CA": "/fr/confidentialite", "en-CA": "/en/confidentialite", "x-default": "/fr/confidentialite" },
     },
     robots: { index: false, follow: true },
   };

@@ -97,8 +97,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       {
         id: "remorquage",
         tag: "Service rapide",
-        title: "Remorquage",
-        highlight: "Express 24/7",
+        title: "Remorquage Express",
+        highlight: "24/7 à Gatineau",
         description:
           "Un service de remorquage rapide, fiable et disponible 24h/24, 7j/7 partout à Gatineau et ses environs. Notre équipe intervient en quelques minutes pour assurer votre sécurité et transporter votre véhicule en toute tranquillité.",
       },
@@ -217,8 +217,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       {
         id: "remorquage",
         tag: "Fast service",
-        title: "Towing",
-        highlight: "Express 24/7",
+        title: "Express Towing",
+        highlight: "24/7 in Gatineau",
         description:
           "A fast, reliable towing service available 24/7 across Gatineau and the surrounding area. Our team arrives within minutes to keep you safe and transport your vehicle with total peace of mind.",
       },

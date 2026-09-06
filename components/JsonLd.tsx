@@ -1,4 +1,4 @@
-import { business } from "@/lib/business";
+import { business, sameAs } from "@/lib/business";
 import { services } from "@/lib/services";
 import type { Locale } from "@/lib/i18n";
 import type { FAQItem } from "@/lib/faq";
@@ -20,7 +20,9 @@ export function LocalBusinessJsonLd({ locale }: { locale: Locale }) {
     telephone: business.phone,
     email: business.email,
     priceRange: "$$",
-    image: `${business.domain}/logo-mark.png`,
+    image: business.photos.map((path) => `${business.domain}${path}`),
+    logo: `${business.domain}/logo-mark.png`,
+    sameAs,
     address: {
       "@type": "PostalAddress",
       streetAddress: a.street,
@@ -98,11 +100,21 @@ export function ServiceJsonLd({
   description,
   url,
   serviceType,
+  available247 = false,
+  startingPrice,
 }: {
   name: string;
   description: string;
   url: string;
   serviceType?: string;
+  /** "Starting at" price. Modelled as an AggregateOffer with lowPrice, not an
+   * Offer with price — the latter would assert one exact price for every tow,
+   * which is not what the page says. */
+  startingPrice?: { amount: number; currency: string };
+  /** Towing/roadside runs around the clock, unlike the garage premises. The
+   * AutoRepair schema above carries the shop's Mon-Sat hours, so 24/7 has to
+   * be declared here on the service itself or the two contradict each other. */
+  available247?: boolean;
 }) {
   const data = {
     "@context": "https://schema.org",
@@ -113,6 +125,54 @@ export function ServiceJsonLd({
     provider: { "@id": `${business.domain}/#business` },
     areaServed: business.areasServed.map((areaName) => ({ "@type": "City", name: areaName })),
     url,
+    ...(startingPrice
+      ? {
+          offers: {
+            "@type": "AggregateOffer",
+            priceCurrency: startingPrice.currency,
+            lowPrice: startingPrice.amount,
+          },
+        }
+      : {}),
+    ...(available247
+      ? {
+          hoursAvailable: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday", "Tuesday", "Wednesday", "Thursday",
+              "Friday", "Saturday", "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+          },
+        }
+      : {}),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/**
+ * BreadcrumbList structured data. Google uses it for the breadcrumb trail
+ * shown in place of the raw URL in search results, and it's the only signal
+ * that tells crawlers where a /garage/* or /remorquage/* page sits in the
+ * hierarchy — those pages are two levels deep with no other parent clue.
+ */
+export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string }[] }) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${business.domain}${item.url}`,
+    })),
   };
 
   return (

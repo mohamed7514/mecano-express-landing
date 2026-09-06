@@ -38,7 +38,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
            >
              <Image 
                src={slide.image}
-               alt={slide.title}
+               alt={`${slide.title} ${slide.highlight} — Mécano Express, Aylmer (Gatineau)`}
                fill
                className="object-contain object-center animate-premium-jump"
                priority={index === 0}
@@ -87,10 +87,21 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                      {slide.tag}
                    </span>
                  </div>
-                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight text-white mb-6">
-                   {slide.title} <br />
-                   <span className="text-accent">{slide.highlight}</span>
-                 </h1>
+                 {/* Only the first slide carries the <h1>. All three slides live
+                     in the DOM at once for the crossfade, so making each one an
+                     <h1> would ship three of them on every crawl. The rest are
+                     <p> with identical styling — visually indistinguishable. */}
+                 {index === 0 ? (
+                   <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight text-white mb-6">
+                     {slide.title} <br />
+                     <span className="text-accent">{slide.highlight}</span>
+                   </h1>
+                 ) : (
+                   <p className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight text-white mb-6">
+                     {slide.title} <br />
+                     <span className="text-accent">{slide.highlight}</span>
+                   </p>
+                 )}
                  <p className="text-lg leading-relaxed text-steel-200">
                    {slide.description}
                  </p>

@@ -3,10 +3,15 @@ import { isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 import { business } from "@/lib/business";
 import { CallButton } from "@/components/CallButton";
-import { ServiceJsonLd } from "@/components/JsonLd";
+import type { FAQItem } from "@/lib/faq";
+import { towingIntents } from "@/lib/towingIntents";
+import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { FAQ } from "@/components/sections/FAQ";
+import { RelatedLinks } from "@/components/sections/RelatedLinks";
 import { Photo } from "@/components/PhotoPlaceholder";
 import { BrandBurst } from "@/components/BrandBurst";
 import { Reveal } from "@/components/Reveal";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { SplitHero } from "@/components/sections/SplitHero";
 import { AreaServed } from "@/components/sections/AreaServed";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -32,7 +37,6 @@ const copy: Record<
     metaTitle: string;
     metaDescription: string;
     eyebrow: string;
-    h1: string;
     heroTitle: string;
     heroHighlight: string;
     subtitle: string;
@@ -42,6 +46,8 @@ const copy: Record<
     galleryTitle: string;
     ctaCardTitle: string;
     ctaCardText: string;
+    faqTitle: string;
+    faq: FAQItem[];
   }
 > = {
   fr: {
@@ -49,9 +55,8 @@ const copy: Record<
     metaDescription:
       "Service de remorquage et dépanneuse à Gatineau, Aylmer, Hull et Buckingham. Intervention rapide, prix confirmé avant le départ. Appelez le (819) 921-7869.",
     eyebrow: "Remorquage & dépannage · Outaouais",
-    h1: "En panne à Gatineau, Aylmer ou Hull ? Remorquage rapide",
     heroTitle: "Remorquage",
-    heroHighlight: "à Gatineau",
+    heroHighlight: "à Gatineau, Aylmer & Hull",
     subtitle:
       "On vous localise et on envoie une remorqueuse rapidement. Prix confirmé avant le départ, aucune surprise.",
     trustBar: ["Prix confirmé avant le départ", "Disponible jour et nuit", "Camion près de vous"],
@@ -64,15 +69,47 @@ const copy: Record<
     galleryTitle: "Notre flotte, sur la route",
     ctaCardTitle: "Toujours en panne ?",
     ctaCardText: "N'attendez pas sur le bord de la route — appelez, on s'occupe du reste.",
+    faqTitle: "Questions fréquentes — Remorquage à Gatineau",
+    faq: [
+      {
+        question: "Êtes-vous disponibles la nuit et la fin de semaine ?",
+        answer:
+          "Oui. Le remorquage et le dépannage roulent 24 heures sur 24, 7 jours sur 7, y compris la nuit, la fin de semaine et les jours fériés. Le garage, lui, est ouvert du lundi au samedi de 9h à 18h.",
+      },
+      {
+        question: "Combien coûte un remorquage à Gatineau ?",
+        answer:
+          "Le prix dépend de la distance et du type de véhicule. On vous le confirme au téléphone avant d'envoyer le camion — vous savez exactement ce que vous payez avant qu'on parte, sans frais ajoutés à l'arrivée.",
+      },
+      {
+        question: "Quels secteurs desservez-vous ?",
+        answer:
+          "Gatineau, Aylmer, Hull et Buckingham, ainsi que les environs en Outaouais. Appelez avec votre position, on vous dit tout de suite si on peut vous rejoindre et en combien de temps.",
+      },
+      {
+        question: "En combien de temps arrivez-vous ?",
+        answer:
+          "On envoie le camion disponible le plus proche de vous. Le délai dépend de votre position et de la circulation — on vous donne une estimation honnête au téléphone plutôt qu'une promesse qu'on ne peut pas tenir.",
+      },
+      {
+        question: "Remorquez-vous autre chose que des voitures ?",
+        answer:
+          "Oui : poids lourds, motos, VR, roulottes et bateaux. On a aussi le survoltage de batterie et le déverrouillage de portière si votre véhicule n'a pas besoin d'être remorqué.",
+      },
+      {
+        question: "Où mon véhicule sera-t-il remorqué ?",
+        answer:
+          "Là où vous voulez : chez vous, chez votre garagiste, ou à notre garage au 879 chemin Vanier à Aylmer si vous voulez qu'on regarde le problème directement.",
+      },
+    ],
   },
   en: {
     metaTitle: "Towing in Gatineau, Aylmer, Hull | Mécano Express",
     metaDescription:
       "Towing and tow truck service in Gatineau, Aylmer, Hull and Buckingham. Fast dispatch, price confirmed before departure. Call (819) 921-7869.",
     eyebrow: "Towing & roadside assistance · Outaouais",
-    h1: "Broken down in Gatineau, Aylmer or Hull? Fast towing",
     heroTitle: "Towing",
-    heroHighlight: "in Gatineau",
+    heroHighlight: "in Gatineau, Aylmer & Hull",
     subtitle:
       "We locate you and dispatch a tow truck fast. Price confirmed before departure, no surprises.",
     trustBar: ["Price confirmed before departure", "Available day and night", "Truck near you"],
@@ -85,6 +122,39 @@ const copy: Record<
     galleryTitle: "Our fleet, on the road",
     ctaCardTitle: "Still stuck?",
     ctaCardText: "Don't wait on the side of the road — call, we'll handle the rest.",
+    faqTitle: "Frequently Asked Questions — Towing in Gatineau",
+    faq: [
+      {
+        question: "Are you available at night and on weekends?",
+        answer:
+          "Yes. Towing and roadside assistance run 24 hours a day, 7 days a week, including nights, weekends and holidays. The garage itself is open Monday to Saturday, 9 AM to 6 PM.",
+      },
+      {
+        question: "How much does a tow cost in Gatineau?",
+        answer:
+          "It depends on the distance and the type of vehicle. We confirm the price on the phone before dispatching the truck — you know exactly what you're paying before we leave, with nothing added on arrival.",
+      },
+      {
+        question: "Which areas do you cover?",
+        answer:
+          "Gatineau, Aylmer, Hull and Buckingham, plus the surrounding Outaouais area. Call with your location and we'll tell you right away whether we can reach you and how long it will take.",
+      },
+      {
+        question: "How fast do you arrive?",
+        answer:
+          "We dispatch the closest available truck. The time depends on your location and traffic — we give you an honest estimate on the phone rather than a promise we can't keep.",
+      },
+      {
+        question: "Do you tow anything other than cars?",
+        answer:
+          "Yes: heavy trucks, motorcycles, RVs, trailers and boats. We also do battery boosts and car lockouts if your vehicle doesn't actually need towing.",
+      },
+      {
+        question: "Where will my vehicle be towed?",
+        answer:
+          "Wherever you want: your home, your own mechanic, or our garage at 879 chemin Vanier in Aylmer if you'd like us to look at the problem directly.",
+      },
+    ],
   },
 };
 
@@ -102,8 +172,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${l}/remorquage-gatineau`,
       languages: {
-        fr: "/fr/remorquage-gatineau",
-        en: "/en/remorquage-gatineau",
+        "fr-CA": "/fr/remorquage-gatineau",
+        "en-CA": "/en/remorquage-gatineau",
         "x-default": "/fr/remorquage-gatineau",
       },
     },
@@ -127,20 +197,33 @@ export default async function RemorquageGatineauPage({
 
   return (
     <div className="pb-24 md:pb-0">
+      <FAQJsonLd items={c.faq} />
       <ServiceJsonLd
         name={l === "fr" ? "Remorquage" : "Towing"}
         description={c.metaDescription}
         url={`${business.domain}/${l}/remorquage-gatineau`}
         serviceType={l === "fr" ? "Remorquage" : "Towing service"}
+        available247
       />
 
       <SplitHero
         dict={dict}
+        breadcrumb={
+          <Breadcrumb
+            items={[
+              { name: dict.nav.home, url: `/${l}` },
+              { name: dict.nav.towingCategory, url: `/${l}/remorquage-gatineau` },
+            ]}
+          />
+        }
         tag={c.eyebrow}
         title={c.heroTitle}
         highlight={c.heroHighlight}
         description={c.subtitle}
         image={{ kind: "static", src: "/remorquage.webp" }}
+        imageAlt={l === "fr"
+          ? "Remorqueuse Mécano Express prête à intervenir à Gatineau"
+          : "Mécano Express tow truck ready to dispatch in Gatineau"}
         trustBar={c.trustBar}
         alwaysOpen
       />
@@ -176,7 +259,9 @@ export default async function RemorquageGatineauPage({
           <Reveal>
             <Photo
               name="gallery-1.webp"
-              alt=""
+              alt={l === "fr"
+                ? "Remorqueuse Mécano Express en intervention à Gatineau"
+                : "Mécano Express tow truck on a call in Gatineau"}
               width={1000}
               height={1000}
               className="aspect-square w-full rounded-2xl border border-steel-200 object-cover"
@@ -185,7 +270,9 @@ export default async function RemorquageGatineauPage({
           <Reveal delay={100}>
             <Photo
               name="gallery-2.webp"
-              alt=""
+              alt={l === "fr"
+                ? "Camion de remorquage Mécano Express chargeant un véhicule"
+                : "Mécano Express tow truck loading a vehicle"}
               width={1000}
               height={1000}
               className="aspect-square w-full rounded-2xl border border-steel-200 object-cover"
@@ -195,6 +282,16 @@ export default async function RemorquageGatineauPage({
       </section>
 
       <AreaServed dict={dict} areas={AREAS} />
+
+      <FAQ title={c.faqTitle} items={c.faq} />
+
+      <RelatedLinks
+        title={l === "fr" ? "Remorquage par situation" : "Towing by situation"}
+        links={towingIntents.map((intent) => ({
+          href: `/${l}/remorquage/${intent.slug}`,
+          label: intent[l].serviceName,
+        }))}
+      />
 
       {/* Secondary CTA before contact */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6">

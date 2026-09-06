@@ -32,6 +32,40 @@ export const business = {
     { days: [1, 2, 3, 4, 5, 6], opens: "09:00", closes: "18:00" },
   ],
   areasServed: ["Aylmer", "Hull", "Gatineau", "Buckingham", "Ottawa"],
+  /**
+   * Photos for the LocalBusiness schema. Google wants actual pictures of the
+   * business here, not a logo — the logo goes in the separate `logo` field.
+   */
+  photos: ["/remorquage.webp", "/camionlourd.webp", "/photos/mecanique.webp"],
+} as const;
+
+/**
+ * Profiles that confirm this is the same business as the site — the `sameAs`
+ * of the LocalBusiness schema. The Google Business Profile listing is the one
+ * that matters for local ranking; add the Facebook page and any directory
+ * listings (Yelp, PagesJaunes) here as they're created.
+ */
+export const sameAs: string[] = [business.mapUrl];
+
+/**
+ * Floor price for a tow — "starting at". Single source for every place the
+ * site states it: the hero on /remorquage/prix, the quote panel, the FAQ
+ * (which feeds the FAQPage schema), the meta description and the Offer in
+ * the Service schema. One constant so the figure can never drift between
+ * them, and so raising it is a one-line change.
+ *
+ * Formatting is per locale, not computed: Quebec French puts the comma as
+ * the decimal mark and the dollar sign after the amount ("79,99 $"), English
+ * Canada puts it before ("$79.99").
+ *
+ * NOTE: this is the amount before tax status is stated. Nothing on the site
+ * claims the figure is tax-included — do not add that claim without the
+ * client confirming it.
+ */
+export const towingStartingPrice = {
+  amount: 79.99,
+  currency: "CAD",
+  display: { fr: "79,99 $", en: "$79.99" },
 } as const;
 
 export const hoursLabel: Record<Locale, string> = {

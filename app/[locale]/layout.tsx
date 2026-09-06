@@ -41,12 +41,12 @@ export async function generateMetadata({
   const l: Locale = isLocale(locale) ? locale : defaultLocale;
   const title =
     l === "fr"
-      ? "Garage à Aylmer, Gatineau — Mécanique sans rendez-vous | Mécano Express"
-      : "Garage in Aylmer, Gatineau — Walk-in Mechanic | Mécano Express";
+      ? "Remorquage 24/7 et garage à Aylmer, Gatineau | Mécano Express"
+      : "24/7 Towing & Garage in Aylmer, Gatineau | Mécano Express";
   const description =
     l === "fr"
-      ? "Garage et mécanique automobile à Aylmer (Gatineau). Freins, pneus, huile, diagnostic. Sans rendez-vous, ouvert le samedi. Appelez le (819) 921-7869."
-      : "Auto garage & mechanic in Aylmer (Gatineau). Brakes, tires, oil, diagnostics. Walk-in, open Saturdays. Call (819) 921-7869.";
+      ? "Remorquage 24h/24 et garage automobile à Aylmer (Gatineau). Freins, pneus, huile, diagnostic. Sans rendez-vous : (819) 921-7869."
+      : "24/7 towing and auto garage in Aylmer (Gatineau). Brakes, tires, oil, diagnostics. Walk-in welcome: (819) 921-7869.";
 
   return {
     metadataBase: new URL(business.domain),
@@ -54,7 +54,7 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical: `/${l}`,
-      languages: { fr: "/fr", en: "/en", "x-default": "/fr" },
+      languages: { "fr-CA": "/fr", "en-CA": "/en", "x-default": "/fr" },
     },
     openGraph: {
       type: "website",

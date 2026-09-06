@@ -26,6 +26,14 @@ export type MechanicIntent = {
    * (where), specialty (which repair symptom/part) or situation (price,
    * urgency) rather than one flat undifferentiated list. */
   group: "zone" | "specialty" | "situation";
+  /**
+   * Ads-only landing pages: their search intent is already owned by a
+   * stronger page (/garage-gatineau, /remorquage-gatineau, /services/freins),
+   * so indexing them would split the signal between near-duplicates. They
+   * stay live and linked for paid traffic, but ship robots "noindex, follow"
+   * and are kept out of the sitemap. Defaults to true.
+   */
+  indexable?: boolean;
   fr: MechanicIntentContent;
   en: MechanicIntentContent;
 };
@@ -232,6 +240,7 @@ export const mechanicIntents: MechanicIntent[] = [
   },
   {
     slug: "near-me",
+    indexable: false,
     group: "situation",
     heroImage: { kind: "photo", name: "mecanique.webp" },
     fr: {
@@ -347,6 +356,7 @@ export const mechanicIntents: MechanicIntent[] = [
   },
   {
     slug: "prix",
+    indexable: false,
     group: "situation",
     heroImage: { kind: "photo", name: "mecanique.webp" },
     fr: {
@@ -440,6 +450,7 @@ export const mechanicIntents: MechanicIntent[] = [
   },
   {
     slug: "freins-near-me",
+    indexable: false,
     group: "specialty",
     heroImage: { kind: "photo", name: "mecanique.webp" },
     fr: {

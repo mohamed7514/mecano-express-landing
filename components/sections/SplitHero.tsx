@@ -20,6 +20,7 @@ export function SplitHero({
   highlight,
   description,
   image,
+  imageAlt,
   trustBar,
   alwaysOpen = false,
 }: {
@@ -30,6 +31,10 @@ export function SplitHero({
   highlight?: string;
   description: string;
   image: HeroImage;
+  /** Descriptive alt text. Falls back to the heading, which on most pages is
+   * a one- or two-word fragment ("Garage", "Remorquage") — fine as a heading,
+   * useless as an image description. */
+  imageAlt?: string;
   trustBar?: string[];
   /** Towing pages run 24/7, independent of the garage's posted hours. */
   alwaysOpen?: boolean;
@@ -41,7 +46,7 @@ export function SplitHero({
         {image.kind === "photo" ? (
           <Photo
             name={image.name}
-            alt={title}
+            alt={imageAlt ?? title}
             fill
             preload
             sizes="(min-width: 1024px) 50vw, 100vw"
@@ -50,7 +55,7 @@ export function SplitHero({
         ) : (
           <Image
             src={image.src}
-            alt={title}
+            alt={imageAlt ?? title}
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

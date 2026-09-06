@@ -8,6 +8,7 @@ import { towingIntents } from "@/lib/towingIntents";
 import { business } from "@/lib/business";
 import { CallButton } from "@/components/CallButton";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { serviceIcons, CheckIcon, ArrowIcon } from "@/components/Icons";
 import { SplitHero } from "@/components/sections/SplitHero";
 import { FAQ } from "@/components/sections/FAQ";
@@ -38,8 +39,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${l}/services/${c.slug}`,
       languages: {
-        fr: `/fr/services/${service.fr.slug}`,
-        en: `/en/services/${service.en.slug}`,
+        "fr-CA": `/fr/services/${service.fr.slug}`,
+        "en-CA": `/en/services/${service.en.slug}`,
         "x-default": `/fr/services/${service.fr.slug}`,
       },
     },
@@ -77,13 +78,13 @@ export default async function ServiceDetailPage({
       <SplitHero
         dict={dict}
         breadcrumb={
-          <nav className="flex items-center gap-2 text-sm text-steel-400" aria-label="Breadcrumb">
-            <Link href={`/${l}`} className="hover:text-white">{dict.nav.home}</Link>
-            <span>/</span>
-            <Link href={`/${l}/services`} className="hover:text-white">{dict.nav.services}</Link>
-            <span>/</span>
-            <span className="text-steel-300">{c.name}</span>
-          </nav>
+          <Breadcrumb
+            items={[
+              { name: dict.nav.home, url: `/${l}` },
+              { name: dict.nav.services, url: `/${l}/services` },
+              { name: c.name, url: `/${l}/services/${c.slug}` },
+            ]}
+          />
         }
         tag={c.tagline}
         title={c.name}

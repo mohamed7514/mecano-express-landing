@@ -111,9 +111,9 @@ export const services: Service[] = [
         "Inspection visuelle multipoint offerte",
         "Sans rendez-vous — passez quand ça vous convient",
       ],
-      metaTitle: "Changement d'huile à Aylmer sans rendez-vous | Mécano Express",
+      metaTitle: "Changement d'huile sans rendez-vous à Aylmer",
       metaDescription:
-        "Changement d'huile rapide et sans rendez-vous à Aylmer (Gatineau). Huile synthétique ou conventionnelle, filtre inclus. Ouvert le samedi. Appelez le (819) 921-7869.",
+        "Changement d'huile rapide et sans rendez-vous à Aylmer (Gatineau). Huile synthétique ou conventionnelle, filtre inclus. Ouvert le samedi. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur le changement d'huile",
       faq: [
         {
@@ -257,7 +257,7 @@ export const services: Service[] = [
         "Réparation de crevaison",
         "Service rapide, sans longue attente",
       ],
-      metaTitle: "Pneus à Aylmer et Gatineau — pose et balancement | Mécano Express",
+      metaTitle: "Pneus à Aylmer et Gatineau — pose et balancement",
       metaDescription:
         "Installation, changement et balancement de pneus à Aylmer et Gatineau. Pneus toutes saisons, réparation de crevaison. Sans rendez-vous. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur les pneus",
@@ -291,7 +291,7 @@ export const services: Service[] = [
         "Flat tire repair",
         "Fast service, no long wait",
       ],
-      metaTitle: "Tires in Aylmer & Gatineau — mounting & balancing | Mécano Express",
+      metaTitle: "Tires in Aylmer & Gatineau — Mounting and Balancing",
       metaDescription:
         "Tire installation, changeover and balancing in Aylmer and Gatineau. All-season tires, flat repair. Walk-in welcome. (819) 921-7869.",
       faqTitle: "Frequently Asked Questions About Tires",
@@ -332,7 +332,7 @@ export const services: Service[] = [
       ],
       metaTitle: "Diagnostic automobile à Aylmer (Gatineau) | Mécano Express",
       metaDescription:
-        "Diagnostic électronique complet à Aylmer. Voyant moteur, problème électrique : on trouve la vraie cause. Explication claire, estimation honnête. (819) 921-7869.",
+        "Diagnostic électronique complet à Aylmer. Voyant moteur ou problème électrique : on trouve la vraie cause, estimation honnête. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur le diagnostic",
       faq: [
         {
@@ -437,7 +437,7 @@ export const services: Service[] = [
         "Steering and ball joints",
         "Steadier ride, longer-lasting tires",
       ],
-      metaTitle: "Suspension & Alignment in Aylmer (Gatineau) | Mécano Express",
+      metaTitle: "Suspension & Alignment in Aylmer, Gatineau",
       metaDescription:
         "Suspension, steering and wheel alignment repair in Aylmer. Shocks, springs, ball joints. Stable ride, tires that last. (819) 921-7869.",
       faqTitle: "Frequently Asked Questions About Suspension & Alignment",
@@ -549,7 +549,7 @@ export const services: Service[] = [
         "Réparation de convertisseur",
         "Réduction du bruit et des émissions",
       ],
-      metaTitle: "Réparation d'échappement et soudure à Aylmer | Mécano Express",
+      metaTitle: "Réparation d'échappement et soudure à Aylmer",
       metaDescription:
         "Réparation de systèmes d'échappement et soudure générale à Aylmer. Silencieux, tuyaux, convertisseurs. Service expert. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur l'échappement",
@@ -622,7 +622,7 @@ export const services: Service[] = [
         "Réparation et entretien préventif",
         "On évite la grosse facture plus tard",
       ],
-      metaTitle: "Réparation de transmission à Aylmer (Gatineau) | Mécano Express",
+      metaTitle: "Réparation de transmission à Aylmer, Gatineau",
       metaDescription:
         "Entretien et réparation de transmission à Aylmer. Changement de fluide, diagnostic, entretien préventif. Estimation honnête. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur la transmission",

@@ -26,7 +26,7 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical: `/${l}/services`,
-      languages: { fr: "/fr/services", en: "/en/services", "x-default": "/fr/services" },
+      languages: { "fr-CA": "/fr/services", "en-CA": "/en/services", "x-default": "/fr/services" },
     },
     openGraph: { title, description, url: `${business.domain}/${l}/services` },
   };
@@ -50,6 +50,9 @@ export default async function ServicesPage({
         highlight={dict.services.heroHighlight}
         description={dict.services.subtitle}
         image={{ kind: "photo", name: "mecanique.webp" }}
+        imageAlt={l === "fr"
+          ? "Atelier du garage Mécano Express au 879 chemin Vanier, Aylmer"
+          : "The Mécano Express workshop at 879 chemin Vanier, Aylmer"}
       />
       <ServicesGrid locale={l} dict={dict} heading={false} />
       <ContactSection locale={l} dict={dict} />

@@ -8,12 +8,20 @@ export function ContactSection({
   locale,
   dict,
   alwaysOpen = false,
+  as: Heading = "h2",
+  title,
 }: {
   locale: Locale;
   dict: Dictionary;
   /** Towing pages run 24/7 — show the availability label instead of the
    * garage's posted hours and the walk-in note. */
   alwaysOpen?: boolean;
+  /** This section is the whole body of /contact, where its title has to be
+   * the page's h1 — everywhere else it's a closing block under an existing
+   * h1, so it stays an h2. */
+  as?: "h1" | "h2";
+  /** Overrides dict.contact.title (used by /contact for a keyword-bearing h1). */
+  title?: string;
 }) {
   const a = business.address;
   return (
@@ -24,9 +32,9 @@ export function ContactSection({
           <p className="font-display text-sm font-bold uppercase tracking-wide text-accent">
             {dict.contact.eyebrow}
           </p>
-          <h2 className="font-display mt-2 text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">
-            {dict.contact.title}
-          </h2>
+          <Heading className="font-display mt-2 text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">
+            {title ?? dict.contact.title}
+          </Heading>
           <p className="mt-4 max-w-md text-lg text-steel-300">{dict.contact.subtitle}</p>
 
           <dl className="mt-8 space-y-5">

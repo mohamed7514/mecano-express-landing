@@ -6,6 +6,8 @@ import { business } from "@/lib/business";
 import { mechanicIntents, getMechanicIntentContent } from "@/lib/mechanicIntents";
 import { CallButton } from "@/components/CallButton";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { RelatedLinks } from "@/components/sections/RelatedLinks";
 import { BrandBurst } from "@/components/BrandBurst";
 import { Reveal } from "@/components/Reveal";
 import { SplitHero } from "@/components/sections/SplitHero";
@@ -35,11 +37,17 @@ export async function generateMetadata({
   return {
     title: content.metaTitle,
     description: content.metaDescription,
+    // Ads-only near-duplicates stay crawlable (follow) so they pass link
+    // equity on, but out of the index so they can't compete with the page
+    // that actually owns the intent. See MechanicIntent.indexable.
+    ...(result.intent.indexable === false
+      ? { robots: { index: false, follow: true } }
+      : {}),
     alternates: {
       canonical: `/${l}/garage/${intent}`,
       languages: {
-        fr: `/fr/garage/${intent}`,
-        en: `/en/garage/${intent}`,
+        "fr-CA": `/fr/garage/${intent}`,
+        "en-CA": `/en/garage/${intent}`,
         "x-default": `/fr/garage/${intent}`,
       },
     },
@@ -76,11 +84,21 @@ export default async function MechanicIntentPage({
 
       <SplitHero
         dict={dict}
+        breadcrumb={
+          <Breadcrumb
+            items={[
+              { name: dict.nav.home, url: `/${l}` },
+              { name: dict.nav.mechanicCategory, url: `/${l}/garage-gatineau` },
+              { name: c.serviceName, url: `/${l}/garage/${slug}` },
+            ]}
+          />
+        }
         tag={c.eyebrow}
         title={c.heroTitle}
         highlight={c.heroHighlight}
         description={c.subtitle}
         image={intent.heroImage}
+        imageAlt={`${c.serviceName} — Mécano Express, Aylmer (Gatineau)`}
         trustBar={c.trustBar}
       />
 
@@ -111,6 +129,16 @@ export default async function MechanicIntentPage({
       {c.areas && <AreaServed dict={dict} areas={c.areas} />}
 
       <FAQ title={c.faqTitle} items={c.faq} />
+
+      <RelatedLinks
+        title={l === "fr" ? "Autres services du garage" : "Other garage services"}
+        links={mechanicIntents
+          .filter((other) => other.slug !== slug)
+          .map((other) => ({
+            href: `/${l}/garage/${other.slug}`,
+            label: other[l].serviceName,
+          }))}
+      />
 
       {/* Secondary CTA before contact */}
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">

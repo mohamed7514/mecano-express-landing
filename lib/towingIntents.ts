@@ -5,7 +5,6 @@ export type TowingIntentContent = {
   metaTitle: string;
   metaDescription: string;
   eyebrow: string;
-  h1: string;
   heroTitle: string;
   heroHighlight: string;
   subtitle: string;
@@ -19,6 +18,25 @@ export type TowingIntentContent = {
     title: string;
     text: string;
     points: string[];
+  };
+  /**
+   * "What determines your price" breakdown, shown under the quote panel on
+   * the price intent. Google rates this page's landing page experience BELOW
+   * AVERAGE on the generic price keywords ("prix remorquage voiture",
+   * "cout remorquage voiture") because the page asks "how much does it cost"
+   * and answers "call us" — no figure anywhere. This block answers with the
+   * real cost drivers instead, so the visitor learns something concrete.
+   *
+   * Every claim here must already be stated elsewhere on the page — never
+   * invent a pricing policy. The actual fix is still a real number: add a
+   * starting price or a range to priceQuote once the client supplies their
+   * tariff. Until then this is a partial answer, not a complete one.
+   */
+  priceFactors?: {
+    title: string;
+    intro: string;
+    items: { title: string; text: string }[];
+    footnote: string;
   };
   areas?: string[];
   ctaCardTitle: string;
@@ -38,6 +56,14 @@ export type TowingIntent = {
    * (where), specialty (what kind of vehicle/service) or situation (price,
    * urgency) rather than one flat undifferentiated list. */
   group: "zone" | "specialty" | "situation";
+  /**
+   * Ads-only landing pages: their search intent is already owned by a
+   * stronger page (/garage-gatineau, /remorquage-gatineau, /services/freins),
+   * so indexing them would split the signal between near-duplicates. They
+   * stay live and linked for paid traffic, but ship robots "noindex, follow"
+   * and are kept out of the sitemap. Defaults to true.
+   */
+  indexable?: boolean;
   fr: TowingIntentContent;
   en: TowingIntentContent;
 };
@@ -55,11 +81,10 @@ export const towingIntents: TowingIntent[] = [
     group: "zone",
     heroImage: { kind: "static", src: "/remorquage.webp" },
     fr: {
-      metaTitle: "Remorquage à Aylmer — Remorqueuse locale, prix confirmé | Mécano Express",
+      metaTitle: "Remorquage à Aylmer — Remorqueuse locale, prix confirmé",
       metaDescription:
         "Remorquage à Aylmer avec camion basé sur place. Intervention en minutes, prix confirmé au téléphone avant le départ. Appelez le (819) 921-7869.",
       eyebrow: "Remorquage · Aylmer",
-      h1: "Remorquage à Aylmer — la remorqueuse est déjà dans votre quartier",
       heroTitle: "Remorquage",
       heroHighlight: "à Aylmer",
       subtitle:
@@ -104,11 +129,10 @@ export const towingIntents: TowingIntent[] = [
       ],
     },
     en: {
-      metaTitle: "Towing in Aylmer — Local Tow Truck, Price Confirmed | Mécano Express",
+      metaTitle: "Towing in Aylmer — Local Tow Truck, Fixed Price",
       metaDescription:
         "Towing in Aylmer with a truck based on site. Dispatched in minutes, price confirmed by phone before we leave. Call (819) 921-7869.",
       eyebrow: "Towing · Aylmer",
-      h1: "Towing in Aylmer — the tow truck is already in your neighborhood",
       heroTitle: "Towing",
       heroHighlight: "in Aylmer",
       subtitle:
@@ -158,11 +182,10 @@ export const towingIntents: TowingIntent[] = [
     group: "zone",
     heroImage: { kind: "static", src: "/remorquage.webp" },
     fr: {
-      metaTitle: "Remorquage Outaouais — Chelsea, Cantley, Val-des-Monts, Buckingham | Mécano Express",
+      metaTitle: "Remorquage Outaouais — Chelsea, Cantley, Buckingham",
       metaDescription:
         "Service de remorquage partout en Outaouais : Chelsea, Cantley, Val-des-Monts, Buckingham, Hull. Prix confirmé avant le départ. Appelez le (819) 921-7869.",
       eyebrow: "Remorquage · Outaouais",
-      h1: "Remorquage partout en Outaouais, pas juste à Gatineau",
       heroTitle: "Remorquage",
       heroHighlight: "Hull & Buckingham",
       subtitle:
@@ -207,11 +230,10 @@ export const towingIntents: TowingIntent[] = [
       ],
     },
     en: {
-      metaTitle: "Towing in Outaouais — Chelsea, Cantley, Val-des-Monts, Buckingham | Mécano Express",
+      metaTitle: "Towing in Outaouais — Chelsea, Cantley, Buckingham",
       metaDescription:
         "Towing service across the Outaouais: Chelsea, Cantley, Val-des-Monts, Buckingham, Hull. Price confirmed before dispatch. Call (819) 921-7869.",
       eyebrow: "Towing · Outaouais",
-      h1: "Towing across the Outaouais, not just Gatineau",
       heroTitle: "Towing",
       heroHighlight: "Hull & Buckingham",
       subtitle:
@@ -261,16 +283,15 @@ export const towingIntents: TowingIntent[] = [
     group: "situation",
     heroImage: { kind: "static", src: "/remorquage.webp" },
     fr: {
-      metaTitle: "Remorquage moins cher à Gatineau — On bat le prix | Mécano Express",
+      metaTitle: "Remorquage à Gatineau à partir de 79,99 $",
       metaDescription:
-        "Vous trouvez moins cher ? On bat le prix. Devis gratuit confirmé au téléphone en 2 minutes, prix final sans frais caché. Remorquage 24h/24. (819) 921-7869.",
+        "Remorquage à Gatineau à partir de 79,99 $. On bat le prix : devis confirmé au téléphone en 2 minutes, prix final sans frais caché. (819) 921-7869.",
       eyebrow: "Meilleur prix · Remorquage",
-      h1: "Remorquage moins cher à Gatineau — on bat le prix",
-      heroTitle: "Remorquage moins cher",
-      heroHighlight: "à Gatineau",
+      heroTitle: "Remorquage à Gatineau",
+      heroHighlight: "à partir de 79,99 $",
       subtitle:
-        "Vous trouvez moins cher ailleurs ? On bat le prix. Dites-nous où vous êtes et où vous allez : on vous confirme le prix au téléphone en 2 minutes — prix final, aucun frais caché.",
-      trustBar: ["On bat le prix, garanti", "Devis gratuit en 2 minutes", "Aucun frais caché"],
+        "Nos remorquages commencent à 79,99 $. Dites-nous où vous êtes et où vous allez : on vous confirme le montant exact au téléphone en 2 minutes — prix final, aucun frais caché. Et si vous trouvez moins cher ailleurs, on bat le prix.",
+      trustBar: ["À partir de 79,99 $", "On bat le prix, garanti", "Aucun frais caché"],
       reasonsTitle: "Le tarif d'un remorquage à Gatineau — et on bat la concurrence",
       reasons: [
         {
@@ -288,13 +309,35 @@ export const towingIntents: TowingIntent[] = [
       ],
       priceQuote: {
         title: "Combien coûte un remorquage à Gatineau ?",
-        text: "Un simple appel suffit : on vous donne le prix pour remorquer votre voiture en 2 minutes, confirmé au téléphone avant d'envoyer le camion. Et si vous trouvez moins cher ailleurs, on bat le prix. Le montant annoncé est le prix final — aucun frais caché.",
+        text: "Nos remorquages commencent à 79,99 $. Le montant exact dépend de votre position et de la distance : donnez-nous les deux et on vous le confirme au téléphone en 2 minutes, avant d'envoyer le camion. Et si vous trouvez moins cher ailleurs, on bat le prix. Le montant annoncé est le prix final — aucun frais caché.",
         points: [
+          "Remorquage à partir de 79,99 $",
           "On bat le prix : trouvez moins cher, on s'aligne",
           "Devis gratuit confirmé au téléphone en 2 minutes",
           "Prix final, aucun frais caché — promis",
           "Remorquage sécuritaire et fiable, 24h/24",
         ],
+      },
+      priceFactors: {
+        title: "Ce qui fait varier le prix d'un remorquage",
+        intro:
+          "Nos remorquages commencent à 79,99 $. Voici exactement ce qui fait bouger le montant à partir de là, pour que vous sachiez à quoi vous attendre avant même de décrocher le téléphone.",
+        items: [
+          {
+            title: "La distance",
+            text: "C'est le facteur principal : d'où on vous récupère et où va votre véhicule. Un remorquage à l'intérieur d'Aylmer et un transport à l'autre bout de l'Outaouais ne se calculent pas de la même façon.",
+          },
+          {
+            title: "Le type de véhicule",
+            text: "Une voiture, un poids lourd, une moto, un VR, une roulotte ou un bateau ne demandent ni le même camion ni le même équipement.",
+          },
+          {
+            title: "Ce qui ne s'ajoute jamais",
+            text: "Rien à l'arrivée. Le montant confirmé au téléphone est celui que vous payez — le soir, la fin de semaine ou un jour férié, c'est le montant annoncé qui s'applique.",
+          },
+        ],
+        footnote:
+          "Le chiffre exact, on vous le donne au téléphone en 2 minutes — gratuitement et sans engagement.",
       },
       ctaCardTitle: "Vous voulez le meilleur prix ?",
       ctaCardText: "Un appel suffit — prix confirmé en 2 minutes, et on bat la concurrence.",
@@ -304,7 +347,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Combien coûte le remorquage d'une voiture ?",
           answer:
-            "Le coût dépend surtout de votre position et de la distance jusqu'à la destination. On calcule votre prix et on vous le confirme au téléphone en 2 minutes — gratuitement et sans engagement.",
+            "Nos remorquages commencent à 79,99 $. À partir de là, le coût dépend surtout de votre position et de la distance jusqu'à la destination. On calcule votre montant exact et on vous le confirme au téléphone en 2 minutes — gratuitement et sans engagement.",
         },
         {
           question: "Battez-vous vraiment le prix des autres remorqueurs ?",
@@ -323,16 +366,15 @@ export const towingIntents: TowingIntent[] = [
       ],
     },
     en: {
-      metaTitle: "Cheaper Towing in Gatineau — We Beat the Price | Mécano Express",
+      metaTitle: "Towing in Gatineau from $79.99",
       metaDescription:
-        "Found it cheaper? We beat the price. Free quote confirmed by phone in 2 minutes, final price with no hidden fees. Towing 24/7. Call (819) 921-7869.",
+        "Towing in Gatineau from $79.99. We beat the price: free quote confirmed by phone in 2 minutes, final price with no hidden fees. Call (819) 921-7869.",
       eyebrow: "Best price · Towing",
-      h1: "Cheaper towing in Gatineau — we beat the price",
-      heroTitle: "Cheaper towing",
-      heroHighlight: "in Gatineau",
+      heroTitle: "Towing in Gatineau",
+      heroHighlight: "from $79.99",
       subtitle:
-        "Found a lower price elsewhere? We beat it. Tell us where you are and where you're headed: we confirm your price by phone in 2 minutes — final price, no hidden fees.",
-      trustBar: ["We beat the price", "Free quote in 2 minutes", "No hidden fees"],
+        "Our tows start at $79.99. Tell us where you are and where you're headed: we confirm the exact amount by phone in 2 minutes — final price, no hidden fees. And if you find it cheaper elsewhere, we beat the price.",
+      trustBar: ["From $79.99", "We beat the price", "No hidden fees"],
       reasonsTitle: "Towing rates in Gatineau — and we beat the competition",
       reasons: [
         {
@@ -350,13 +392,35 @@ export const towingIntents: TowingIntent[] = [
       ],
       priceQuote: {
         title: "How much does a tow cost in Gatineau?",
-        text: "One call is all it takes: we give you the price to tow your car in 2 minutes, confirmed by phone before the truck leaves. And if you find it cheaper elsewhere, we beat the price. The amount quoted is the final price — no hidden fees.",
+        text: "Our tows start at $79.99. The exact amount depends on where you are and how far your vehicle is going: give us both and we confirm it by phone in 2 minutes, before the truck leaves. And if you find it cheaper elsewhere, we beat the price. The amount quoted is the final price — no hidden fees.",
         points: [
+          "Towing from $79.99",
           "We beat the price: find it cheaper, we match it",
           "Free quote confirmed by phone in 2 minutes",
           "Final price, no hidden fees — promised",
           "Safe, reliable towing, 24/7",
         ],
+      },
+      priceFactors: {
+        title: "What makes the price of a tow go up or down",
+        intro:
+          "Our tows start at $79.99. Here is exactly what moves the amount from there, so you know what to expect before you even pick up the phone.",
+        items: [
+          {
+            title: "The distance",
+            text: "This is the main factor: where we pick you up and where your vehicle is going. A tow within Aylmer and a haul to the far side of the Outaouais aren't worked out the same way.",
+          },
+          {
+            title: "The type of vehicle",
+            text: "A car, a heavy truck, a motorcycle, an RV, a trailer or a boat need neither the same truck nor the same equipment.",
+          },
+          {
+            title: "What never gets added",
+            text: "Nothing on arrival. The amount confirmed on the phone is the amount you pay — evening, weekend or holiday, the quoted amount is what applies.",
+          },
+        ],
+        footnote:
+          "We give you the exact figure on the phone in 2 minutes — free, with no obligation.",
       },
       ctaCardTitle: "Want the best price?",
       ctaCardText: "One call is all it takes — price confirmed in 2 minutes, and we beat the competition.",
@@ -366,7 +430,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "How much does it cost to tow a car?",
           answer:
-            "The cost mainly depends on your location and the distance to the destination. We work out your price and confirm it by phone in 2 minutes — free and with no obligation.",
+            "Our tows start at $79.99. From there, the cost mainly depends on your location and the distance to the destination. We work out your exact amount and confirm it by phone in 2 minutes — free and with no obligation.",
         },
         {
           question: "Do you really beat other tow companies' prices?",
@@ -387,6 +451,7 @@ export const towingIntents: TowingIntent[] = [
   },
   {
     slug: "near-me",
+    indexable: false,
     group: "situation",
     heroImage: { kind: "static", src: "/remorquage.webp" },
     fr: {
@@ -394,7 +459,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Remorqueuse près de chez vous, disponible jour et nuit. Une vraie personne répond, camion envoyé rapidement. Appelez le (819) 921-7869.",
       eyebrow: "Remorquage à proximité",
-      h1: "Une remorqueuse près de vous, disponible tout de suite",
       heroTitle: "Remorquage",
       heroHighlight: "Près de Vous",
       subtitle:
@@ -442,7 +506,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Tow truck near you, available day and night. A real person answers, truck dispatched fast. Call (819) 921-7869.",
       eyebrow: "Towing near me",
-      h1: "A tow truck near me, available right now",
       heroTitle: "Towing",
       heroHighlight: "Near Me",
       subtitle:
@@ -493,7 +556,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Remorquage et dépannage de véhicules lourds et de camions à Gatineau et en Outaouais. Équipement adapté, intervention sécuritaire. (819) 921-7869.",
       eyebrow: "Remorquage · Poids lourd",
-      h1: "Remorquage poids lourd — l'équipement pour vos camions",
       heroTitle: "Remorquage",
       heroHighlight: "Poids Lourd",
       subtitle:
@@ -540,7 +602,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Heavy vehicle and truck towing and recovery in Gatineau and the Outaouais. Proper equipment, safe intervention. Call (819) 921-7869.",
       eyebrow: "Towing · Heavy truck",
-      h1: "Heavy truck towing — the right equipment for your rig",
       heroTitle: "Heavy Truck",
       heroHighlight: "Towing",
       subtitle:
@@ -591,7 +652,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Clés verrouillées dans votre véhicule à Gatineau ou Aylmer ? Déverrouillage rapide et sécuritaire sur place, sans dommage. (819) 921-7869.",
       eyebrow: "Serrurier automobile",
-      h1: "Clés verrouillées dans l'auto ? On vous ouvre sur place",
       heroTitle: "Déverrouillage",
       heroHighlight: "Automobile",
       subtitle:
@@ -639,7 +699,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Locked your keys in your car in Gatineau or Aylmer? Fast, safe lockout service on site, no damage. Call (819) 921-7869.",
       eyebrow: "Car lockout",
-      h1: "Keys locked in your car? We'll get you back in",
       heroTitle: "Car",
       heroHighlight: "Lockout",
       subtitle:
@@ -691,7 +750,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Batterie à plat ? Service de survoltage et aide au démarrage sur place à Gatineau et Aylmer. Rapide, sans tracas. (819) 921-7869.",
       eyebrow: "Booster · Survoltage Batterie",
-      h1: "Batterie à plat ? Booster et survoltage sur place en quelques minutes",
       heroTitle: "Booster",
       heroHighlight: "de Batterie",
       subtitle:
@@ -739,7 +797,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Dead battery? Boost and jump-start service on site in Gatineau and Aylmer. Fast, no hassle. Call (819) 921-7869.",
       eyebrow: "Boost · Battery",
-      h1: "Dead battery? We'll boost you in minutes, on site",
       heroTitle: "Battery",
       heroHighlight: "Boost",
       subtitle:
@@ -790,7 +847,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Remorquage spécialisé pour moto, VR, roulotte et bateau à Gatineau et en Outaouais. Équipement adapté, transport sécuritaire. (819) 921-7869.",
       eyebrow: "Remorquage spécialisé",
-      h1: "Remorquage spécialisé — moto, VR, roulotte et bateau",
       heroTitle: "Remorquage",
       heroHighlight: "Spécialisé",
       subtitle:
@@ -838,7 +894,6 @@ export const towingIntents: TowingIntent[] = [
       metaDescription:
         "Specialized towing for motorcycles, RVs, trailers and boats in Gatineau and the Outaouais. Right equipment, safe transport. Call (819) 921-7869.",
       eyebrow: "Specialized towing",
-      h1: "Specialized towing — motorcycle, RV, trailer and boat",
       heroTitle: "Specialized",
       heroHighlight: "Towing",
       subtitle:
