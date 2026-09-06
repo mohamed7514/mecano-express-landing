@@ -6,76 +6,74 @@ import type { Locale } from "@/lib/i18n";
 import { type Dictionary } from "@/lib/dictionary";
 import { hoursLabel } from "@/lib/business";
 import { business } from "@/lib/business";
-import { services } from "@/lib/services";
-import { towingIntents } from "@/lib/towingIntents";
-import { mechanicIntents } from "@/lib/mechanicIntents";
 import { Logo } from "./Logo";
 import { CallButton } from "./CallButton";
 import { PinIcon, ClockIcon } from "./Icons";
 
+type Cluster = "towing" | "repair" | "neutral";
+
+/**
+ * Which of the two topic clusters the current page belongs to.
+ *
+ * The site is split into a towing cluster and a mechanic cluster that are
+ * meant to stay watertight: link equity should circulate inside a cluster
+ * rather than bleed into the other one. Only the home page and /contact are
+ * neutral — they act as the switchboard between the two.
+ *
+ * The towing service detail page lives at /services/remorquage (FR) and
+ * /services/towing (EN), so it has to be caught before the /services test.
+ */
+function clusterOf(pathname: string, locale: Locale): Cluster {
+  if (pathname === `/${locale}` || pathname === `/${locale}/`) return "neutral";
+  if (/\/(contact|confidentialite)\b/.test(pathname)) return "neutral";
+  if (/\/(remorquage|towing)\b/.test(pathname)) return "towing";
+  return "repair";
+}
+
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const addr = business.address;
-  // Towing/roadside assistance runs 24/7, unlike the garage's posted hours.
-  // The footer is shared across every page via the layout, so we detect the
-  // towing context from the URL (remorquage-gatineau, remorquage/[intent] and
-  // the towing service detail page — slug "remorquage" in FR, "towing" in EN).
   const pathname = usePathname();
-  const isTowing = /\/(remorquage|towing)\b/.test(pathname);
-  const footerServices = [
-    ...services.filter((s) => s.category === "towing"),
-    ...services.filter((s) => s.category !== "towing"),
-  ].slice(0, 5);
+  const cluster = clusterOf(pathname, locale);
+  // Towing/roadside assistance runs 24/7, unlike the garage's posted hours.
+  const isTowing = cluster === "towing";
+
+  const towingPillar = {
+    href: `/${locale}/remorquage-gatineau`,
+    label: locale === "fr" ? "Remorquage à Gatineau" : "Towing in Gatineau",
+  };
+  const repairPillar = {
+    href: `/${locale}/garage-gatineau`,
+    label: locale === "fr" ? "Garage à Gatineau" : "Garage in Gatineau",
+  };
+
+  /**
+   * Deliberately short, and deliberately pillar-only.
+   *
+   * An earlier version listed every intent page of both clusters here. It
+   * fixed the orphan problem it was written for, but because the footer ships
+   * on all 62 pages it also flattened the site: every page ended up with the
+   * same 30 inbound links, so nothing looked more important than anything
+   * else, half of all internal links crossed the cluster boundary, and the
+   * noindex ad landing pages absorbed as much link equity as real pages.
+   *
+   * Satellites are linked from their pillar and from their sibling pages
+   * instead — those links carry hierarchy, a footer block repeated site-wide
+   * does not.
+   */
+  const navLinks = [
+    { href: `/${locale}`, label: dict.nav.home },
+    ...(cluster === "towing" || cluster === "neutral" ? [towingPillar] : []),
+    ...(cluster === "repair" || cluster === "neutral" ? [repairPillar] : []),
+    ...(cluster === "repair" || cluster === "neutral"
+      ? [{ href: `/${locale}/services`, label: dict.nav.services }]
+      : []),
+    { href: `/${locale}/contact`, label: dict.nav.contact },
+    { href: `/${locale}/confidentialite`, label: dict.footer.privacy },
+  ];
+
   return (
     <footer className="bg-graphite-900 text-steel-300">
-      {/* Intent-page links. The header's services dropdown only mounts its
-          links on hover, so without this block every /remorquage/* and
-          /garage/* page had a single inbound internal link. The footer is in
-          the layout, so these ship on all 60+ pages. */}
-      <div className="border-b border-white/10">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 sm:grid-cols-2">
-          <div>
-            <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white">
-              {dict.nav.towingCategory}
-            </h3>
-            <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
-              <li>
-                <Link href={`/${locale}/remorquage-gatineau`} className="hover:text-white">
-                  {locale === "fr" ? "Remorquage à Gatineau" : "Towing in Gatineau"}
-                </Link>
-              </li>
-              {towingIntents.map((intent) => (
-                <li key={intent.slug}>
-                  <Link href={`/${locale}/remorquage/${intent.slug}`} className="hover:text-white">
-                    {intent[locale].serviceName}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white">
-              {dict.nav.mechanicCategory}
-            </h3>
-            <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
-              <li>
-                <Link href={`/${locale}/garage-gatineau`} className="hover:text-white">
-                  {locale === "fr" ? "Garage à Gatineau" : "Garage in Gatineau"}
-                </Link>
-              </li>
-              {mechanicIntents.map((intent) => (
-                <li key={intent.slug}>
-                  <Link href={`/${locale}/garage/${intent.slug}`} className="hover:text-white">
-                    {intent[locale].serviceName}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.6fr_1fr_1.2fr]">
         <div>
           <Logo dark size="md" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-steel-400">
@@ -88,24 +86,10 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             {dict.footer.nav}
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link href={`/${locale}`} className="hover:text-white">{dict.nav.home}</Link></li>
-            <li><Link href={`/${locale}/remorquage-gatineau`} className="hover:text-white">{dict.campaignSplit.towingTitle}</Link></li>
-            <li><Link href={`/${locale}/garage-gatineau`} className="hover:text-white">{dict.campaignSplit.repairTitle}</Link></li>
-            <li><Link href={`/${locale}/services`} className="hover:text-white">{dict.nav.services}</Link></li>
-            <li><Link href={`/${locale}/contact`} className="hover:text-white">{dict.nav.contact}</Link></li>
-            <li><Link href={`/${locale}/confidentialite`} className="hover:text-white">{dict.footer.privacy}</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white">
-            {dict.nav.services}
-          </h3>
-          <ul className="mt-4 space-y-2 text-sm">
-            {footerServices.map((s) => (
-              <li key={s.id}>
-                <Link href={`/${locale}/services/${s[locale].slug}`} className="hover:text-white">
-                  {s[locale].name}
+            {navLinks.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="hover:text-white">
+                  {l.label}
                 </Link>
               </li>
             ))}
