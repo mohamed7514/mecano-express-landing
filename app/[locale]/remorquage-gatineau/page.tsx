@@ -70,36 +70,52 @@ const copy: Record<
     ctaCardTitle: "Toujours en panne ?",
     ctaCardText: "N'attendez pas sur le bord de la route — appelez, on s'occupe du reste.",
     faqTitle: "Questions fréquentes — Remorquage à Gatineau",
+    // Written for answer engines as much as for readers: each answer opens
+    // with the answer itself (never "ça dépend"), carries at least one hard
+    // number and one place name, and stands alone when quoted out of context.
+    // Every figure here is already published elsewhere on the site — the
+    // 79,99 $ floor, the 15-minute average, the posted garage hours — so the
+    // FAQ states them instead of hedging around them.
     faq: [
-      {
-        question: "Êtes-vous disponibles la nuit et la fin de semaine ?",
-        answer:
-          "Oui. Le remorquage et le dépannage roulent 24 heures sur 24, 7 jours sur 7, y compris la nuit, la fin de semaine et les jours fériés. Le garage, lui, est ouvert du lundi au samedi de 9h à 18h.",
-      },
       {
         question: "Combien coûte un remorquage à Gatineau ?",
         answer:
-          "Le prix dépend de la distance et du type de véhicule. On vous le confirme au téléphone avant d'envoyer le camion — vous savez exactement ce que vous payez avant qu'on parte, sans frais ajoutés à l'arrivée.",
+          "Un remorquage commence à 79,99 $. Le montant final dépend de votre position et de la distance jusqu'à la destination : on le calcule et on vous le confirme au téléphone en deux minutes, gratuitement et sans engagement. Le prix annoncé est le prix final — aucun frais ajouté à l'arrivée, même la nuit ou la fin de semaine. La carte de débit et de crédit sont acceptées directement avec le chauffeur.",
       },
       {
-        question: "Quels secteurs desservez-vous ?",
+        question: "En combien de temps la dépanneuse arrive-t-elle ?",
         answer:
-          "Gatineau, Aylmer, Hull et Buckingham, ainsi que les environs en Outaouais. Appelez avec votre position, on vous dit tout de suite si on peut vous rejoindre et en combien de temps.",
+          "Comptez environ 15 minutes en moyenne dans le secteur d'Aylmer, Hull et Gatineau. On envoie le camion disponible le plus proche de vous. Le délai réel dépend de votre position et de la circulation, alors on vous donne une estimation honnête au téléphone plutôt qu'une promesse qu'on ne peut pas tenir.",
       },
       {
-        question: "En combien de temps arrivez-vous ?",
+        question: "Êtes-vous disponibles la nuit et la fin de semaine ?",
         answer:
-          "On envoie le camion disponible le plus proche de vous. Le délai dépend de votre position et de la circulation — on vous donne une estimation honnête au téléphone plutôt qu'une promesse qu'on ne peut pas tenir.",
+          "Oui, le remorquage et le dépannage roulent 24 heures sur 24, 7 jours sur 7, y compris la nuit, la fin de semaine et les jours fériés. Le tarif ne change pas en dehors des heures normales. Le garage mécanique, lui, a des heures fixes : du lundi au samedi de 9h à 18h, au 879 chemin Vanier à Aylmer.",
+      },
+      {
+        question: "Que faire en attendant la dépanneuse ?",
+        answer:
+          "Allumez vos feux de détresse, puis sortez du véhicule par la portière opposée à la circulation si vous pouvez le faire en sécurité et attendez derrière la glissière ou sur l'accotement. Sur l'autoroute, ne restez pas dans l'habitacle. Gardez votre téléphone sur vous : on vous rappelle quand le chauffeur approche. Le remorquage se fait ensuite sans passager à bord, pour votre sécurité.",
+      },
+      {
+        question: "Quels secteurs desservez-vous autour de Gatineau ?",
+        answer:
+          "On couvre Gatineau, Aylmer, Hull et Buckingham, ainsi que les environs en Outaouais — Chelsea, Cantley et Val-des-Monts inclus. Notre point d'attache est le 879 chemin Vanier à Aylmer. Appelez avec votre position au (819) 921-7869 : on vous dit tout de suite si on peut vous rejoindre et en combien de temps.",
+      },
+      {
+        question: "Le remorquage est-il couvert par mon assurance ?",
+        answer:
+          "Plusieurs polices d'assurance automobile au Québec incluent une clause d'assistance routière qui couvre tout ou partie du remorquage. Vérifiez auprès de votre assureur, avant ou après l'intervention. On fournit une facture détaillée avec la date, le point de départ, la destination et le montant — c'est ce qu'il faut pour une réclamation.",
       },
       {
         question: "Remorquez-vous autre chose que des voitures ?",
         answer:
-          "Oui : poids lourds, motos, VR, roulottes et bateaux. On a aussi le survoltage de batterie et le déverrouillage de portière si votre véhicule n'a pas besoin d'être remorqué.",
+          "Oui : poids lourds, camions, autobus, machinerie, conteneurs, motos, VR, roulottes et bateaux. Si votre véhicule n'a pas besoin d'être remorqué, on fait aussi le survoltage de batterie et le déverrouillage de portière sur place. Précisez le type de véhicule au téléphone pour qu'on envoie le bon équipement du premier coup.",
       },
       {
         question: "Où mon véhicule sera-t-il remorqué ?",
         answer:
-          "Là où vous voulez : chez vous, chez votre garagiste, ou à notre garage au 879 chemin Vanier à Aylmer si vous voulez qu'on regarde le problème directement.",
+          "Là où vous voulez : chez vous, chez votre garagiste habituel, chez le concessionnaire, ou à notre garage au 879 chemin Vanier à Aylmer si vous voulez qu'on diagnostique le problème directement. La destination est fixée avec vous au téléphone avant le départ, parce qu'elle entre dans le calcul du prix.",
       },
     ],
   },
@@ -125,34 +141,44 @@ const copy: Record<
     faqTitle: "Frequently Asked Questions — Towing in Gatineau",
     faq: [
       {
-        question: "Are you available at night and on weekends?",
-        answer:
-          "Yes. Towing and roadside assistance run 24 hours a day, 7 days a week, including nights, weekends and holidays. The garage itself is open Monday to Saturday, 9 AM to 6 PM.",
-      },
-      {
         question: "How much does a tow cost in Gatineau?",
         answer:
-          "It depends on the distance and the type of vehicle. We confirm the price on the phone before dispatching the truck — you know exactly what you're paying before we leave, with nothing added on arrival.",
+          "A tow starts at $79.99. The final amount depends on where you are and how far you're going: we work it out and confirm it by phone in two minutes, free and with no obligation. The quoted price is the final price — nothing is added on arrival, not at night and not on weekends. Debit and credit cards are accepted directly with the driver.",
       },
       {
-        question: "Which areas do you cover?",
+        question: "How fast does the tow truck arrive?",
         answer:
-          "Gatineau, Aylmer, Hull and Buckingham, plus the surrounding Outaouais area. Call with your location and we'll tell you right away whether we can reach you and how long it will take.",
+          "Expect roughly 15 minutes on average across Aylmer, Hull and Gatineau. We dispatch the closest available truck. The real time depends on your location and traffic, so we give you an honest estimate on the phone rather than a promise we can't keep.",
       },
       {
-        question: "How fast do you arrive?",
+        question: "Are you available at night and on weekends?",
         answer:
-          "We dispatch the closest available truck. The time depends on your location and traffic — we give you an honest estimate on the phone rather than a promise we can't keep.",
+          "Yes, towing and roadside assistance run 24 hours a day, 7 days a week, including nights, weekends and holidays, and the rate does not change outside normal hours. The mechanical garage keeps set hours: Monday to Saturday, 9 AM to 6 PM, at 879 chemin Vanier in Aylmer.",
+      },
+      {
+        question: "What should I do while waiting for the tow truck?",
+        answer:
+          "Turn on your hazard lights, then get out through the door away from traffic if you can do it safely and wait behind the guardrail or on the shoulder. On the highway, do not stay inside the vehicle. Keep your phone on you — we call back when the driver is close. The tow itself is done without a passenger on board, for your safety.",
+      },
+      {
+        question: "Which areas around Gatineau do you cover?",
+        answer:
+          "We cover Gatineau, Aylmer, Hull and Buckingham, plus the surrounding Outaouais area including Chelsea, Cantley and Val-des-Monts. Our base is 879 chemin Vanier in Aylmer. Call with your location at (819) 921-7869 and we'll tell you right away whether we can reach you and how long it will take.",
+      },
+      {
+        question: "Is towing covered by my insurance?",
+        answer:
+          "Many Quebec auto insurance policies include roadside assistance coverage that pays all or part of a tow. Check with your insurer, before or after the call-out. We provide a detailed invoice with the date, the pickup point, the destination and the amount — which is what a claim requires.",
       },
       {
         question: "Do you tow anything other than cars?",
         answer:
-          "Yes: heavy trucks, motorcycles, RVs, trailers and boats. We also do battery boosts and car lockouts if your vehicle doesn't actually need towing.",
+          "Yes: heavy trucks, buses, machinery, containers, motorcycles, RVs, trailers and boats. If your vehicle doesn't actually need towing, we also do battery boosts and car lockouts on the spot. Tell us the vehicle type on the phone so we send the right equipment the first time.",
       },
       {
         question: "Where will my vehicle be towed?",
         answer:
-          "Wherever you want: your home, your own mechanic, or our garage at 879 chemin Vanier in Aylmer if you'd like us to look at the problem directly.",
+          "Wherever you want: your home, your own mechanic, the dealership, or our garage at 879 chemin Vanier in Aylmer if you'd like us to diagnose the problem directly. The destination is agreed with you by phone before we leave, because it factors into the price.",
       },
     ],
   },
