@@ -13,6 +13,10 @@ export function ServicesGrid({
 }: {
   locale: Locale;
   dict: Dictionary;
+  /** Full heading block (eyebrow + h2 + subtitle). /services suppresses it
+   * because its SplitHero already carries that title and subtitle — it gets
+   * the lone h2 below instead, so the page never runs h1 into the cards'
+   * <h3> with nothing in between. */
   heading?: boolean;
   filter?: "repair" | "towing";
 }) {
@@ -34,7 +38,13 @@ export function ServicesGrid({
         </div>
       )}
 
-      <div className={`grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ${heading ? "mt-12" : ""}`}>
+      {!heading && (
+        <h2 className="font-display text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">
+          {dict.services.listHeading}
+        </h2>
+      )}
+
+      <div className={`grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ${heading ? "mt-12" : "mt-8"}`}>
         {items.map((s, i) => {
           const c = s[locale];
           return (

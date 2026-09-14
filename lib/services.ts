@@ -433,7 +433,7 @@ export const services: Service[] = [
         "Direction et rotules",
         "Conduite plus stable, pneus qui durent",
       ],
-      metaTitle: "Suspension et alignement à Aylmer (Gatineau) | Mécano Express",
+      metaTitle: "Suspension et alignement à Aylmer | Mécano Express",
       metaDescription:
         "Réparation de suspension, direction et alignement des roues à Aylmer. Amortisseurs, ressorts, rotules. Conduite stable, pneus qui durent. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur la suspension et l'alignement",
@@ -510,7 +510,7 @@ export const services: Service[] = [
         "Compresseur et composants A/C",
         "Habitacle confortable en toute saison",
       ],
-      metaTitle: "Climatisation automobile à Aylmer (Gatineau) | Mécano Express",
+      metaTitle: "Climatisation automobile à Aylmer | Mécano Express",
       metaDescription:
         "Recharge et réparation de climatisation automobile à Aylmer. Détection de fuite, compresseur, réfrigérant. Sans rendez-vous. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur la climatisation",
@@ -741,7 +741,7 @@ export const services: Service[] = [
         "Redressement de carrosserie",
         "Estimation honnête avant tout travail",
       ],
-      metaTitle: "Réparation de carrosserie à Aylmer (Gatineau) | Mécano Express",
+      metaTitle: "Réparation de carrosserie à Aylmer | Mécano Express",
       metaDescription:
         "Réparation de carrosserie, bosses et rouille à Aylmer. Pare-chocs, redressement, traitement antirouille. Estimation honnête. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur la carrosserie",

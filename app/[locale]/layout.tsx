@@ -41,7 +41,7 @@ export async function generateMetadata({
   const l: Locale = isLocale(locale) ? locale : defaultLocale;
   const title =
     l === "fr"
-      ? "Remorquage 24/7 et garage à Aylmer, Gatineau | Mécano Express"
+      ? "Remorquage 24/7 et garage à Aylmer | Mécano Express"
       : "24/7 Towing & Garage in Aylmer, Gatineau | Mécano Express";
   const description =
     l === "fr"

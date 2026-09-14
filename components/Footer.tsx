@@ -82,9 +82,9 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         </div>
 
         <div>
-          <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white">
+          <h2 className="font-display text-sm font-bold uppercase tracking-wide text-white">
             {dict.footer.nav}
-          </h3>
+          </h2>
           <ul className="mt-4 space-y-2 text-sm">
             {navLinks.map((l) => (
               <li key={l.href}>
@@ -97,9 +97,9 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         </div>
 
         <div>
-          <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white">
+          <h2 className="font-display text-sm font-bold uppercase tracking-wide text-white">
             {dict.footer.contact}
-          </h3>
+          </h2>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex items-start gap-2.5">
               <PinIcon width={18} height={18} className="mt-0.5 shrink-0 text-accent" />

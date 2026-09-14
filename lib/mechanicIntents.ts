@@ -244,9 +244,9 @@ export const mechanicIntents: MechanicIntent[] = [
     group: "situation",
     heroImage: { kind: "photo", name: "mecanique.webp" },
     fr: {
-      metaTitle: "Mécanicien près de chez vous — 879 chemin Vanier, Aylmer | Mécano Express",
+      metaTitle: "Mécanicien près de chez vous à Aylmer | Mécano Express",
       metaDescription:
-        "Mécanicien près de chez vous au 879 chemin Vanier, secteur Vanier à Aylmer — à quelques minutes de Gatineau et Hull. Sans rendez-vous, prix confirmé avant travaux. (819) 921-7869.",
+        "Mécanicien au 879 chemin Vanier à Aylmer, à quelques minutes de Gatineau et Hull. Sans rendez-vous, prix confirmé avant travaux. (819) 921-7869.",
       eyebrow: "Mécanicien à proximité",
       heroTitle: "Mécanicien",
       heroHighlight: "Près de Vous",
@@ -299,9 +299,9 @@ export const mechanicIntents: MechanicIntent[] = [
       ],
     },
     en: {
-      metaTitle: "Mechanic Near Me — 879 chemin Vanier, Aylmer | Mécano Express",
+      metaTitle: "Mechanic Near You in Aylmer | Mécano Express",
       metaDescription:
-        "Mechanic near you at 879 chemin Vanier, Vanier area in Aylmer — minutes from Gatineau and Hull. Walk-in welcome, price confirmed before work. Call (819) 921-7869.",
+        "Mechanic at 879 chemin Vanier in Aylmer, minutes from Gatineau and Hull. Walk-in welcome, price confirmed before work. Call (819) 921-7869.",
       eyebrow: "Mechanic near me",
       heroTitle: "Mechanic",
       heroHighlight: "Near Me",

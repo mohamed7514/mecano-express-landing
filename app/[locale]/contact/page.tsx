@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { business, ogBase } from "@/lib/business";
+import { business, hoursLabel, ogBase } from "@/lib/business";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export async function generateMetadata({
@@ -15,10 +15,12 @@ export async function generateMetadata({
     l === "fr"
       ? "Nous joindre — Garage à Aylmer | Mécano Express"
       : "Contact — Garage in Aylmer | Mécano Express";
+  // Was 94 characters (87 in EN), the shortest on the site. The posted hours
+  // come from hoursLabel so they can't drift from business.hours.
   const description =
     l === "fr"
-      ? `Garage Mécano Express, ${business.address.street}, ${business.address.sector}. Sans rendez-vous. Appelez le ${business.phoneDisplay}.`
-      : `Mécano Express garage, ${business.address.street}, ${business.address.sector}. Walk-in welcome. Call ${business.phoneDisplay}.`;
+      ? `Garage Mécano Express au ${business.address.street}, ${business.address.sector} (Gatineau). ${hoursLabel[l]}, sans rendez-vous. Appelez le ${business.phoneDisplay}.`
+      : `Mécano Express garage at ${business.address.street}, ${business.address.sector} (Gatineau). ${hoursLabel[l]}, walk-in welcome. Call ${business.phoneDisplay}.`;
   return {
     title,
     description,

@@ -27,6 +27,10 @@ export type Dictionary = {
     heroTitle: string;
     heroHighlight: string;
     subtitle: string;
+    /** Lone <h2> above the grid on /services, where the full heading block is
+     * suppressed because SplitHero already carries the title and subtitle.
+     * Without it the page ran h1 straight into ten <h3> service cards. */
+    listHeading: string;
     learnMore: string;
   };
   why: {
@@ -115,6 +119,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       heroHighlight: "Services",
       subtitle:
         "Du changement d'huile à la transmission, nos mécaniciens s'occupent de tout — au bon prix, sans vous vendre l'inutile.",
+      listHeading: "Nos services de mécanique et de remorquage",
       learnMore: "En savoir plus",
     },
     why: {
@@ -226,6 +231,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       heroHighlight: "Services",
       subtitle:
         "From an oil change to your transmission, our mechanics handle it all — at a fair price, without selling you what you don't need.",
+      listHeading: "Our mechanical and towing services",
       learnMore: "Learn more",
     },
     why: {

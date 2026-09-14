@@ -14,9 +14,11 @@ export function CampaignSplit({ locale, dict }: { locale: Locale; dict: Dictiona
   const s = dict.campaignSplit;
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <p className="font-display text-center text-sm font-bold uppercase tracking-wide text-accent">
+      {/* A real <h2>, not a styled <p>: the two cards below are <h3>, so
+          without a heading here the homepage jumped straight from h1 to h3. */}
+      <h2 className="font-display text-center text-sm font-bold uppercase tracking-wide text-accent">
         {s.eyebrow}
-      </p>
+      </h2>
       <div className="mt-6 grid gap-5 sm:grid-cols-2">
         <Reveal>
           <Link
