@@ -285,12 +285,15 @@ export const towingIntents: TowingIntent[] = [
     fr: {
       metaTitle: "Remorquage à Gatineau à partir de 79,99 $",
       metaDescription:
-        "Remorquage à Gatineau à partir de 79,99 $. On bat le prix : devis confirmé au téléphone en 2 minutes, prix final sans frais caché. (819) 921-7869.",
+        // "remorquer une voiture prix" converts 20x/30 days — the account's
+        // second-best keyword — and the verb form appeared nowhere on the
+        // page that owns it. The h1 stays as-is for Ads message match.
+        "Remorquer une voiture à Gatineau à partir de 79,99 $. On bat le prix : devis confirmé au téléphone en 2 minutes, sans frais caché. (819) 921-7869.",
       eyebrow: "Meilleur prix · Remorquage",
       heroTitle: "Remorquage à Gatineau",
       heroHighlight: "à partir de 79,99 $",
       subtitle:
-        "Nos remorquages commencent à 79,99 $. Dites-nous où vous êtes et où vous allez : on vous confirme le montant exact au téléphone en 2 minutes — prix final, aucun frais caché. Et si vous trouvez moins cher ailleurs, on bat le prix.",
+        "Remorquer une voiture commence à 79,99 $. Dites-nous où vous êtes et où vous allez : on vous confirme le montant exact au téléphone en 2 minutes — prix final, aucun frais caché. Et si vous trouvez moins cher ailleurs, on bat le prix.",
       trustBar: ["À partir de 79,99 $", "On bat le prix, garanti", "Aucun frais caché"],
       reasonsTitle: "Le tarif d'un remorquage à Gatineau — et on bat la concurrence",
       reasons: [

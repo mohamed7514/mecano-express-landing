@@ -308,14 +308,14 @@ export const services: Service[] = [
       heroTitle: "Tires and Balancing",
       heroHighlight: "in Aylmer",
       intro:
-        "Installation, changeover, balancing and storage. All-season, summer or winter tires — we advise you based on how you drive and get you back on the road fast.",
+        "A walk-in tire shop in Aylmer, minutes from Gatineau: installation, changeover, balancing and storage. All-season, summer or winter tires — we advise you based on how you drive and get you back on the road fast.",
       points: [
         "Precision mounting and balancing",
         "Winter, summer and all-season tires",
-        "Flat tire repair",
+        "Flat tire repair and puncture plugs",
         "Fast service, no long wait",
       ],
-      metaTitle: "Tires in Aylmer & Gatineau — Mounting and Balancing",
+      metaTitle: "Tire Shop and Repair in Gatineau & Aylmer | Mécano Express",
       metaDescription:
         "Tire installation, changeover and balancing in Aylmer and Gatineau. All-season tires, flat repair. Walk-in welcome. (819) 921-7869.",
       faqTitle: "Frequently Asked Questions About Tires",
@@ -433,7 +433,7 @@ export const services: Service[] = [
         "Direction et rotules",
         "Conduite plus stable, pneus qui durent",
       ],
-      metaTitle: "Suspension et alignement à Aylmer | Mécano Express",
+      metaTitle: "Alignement auto et suspension à Gatineau | Mécano Express",
       metaDescription:
         "Réparation de suspension, direction et alignement des roues à Aylmer. Amortisseurs, ressorts, rotules. Conduite stable, pneus qui durent. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur la suspension et l'alignement",
@@ -731,19 +731,22 @@ export const services: Service[] = [
       name: "Carrosserie",
       slug: "carrosserie",
       tagline: "Réparation de carrosserie voiture",
-      heroTitle: "Réparation de carrosserie",
-      heroHighlight: "à Aylmer",
+      // "carrosserie gatineau" and "carrossier gatineau" are two distinct
+      // 260/month terms — Google does not treat them as synonyms, so both
+      // words have to appear, and Gatineau has to stay in the title.
+      heroTitle: "Carrosserie et débosselage",
+      heroHighlight: "à Gatineau",
       intro:
-        "Réparation de carrosserie voiture : pare-chocs abîmé, bosse ou rouille qui perce la tôle. Notre atelier répare la carrosserie pour redonner à votre véhicule une apparence propre et éviter que les dommages ne s'aggravent.",
+        "Réparation de carrosserie voiture : pare-chocs abîmé, bosse ou rouille qui perce la tôle. Notre carrossier à Aylmer, à quelques minutes de Gatineau, répare la carrosserie pour redonner à votre véhicule une apparence propre et éviter que les dommages ne s'aggravent.",
       points: [
         "Réparation de pare-chocs et de bosses",
         "Traitement et réparation de rouille",
-        "Redressement de carrosserie",
+        "Débosselage et redressement de carrosserie",
         "Estimation honnête avant tout travail",
       ],
-      metaTitle: "Réparation de carrosserie à Aylmer | Mécano Express",
+      metaTitle: "Carrossier et carrosserie à Gatineau | Mécano Express",
       metaDescription:
-        "Réparation de carrosserie, bosses et rouille à Aylmer. Pare-chocs, redressement, traitement antirouille. Estimation honnête. (819) 921-7869.",
+        "Carrossier à Gatineau et Aylmer : réparation de carrosserie, bosses, rouille et pare-chocs. Débosselage et estimation honnête. (819) 921-7869.",
       faqTitle: "Questions fréquentes sur la carrosserie",
       faq: [
         {
@@ -767,19 +770,19 @@ export const services: Service[] = [
       name: "Body Shop",
       slug: "auto-body",
       tagline: "Body shop — dent and rust repair",
-      heroTitle: "Auto Body Repair",
-      heroHighlight: "in Aylmer",
+      heroTitle: "Auto Body Shop",
+      heroHighlight: "in Gatineau",
       intro:
-        "Looking for a body shop? A damaged bumper, a dent or rust eating through the metal — our shop repairs the bodywork to give your vehicle a clean look again and stop the damage from spreading.",
+        "Looking for a car body shop? A damaged bumper, a dent or rust eating through the metal — our auto body shop in Aylmer, minutes from Gatineau, handles collision repair and bodywork to give your vehicle a clean look again and stop the damage from spreading.",
       points: [
         "Bumper and dent repair",
         "Rust treatment and repair",
-        "Panel straightening",
+        "Collision repair and panel straightening",
         "Honest estimate before any work",
       ],
-      metaTitle: "Body Shop in Aylmer (Gatineau) | Mécano Express",
+      metaTitle: "Car & Auto Body Shop in Gatineau | Mécano Express",
       metaDescription:
-        "Body shop for dent and rust repair in Aylmer. Bumpers, panel straightening, rust treatment. Honest estimate. (819) 921-7869.",
+        "Auto body shop in Gatineau and Aylmer: collision repair, dents, rust and bumpers. Panel straightening and an honest estimate. (819) 921-7869.",
       faqTitle: "Frequently Asked Questions About Our Body Shop",
       faq: [
         {
