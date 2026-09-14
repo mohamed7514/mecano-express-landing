@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { business } from "@/lib/business";
+import { business, ogBase } from "@/lib/business";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { SplitHero } from "@/components/sections/SplitHero";
@@ -28,7 +28,7 @@ export async function generateMetadata({
       canonical: `/${l}/services`,
       languages: { "fr-CA": "/fr/services", "en-CA": "/en/services", "x-default": "/fr/services" },
     },
-    openGraph: { title, description, url: `${business.domain}/${l}/services` },
+    openGraph: { ...ogBase(l), title, description, url: `${business.domain}/${l}/services` },
   };
 }
 

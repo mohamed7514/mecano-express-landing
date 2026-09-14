@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { isLocale, defaultLocale, type Locale } from "@/lib/i18n";
-import { business } from "@/lib/business";
+import { business, ogBase } from "@/lib/business";
 
 export async function generateMetadata({
   params,
@@ -10,11 +10,25 @@ export async function generateMetadata({
   const { locale } = await params;
   const l: Locale = isLocale(locale) ? locale : defaultLocale;
   const title = l === "fr" ? "Politique de confidentialité | Mécano Express" : "Privacy Policy | Mécano Express";
+  // Without its own description and openGraph this page inherited the
+  // homepage's — including og:url, so it announced itself as the homepage
+  // while its canonical said otherwise.
+  const description =
+    l === "fr"
+      ? "Comment Mécano Express utilise Google Analytics et le suivi de conversion Google Ads : données collectées, cookies, et comment refuser le suivi."
+      : "How Mécano Express uses Google Analytics and Google Ads conversion tracking: what data is collected, cookies, and how to opt out.";
   return {
     title,
+    description,
     alternates: {
       canonical: `/${l}/confidentialite`,
       languages: { "fr-CA": "/fr/confidentialite", "en-CA": "/en/confidentialite", "x-default": "/fr/confidentialite" },
+    },
+    openGraph: {
+      ...ogBase(l),
+      title,
+      description,
+      url: `${business.domain}/${l}/confidentialite`,
     },
     robots: { index: false, follow: true },
   };

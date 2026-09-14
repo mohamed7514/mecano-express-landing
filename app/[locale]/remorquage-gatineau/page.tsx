@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { business } from "@/lib/business";
+import { business, ogBase } from "@/lib/business";
 import { CallButton } from "@/components/CallButton";
 import type { FAQItem } from "@/lib/faq";
 import { towingIntents } from "@/lib/towingIntents";
@@ -178,6 +178,7 @@ export async function generateMetadata({
       },
     },
     openGraph: {
+      ...ogBase(l),
       title: c.metaTitle,
       description: c.metaDescription,
       url: `${business.domain}/${l}/remorquage-gatineau`,

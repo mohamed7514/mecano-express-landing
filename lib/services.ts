@@ -5,6 +5,12 @@ export type ServiceContent = {
   name: string;
   slug: string;
   tagline: string;
+  /** Hero <h1>, split so the geo half renders in the accent colour — same
+   * shape as MechanicIntentContent. `name` alone is a one-word label
+   * ("Freins", "Pneus"): fine for nav and breadcrumbs, useless as the
+   * heading Google reads right after the title. */
+  heroTitle: string;
+  heroHighlight: string;
   intro: string;
   points: string[];
   metaTitle: string;
@@ -30,6 +36,10 @@ export const services: Service[] = [
       name: "Remorquage",
       slug: "remorquage",
       tagline: "Remorquage et dépannage rapide",
+      // No city in this h1 on purpose: /remorquage-gatineau is the pillar for
+      // "remorquage gatineau" and a third page on that term would split it.
+      heroTitle: "Remorquage et",
+      heroHighlight: "dépannage routier",
       intro:
         "En panne sur la route à Aylmer, Gatineau, Hull ou Buckingham ? On envoie une remorqueuse rapidement, on vous localise et on vous ramène en sécurité — vous ou votre véhicule.",
       points: [
@@ -64,6 +74,8 @@ export const services: Service[] = [
       name: "Towing",
       slug: "towing",
       tagline: "Fast towing and roadside assistance",
+      heroTitle: "Towing and",
+      heroHighlight: "roadside assistance",
       intro:
         "Broken down on the road in Aylmer, Gatineau, Hull or Buckingham? We send a tow truck fast, locate you, and get you and your vehicle back to safety.",
       points: [
@@ -103,6 +115,8 @@ export const services: Service[] = [
       name: "Changement d'huile",
       slug: "changement-huile",
       tagline: "Vidange rapide, sans rendez-vous",
+      heroTitle: "Changement d'huile",
+      heroHighlight: "à Aylmer",
       intro:
         "Un changement d'huile régulier est le geste le plus simple pour prolonger la vie de votre moteur. Chez Mécano Express à Aylmer, on le fait rapidement, sans rendez-vous, avec l'huile adaptée à votre véhicule.",
       points: [
@@ -137,6 +151,8 @@ export const services: Service[] = [
       name: "Oil Change",
       slug: "oil-change",
       tagline: "Fast oil change, no appointment",
+      heroTitle: "Oil Change",
+      heroHighlight: "in Aylmer",
       intro:
         "A regular oil change is the simplest way to extend the life of your engine. At Mécano Express in Aylmer, we do it fast, with no appointment, using the right oil for your vehicle.",
       points: [
@@ -176,6 +192,8 @@ export const services: Service[] = [
       name: "Freins",
       slug: "freins",
       tagline: "Réparation et remplacement de freins",
+      heroTitle: "Réparation de freins",
+      heroHighlight: "à Aylmer",
       intro:
         "Un bruit, une vibration ou une pédale molle ? Vos freins sont votre système de sécurité numéro un. On les inspecte, on les répare et on les remplace au bon prix, sans vous vendre l'inutile.",
       points: [
@@ -210,6 +228,8 @@ export const services: Service[] = [
       name: "Brakes",
       slug: "brakes",
       tagline: "Brake repair and replacement",
+      heroTitle: "Brake Repair",
+      heroHighlight: "in Aylmer",
       intro:
         "A noise, a vibration or a soft pedal? Your brakes are your number one safety system. We inspect, repair and replace them at a fair price — without selling you what you don't need.",
       points: [
@@ -249,6 +269,8 @@ export const services: Service[] = [
       name: "Pneus",
       slug: "pneus",
       tagline: "Installation, changement et balancement",
+      heroTitle: "Pneus et balancement",
+      heroHighlight: "à Aylmer",
       intro:
         "Installation, changement, balancement et entreposage. Pneus quatre saisons, d'été ou d'hiver — on vous conseille selon votre conduite et on vous remet sur la route rapidement.",
       points: [
@@ -283,6 +305,8 @@ export const services: Service[] = [
       name: "Tires",
       slug: "tires",
       tagline: "Installation, changeover and balancing",
+      heroTitle: "Tires and Balancing",
+      heroHighlight: "in Aylmer",
       intro:
         "Installation, changeover, balancing and storage. All-season, summer or winter tires — we advise you based on how you drive and get you back on the road fast.",
       points: [
@@ -322,6 +346,8 @@ export const services: Service[] = [
       name: "Diagnostic",
       slug: "diagnostic",
       tagline: "Diagnostic électronique complet",
+      heroTitle: "Diagnostic électronique",
+      heroHighlight: "à Aylmer",
       intro:
         "Un voyant s'allume au tableau de bord ? On branche notre équipement de diagnostic pour trouver la vraie cause — pas juste effacer le code. Vous savez exactement ce qui se passe avant de payer.",
       points: [
@@ -356,6 +382,8 @@ export const services: Service[] = [
       name: "Diagnostics",
       slug: "diagnostics",
       tagline: "Complete electronic diagnostics",
+      heroTitle: "Electronic Diagnostics",
+      heroHighlight: "in Aylmer",
       intro:
         "A warning light on your dashboard? We plug in our diagnostic equipment to find the real cause — not just clear the code. You know exactly what's going on before you pay.",
       points: [
@@ -395,6 +423,8 @@ export const services: Service[] = [
       name: "Suspension et alignement",
       slug: "suspension-alignement",
       tagline: "Amortisseurs, direction et alignement",
+      heroTitle: "Suspension et alignement",
+      heroHighlight: "à Aylmer",
       intro:
         "Votre voiture tire d'un côté, rebondit ou vos pneus s'usent inégalement ? On corrige la suspension, la direction et l'alignement pour une conduite stable et des pneus qui durent.",
       points: [
@@ -429,6 +459,8 @@ export const services: Service[] = [
       name: "Suspension & Alignment",
       slug: "suspension-alignment",
       tagline: "Shocks, steering and alignment",
+      heroTitle: "Suspension and Alignment",
+      heroHighlight: "in Aylmer",
       intro:
         "Your car pulls to one side, bounces or your tires wear unevenly? We fix suspension, steering and alignment for a stable ride and tires that last.",
       points: [
@@ -468,6 +500,8 @@ export const services: Service[] = [
       name: "Climatisation",
       slug: "climatisation",
       tagline: "Recharge et réparation A/C",
+      heroTitle: "Climatisation automobile",
+      heroHighlight: "à Aylmer",
       intro:
         "L'air climatisé ne refroidit plus ? On diagnostique la fuite, on recharge le système et on répare le tout pour retrouver un habitacle confortable, été comme hiver.",
       points: [
@@ -502,6 +536,8 @@ export const services: Service[] = [
       name: "Air Conditioning",
       slug: "air-conditioning",
       tagline: "A/C recharge and repair",
+      heroTitle: "Car Air Conditioning",
+      heroHighlight: "in Aylmer",
       intro:
         "Your A/C isn't cooling anymore? We diagnose the leak, recharge the system and repair everything to bring back a comfortable cabin, summer and winter.",
       points: [
@@ -541,6 +577,8 @@ export const services: Service[] = [
       name: "Échappement",
       slug: "echappement",
       tagline: "Silencieux, soudure et systèmes d'échappement",
+      heroTitle: "Réparation d'échappement",
+      heroHighlight: "à Aylmer",
       intro:
         "Un échappement bruyant ou percé ? Notre atelier fait la soudure générale et la réparation complète des systèmes d'échappement — silencieux, tuyaux et convertisseurs.",
       points: [
@@ -575,6 +613,8 @@ export const services: Service[] = [
       name: "Exhaust",
       slug: "exhaust",
       tagline: "Mufflers, welding and exhaust systems",
+      heroTitle: "Exhaust Repair",
+      heroHighlight: "in Aylmer",
       intro:
         "A loud or leaking exhaust? Our shop handles general welding and complete exhaust system repair — mufflers, pipes and converters.",
       points: [
@@ -614,6 +654,8 @@ export const services: Service[] = [
       name: "Transmission",
       slug: "transmission",
       tagline: "Entretien et réparation de transmission",
+      heroTitle: "Réparation de transmission",
+      heroHighlight: "à Aylmer",
       intro:
         "La transmission est au cœur de votre véhicule. Changement de fluide, diagnostic et réparation : on prend soin de la vôtre pour éviter les réparations coûteuses.",
       points: [
@@ -648,6 +690,8 @@ export const services: Service[] = [
       name: "Transmission",
       slug: "transmission",
       tagline: "Transmission service and repair",
+      heroTitle: "Transmission Repair",
+      heroHighlight: "in Aylmer",
       intro:
         "The transmission is at the heart of your vehicle. Fluid change, diagnostics and repair: we take care of yours to avoid costly breakdowns.",
       points: [
@@ -687,6 +731,8 @@ export const services: Service[] = [
       name: "Carrosserie",
       slug: "carrosserie",
       tagline: "Réparation de carrosserie voiture",
+      heroTitle: "Réparation de carrosserie",
+      heroHighlight: "à Aylmer",
       intro:
         "Réparation de carrosserie voiture : pare-chocs abîmé, bosse ou rouille qui perce la tôle. Notre atelier répare la carrosserie pour redonner à votre véhicule une apparence propre et éviter que les dommages ne s'aggravent.",
       points: [
@@ -721,6 +767,8 @@ export const services: Service[] = [
       name: "Body Shop",
       slug: "auto-body",
       tagline: "Body shop — dent and rust repair",
+      heroTitle: "Auto Body Repair",
+      heroHighlight: "in Aylmer",
       intro:
         "Looking for a body shop? A damaged bumper, a dent or rust eating through the metal — our shop repairs the bodywork to give your vehicle a clean look again and stop the damage from spreading.",
       points: [

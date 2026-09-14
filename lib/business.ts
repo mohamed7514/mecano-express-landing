@@ -48,6 +48,35 @@ export const business = {
 export const sameAs: string[] = [business.mapUrl];
 
 /**
+ * The openGraph fields every page has to repeat. Next merges `openGraph`
+ * shallowly, so a page declaring its own object replaces the layout's whole
+ * object rather than extending it — and the file-based opengraph-image is
+ * only re-attached to the segment that owns the file ([locale], not the
+ * pages). Spread this into every page's `openGraph` or that page ships with
+ * no image at all and its Twitter card degrades to a text-only `summary`.
+ */
+export function ogBase(l: Locale) {
+  return {
+    type: "website" as const,
+    locale: l === "fr" ? "fr_CA" : "en_CA",
+    siteName: business.name,
+    // Dimensions are stated so a scraper can lay the card out without
+    // fetching the PNG first. They must match app/[locale]/opengraph-image.tsx.
+    images: [
+      {
+        url: `/${l}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt:
+          l === "fr"
+            ? "Mécano Express — remorquage et garage à Aylmer, Gatineau"
+            : "Mécano Express — towing and auto garage in Aylmer, Gatineau",
+      },
+    ],
+  };
+}
+
+/**
  * Floor price for a tow — "starting at". Single source for every place the
  * site states it: the hero on /remorquage/prix, the quote panel, the FAQ
  * (which feeds the FAQPage schema), the meta description and the Offer in

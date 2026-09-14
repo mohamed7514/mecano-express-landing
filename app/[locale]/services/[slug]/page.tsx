@@ -5,7 +5,7 @@ import { locales, isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 import { getServiceBySlug, services } from "@/lib/services";
 import { towingIntents } from "@/lib/towingIntents";
-import { business } from "@/lib/business";
+import { business, ogBase } from "@/lib/business";
 import { CallButton } from "@/components/CallButton";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -33,18 +33,30 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug, l);
   if (!service) return {};
   const c = service[l];
+  // This page and /remorquage-gatineau shipped the same title and a
+  // byte-identical description, both indexable, both chasing "remorquage
+  // gatineau". /remorquage-gatineau is the pillar — it holds the hub links
+  // and the Ads spend — so the towing entry consolidates into it and drops
+  // out of the sitemap. It stays crawlable and linked for users and paid
+  // traffic; no noindex, which would contradict the canonical. The hreflang
+  // cluster belongs to the pillar too, so this page declares none.
+  const canonicalizedToPillar = service.category === "towing";
+
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: {
-      canonical: `/${l}/services/${c.slug}`,
-      languages: {
-        "fr-CA": `/fr/services/${service.fr.slug}`,
-        "en-CA": `/en/services/${service.en.slug}`,
-        "x-default": `/fr/services/${service.fr.slug}`,
-      },
-    },
+    alternates: canonicalizedToPillar
+      ? { canonical: `/${l}/remorquage-gatineau` }
+      : {
+          canonical: `/${l}/services/${c.slug}`,
+          languages: {
+            "fr-CA": `/fr/services/${service.fr.slug}`,
+            "en-CA": `/en/services/${service.en.slug}`,
+            "x-default": `/fr/services/${service.fr.slug}`,
+          },
+        },
     openGraph: {
+      ...ogBase(l),
       title: c.metaTitle,
       description: c.metaDescription,
       url: `${business.domain}/${l}/services/${c.slug}`,
@@ -87,8 +99,10 @@ export default async function ServiceDetailPage({
           />
         }
         tag={c.tagline}
-        title={c.name}
+        title={c.heroTitle}
+        highlight={c.heroHighlight}
         description={c.intro}
+        imageAlt={c.tagline}
         image={
           service.category === "towing"
             ? { kind: "static", src: "/remorquage.webp" }
@@ -108,9 +122,7 @@ export default async function ServiceDetailPage({
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <p className="text-lg leading-relaxed text-ink">{c.intro}</p>
-
-            <h2 className="font-display mt-10 text-xl font-bold">{dict.serviceDetail.included}</h2>
+            <h2 className="font-display text-xl font-bold">{dict.serviceDetail.included}</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {c.points.map((p) => (
                 <li key={p} className="flex items-start gap-3 rounded-xl border border-steel-200 bg-white p-4">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { locales, isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { business } from "@/lib/business";
+import { business, ogBase } from "@/lib/business";
 import { mechanicIntents, getMechanicIntentContent } from "@/lib/mechanicIntents";
 import { CallButton } from "@/components/CallButton";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
@@ -52,6 +52,7 @@ export async function generateMetadata({
       },
     },
     openGraph: {
+      ...ogBase(l),
       title: content.metaTitle,
       description: content.metaDescription,
       url: `${business.domain}/${l}/garage/${intent}`,

@@ -8,7 +8,8 @@ import { business } from "@/lib/business";
 /**
  * Only indexable pages belong here — a sitemap entry is a request to index,
  * so listing a noindex URL sends Google two contradictory signals. That rules
- * out /confidentialite and the Ads-only intent pages (`indexable: false`).
+ * out /confidentialite, the Ads-only intent pages (`indexable: false`) and
+ * /services/remorquage, which canonicalizes to /remorquage-gatineau.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = business.domain;
@@ -42,6 +43,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${base}/${locale}/services`, lastModified, changeFrequency: "monthly", priority: 0.9 });
     entries.push({ url: `${base}/${locale}/contact`, lastModified, changeFrequency: "yearly", priority: 0.7 });
     for (const s of services) {
+      // The towing service page canonicalizes to /remorquage-gatineau (see
+      // services/[slug]/page.tsx) — a sitemap entry would ask Google to index
+      // a URL that points its canonical somewhere else.
+      if (s.category === "towing") continue;
       entries.push({
         url: `${base}/${locale}/services/${s[locale].slug}`,
         lastModified,

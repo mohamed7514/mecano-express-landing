@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { business } from "@/lib/business";
+import { business, ogBase } from "@/lib/business";
 import type { FAQItem } from "@/lib/faq";
 import { mechanicIntents } from "@/lib/mechanicIntents";
 import { CallButton } from "@/components/CallButton";
@@ -144,6 +144,7 @@ export async function generateMetadata({
       languages: { "fr-CA": "/fr/garage-gatineau", "en-CA": "/en/garage-gatineau", "x-default": "/fr/garage-gatineau" },
     },
     openGraph: {
+      ...ogBase(l),
       title: c.metaTitle,
       description: c.metaDescription,
       url: `${business.domain}/${l}/garage-gatineau`,

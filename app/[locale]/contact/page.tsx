@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { business } from "@/lib/business";
+import { business, ogBase } from "@/lib/business";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export async function generateMetadata({
@@ -26,7 +26,7 @@ export async function generateMetadata({
       canonical: `/${l}/contact`,
       languages: { "fr-CA": "/fr/contact", "en-CA": "/en/contact", "x-default": "/fr/contact" },
     },
-    openGraph: { title, description, url: `${business.domain}/${l}/contact` },
+    openGraph: { ...ogBase(l), title, description, url: `${business.domain}/${l}/contact` },
   };
 }
 

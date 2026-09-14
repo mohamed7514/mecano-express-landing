@@ -12,14 +12,6 @@ export type Dictionary = {
   };
   cta: { call: string; callNow: string; directions: string; allServices: string };
   badges: { walkIn: string; openSat: string; local: string };
-  hero: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    trust1: string;
-    trust2: string;
-    trust3: string;
-  };
   heroSlides: {
     id: string;
     tag: string;
@@ -84,21 +76,16 @@ export const dictionaries: Record<Locale, Dictionary> = {
       allServices: "Tous nos services",
     },
     badges: { walkIn: "Sans rendez-vous", openSat: "Ouvert le samedi", local: "Garage local à Aylmer" },
-    hero: {
-      eyebrow: "Garage & mécanique · Aylmer, Gatineau",
-      title: "Votre garage de confiance à Aylmer",
-      subtitle:
-        "Mécanique automobile honnête et rapide, sans rendez-vous. Au 879 chemin Vanier — passez nous voir ou appelez.",
-      trust1: "Sans rendez-vous",
-      trust2: "Ouvert le samedi",
-      trust3: "Mécaniciens d'expérience",
-    },
     heroSlides: [
       {
         id: "remorquage",
         tag: "Service rapide",
-        title: "Remorquage Express",
-        highlight: "24/7 à Gatineau",
+        // Slide 1 carries the page's only <h1> (see Hero.tsx), so it has to
+        // name both trades — the <title> promises towing AND garage, and an
+        // h1 that covered only towing contradicted it. The slide's own body
+        // copy below stays towing-specific.
+        title: "Remorquage 24/7 et",
+        highlight: "garage à Aylmer",
         description:
           "Un service de remorquage rapide, fiable et disponible 24h/24, 7j/7 partout à Gatineau et ses environs. Notre équipe intervient en quelques minutes pour assurer votre sécurité et transporter votre véhicule en toute tranquillité.",
       },
@@ -116,7 +103,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         title: "Mécanique",
         highlight: "& Freins",
         description:
-          "Diagnostic rapide, réparation de freins et mécanique générale sans rendez-vous. Moins cher qu'un concessionnaire avec une garantie d'un an sur toutes les pièces et la main-d'œuvre.",
+          "Votre garage de confiance à Aylmer : diagnostic rapide, réparation de freins et mécanique générale sans rendez-vous. Au 879 chemin Vanier — moins cher qu'un concessionnaire, avec une garantie d'un an sur les pièces et la main-d'œuvre.",
       },
     ],
     heroStats: { arrivalLabel: "Arrivée moyenne", hoursLabel: "Jour et nuit", areaLabel: "Outaouais" },
@@ -204,21 +191,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
       allServices: "All our services",
     },
     badges: { walkIn: "No appointment", openSat: "Open Saturdays", local: "Local garage in Aylmer" },
-    hero: {
-      eyebrow: "Garage & mechanic · Aylmer, Gatineau",
-      title: "Your trusted garage in Aylmer",
-      subtitle:
-        "Honest, fast auto mechanic — no appointment needed. At 879 chemin Vanier — drop in or give us a call.",
-      trust1: "No appointment",
-      trust2: "Open Saturdays",
-      trust3: "Experienced mechanics",
-    },
     heroSlides: [
       {
         id: "remorquage",
         tag: "Fast service",
-        title: "Express Towing",
-        highlight: "24/7 in Gatineau",
+        title: "24/7 Towing and",
+        highlight: "Garage in Aylmer",
         description:
           "A fast, reliable towing service available 24/7 across Gatineau and the surrounding area. Our team arrives within minutes to keep you safe and transport your vehicle with total peace of mind.",
       },
@@ -236,7 +214,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         title: "Mechanic",
         highlight: "& Brakes",
         description:
-          "Fast diagnostics, brake repair and general mechanical work, no appointment needed. Cheaper than a dealership with a one-year warranty on all parts and labor.",
+          "Your trusted garage in Aylmer: fast diagnostics, brake repair and general mechanical work, no appointment needed. At 879 chemin Vanier — cheaper than a dealership, with a one-year warranty on parts and labor.",
       },
     ],
     heroStats: { arrivalLabel: "Average arrival", hoursLabel: "Day and night", areaLabel: "Outaouais" },
