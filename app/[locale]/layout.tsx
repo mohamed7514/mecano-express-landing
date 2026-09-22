@@ -11,6 +11,7 @@ import { LocalBusinessJsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
 import { FloatingCallButton } from "@/components/FloatingCallButton";
 import { GoogleTagManagerScript, GoogleTagManagerNoscript } from "@/components/GoogleTagManager";
+import { AhrefsAnalytics } from "@/components/AhrefsAnalytics";
 
 export const viewport: Viewport = {
   themeColor: "#000000",
@@ -87,6 +88,7 @@ export default async function LocaleLayout({
       <body>
         <GoogleTagManagerNoscript />
         <Analytics />
+        <AhrefsAnalytics />
         <LocalBusinessJsonLd locale={locale} />
         <Header locale={locale} dict={dict} />
         <main>{children}</main>
