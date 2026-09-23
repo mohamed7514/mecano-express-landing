@@ -33,15 +33,19 @@ export type Zone = {
 
 export const zones: Zone[] = [
   { id: "aylmer", name: { fr: "Aylmer", en: "Aylmer" }, towing: "aylmer", garage: "aylmer" },
-  { id: "hull", name: { fr: "Hull", en: "Hull" }, garage: "hull" },
-  { id: "chelsea", name: { fr: "Chelsea", en: "Chelsea" }, towing: "chelsea" },
-  { id: "gatineau", name: { fr: "Gatineau", en: "Gatineau" } },
-  { id: "buckingham", name: { fr: "Buckingham", en: "Buckingham" } },
-  { id: "cantley", name: { fr: "Cantley", en: "Cantley" } },
-  { id: "val-des-monts", name: { fr: "Val-des-Monts", en: "Val-des-Monts" } },
-  { id: "luskville", name: { fr: "Luskville", en: "Luskville" } },
-  { id: "masson-angers", name: { fr: "Masson-Angers", en: "Masson-Angers" } },
-  { id: "ange-gardien", name: { fr: "L'Ange-Gardien", en: "L'Ange-Gardien" } },
+  { id: "hull", name: { fr: "Hull", en: "Hull" }, towing: "hull", garage: "hull" },
+  { id: "chelsea", name: { fr: "Chelsea", en: "Chelsea" }, towing: "chelsea", garage: "chelsea" },
+  { id: "gatineau", name: { fr: "Gatineau", en: "Gatineau" }, towing: "gatineau", garage: "gatineau" },
+  { id: "buckingham", name: { fr: "Buckingham", en: "Buckingham" }, towing: "buckingham", garage: "buckingham" },
+  // Cantley and Val-des-Monts are towing-only on purpose: the truck drives to
+  // them, but nobody tows a working car 30 km to a garage they could reach
+  // more cheaply. A "garage près de Cantley" page would be a claim the
+  // business cannot back.
+  { id: "cantley", name: { fr: "Cantley", en: "Cantley" }, towing: "cantley" },
+  { id: "val-des-monts", name: { fr: "Val-des-Monts", en: "Val-des-Monts" }, towing: "val-des-monts" },
+  { id: "luskville", name: { fr: "Luskville", en: "Luskville" }, towing: "luskville", garage: "luskville" },
+  { id: "masson-angers", name: { fr: "Masson-Angers", en: "Masson-Angers" }, towing: "masson-angers", garage: "masson-angers" },
+  { id: "ange-gardien", name: { fr: "L'Ange-Gardien", en: "L'Ange-Gardien" }, towing: "ange-gardien", garage: "ange-gardien" },
 ];
 
 /** Which branch a page belongs to, so a chip links within its own branch. */

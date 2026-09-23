@@ -178,107 +178,6 @@ export const towingIntents: TowingIntent[] = [
     },
   },
   {
-    slug: "secteurs",
-    group: "zone",
-    heroImage: { kind: "static", src: "/remorquage.webp" },
-    fr: {
-      metaTitle: "Remorquage Outaouais — Chelsea, Cantley, Buckingham",
-      metaDescription:
-        "Service de remorquage partout en Outaouais : Chelsea, Cantley, Val-des-Monts, Buckingham, Hull. Prix confirmé avant le départ. Appelez le (819) 921-7869.",
-      eyebrow: "Remorquage · Outaouais",
-      heroTitle: "Remorquage",
-      heroHighlight: "Hull & Buckingham",
-      subtitle:
-        "Chelsea, Cantley, Val-des-Monts, Buckingham ou Hull — peu importe le secteur, on vous localise et on envoie une remorqueuse. Prix confirmé avant le départ.",
-      trustBar: ["Tout l'Outaouais couvert", "Prix confirmé au téléphone", "Camion en route en minutes"],
-      reasonsTitle: "Pourquoi nous appeler, où que vous soyez",
-      reasons: [
-        {
-          title: "On ne se limite pas à un seul secteur",
-          text: "Contrairement à plusieurs remorqueurs locaux, on dessert l'ensemble de l'Outaouais, des secteurs ruraux aux zones urbaines.",
-        },
-        {
-          title: "Un seul appel, une réponse claire",
-          text: "Dites-nous où vous êtes — on vous confirme le prix et le délai avant d'envoyer le camion.",
-        },
-        {
-          title: "Disponibles jour et nuit",
-          text: "Une panne ne prévient pas. On répond et on intervient à toute heure, 7 jours sur 7.",
-        },
-      ],
-      areas: ["Chelsea", "Cantley", "Val-des-Monts", "Buckingham", "Hull", "Gatineau"],
-      ctaCardTitle: "En panne quelque part en Outaouais ?",
-      ctaCardText: "Appelez-nous, on vous localise et on envoie une remorqueuse — peu importe le secteur.",
-      serviceName: "Remorquage en Outaouais",
-      faqTitle: "Questions fréquentes — Remorquage en Outaouais",
-      faq: [
-        {
-          question: "Desservez-vous Chelsea et Cantley ?",
-          answer:
-            "Oui, on couvre Chelsea, Cantley, Val-des-Monts, Buckingham, Hull et Gatineau — pas seulement le centre-ville.",
-        },
-        {
-          question: "Le prix change-t-il selon le secteur ?",
-          answer:
-            "Le prix dépend surtout de la distance à parcourir. On vous le confirme par téléphone avant le départ, peu importe le secteur.",
-        },
-        {
-          question: "Que faire si je ne connais pas mon adresse exacte ?",
-          answer:
-            "Donnez-nous un point de repère ou activez le partage de position sur votre téléphone — on peut vous localiser à partir de ça.",
-        },
-      ],
-    },
-    en: {
-      metaTitle: "Towing in Outaouais — Chelsea, Cantley, Buckingham",
-      metaDescription:
-        "Towing service across the Outaouais: Chelsea, Cantley, Val-des-Monts, Buckingham, Hull. Price confirmed before dispatch. Call (819) 921-7869.",
-      eyebrow: "Towing · Outaouais",
-      heroTitle: "Towing",
-      heroHighlight: "Hull & Buckingham",
-      subtitle:
-        "Chelsea, Cantley, Val-des-Monts, Buckingham or Hull — wherever you are, we locate you and dispatch a tow truck. Price confirmed before we leave.",
-      trustBar: ["All of Outaouais covered", "Price confirmed by phone", "Truck dispatched in minutes"],
-      reasonsTitle: "Why call us, wherever you are",
-      reasons: [
-        {
-          title: "We don't stick to one area",
-          text: "Unlike many local tow operators, we serve the whole Outaouais region, from rural sectors to urban areas.",
-        },
-        {
-          title: "One call, a clear answer",
-          text: "Tell us where you are — we confirm the price and the ETA before the truck leaves.",
-        },
-        {
-          title: "Available day and night",
-          text: "Breakdowns don't wait for business hours. We answer and respond any time, 7 days a week.",
-        },
-      ],
-      areas: ["Chelsea", "Cantley", "Val-des-Monts", "Buckingham", "Hull", "Gatineau"],
-      ctaCardTitle: "Broken down somewhere in the Outaouais?",
-      ctaCardText: "Call us, we'll locate you and dispatch a tow truck — wherever you are.",
-      serviceName: "Towing in the Outaouais",
-      faqTitle: "Frequently Asked Questions — Towing in the Outaouais",
-      faq: [
-        {
-          question: "Do you serve Chelsea and Cantley?",
-          answer:
-            "Yes, we cover Chelsea, Cantley, Val-des-Monts, Buckingham, Hull and Gatineau — not just downtown.",
-        },
-        {
-          question: "Does the price change depending on the area?",
-          answer:
-            "The price mainly depends on the distance to travel. We confirm it by phone before departure, no matter the area.",
-        },
-        {
-          question: "What if I don't know my exact address?",
-          answer:
-            "Give us a landmark or share your phone's location — that's enough for us to locate you.",
-        },
-      ],
-    },
-  },
-  {
     // Every fact here is sourced — see the research notes. Chelsea's hook is
     // that its road network has almost no redundancy: the municipality
     // publishes full closures of route 105 with a mandatory detour via the
@@ -391,6 +290,894 @@ export const towingIntents: TowingIntent[] = [
           question: "Do you come out to Chelsea at night and in winter?",
           answer:
             "Yes, the tow truck runs 24 hours a day, 7 days a week in Chelsea, holidays included, and the rate does not change at night or on weekends. Winter is when we go there most: the wooded roads on the park side and the approaches to Camp Fortune turn awkward once the surface ices over.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "hull",
+    group: "zone",
+    heroImage: { kind: "static", src: "/remorquage.webp" },
+    fr: {
+      metaTitle: "Remorquage à Hull — ponts, centre-ville, Taché",
+      metaDescription:
+        "Remorquage 24h/24 dans le secteur Hull : pont du Portage, pont Alexandra, boulevard Alexandre-Taché, Vieux-Hull. À partir de 79,99 $. (819) 921-7869.",
+      eyebrow: "Remorquage · Hull",
+      heroTitle: "Remorquage",
+      heroHighlight: "à Hull",
+      subtitle:
+        "Quatre ponts, un centre-ville dense et des stationnements étagés : le secteur Hull ne se remorque pas comme un rang de campagne. Donnez-nous la rue, on confirme le prix avant de partir.",
+      trustBar: ["Les quatre ponts couverts", "À partir de 79,99 $", "24 h sur 24, 7 jours sur 7"],
+      reasonsTitle: "Ce qui rend le secteur Hull particulier",
+      reasons: [
+        {
+          title: "Quatre ponts, quatre files",
+          text: "Portage, Chaudière, Alexandra et Macdonald-Cartier relient Hull à Ottawa. Le Macdonald-Cartier encaisse à lui seul près de 70 000 véhicules par jour : y tomber en panne, c'est bloquer une artère.",
+        },
+        {
+          title: "Un boulevard Taché à une voie",
+          text: "En fin de journée, la section vers l'ouest entre l'UQO et le boulevard Saint-Joseph se réduit et bouchonne. On contourne par Maisonneuve plutôt que d'attendre dedans.",
+        },
+        {
+          title: "Des garages souterrains bas",
+          text: "Le centre-ville empile les stationnements étagés. Un plateau standard n'y entre pas toujours : donnez le niveau et la hauteur affichée à l'entrée, on envoie le bon équipement.",
+        },
+      ],
+      areas: ["Vieux-Hull", "Val-Tétreau", "Wrightville", "Mont-Bleu", "Le Plateau", "Parc-de-la-Montagne"],
+      ctaCardTitle: "Immobilisé quelque part dans Hull ?",
+      ctaCardText: "Donnez la rue et le pont le plus proche — la dépanneuse part.",
+      serviceName: "Remorquage à Hull",
+      faqTitle: "Questions fréquentes — Remorquage à Hull",
+      faq: [
+        {
+          question: "Combien coûte un remorquage à Hull ?",
+          answer:
+            "Le remorquage commence à 79,99 $ et le total dépend de la rue où vous êtes et de l'endroit où va le véhicule. Depuis le Vieux-Hull, notre atelier du 879 chemin Vanier est à une dizaine de kilomètres par le boulevard Alexandre-Taché. On calcule le montant exact au téléphone, gratuitement, et le prix annoncé ne bouge plus à l'arrivée.",
+        },
+        {
+          question: "Intervenez-vous sur les ponts entre Hull et Ottawa ?",
+          answer:
+            "Oui, les quatre traversées sont dans notre zone : Portage, Chaudière, Alexandra et Macdonald-Cartier. Sur le Macdonald-Cartier, qui porte environ 70 000 véhicules par jour, restez ceinturé dans le véhicule si la circulation est dense plutôt que d'en sortir. Appelez le (819) 921-7869 en précisant le sens de circulation.",
+        },
+        {
+          question: "Quels quartiers du secteur Hull desservez-vous ?",
+          answer:
+            "Tout le secteur, codes postaux J8X, J8Y et J8Z : Vieux-Hull, Val-Tétreau, Wrightville, Mont-Bleu, Le Plateau et le secteur du parc de la Montagne, jusqu'à la limite de Chelsea sur le boulevard Saint-Joseph. C'est le secteur le plus rapide à rejoindre depuis l'atelier d'Aylmer, environ quinze minutes hors pointe.",
+        },
+        {
+          question: "Pouvez-vous sortir une voiture d'un stationnement souterrain ?",
+          answer:
+            "Oui dans la grande majorité des cas. La contrainte est la hauteur libre : beaucoup de garages du centre-ville de Hull sont limités à deux mètres, ce qui exclut le plateau classique. Dites-nous le niveau où se trouve la voiture et la hauteur inscrite à l'entrée, et on arrive avec l'équipement qui passe.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Towing in Hull — bridges, downtown, Taché",
+      metaDescription:
+        "24/7 towing in the Hull sector: Portage Bridge, Alexandra Bridge, boulevard Alexandre-Taché, Vieux-Hull. From $79.99. Call (819) 921-7869.",
+      eyebrow: "Towing · Hull",
+      heroTitle: "Towing",
+      heroHighlight: "in Hull",
+      subtitle:
+        "Four bridges, a dense downtown and multi-level parkades: the Hull sector is not towed the way a country road is. Give us the street and we confirm your price before the truck leaves.",
+      trustBar: ["All four bridges covered", "From $79.99", "24 hours a day, 7 days a week"],
+      reasonsTitle: "What makes the Hull sector its own problem",
+      reasons: [
+        {
+          title: "Four bridges, four queues",
+          text: "Portage, Chaudière, Alexandra and Macdonald-Cartier link Hull to Ottawa. The Macdonald-Cartier alone carries close to 70,000 vehicles a day: breaking down on it blocks an artery.",
+        },
+        {
+          title: "A one-lane stretch of Taché",
+          text: "Late in the day the westbound section between UQO and boulevard Saint-Joseph narrows and backs up. We go around by Maisonneuve rather than sit in it.",
+        },
+        {
+          title: "Low underground parkades",
+          text: "Downtown stacks its parking. A standard flatbed does not always fit: give us the level and the clearance posted at the entrance and we send equipment that does.",
+        },
+      ],
+      areas: ["Vieux-Hull", "Val-Tétreau", "Wrightville", "Mont-Bleu", "Le Plateau", "Parc-de-la-Montagne"],
+      ctaCardTitle: "Stuck somewhere in Hull?",
+      ctaCardText: "Give us the street and the nearest bridge — the truck leaves.",
+      serviceName: "Towing in Hull",
+      faqTitle: "Frequently Asked Questions — Towing in Hull",
+      faq: [
+        {
+          question: "How much does a tow cost in Hull?",
+          answer:
+            "Towing starts at $79.99 and the total depends on the street you are on and where the vehicle is going. From Vieux-Hull, our shop at 879 chemin Vanier is about ten kilometres away by boulevard Alexandre-Taché. We work the exact figure out by phone, free, and the quoted price does not change when we arrive.",
+        },
+        {
+          question: "Do you come out onto the bridges between Hull and Ottawa?",
+          answer:
+            "Yes, all four crossings are in our area: Portage, Chaudière, Alexandra and Macdonald-Cartier. On the Macdonald-Cartier, which carries roughly 70,000 vehicles a day, stay belted inside the vehicle in heavy traffic rather than stepping out. Call (819) 921-7869 and tell us which direction you were heading.",
+        },
+        {
+          question: "Which Hull neighbourhoods do you serve?",
+          answer:
+            "The whole sector, postal codes J8X, J8Y and J8Z: Vieux-Hull, Val-Tétreau, Wrightville, Mont-Bleu, Le Plateau and the Parc-de-la-Montagne area, out to the Chelsea boundary on boulevard Saint-Joseph. It is the fastest sector to reach from the Aylmer shop, around fifteen minutes outside rush hour.",
+        },
+        {
+          question: "Can you pull a car out of an underground parkade?",
+          answer:
+            "Yes in the large majority of cases. The constraint is headroom: many downtown Hull garages are capped at two metres, which rules out the usual flatbed. Tell us which level the car is on and the clearance posted at the entrance, and we arrive with equipment that fits.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "gatineau",
+    group: "zone",
+    heroImage: { kind: "static", src: "/remorquage.webp" },
+    fr: {
+      metaTitle: "Remorquage secteur Gatineau — Maloney et Gréber",
+      metaDescription:
+        "Remorquage 24h/24 dans le secteur Gatineau : boulevard Maloney, Gréber, La Vérendrye, Pointe-Gatineau, Templeton. À partir de 79,99 $. (819) 921-7869.",
+      eyebrow: "Remorquage · Secteur Gatineau",
+      heroTitle: "Remorquage",
+      heroHighlight: "secteur Gatineau",
+      subtitle:
+        "De la Pointe-Gatineau à la limite de Masson-Angers, le secteur Gatineau est un long corridor commercial. On y roule toute la journée : donnez le boulevard et l'intersection.",
+      trustBar: ["Corridor Maloney couvert", "À partir de 79,99 $", "Dépanneuse 24 h sur 24"],
+      reasonsTitle: "Pourquoi le secteur Gatineau demande des repères précis",
+      reasons: [
+        {
+          title: "Un boulevard de bout en bout",
+          text: "Le boulevard Maloney, c'est la route 148 : il part d'un échangeur incomplet de l'autoroute 50 et file jusqu'à la limite de Masson-Angers. Dire « sur Maloney » ne suffit pas, l'intersection change tout.",
+        },
+        {
+          title: "Le Rapibus au milieu",
+          text: "La voie réservée longe le côté nord de Maloney puis s'en écarte juste à l'est de la montée Paiement. Elle ferme des accès et impose des détours que les GPS ne reflètent pas toujours.",
+        },
+        {
+          title: "Des stationnements commerciaux saturés",
+          text: "Les Promenades, au coin de Gréber et de Maloney, est le plus grand centre commercial de la ville. Une batterie à plat un samedi s'y règle souvent sur place, sans remorquage.",
+        },
+      ],
+      areas: ["Pointe-Gatineau", "Templeton", "Le Carrefour", "Touraine", "Cheval-Blanc", "Saint-Richard"],
+      ctaCardTitle: "En panne sur Maloney ou Gréber ?",
+      ctaCardText: "Donnez le boulevard et l'intersection — on est dans le secteur.",
+      serviceName: "Remorquage — secteur Gatineau",
+      faqTitle: "Questions fréquentes — Remorquage dans le secteur Gatineau",
+      faq: [
+        {
+          question: "Combien coûte un remorquage dans le secteur Gatineau ?",
+          answer:
+            "Le tarif part de 79,99 $ et le total se calcule sur la distance réelle. Le secteur s'étire sur une dizaine de kilomètres entre la Pointe-Gatineau et Masson-Angers : une panne près du boulevard Gréber et une autre au bout de Maloney Est ne donnent pas le même montant. Deux minutes au téléphone suffisent pour le chiffre final.",
+        },
+        {
+          question: "Quels quartiers couvrez-vous dans le secteur Gatineau ?",
+          answer:
+            "Les codes postaux J8P, J8R et J8T : Pointe-Gatineau, Le Carrefour, Touraine, Templeton, Cheval-Blanc et Saint-Richard, du boulevard La Vérendrye jusqu'à la montée Paiement et au-delà vers l'est. Appelez au (819) 921-7869 avec l'intersection la plus proche, c'est ce qui nous situe le plus vite.",
+        },
+        {
+          question: "Combien de temps avant l'arrivée de la dépanneuse ?",
+          answer:
+            "Comptez en général de 20 à 40 minutes depuis l'atelier d'Aylmer, selon l'heure et le pont emprunté. Le facteur qui pèse le plus ici, c'est l'accès à l'autoroute 50 : aux heures de pointe, l'approche de l'échangeur Maloney est le point le plus lent de tout le trajet.",
+        },
+        {
+          question: "Intervenez-vous dans les stationnements de centres commerciaux ?",
+          answer:
+            "Oui, et c'est une bonne part de nos appels dans ce secteur. Aux Promenades comme dans les commerces du boulevard Gréber, l'appel typique est un survoltage ou un déverrouillage, pas un remorquage. On règle ça sur place quand c'est possible : ça vous coûte moins cher qu'un transport vers un garage.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Towing in the Gatineau sector — Maloney, Gréber",
+      metaDescription:
+        "24/7 towing in the Gatineau sector: boulevard Maloney, Gréber, La Vérendrye, Pointe-Gatineau, Templeton. From $79.99. Call (819) 921-7869.",
+      eyebrow: "Towing · Gatineau sector",
+      heroTitle: "Towing",
+      heroHighlight: "Gatineau sector",
+      subtitle:
+        "From Pointe-Gatineau to the Masson-Angers boundary, the Gatineau sector is one long commercial corridor. We drive it all day: give us the boulevard and the intersection.",
+      trustBar: ["Maloney corridor covered", "From $79.99", "Tow truck 24 hours a day"],
+      reasonsTitle: "Why the Gatineau sector needs a precise landmark",
+      reasons: [
+        {
+          title: "One boulevard, end to end",
+          text: "Boulevard Maloney is Route 148: it leaves an incomplete Autoroute 50 interchange and runs to the Masson-Angers boundary. \"On Maloney\" is not an address — the intersection changes everything.",
+        },
+        {
+          title: "The Rapibus down the middle",
+          text: "The busway runs along the north side of Maloney, then peels away just east of montée Paiement. It closes accesses and forces detours that GPS apps do not always show.",
+        },
+        {
+          title: "Packed retail parking",
+          text: "Les Promenades, at Gréber and Maloney, is the city's largest mall. A dead battery there on a Saturday is usually settled on the spot, with no tow at all.",
+        },
+      ],
+      areas: ["Pointe-Gatineau", "Templeton", "Le Carrefour", "Touraine", "Cheval-Blanc", "Saint-Richard"],
+      ctaCardTitle: "Broken down on Maloney or Gréber?",
+      ctaCardText: "Give us the boulevard and the intersection — we're in the area.",
+      serviceName: "Towing — Gatineau sector",
+      faqTitle: "Frequently Asked Questions — Towing in the Gatineau sector",
+      faq: [
+        {
+          question: "How much does a tow cost in the Gatineau sector?",
+          answer:
+            "The rate starts at $79.99 and the total is worked out on actual distance. The sector runs about ten kilometres from Pointe-Gatineau to Masson-Angers: a breakdown near boulevard Gréber and one at the far end of Maloney Est are not the same trip. Two minutes on the phone gives you the final figure.",
+        },
+        {
+          question: "Which neighbourhoods do you cover in the Gatineau sector?",
+          answer:
+            "Postal codes J8P, J8R and J8T: Pointe-Gatineau, Le Carrefour, Touraine, Templeton, Cheval-Blanc and Saint-Richard, from boulevard La Vérendrye out past montée Paiement. Call (819) 921-7869 with the nearest intersection — that is what places you fastest.",
+        },
+        {
+          question: "How long before the tow truck arrives?",
+          answer:
+            "Usually 20 to 40 minutes from the Aylmer shop, depending on the hour and the bridge we take. The biggest variable here is the Autoroute 50 access: at rush hour, the approach to the Maloney interchange is the slowest part of the whole run.",
+        },
+        {
+          question: "Do you come into shopping centre parking lots?",
+          answer:
+            "Yes, and it is a good share of our calls in this sector. At Les Promenades and along boulevard Gréber, the typical call is a boost or a lockout, not a tow. We settle it on the spot where we can, which costs you less than moving the car to a garage.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "buckingham",
+    group: "zone",
+    heroImage: { kind: "static", src: "/remorquage.webp" },
+    fr: {
+      metaTitle: "Remorquage à Buckingham — route 309, Lièvre",
+      metaDescription:
+        "Remorquage 24h/24 à Buckingham : route 309, avenue de Buckingham, boulevard Maloney Est, rivière du Lièvre. Prix confirmé au téléphone. (819) 921-7869.",
+      eyebrow: "Remorquage · Buckingham",
+      heroTitle: "Remorquage",
+      heroHighlight: "à Buckingham",
+      subtitle:
+        "Buckingham est à l'extrémité est de Gatineau, de part et d'autre de la rivière du Lièvre. On y va à toute heure : dites-nous de quel côté de la rivière vous êtes.",
+      trustBar: ["Routes 309 et 315 couvertes", "Prix confirmé avant le départ", "Nuit et jours fériés"],
+      reasonsTitle: "Ce qu'il faut savoir avant d'appeler depuis Buckingham",
+      reasons: [
+        {
+          title: "La rivière coupe le secteur en deux",
+          text: "La rivière du Lièvre traverse Buckingham. Nous dire de quel côté vous êtes évite un détour par le pont, et ça vaut souvent dix minutes.",
+        },
+        {
+          title: "La route 309 part d'ici",
+          text: "Elle démarre à l'autoroute 50 dans le secteur Buckingham et remonte vers le nord le long de la Lièvre. Plus on monte, plus les services se raréfient : c'est le genre de trajet qu'on chiffre d'avance.",
+        },
+        {
+          title: "Trente kilomètres à l'est de l'atelier",
+          text: "On ne prétend pas être à cinq minutes. On annonce un délai réel au téléphone plutôt qu'un chiffre optimiste, et la distance est dans le prix dès le premier appel.",
+        },
+      ],
+      areas: ["Vieux-Buckingham", "L'Ange-Gardien", "Masson-Angers", "Notre-Dame-de-la-Salette", "Mayo"],
+      ctaCardTitle: "Besoin d'une dépanneuse à Buckingham ?",
+      ctaCardText: "Un appel, le prix confirmé, et on part de l'atelier.",
+      serviceName: "Remorquage à Buckingham",
+      faqTitle: "Questions fréquentes — Remorquage à Buckingham",
+      faq: [
+        {
+          question: "Combien coûte un remorquage à Buckingham ?",
+          answer:
+            "Le remorquage commence à 79,99 $, et Buckingham est à une trentaine de kilomètres à l'est de notre atelier d'Aylmer : la distance entre dans le calcul et on vous l'annonce d'avance. Le montant est confirmé au téléphone avant que le camion parte, et il ne change pas une fois sur place.",
+        },
+        {
+          question: "Desservez-vous tout Buckingham et les environs ?",
+          answer:
+            "Oui — Buckingham, code postal J8L, et ce qui l'entoure : le Vieux-Buckingham, l'avenue de Buckingham qui est la route 315, le boulevard Maloney Est, la route 309 vers le nord, ainsi que L'Ange-Gardien, Mayo et Notre-Dame-de-la-Salette. Appelez avec le nom du chemin plutôt que celui du quartier.",
+        },
+        {
+          question: "Remorquez-vous de Buckingham jusqu'à Gatineau ou Ottawa ?",
+          answer:
+            "Oui, c'est même le trajet le plus courant : un véhicule ramassé à Buckingham repart souvent vers un garage du secteur Gatineau, vers Ottawa ou vers notre propre atelier d'Aylmer. Le tarif se calcule sur le trajet complet, du point de ramassage à la destination, et il est confirmé avant le départ.",
+        },
+        {
+          question: "Venez-vous à Buckingham la nuit et l'hiver ?",
+          answer:
+            "La dépanneuse roule 24 heures sur 24 à Buckingham, jours fériés compris, sans supplément de nuit ni de fin de semaine. L'hiver, la route 309 le long de la Lièvre et les chemins qui montent vers Mayo sont ceux où on intervient le plus : la chaussée y reste glacée bien plus longtemps qu'en ville.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Towing in Buckingham — Route 309, Lièvre River",
+      metaDescription:
+        "24/7 towing in Buckingham: Route 309, avenue de Buckingham, boulevard Maloney Est, Lièvre River. Price confirmed by phone. Call (819) 921-7869.",
+      eyebrow: "Towing · Buckingham",
+      heroTitle: "Towing",
+      heroHighlight: "in Buckingham",
+      subtitle:
+        "Buckingham sits at Gatineau's eastern end, on both banks of the Lièvre River. We come out at any hour — tell us which side of the river you are on.",
+      trustBar: ["Routes 309 and 315 covered", "Price confirmed before we leave", "Nights and holidays"],
+      reasonsTitle: "What to know before calling from Buckingham",
+      reasons: [
+        {
+          title: "The river splits the sector",
+          text: "The Lièvre River runs straight through Buckingham. Telling us which bank you are on saves a detour to the bridge, and that is often ten minutes.",
+        },
+        {
+          title: "Route 309 starts here",
+          text: "It leaves Autoroute 50 in the Buckingham sector and climbs north along the Lièvre. The further up you go, the thinner the services get — the kind of run we price before leaving.",
+        },
+        {
+          title: "Thirty kilometres east of the shop",
+          text: "We will not pretend to be five minutes away. We give a real arrival window on the phone instead of an optimistic one, and the distance is in the price from the first call.",
+        },
+      ],
+      areas: ["Vieux-Buckingham", "L'Ange-Gardien", "Masson-Angers", "Notre-Dame-de-la-Salette", "Mayo"],
+      ctaCardTitle: "Need a tow truck in Buckingham?",
+      ctaCardText: "One call, the price confirmed, and we leave the shop.",
+      serviceName: "Towing in Buckingham",
+      faqTitle: "Frequently Asked Questions — Towing in Buckingham",
+      faq: [
+        {
+          question: "How much does a tow cost in Buckingham?",
+          answer:
+            "Towing starts at $79.99, and Buckingham is about thirty kilometres east of our Aylmer shop: that distance is part of the calculation and we tell you up front. The amount is confirmed by phone before the truck leaves, and it does not change once we are on site.",
+        },
+        {
+          question: "Do you cover all of Buckingham and the area around it?",
+          answer:
+            "Yes — Buckingham, postal code J8L, and what surrounds it: Vieux-Buckingham, avenue de Buckingham which is Route 315, boulevard Maloney Est, Route 309 heading north, plus L'Ange-Gardien, Mayo and Notre-Dame-de-la-Salette. Call with the road name rather than the neighbourhood name.",
+        },
+        {
+          question: "Will you tow from Buckingham to Gatineau or Ottawa?",
+          answer:
+            "Yes, and it is the most common run we do here: a vehicle picked up in Buckingham usually goes on to a garage in the Gatineau sector, to Ottawa, or to our own shop in Aylmer. The rate covers the complete trip, pickup to destination, and it is confirmed before we set off.",
+        },
+        {
+          question: "Do you come to Buckingham at night and in winter?",
+          answer:
+            "The tow truck runs 24 hours a day in Buckingham, holidays included, with no night or weekend surcharge. In winter, Route 309 along the Lièvre and the roads climbing toward Mayo are where we go most: the surface there stays iced over far longer than it does in town.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "masson-angers",
+    group: "zone",
+    heroImage: { kind: "static", src: "/remorquage.webp" },
+    fr: {
+      metaTitle: "Remorquage à Masson-Angers — traversier, 148, A-50",
+      metaDescription:
+        "Remorquage 24h/24 à Masson-Angers : traverse de Cumberland, chemin Montréal Ouest, route 315, autoroute 50. À partir de 79,99 $. (819) 921-7869.",
+      eyebrow: "Remorquage · Masson-Angers",
+      heroTitle: "Remorquage",
+      heroHighlight: "à Masson-Angers",
+      subtitle:
+        "Entre la traverse de Cumberland et l'autoroute 50, Masson-Angers vit sur deux axes. On y va jour et nuit : dites-nous si vous êtes côté Masson ou côté Angers.",
+      trustBar: ["Traverse de Cumberland desservie", "À partir de 79,99 $", "Jour et nuit"],
+      reasonsTitle: "Masson-Angers, deux villages et un traversier",
+      reasons: [
+        {
+          title: "Un traversier, mille automobilistes par jour",
+          text: "La traverse Cumberland–Masson fait passer environ mille automobilistes chaque jour, quatorze véhicules par voyage. Une panne dans la file bloque l'embarquement : on traite ces appels en priorité.",
+        },
+        {
+          title: "Le traversier ferme parfois",
+          text: "À la crue du printemps, les traversées sont suspendues et tout le trafic se reporte sur l'autoroute 50 et les ponts de Gatineau. Le détour rallonge, et notre délai annoncé en tient compte.",
+        },
+        {
+          title: "Masson et Angers ne se touchent pas",
+          text: "Le secteur réunit deux anciens villages séparés par la rivière du Lièvre. Le nom du chemin nous amène au bon endroit bien mieux que le nom du secteur.",
+        },
+      ],
+      areas: ["Masson", "Angers", "Traverse de Cumberland", "Chemin Montréal Ouest", "Route 315"],
+      ctaCardTitle: "En panne à Masson-Angers ?",
+      ctaCardText: "Côté Masson ou côté Angers — dites-le-nous et on part.",
+      serviceName: "Remorquage à Masson-Angers",
+      faqTitle: "Questions fréquentes — Remorquage à Masson-Angers",
+      faq: [
+        {
+          question: "Combien coûte un remorquage à Masson-Angers ?",
+          answer:
+            "Le remorquage part de 79,99 $ et le total dépend du trajet complet. Masson-Angers est à l'extrémité est de Gatineau, une trentaine de kilomètres de notre atelier d'Aylmer par l'autoroute 50. On vous donne le montant exact au téléphone avant de partir, et c'est celui que vous payez.",
+        },
+        {
+          question: "Quel territoire couvrez-vous à Masson-Angers ?",
+          answer:
+            "Tout le secteur, code postal J8M : le village de Masson, celui d'Angers, le chemin Montréal Ouest qui est la route 148, la route 315 vers Buckingham, les sorties de l'autoroute 50 et la traverse de Cumberland. Appelez le (819) 921-7869 avec le nom du chemin et le numéro civique.",
+        },
+        {
+          question: "Et si je tombe en panne dans la file du traversier ?",
+          answer:
+            "Appelez tout de suite en précisant que vous êtes à la traverse de Cumberland. Le bateau ne prend que quatorze véhicules par voyage et environ mille automobilistes l'empruntent chaque jour : un véhicule immobilisé dans la file retarde tout le monde. On traite ces appels en priorité et on dégage d'abord le véhicule.",
+        },
+        {
+          question: "Que se passe-t-il quand le traversier est fermé ?",
+          answer:
+            "Au printemps, la crue de la rivière des Outaouais force parfois la suspension des traversées entre Masson-Angers et Cumberland. Le trajet vers l'Ontario repasse alors par l'autoroute 50 et les ponts de Gatineau, ce qui ajoute une quarantaine de kilomètres. On en tient compte dans le délai qu'on vous annonce.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Towing in Masson-Angers — ferry, 148, A-50",
+      metaDescription:
+        "24/7 towing in Masson-Angers: Cumberland ferry, chemin Montréal Ouest, Route 315, Autoroute 50. From $79.99. Call (819) 921-7869.",
+      eyebrow: "Towing · Masson-Angers",
+      heroTitle: "Towing",
+      heroHighlight: "in Masson-Angers",
+      subtitle:
+        "Between the Cumberland ferry and Autoroute 50, Masson-Angers lives on two axes. We come day or night — tell us whether you are on the Masson side or the Angers side.",
+      trustBar: ["Cumberland ferry served", "From $79.99", "Day and night"],
+      reasonsTitle: "Masson-Angers: two villages and a ferry",
+      reasons: [
+        {
+          title: "A ferry, a thousand drivers a day",
+          text: "The Cumberland–Masson crossing carries around a thousand motorists daily, fourteen vehicles per trip. A breakdown in the queue stops boarding, so those calls go to the front of ours.",
+        },
+        {
+          title: "The ferry does shut down",
+          text: "At spring freshet the crossings are suspended and all that traffic shifts onto Autoroute 50 and the Gatineau bridges. The detour is long, and the wait we quote you accounts for it.",
+        },
+        {
+          title: "Masson and Angers are not adjacent",
+          text: "The sector joins two former villages split by the Lièvre River. The road name gets us to the right place far better than the sector name does.",
+        },
+      ],
+      areas: ["Masson", "Angers", "Cumberland ferry", "Chemin Montréal Ouest", "Route 315"],
+      ctaCardTitle: "Broken down in Masson-Angers?",
+      ctaCardText: "Masson side or Angers side — tell us and we leave.",
+      serviceName: "Towing in Masson-Angers",
+      faqTitle: "Frequently Asked Questions — Towing in Masson-Angers",
+      faq: [
+        {
+          question: "How much does a tow cost in Masson-Angers?",
+          answer:
+            "Towing starts at $79.99 and the total depends on the complete trip. Masson-Angers sits at Gatineau's eastern edge, about thirty kilometres from our Aylmer shop by Autoroute 50. We give you the exact amount by phone before leaving, and that is what you pay.",
+        },
+        {
+          question: "What area do you cover in Masson-Angers?",
+          answer:
+            "The whole sector, postal code J8M: the village of Masson, the village of Angers, chemin Montréal Ouest which is Route 148, Route 315 toward Buckingham, the Autoroute 50 exits and the Cumberland ferry landing. Call (819) 921-7869 with the road name and street number.",
+        },
+        {
+          question: "What if I break down in the ferry queue?",
+          answer:
+            "Call right away and say you are at the Cumberland crossing. The boat takes only fourteen vehicles per trip and roughly a thousand motorists use it each day, so one stalled car holds up everyone behind it. We treat those calls as priority and clear the vehicle first.",
+        },
+        {
+          question: "What happens when the ferry is closed?",
+          answer:
+            "In spring, high water on the Ottawa River sometimes suspends the Masson-Angers–Cumberland crossings. The trip to Ontario then goes back around by Autoroute 50 and the Gatineau bridges, adding roughly forty kilometres. We factor that into the arrival time we quote you.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "cantley",
+    group: "zone",
+    heroImage: { kind: "static", src: "/remorquage.webp" },
+    fr: {
+      metaTitle: "Remorquage à Cantley — montée de la Source, 307",
+      metaDescription:
+        "Remorquage 24h/24 à Cantley : montée de la Source, chemin Sainte-Élisabeth, route 307, chemins ruraux et culs-de-sac. (819) 921-7869.",
+      eyebrow: "Remorquage · Cantley",
+      heroTitle: "Remorquage",
+      heroHighlight: "à Cantley",
+      subtitle:
+        "Cantley tient sur une seule artère et une série de chemins qui n'en ressortent pas. Donnez le chemin et le numéro civique, pas seulement « à Cantley ».",
+      trustBar: ["Route 307 et chemins ruraux", "À partir de 79,99 $", "24 h sur 24"],
+      reasonsTitle: "Pourquoi une panne à Cantley n'est pas une panne en ville",
+      reasons: [
+        {
+          title: "Une seule artère",
+          text: "La route 307 traverse Cantley sous le nom de montée de la Source, dans le prolongement de la rue Saint-Louis à Gatineau. Tout passe par là : si elle bloque, il n'y a pas de second chemin.",
+        },
+        {
+          title: "Beaucoup d'impasses",
+          text: "Une grande partie du réseau local se termine en cul-de-sac. Un camion engagé au mauvais endroit perd le temps du demi-tour, alors on vérifie le chemin avec vous avant de partir.",
+        },
+        {
+          title: "Des entrées longues",
+          text: "En secteur boisé, la maison est souvent à cent mètres de la route. Le numéro civique plus un repère visible depuis le chemin valent mieux qu'une adresse toute seule.",
+        },
+      ],
+      areas: ["Montée de la Source", "Chemin Sainte-Élisabeth", "Mont-Cascades", "Route 307"],
+      ctaCardTitle: "Immobilisé sur un chemin de Cantley ?",
+      ctaCardText: "Le nom du chemin, le numéro civique, et la dépanneuse part.",
+      serviceName: "Remorquage à Cantley",
+      faqTitle: "Questions fréquentes — Remorquage à Cantley",
+      faq: [
+        {
+          question: "Combien coûte un remorquage à Cantley ?",
+          answer:
+            "Le tarif débute à 79,99 $ et le reste dépend d'où vous êtes sur le territoire. Cantley s'étire vers le nord le long de la route 307 : le bas de la montée de la Source et le haut du chemin Sainte-Élisabeth ne sont pas à la même distance de l'atelier. On chiffre le trajet exact au téléphone, gratuitement.",
+        },
+        {
+          question: "Desservez-vous tout Cantley, y compris les chemins ruraux ?",
+          answer:
+            "Oui, toute la municipalité, code postal J8V, dans la MRC des Collines-de-l'Outaouais : la montée de la Source, le chemin Sainte-Élisabeth, les chemins qui mènent au Mont-Cascades et les chemins de desserte qui en partent. Appelez au (819) 921-7869 avec le nom du chemin, c'est le repère qui compte ici.",
+        },
+        {
+          question: "Que faire si je suis en panne sur la route 307 ?",
+          answer:
+            "Rangez-vous le plus loin possible de la voie, allumez vos feux de détresse et restez derrière la glissière ou hors du véhicule côté fossé. La 307 est la seule voie de traversée de Cantley, donc la circulation y est continue et rapide même en soirée. Donnez-nous le dernier chemin croisé, on vous situe tout de suite.",
+        },
+        {
+          question: "Mon chemin est une impasse non déneigée — venez-vous quand même ?",
+          answer:
+            "Oui, tant que la dépanneuse peut entrer et ressortir. C'est exactement pour ça qu'on demande le nom du chemin avant de partir : une bonne partie du réseau de Cantley se termine en cul-de-sac et certains chemins privés ne sont pas entretenus l'hiver. Décrivez l'état du chemin, on envoie le véhicule adapté.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Towing in Cantley — montée de la Source, 307",
+      metaDescription:
+        "24/7 towing in Cantley: montée de la Source, chemin Sainte-Élisabeth, Route 307, rural roads and dead ends. Call (819) 921-7869.",
+      eyebrow: "Towing · Cantley",
+      heroTitle: "Towing",
+      heroHighlight: "in Cantley",
+      subtitle:
+        "Cantley hangs off one artery and a string of roads that do not lead back out. Give us the road and the street number, not just \"in Cantley\".",
+      trustBar: ["Route 307 and rural roads", "From $79.99", "24 hours a day"],
+      reasonsTitle: "Why a breakdown in Cantley is not a breakdown in town",
+      reasons: [
+        {
+          title: "A single artery",
+          text: "Route 307 crosses Cantley as montée de la Source, carrying on from rue Saint-Louis in Gatineau. Everything runs through it: if it blocks, there is no second road.",
+        },
+        {
+          title: "A lot of dead ends",
+          text: "Much of the local network finishes in a cul-de-sac. A truck that turns down the wrong one loses the time it takes to turn around, so we check the road with you before leaving.",
+        },
+        {
+          title: "Long driveways",
+          text: "On wooded lots the house often sits a hundred metres back. A street number plus something visible from the road beats an address on its own.",
+        },
+      ],
+      areas: ["Montée de la Source", "Chemin Sainte-Élisabeth", "Mont-Cascades", "Route 307"],
+      ctaCardTitle: "Stuck on a Cantley back road?",
+      ctaCardText: "The road name, the street number, and the truck leaves.",
+      serviceName: "Towing in Cantley",
+      faqTitle: "Frequently Asked Questions — Towing in Cantley",
+      faq: [
+        {
+          question: "How much does a tow cost in Cantley?",
+          answer:
+            "The rate opens at $79.99 and the rest depends on where you are on the territory. Cantley stretches north along Route 307: the bottom of montée de la Source and the top of chemin Sainte-Élisabeth are not the same distance from the shop. We price the exact run by phone, free of charge.",
+        },
+        {
+          question: "Do you serve all of Cantley, back roads included?",
+          answer:
+            "Yes, the whole municipality, postal code J8V, in the MRC des Collines-de-l'Outaouais: montée de la Source, chemin Sainte-Élisabeth, the roads up to Mont-Cascades and the side roads branching off them. Call (819) 921-7869 with the road name — that is the landmark that counts out here.",
+        },
+        {
+          question: "What should I do if I break down on Route 307?",
+          answer:
+            "Pull as far off the travelled lane as you can, put the hazards on and wait behind the guardrail or on the ditch side, outside the vehicle. Route 307 is Cantley's only through road, so traffic on it stays steady and fast even in the evening. Tell us the last road you passed and we place you at once.",
+        },
+        {
+          question: "My road is an unploughed dead end — will you still come?",
+          answer:
+            "Yes, as long as the truck can get in and back out. That is exactly why we ask for the road name before leaving: much of Cantley's network ends in a cul-de-sac and some private roads are not maintained in winter. Describe the condition and we send the right vehicle.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "val-des-monts",
+    group: "zone",
+    heroImage: { kind: "static", src: "/remorquage.webp" },
+    fr: {
+      metaTitle: "Remorquage à Val-des-Monts — Perkins, Poltimore",
+      metaDescription:
+        "Remorquage 24h/24 à Val-des-Monts : Perkins, Saint-Pierre-de-Wakefield, Poltimore, lac McGregor. Chemins de chalet. (819) 921-7869.",
+      eyebrow: "Remorquage · Val-des-Monts",
+      heroTitle: "Remorquage",
+      heroHighlight: "à Val-des-Monts",
+      subtitle:
+        "Trois anciens villages, des dizaines de lacs et des centaines de kilomètres de chemins. On y monte à toute heure — avec le nom du lac, on vous trouve.",
+      trustBar: ["Perkins, Poltimore, Saint-Pierre", "Prix confirmé au téléphone", "Nuit et fin de semaine"],
+      reasonsTitle: "Ce que Val-des-Monts a de particulier",
+      reasons: [
+        {
+          title: "Trois villages en un",
+          text: "Val-des-Monts est né en 1975 de la fusion de Perkins, Saint-Pierre-de-Wakefield et Poltimore. Les trois sont loin les uns des autres : nommer le bon secteur, c'est déjà la moitié du travail.",
+        },
+        {
+          title: "Une population qui gonfle l'été",
+          text: "Le territoire compte des milliers de chalets autour du lac McGregor, du lac Saint-Pierre et du lac Grand. L'été, il y a beaucoup plus de monde sur des chemins qui n'ont pas changé.",
+        },
+        {
+          title: "Un réseau très long",
+          text: "Les chemins locaux sont étroits, en pente et souvent bordés d'arbres. On demande le nom du lac ou du chemin plutôt que l'adresse : c'est ce qui se repère sur le terrain.",
+        },
+      ],
+      areas: ["Perkins", "Saint-Pierre-de-Wakefield", "Poltimore", "Lac McGregor", "Lac Saint-Pierre", "Lac Grand"],
+      ctaCardTitle: "En panne dans le bout de Val-des-Monts ?",
+      ctaCardText: "Le nom du lac ou du chemin suffit — on part de suite.",
+      serviceName: "Remorquage à Val-des-Monts",
+      faqTitle: "Questions fréquentes — Remorquage à Val-des-Monts",
+      faq: [
+        {
+          question: "Combien coûte un remorquage à Val-des-Monts ?",
+          answer:
+            "Le remorquage commence à 79,99 $ et Val-des-Monts est le territoire le plus étendu qu'on dessert : entre Perkins, tout au sud, et Poltimore, bien plus haut, il y a des dizaines de kilomètres d'écart. C'est pour ça qu'on calcule le prix au téléphone avant de partir plutôt que d'afficher un tarif unique.",
+        },
+        {
+          question: "Desservez-vous les trois secteurs de Val-des-Monts ?",
+          answer:
+            "Oui : Perkins, Saint-Pierre-de-Wakefield et Poltimore, les trois anciennes municipalités réunies en 1975, plus le secteur du lac McGregor. Le code postal est J8N et le territoire se rejoint par la route 307 depuis Cantley. Appelez le (819) 921-7869 en nommant le secteur, puis le chemin.",
+        },
+        {
+          question: "Montez-vous jusqu'aux chalets autour des lacs ?",
+          answer:
+            "Oui. Le lac McGregor est le plus grand du territoire, suivi du lac Saint-Pierre et du lac Grand, et les chemins de chalet qui y mènent sont étroits, en pente et parfois en gravier. Donnez le nom du lac et celui du chemin : c'est plus utile qu'une adresse et ça nous dit tout de suite quel camion envoyer.",
+        },
+        {
+          question: "Venez-vous l'hiver, quand les chemins sont glacés ?",
+          answer:
+            "Oui, la dépanneuse roule toute l'année à Val-des-Monts, nuit et jours fériés compris. L'hiver est notre haute saison ici : les descentes vers les lacs et les chemins de chalet gèlent tôt et dégèlent tard. Dites-nous si le chemin est en pente et s'il est sablé, ça détermine le véhicule qu'on envoie.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Towing in Val-des-Monts — Perkins, Poltimore",
+      metaDescription:
+        "24/7 towing in Val-des-Monts: Perkins, Saint-Pierre-de-Wakefield, Poltimore, Lac McGregor. Cottage roads. Call (819) 921-7869.",
+      eyebrow: "Towing · Val-des-Monts",
+      heroTitle: "Towing",
+      heroHighlight: "in Val-des-Monts",
+      subtitle:
+        "Three former villages, dozens of lakes and hundreds of kilometres of road. We drive up at any hour — give us the lake and we find you.",
+      trustBar: ["Perkins, Poltimore, Saint-Pierre", "Price confirmed by phone", "Nights and weekends"],
+      reasonsTitle: "What sets Val-des-Monts apart",
+      reasons: [
+        {
+          title: "Three villages in one",
+          text: "Val-des-Monts was formed in 1975 by merging Perkins, Saint-Pierre-de-Wakefield and Poltimore. The three sit far apart: naming the right one is already half the job.",
+        },
+        {
+          title: "A population that swells in summer",
+          text: "The territory holds thousands of cottages around Lac McGregor, Lac Saint-Pierre and Lac Grand. In summer there are many more people on roads that have not changed.",
+        },
+        {
+          title: "A very long road network",
+          text: "The local roads are narrow, steep and mostly tree-lined. We ask for the lake or the road name rather than the address — that is what is actually findable on the ground.",
+        },
+      ],
+      areas: ["Perkins", "Saint-Pierre-de-Wakefield", "Poltimore", "Lac McGregor", "Lac Saint-Pierre", "Lac Grand"],
+      ctaCardTitle: "Broken down up in Val-des-Monts?",
+      ctaCardText: "The lake or the road name is enough — we leave right away.",
+      serviceName: "Towing in Val-des-Monts",
+      faqTitle: "Frequently Asked Questions — Towing in Val-des-Monts",
+      faq: [
+        {
+          question: "How much does a tow cost in Val-des-Monts?",
+          answer:
+            "Towing starts at $79.99, and Val-des-Monts is the largest territory we serve: between Perkins at the southern end and Poltimore well to the north there are dozens of kilometres. That is why we work the price out by phone before leaving instead of posting one flat rate.",
+        },
+        {
+          question: "Do you serve all three parts of Val-des-Monts?",
+          answer:
+            "Yes: Perkins, Saint-Pierre-de-Wakefield and Poltimore, the three former municipalities merged in 1975, plus the Lac McGregor area. The postal code is J8N and the territory is reached by Route 307 through Cantley. Call (819) 921-7869, name the sector first, then the road.",
+        },
+        {
+          question: "Do you go up to the cottages around the lakes?",
+          answer:
+            "Yes. Lac McGregor is the largest here, followed by Lac Saint-Pierre and Lac Grand, and the cottage roads serving them are narrow, steep and sometimes gravel. Give us the lake name and the road name: it beats an address and tells us immediately which truck to send.",
+        },
+        {
+          question: "Do you come in winter, when the roads are iced?",
+          answer:
+            "Yes, the tow truck runs year-round in Val-des-Monts, nights and holidays included. Winter is our busy season here: the descents toward the lakes and the cottage roads freeze early and thaw late. Tell us whether the road is steep and whether it has been sanded — that decides the vehicle we send.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "luskville",
+    group: "zone",
+    heroImage: { kind: "static", src: "/remorquage.webp" },
+    fr: {
+      metaTitle: "Remorquage à Luskville — route 148, Pontiac",
+      metaDescription:
+        "Remorquage 24h/24 à Luskville et dans la municipalité de Pontiac : route 148, chemin de la Montagne, escarpement d'Eardley. (819) 921-7869.",
+      eyebrow: "Remorquage · Luskville",
+      heroTitle: "Remorquage",
+      heroHighlight: "à Luskville",
+      subtitle:
+        "Luskville s'étire le long de la route 148, entre la rivière des Outaouais et l'escarpement d'Eardley. C'est droit, c'est long, et il n'y a pas grand-chose entre deux villages.",
+      trustBar: ["Route 148 vers l'ouest", "À partir de 79,99 $", "24 h sur 24"],
+      reasonsTitle: "Tomber en panne sur la 148 à l'ouest d'Aylmer",
+      reasons: [
+        {
+          title: "Une seule route, très longue",
+          text: "La 148 relie Aylmer au Pontiac presque en ligne droite. C'est rapide quand tout va bien et très isolé quand ça s'arrête : peu de commerces, peu d'éclairage, des accotements étroits.",
+        },
+        {
+          title: "L'escarpement juste au nord",
+          text: "Luskville est au pied de l'escarpement d'Eardley, dans le secteur ouest du parc de la Gatineau. Les chemins qui montent vers la chute de Luskville sont raides et finissent en sentier.",
+        },
+        {
+          title: "Des adresses très espacées",
+          text: "Luskville fait partie de la municipalité de Pontiac, code postal J0X 2G0. Les numéros civiques se suivent sur des kilomètres de 148 : un numéro seul ne dit pas grand-chose, un repère oui.",
+        },
+      ],
+      areas: ["Luskville", "Municipalité de Pontiac", "Chemin de la Montagne", "Chute de Luskville", "Quyon"],
+      ctaCardTitle: "En panne sur la 148 vers le Pontiac ?",
+      ctaCardText: "Donnez le dernier chemin croisé — on remonte la 148.",
+      serviceName: "Remorquage à Luskville",
+      faqTitle: "Questions fréquentes — Remorquage à Luskville",
+      faq: [
+        {
+          question: "Combien coûte un remorquage à Luskville ?",
+          answer:
+            "Le remorquage part de 79,99 $ et la distance compte : Luskville est à une vingtaine de kilomètres à l'ouest de notre atelier d'Aylmer par la route 148. C'est un des rares trajets qu'on fait presque tout droit, donc le temps est prévisible et le prix annoncé au téléphone est ferme.",
+        },
+        {
+          question: "Desservez-vous toute la municipalité de Pontiac ?",
+          answer:
+            "Oui : Luskville, code postal J0X 2G0, et le reste de la municipalité de Pontiac le long de la 148, jusque vers Quyon. C'est le prolongement naturel de notre secteur d'Aylmer, puisque la 148 est la même route. Appelez le (819) 921-7869 avec le dernier chemin ou le dernier commerce croisé.",
+        },
+        {
+          question: "Et si je n'ai pas de réseau cellulaire ?",
+          answer:
+            "La couverture est inégale au pied de l'escarpement d'Eardley et sur les chemins qui montent vers la chute de Luskville. Si vous captez un instant, appelez le (819) 921-7869 et donnez d'abord votre position : le dernier chemin croisé sur la 148. Même si l'appel coupe ensuite, on a l'essentiel pour partir.",
+        },
+        {
+          question: "Intervenez-vous sur les chemins qui montent vers le parc ?",
+          answer:
+            "Oui, avec une réserve : les chemins qui grimpent l'escarpement d'Eardley sont raides et certains se terminent en sentier de randonnée, où aucune dépanneuse ne passe. Dites-nous jusqu'où vous êtes monté et si le véhicule est encore sur une surface carrossable, on vous dit franchement ce qui est faisable.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Towing in Luskville — Route 148, Pontiac",
+      metaDescription:
+        "24/7 towing in Luskville and the Municipality of Pontiac: Route 148, chemin de la Montagne, Eardley Escarpment. Call (819) 921-7869.",
+      eyebrow: "Towing · Luskville",
+      heroTitle: "Towing",
+      heroHighlight: "in Luskville",
+      subtitle:
+        "Luskville runs along Route 148, between the Ottawa River and the Eardley Escarpment. It is straight, it is long, and there is not much between villages.",
+      trustBar: ["Route 148 westbound", "From $79.99", "24 hours a day"],
+      reasonsTitle: "Breaking down on the 148 west of Aylmer",
+      reasons: [
+        {
+          title: "One road, and a long one",
+          text: "The 148 links Aylmer to the Pontiac almost in a straight line. Quick when all is well, and very isolated when it is not: few businesses, little lighting, narrow shoulders.",
+        },
+        {
+          title: "The escarpment right to the north",
+          text: "Luskville sits at the foot of the Eardley Escarpment, in Gatineau Park's western sector. The roads climbing toward Luskville Falls are steep and turn into footpath.",
+        },
+        {
+          title: "Addresses spread thin",
+          text: "Luskville is part of the Municipality of Pontiac, postal code J0X 2G0. Street numbers run for kilometres along the 148: a number alone says little, a landmark says a lot.",
+        },
+      ],
+      areas: ["Luskville", "Municipality of Pontiac", "Chemin de la Montagne", "Luskville Falls", "Quyon"],
+      ctaCardTitle: "Broken down on the 148 toward the Pontiac?",
+      ctaCardText: "Give us the last road you passed — we head up the 148.",
+      serviceName: "Towing in Luskville",
+      faqTitle: "Frequently Asked Questions — Towing in Luskville",
+      faq: [
+        {
+          question: "How much does a tow cost in Luskville?",
+          answer:
+            "Towing starts at $79.99 and distance counts: Luskville is about twenty kilometres west of our Aylmer shop on Route 148. It is one of the few runs we make almost in a straight line, so the timing is predictable and the price quoted on the phone is firm.",
+        },
+        {
+          question: "Do you serve the whole Municipality of Pontiac?",
+          answer:
+            "Yes: Luskville, postal code J0X 2G0, and the rest of the Municipality of Pontiac along the 148, out toward Quyon. It is the natural extension of our Aylmer area, since the 148 is the same road. Call (819) 921-7869 with the last road or the last business you passed.",
+        },
+        {
+          question: "What if I have no cell signal?",
+          answer:
+            "Coverage is patchy at the foot of the Eardley Escarpment and on the roads climbing toward Luskville Falls. If you get a bar for a moment, call (819) 921-7869 and give your position first: the last road you crossed on the 148. Even if the call drops after that, we have what we need to leave.",
+        },
+        {
+          question: "Do you come out on the roads climbing toward the park?",
+          answer:
+            "Yes, with one caveat: the roads up the Eardley Escarpment are steep and some end as hiking trail, where no tow truck goes. Tell us how far up you got and whether the vehicle is still on a driveable surface, and we will tell you honestly what can be done.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "ange-gardien",
+    group: "zone",
+    heroImage: { kind: "static", src: "/remorquage.webp" },
+    fr: {
+      metaTitle: "Remorquage à L'Ange-Gardien — routes 309 et 315",
+      metaDescription:
+        "Remorquage 24h/24 à L'Ange-Gardien en Outaouais : routes 309 et 315, Glen Almond, chemins de rang. Prix confirmé au téléphone. (819) 921-7869.",
+      eyebrow: "Remorquage · L'Ange-Gardien",
+      heroTitle: "Remorquage",
+      heroHighlight: "à L'Ange-Gardien",
+      subtitle:
+        "L'Ange-Gardien vit entre deux routes et beaucoup de chemins de rang. On y va de nuit comme de jour — à condition de savoir par où entrer.",
+      trustBar: ["Routes 309 et 315", "À partir de 79,99 $", "Nuit, fin de semaine, fériés"],
+      reasonsTitle: "Trouver quelqu'un à L'Ange-Gardien",
+      reasons: [
+        {
+          title: "Deux routes, pas trois",
+          text: "La 309 et la 315 encadrent le territoire. Entre les deux, ce sont des chemins de rang : nous dire par quelle route vous êtes arrivé nous évite de faire tout le tour.",
+        },
+        {
+          title: "Un nom porté par deux municipalités",
+          text: "Il existe un autre L'Ange-Gardien au Québec, près de la ville de Québec. Précisez « Outaouais » quand vous appelez un service, et surtout quand vous commandez une pièce.",
+        },
+        {
+          title: "Des hameaux, pas des quartiers",
+          text: "Glen Almond, Neilon et Ribot ne sont pas des quartiers mais des lieux-dits. Ils parlent beaucoup plus au chauffeur que le nom de la municipalité.",
+        },
+      ],
+      areas: ["Glen Almond", "Neilon", "Ribot", "Route 309", "Route 315"],
+      ctaCardTitle: "Besoin d'une dépanneuse à L'Ange-Gardien ?",
+      ctaCardText: "La route d'accès et le chemin — c'est tout ce qu'il nous faut.",
+      serviceName: "Remorquage à L'Ange-Gardien",
+      faqTitle: "Questions fréquentes — Remorquage à L'Ange-Gardien",
+      faq: [
+        {
+          question: "Combien coûte un remorquage à L'Ange-Gardien ?",
+          answer:
+            "Le remorquage commence à 79,99 $ et L'Ange-Gardien est dans l'est de notre zone, au nord de Buckingham. Le montant dépend du chemin où vous êtes et de la destination du véhicule : deux points du même rang peuvent être à dix kilomètres l'un de l'autre. On confirme le prix au téléphone avant de partir.",
+        },
+        {
+          question: "Quel territoire couvrez-vous à L'Ange-Gardien ?",
+          answer:
+            "Toute la municipalité, code postal J8L, qu'on rejoint par la route 309 ou la route 315 depuis Buckingham : les hameaux de Glen Almond, Neilon et Ribot, et les chemins de rang entre les deux routes. Appelez le (819) 921-7869 en donnant la route d'accès puis le nom du chemin.",
+        },
+        {
+          question: "Venez-vous sur les chemins de rang et de gravier ?",
+          answer:
+            "Oui. Une bonne part du territoire de L'Ange-Gardien est desservie par des chemins de rang, dont plusieurs ne sont pas asphaltés. Ce qu'on a besoin de savoir avant de partir, c'est la largeur et l'état du chemin et s'il y a de quoi faire demi-tour. Dites-le au téléphone, on envoie le camion qui convient.",
+        },
+        {
+          question: "Remorquez-vous jusqu'à Gatineau ou jusqu'à votre atelier ?",
+          answer:
+            "Oui, les deux. Beaucoup de véhicules ramassés à L'Ange-Gardien descendent vers un garage de Buckingham ou du secteur Gatineau, et certains viennent directement à notre atelier du 879 chemin Vanier à Aylmer. Le tarif couvre le trajet complet et il est annoncé avant que la dépanneuse quitte la cour.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Towing in L'Ange-Gardien — Routes 309 and 315",
+      metaDescription:
+        "24/7 towing in L'Ange-Gardien, Outaouais: Routes 309 and 315, Glen Almond, concession roads. Price confirmed by phone. Call (819) 921-7869.",
+      eyebrow: "Towing · L'Ange-Gardien",
+      heroTitle: "Towing",
+      heroHighlight: "in L'Ange-Gardien",
+      subtitle:
+        "L'Ange-Gardien lives between two highways and a lot of concession roads. We come out at night as readily as by day — as long as we know which way in.",
+      trustBar: ["Routes 309 and 315", "From $79.99", "Nights, weekends, holidays"],
+      reasonsTitle: "Finding someone in L'Ange-Gardien",
+      reasons: [
+        {
+          title: "Two roads, not three",
+          text: "Routes 309 and 315 frame the territory. Between them it is concession roads: telling us which highway you came in on saves us driving the long way around.",
+        },
+        {
+          title: "A name two municipalities share",
+          text: "There is another L'Ange-Gardien in Quebec, near Quebec City. Say \"Outaouais\" when you call any service, and especially when you order a part.",
+        },
+        {
+          title: "Hamlets, not neighbourhoods",
+          text: "Glen Almond, Neilon and Ribot are place names, not districts. They tell the driver far more than the name of the municipality does.",
+        },
+      ],
+      areas: ["Glen Almond", "Neilon", "Ribot", "Route 309", "Route 315"],
+      ctaCardTitle: "Need a tow truck in L'Ange-Gardien?",
+      ctaCardText: "The highway in and the road name — that is all we need.",
+      serviceName: "Towing in L'Ange-Gardien",
+      faqTitle: "Frequently Asked Questions — Towing in L'Ange-Gardien",
+      faq: [
+        {
+          question: "How much does a tow cost in L'Ange-Gardien?",
+          answer:
+            "Towing starts at $79.99, and L'Ange-Gardien sits at the eastern end of our area, north of Buckingham. The amount depends on which road you are on and where the vehicle is going: two points on the same concession road can be ten kilometres apart. We confirm the price by phone before leaving.",
+        },
+        {
+          question: "What area do you cover in L'Ange-Gardien?",
+          answer:
+            "The whole municipality, postal code J8L, reached by Route 309 or Route 315 from Buckingham: the hamlets of Glen Almond, Neilon and Ribot, and the concession roads between the two highways. Call (819) 921-7869, give the highway you came in on, then the road name.",
+        },
+        {
+          question: "Do you drive concession and gravel roads?",
+          answer:
+            "Yes. A good share of L'Ange-Gardien is served by concession roads, several of them unpaved. What we need to know before leaving is the width and condition of the road and whether there is room to turn around. Tell us on the phone and we send the truck that suits it.",
+        },
+        {
+          question: "Will you tow to Gatineau or to your own shop?",
+          answer:
+            "Yes, either. Many vehicles picked up in L'Ange-Gardien go down to a garage in Buckingham or the Gatineau sector, and some come straight to our shop at 879 chemin Vanier in Aylmer. The rate covers the complete trip and is quoted before the truck leaves the yard.",
         },
       ],
     },

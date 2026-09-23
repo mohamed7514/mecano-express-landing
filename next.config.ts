@@ -61,6 +61,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // /remorquage/secteurs was a single page covering Chelsea, Cantley,
+      // Val-des-Monts, Buckingham and Hull at once — the opposite of one page
+      // per area. Each of those towns now has its own page, so the catch-all
+      // is gone and its traffic belongs on the towing hub, which lists them
+      // all. Insurance: it is not known to have shipped, but the redirect
+      // costs nothing and a 404 would.
+      {
+        source: "/:locale(fr|en)/remorquage/secteurs",
+        destination: "/:locale/remorquage",
+        permanent: true,
+      },
+
       // The mechanical services moved from /services/<slug> to /garage/<slug>,
       // so the URL names the trade the page belongs to. Order matters here:
       // the towing entry is caught before the catch-all, because it does not

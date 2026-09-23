@@ -269,6 +269,672 @@ export const mechanicIntents: MechanicIntent[] = [
     },
   },
   {
+    slug: "luskville",
+    group: "zone",
+    heroImage: { kind: "photo", name: "mecanique.webp" },
+    fr: {
+      metaTitle: "Garage près de Luskville (route 148) | Mécano Express",
+      metaDescription:
+        "Garage mécanique desservant Luskville et le Pontiac, à 20 minutes par la route 148. Suspension, alignement, pneus. (819) 921-7869.",
+      eyebrow: "Garage · Luskville",
+      heroTitle: "Garage",
+      heroHighlight: "près de Luskville",
+      subtitle:
+        "Luskville et Aylmer sont sur la même route. Vingt minutes de 148 vers l'est et vous êtes au 879 chemin Vanier — sans rendez-vous, prix confirmé avant travaux.",
+      trustBar: ["20 minutes par la 148", "Sans rendez-vous", "Garantie 1 an pièces et main-d'œuvre"],
+      reasonsTitle: "Ce qu'on voit arriver du Pontiac",
+      reasons: [
+        {
+          title: "Des suspensions fatiguées",
+          text: "Les chemins de gravier et les accotements creusés du secteur usent les amortisseurs et déréglent la géométrie. C'est le motif de visite numéro un qui nous vient de l'ouest.",
+        },
+        {
+          title: "Un trajet sans détour",
+          text: "La 148 est une ligne droite entre Luskville et Aylmer : pas de pont, pas d'échangeur, pas d'heure de pointe à traverser. Vingt minutes, et c'est prévisible.",
+        },
+        {
+          title: "Le garage complet le plus proche à l'est",
+          text: "Freins, pneus, climatisation, diagnostic électronique : tout se fait sur place, au lieu de répartir la voiture entre trois commerces.",
+        },
+      ],
+      areas: ["Luskville", "Pontiac", "Aylmer"],
+      ctaCardTitle: "Vous venez du Pontiac ?",
+      ctaCardText: "Appelez avant de prendre la 148 — on vous dit quoi faire vérifier.",
+      serviceName: "Garage près de Luskville",
+      faqTitle: "Questions fréquentes — Garage près de Luskville",
+      faq: [
+        {
+          question: "Combien de temps de route depuis Luskville jusqu'à votre atelier ?",
+          answer:
+            "Une vingtaine de minutes par la route 148 vers l'est, soit une vingtaine de kilomètres jusqu'au 879 chemin Vanier à Aylmer. C'est tout droit, sans pont ni échangeur. L'atelier ouvre du lundi au samedi de 9 h à 18 h, sans rendez-vous, et il y a du stationnement sur place.",
+        },
+        {
+          question: "Mes chemins sont en gravier — qu'est-ce que je devrais faire vérifier ?",
+          answer:
+            "La suspension et la géométrie, en priorité. Rouler régulièrement sur du gravier use les amortisseurs, déséquilibre le parallélisme et mange l'intérieur des pneus avant tout le reste. Si le volant tire d'un côté ou si l'usure des pneus est inégale d'un bord à l'autre, c'est le signe. L'inspection se fait à l'atelier et l'estimation est confirmée avant les travaux.",
+        },
+        {
+          question: "Est-ce que vous venez chercher le véhicule à Luskville s'il ne roule plus ?",
+          answer:
+            "Oui. Le service de remorquage répond 24 heures sur 24 au (819) 921-7869 et couvre toute la municipalité de Pontiac, code postal J0X 2G0, le long de la 148 jusque vers Quyon. Le remorquage commence à 79,99 $ et le véhicule est ramené directement à l'atelier d'Aylmer pour le diagnostic.",
+        },
+        {
+          question: "Faut-il prendre rendez-vous pour un changement d'huile ?",
+          answer:
+            "Non, l'atelier prend les visites sans rendez-vous du lundi au samedi, de 9 h à 18 h. Cela dit, si vous faites vingt minutes de route depuis Luskville, un appel au (819) 921-7869 avant de partir vous évite d'arriver au pire moment de la journée — et permet de sortir la pièce d'avance si on sait déjà ce qu'il faut.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Garage near Luskville (Route 148) | Mécano Express",
+      metaDescription:
+        "Auto garage serving Luskville and the Pontiac, 20 minutes away on Route 148. Suspension, alignment, tires. Call (819) 921-7869.",
+      eyebrow: "Garage · Luskville",
+      heroTitle: "Garage",
+      heroHighlight: "near Luskville",
+      subtitle:
+        "Luskville and Aylmer sit on the same road. Twenty minutes east on the 148 and you are at 879 chemin Vanier — walk in, price confirmed before work.",
+      trustBar: ["20 minutes on the 148", "Walk-in welcome", "1-year parts and labour warranty"],
+      reasonsTitle: "What we see coming in from the Pontiac",
+      reasons: [
+        {
+          title: "Tired suspensions",
+          text: "Gravel roads and scoured shoulders wear out shocks and pull the alignment off. It is the number one reason vehicles come to us from the west.",
+        },
+        {
+          title: "A drive with no detour",
+          text: "The 148 runs straight from Luskville to Aylmer: no bridge, no interchange, no rush hour to cross. Twenty minutes, and it is predictable.",
+        },
+        {
+          title: "The nearest full garage heading east",
+          text: "Brakes, tires, air conditioning, electronic diagnostics — all under one roof, instead of splitting the car between three businesses.",
+        },
+      ],
+      areas: ["Luskville", "Pontiac", "Aylmer"],
+      ctaCardTitle: "Driving in from the Pontiac?",
+      ctaCardText: "Call before you take the 148 — we'll tell you what to have checked.",
+      serviceName: "Garage near Luskville",
+      faqTitle: "Frequently Asked Questions — Garage near Luskville",
+      faq: [
+        {
+          question: "How long is the drive from Luskville to your shop?",
+          answer:
+            "About twenty minutes east on Route 148, roughly twenty kilometres to 879 chemin Vanier in Aylmer. It is a straight run with no bridge and no interchange. The shop is open Monday to Saturday, 9 AM to 6 PM, no appointment needed, and there is parking on site.",
+        },
+        {
+          question: "My roads are gravel — what should I have checked?",
+          answer:
+            "Suspension and alignment first. Regular gravel driving wears shocks, pulls the toe out of spec and eats the inner edge of the front tires before anything else shows. A steering wheel that pulls to one side, or tread worn unevenly across the tire, is the tell. The inspection happens at the shop and the estimate is confirmed before any work.",
+        },
+        {
+          question: "Will you come and get the vehicle in Luskville if it will not move?",
+          answer:
+            "Yes. Towing answers 24 hours a day at (819) 921-7869 and covers the whole Municipality of Pontiac, postal code J0X 2G0, along the 148 out toward Quyon. Towing starts at $79.99 and the vehicle comes straight back to the Aylmer shop for diagnosis.",
+        },
+        {
+          question: "Do I need an appointment for an oil change?",
+          answer:
+            "No, the shop takes walk-ins Monday to Saturday, 9 AM to 6 PM. That said, if you are driving twenty minutes from Luskville, a call to (819) 921-7869 before you leave saves you arriving at the busiest hour — and lets us pull the part in advance when we already know what is needed.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "chelsea",
+    group: "zone",
+    heroImage: { kind: "photo", name: "mecanique.webp" },
+    fr: {
+      metaTitle: "Garage près de Chelsea (A-5, route 105) | Mécano Express",
+      metaDescription:
+        "Garage mécanique desservant Chelsea. Freins, pneus, suspension — l'usure typique des côtes du secteur. Prix confirmé. (819) 921-7869.",
+      eyebrow: "Garage · Chelsea",
+      heroTitle: "Garage",
+      heroHighlight: "près de Chelsea",
+      subtitle:
+        "Chelsea, c'est des côtes, du sel et des chemins de parc. Ça se voit sur les freins et les pneus. On répare tout ça au 879 chemin Vanier, à Aylmer.",
+      trustBar: ["Par l'A-5 et le boulevard Taché", "Prix confirmé avant travaux", "Ouvert le samedi"],
+      reasonsTitle: "Ce que les routes de Chelsea font à une voiture",
+      reasons: [
+        {
+          title: "Des freins qui travaillent plus",
+          text: "Descendre le chemin d'Old Chelsea ou les accès du parc en frein moteur, tous les jours, use les plaquettes plus vite qu'un trajet de banlieue à plat.",
+        },
+        {
+          title: "Du sel six mois par année",
+          text: "Les côtes sont sablées et salées tôt en saison. Les conduites de frein et les étriers en prennent pour leur grade : c'est ce qu'on inspecte en premier sur un véhicule de Chelsea.",
+        },
+        {
+          title: "Un trajet de vingt minutes",
+          text: "De Chelsea à l'atelier, comptez une vingtaine de minutes par l'A-5 puis le boulevard Alexandre-Taché. On ne prétend pas être au coin de la rue.",
+        },
+      ],
+      areas: ["Chelsea", "Old Chelsea", "Aylmer"],
+      ctaCardTitle: "Un bruit de frein en descendant de Chelsea ?",
+      ctaCardText: "Décrivez-le au téléphone — on vous dit si ça peut attendre.",
+      serviceName: "Garage près de Chelsea",
+      faqTitle: "Questions fréquentes — Garage près de Chelsea",
+      faq: [
+        {
+          question: "Combien de temps pour venir de Chelsea à votre garage ?",
+          answer:
+            "Une vingtaine de minutes depuis la plupart des secteurs de Chelsea, par l'autoroute 5 puis le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. L'atelier est ouvert du lundi au samedi de 9 h à 18 h, sans rendez-vous. Hors des heures de pointe, le trajet est régulier et sans surprise.",
+        },
+        {
+          question: "Pourquoi mes freins s'usent-ils vite à Chelsea ?",
+          answer:
+            "Parce que le relief les fait travailler davantage. Une descente répétée sur le chemin d'Old Chelsea ou vers la route 105 sollicite les plaquettes bien plus qu'un parcours plat, et le sel appliqué tôt en saison attaque les conduites et les étriers. Un jeu de plaquettes qui dure 60 000 km en ville peut en faire nettement moins ici.",
+        },
+        {
+          question: "Faites-vous l'entretien complet ou seulement les freins ?",
+          answer:
+            "L'atelier couvre l'ensemble : changement d'huile, freins, pneus et entreposage, diagnostic électronique, climatisation, suspension et alignement, échappement, transmission et carrosserie. Les travaux sont garantis un an, pièces et main-d'œuvre, et rien ne commence avant que le prix soit approuvé avec vous.",
+        },
+        {
+          question: "Et si la voiture ne redescend pas de Chelsea ?",
+          answer:
+            "Le remorquage répond 24 heures sur 24 au (819) 921-7869 et couvre toute la municipalité — Old Chelsea, Farm Point, Tenaga, Kirk's Ferry — ainsi que l'autoroute 5 et la route 105. Le remorquage commence à 79,99 $ et le véhicule est ramené à l'atelier d'Aylmer, où le diagnostic suit directement.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Garage near Chelsea (A-5, Route 105) | Mécano Express",
+      metaDescription:
+        "Auto garage serving Chelsea. Brakes, tires, suspension — the wear those hills produce. Price confirmed. Call (819) 921-7869.",
+      eyebrow: "Garage · Chelsea",
+      heroTitle: "Garage",
+      heroHighlight: "near Chelsea",
+      subtitle:
+        "Chelsea means hills, salt and park roads. It shows up on brakes and tires. We fix all of it at 879 chemin Vanier in Aylmer.",
+      trustBar: ["Via the A-5 and boulevard Taché", "Price confirmed before work", "Open Saturday"],
+      reasonsTitle: "What Chelsea's roads do to a car",
+      reasons: [
+        {
+          title: "Brakes that work harder",
+          text: "Coming down chemin d'Old Chelsea or the park accesses on the brakes every day wears pads faster than a flat suburban commute ever does.",
+        },
+        {
+          title: "Six months of road salt",
+          text: "The hills are sanded and salted early in the season. Brake lines and calipers take the punishment, so that is what we inspect first on a Chelsea vehicle.",
+        },
+        {
+          title: "A twenty-minute drive",
+          text: "Chelsea to the shop is about twenty minutes by the A-5 then boulevard Alexandre-Taché. We are not going to pretend we are around the corner.",
+        },
+      ],
+      areas: ["Chelsea", "Old Chelsea", "Aylmer"],
+      ctaCardTitle: "Brake noise on the way down from Chelsea?",
+      ctaCardText: "Describe it on the phone — we'll tell you whether it can wait.",
+      serviceName: "Garage near Chelsea",
+      faqTitle: "Frequently Asked Questions — Garage near Chelsea",
+      faq: [
+        {
+          question: "How long does it take to get from Chelsea to your garage?",
+          answer:
+            "About twenty minutes from most parts of Chelsea, by Autoroute 5 then boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. The shop is open Monday to Saturday, 9 AM to 6 PM, walk-ins welcome. Outside rush hour the drive is steady and predictable.",
+        },
+        {
+          question: "Why do my brakes wear so fast in Chelsea?",
+          answer:
+            "Because the terrain makes them work. Repeatedly descending chemin d'Old Chelsea or dropping toward Route 105 loads the pads far more than flat driving, and salt laid early in the season attacks the lines and calipers. A set of pads that lasts 60,000 km in the city can fall well short of that here.",
+        },
+        {
+          question: "Do you do full servicing or only brakes?",
+          answer:
+            "The shop covers all of it: oil changes, brakes, tires and storage, electronic diagnostics, air conditioning, suspension and alignment, exhaust, transmission and bodywork. Work carries a one-year warranty on parts and labour, and nothing starts before the price is agreed with you.",
+        },
+        {
+          question: "What if the car will not make it down from Chelsea?",
+          answer:
+            "Towing answers 24 hours a day at (819) 921-7869 and covers the whole municipality — Old Chelsea, Farm Point, Tenaga, Kirk's Ferry — as well as Autoroute 5 and Route 105. Towing starts at $79.99 and the vehicle comes back to the Aylmer shop, where diagnosis follows straight away.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "gatineau",
+    group: "zone",
+    heroImage: { kind: "photo", name: "mecanique.webp" },
+    fr: {
+      metaTitle: "Garage près du secteur Gatineau | Mécano Express",
+      metaDescription:
+        "Garage indépendant desservant le secteur Gatineau : Pointe-Gatineau, Templeton, Le Carrefour. Prix confirmé avant travaux. (819) 921-7869.",
+      eyebrow: "Garage · Secteur Gatineau",
+      heroTitle: "Garage",
+      heroHighlight: "près du secteur Gatineau",
+      subtitle:
+        "Le secteur Gatineau ne manque pas de concessionnaires sur Gréber. Ce qu'on offre est autre chose : un atelier indépendant qui explique la facture avant de la faire.",
+      trustBar: ["Atelier indépendant", "Prix confirmé avant travaux", "Garantie 1 an"],
+      reasonsTitle: "Pourquoi traverser la ville plutôt que rester sur Gréber",
+      reasons: [
+        {
+          title: "Un diagnostic qu'on vous explique",
+          text: "On vous montre la pièce et la lecture de l'appareil avant de parler de réparation. Vous repartez en sachant ce qui a été fait et pourquoi.",
+        },
+        {
+          title: "Pas de forfait imposé",
+          text: "Un véhicule qui a besoin de freins repart avec des freins, pas avec un ensemble d'entretien en trois volets décidé d'avance.",
+        },
+        {
+          title: "Une seule adresse pour tout",
+          text: "Mécanique, carrosserie, pneus et remorquage partent du même endroit. Un véhicule immobilisé dans le secteur Gatineau arrive ici par notre propre dépanneuse.",
+        },
+      ],
+      areas: ["Gatineau", "Pointe-Gatineau", "Templeton", "Aylmer"],
+      ctaCardTitle: "Vous êtes dans le secteur Gatineau ?",
+      ctaCardText: "Un appel, un diagnostic honnête, un prix avant les travaux.",
+      serviceName: "Garage près du secteur Gatineau",
+      faqTitle: "Questions fréquentes — Garage près du secteur Gatineau",
+      faq: [
+        {
+          question: "Combien de temps de route depuis le secteur Gatineau ?",
+          answer:
+            "De 20 à 30 minutes selon l'endroit et l'heure : la Pointe-Gatineau est plus proche que le bout de Maloney Est, et l'approche de l'échangeur de l'autoroute 50 est le point le plus lent aux heures de pointe. L'atelier est au 879 chemin Vanier à Aylmer, ouvert du lundi au samedi de 9 h à 18 h.",
+        },
+        {
+          question: "Quels quartiers du secteur Gatineau desservez-vous ?",
+          answer:
+            "Les codes postaux J8P, J8R et J8T : Pointe-Gatineau, Le Carrefour, Touraine, Templeton, Cheval-Blanc et Saint-Richard. Que vous veniez par le boulevard Maloney, La Vérendrye ou l'autoroute 50, l'atelier se rejoint par le boulevard Alexandre-Taché puis le chemin Vanier.",
+        },
+        {
+          question: "Pourquoi choisir un indépendant plutôt qu'un concessionnaire de Gréber ?",
+          answer:
+            "Pour deux raisons concrètes : le taux horaire d'un atelier indépendant est plus bas que celui d'un réseau de concession, et on ne travaille pas avec des forfaits d'entretien préétablis. On répare ce qui doit l'être, on vous montre pourquoi, et la garantie d'un an couvre les pièces comme la main-d'œuvre.",
+        },
+        {
+          question: "Pouvez-vous récupérer un véhicule immobilisé dans le secteur ?",
+          answer:
+            "Oui, on a notre propre dépanneuse et elle répond 24 heures sur 24 au (819) 921-7869. Elle couvre tout le corridor du boulevard Maloney, les stationnements commerciaux des Promenades et de Gréber, et les accès de l'autoroute 50. Le remorquage commence à 79,99 $ et le véhicule arrive directement à l'atelier.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Garage near the Gatineau sector | Mécano Express",
+      metaDescription:
+        "Independent garage serving the Gatineau sector: Pointe-Gatineau, Templeton, Le Carrefour. Price confirmed before work. Call (819) 921-7869.",
+      eyebrow: "Garage · Gatineau sector",
+      heroTitle: "Garage",
+      heroHighlight: "near the Gatineau sector",
+      subtitle:
+        "The Gatineau sector is not short of dealerships on Gréber. What we offer is different: an independent shop that explains the bill before running it up.",
+      trustBar: ["Independent shop", "Price confirmed before work", "1-year warranty"],
+      reasonsTitle: "Why cross town instead of staying on Gréber",
+      reasons: [
+        {
+          title: "A diagnosis we walk you through",
+          text: "We show you the part and the reading off the scanner before anyone talks about repairs. You leave knowing what was done and why.",
+        },
+        {
+          title: "No packaged service plan",
+          text: "A vehicle that needs brakes leaves with brakes, not with a three-part maintenance bundle decided in advance.",
+        },
+        {
+          title: "One address for all of it",
+          text: "Mechanical work, bodywork, tires and towing all run from the same place. A vehicle stranded in the Gatineau sector arrives here on our own truck.",
+        },
+      ],
+      areas: ["Gatineau", "Pointe-Gatineau", "Templeton", "Aylmer"],
+      ctaCardTitle: "Based in the Gatineau sector?",
+      ctaCardText: "One call, an honest diagnosis, a price before the work.",
+      serviceName: "Garage near the Gatineau sector",
+      faqTitle: "Frequently Asked Questions — Garage near the Gatineau sector",
+      faq: [
+        {
+          question: "How long is the drive from the Gatineau sector?",
+          answer:
+            "Twenty to thirty minutes depending on where you start and when: Pointe-Gatineau is closer than the far end of Maloney Est, and the approach to the Autoroute 50 interchange is the slowest stretch at rush hour. The shop is at 879 chemin Vanier in Aylmer, open Monday to Saturday, 9 AM to 6 PM.",
+        },
+        {
+          question: "Which Gatineau-sector neighbourhoods do you serve?",
+          answer:
+            "Postal codes J8P, J8R and J8T: Pointe-Gatineau, Le Carrefour, Touraine, Templeton, Cheval-Blanc and Saint-Richard. Whether you come by boulevard Maloney, La Vérendrye or Autoroute 50, the shop is reached via boulevard Alexandre-Taché and then chemin Vanier.",
+        },
+        {
+          question: "Why choose an independent over a dealership on Gréber?",
+          answer:
+            "Two concrete reasons: an independent shop's hourly rate is lower than a dealer network's, and we do not work from pre-set maintenance packages. We repair what needs repairing, show you why, and the one-year warranty covers parts as well as labour.",
+        },
+        {
+          question: "Can you recover a vehicle stranded in the sector?",
+          answer:
+            "Yes, we run our own tow truck and it answers 24 hours a day at (819) 921-7869. It covers the entire boulevard Maloney corridor, the retail lots at Les Promenades and along Gréber, and the Autoroute 50 accesses. Towing starts at $79.99 and the vehicle comes straight to the shop.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "masson-angers",
+    group: "zone",
+    heroImage: { kind: "photo", name: "mecanique.webp" },
+    fr: {
+      metaTitle: "Garage près de Masson-Angers | Mécano Express",
+      metaDescription:
+        "Garage mécanique desservant Masson-Angers par l'autoroute 50. Travaux planifiés, prix confirmé avant, garantie 1 an. (819) 921-7869.",
+      eyebrow: "Garage · Masson-Angers",
+      heroTitle: "Garage",
+      heroHighlight: "près de Masson-Angers",
+      subtitle:
+        "Masson-Angers est à l'autre bout de la ville. On est honnêtes : ça vaut le déplacement pour un travail planifié, pas pour un changement d'huile de dernière minute.",
+      trustBar: ["Par l'autoroute 50", "Prix confirmé avant travaux", "Garantie 1 an"],
+      reasonsTitle: "Quand ça vaut le trajet, et quand ça ne le vaut pas",
+      reasons: [
+        {
+          title: "Pour un travail qu'on planifie",
+          text: "Freins, suspension, climatisation, carrosserie : un devis obtenu au téléphone, une date, une seule visite. C'est là que la distance se justifie.",
+        },
+        {
+          title: "Pour un véhicule qui ne roule plus",
+          text: "Dans ce cas, c'est notre dépanneuse qui fait le trajet, pas vous. Le véhicule arrive à l'atelier et le diagnostic suit sans deuxième déplacement.",
+        },
+        {
+          title: "Pas pour une urgence de cinq minutes",
+          text: "Une crevaison un mardi soir se règle plus vite près de chez vous. On préfère le dire que de vous faire traverser Gatineau pour rien.",
+        },
+      ],
+      areas: ["Masson-Angers", "Buckingham", "Gatineau"],
+      ctaCardTitle: "Un devis avant de faire la route ?",
+      ctaCardText: "Décrivez le problème au téléphone — on vous dit si ça vaut le trajet.",
+      serviceName: "Garage près de Masson-Angers",
+      faqTitle: "Questions fréquentes — Garage près de Masson-Angers",
+      faq: [
+        {
+          question: "Quelle distance entre Masson-Angers et votre atelier ?",
+          answer:
+            "Une trentaine de kilomètres, soit environ 35 minutes par l'autoroute 50 puis le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. C'est le secteur le plus éloigné qu'on dessert côté garage, et on le dit franchement : pour une petite intervention, un atelier de Buckingham sera plus commode.",
+        },
+        {
+          question: "Alors pourquoi venir jusqu'à Aylmer ?",
+          answer:
+            "Pour les travaux qui se planifient et où le prix compte : freins complets, suspension, climatisation, carrosserie. Vous obtenez le devis au téléphone au (819) 921-7869, on fixe une date, et tout se fait en une visite. La garantie est d'un an sur les pièces et la main-d'œuvre, peu importe le secteur d'où vous venez.",
+        },
+        {
+          question: "Desservez-vous Masson-Angers en remorquage aussi ?",
+          answer:
+            "Oui, et c'est souvent la meilleure porte d'entrée. La dépanneuse répond 24 heures sur 24 au (819) 921-7869 et couvre tout le secteur, code postal J8M, y compris la traverse de Cumberland et le chemin Montréal Ouest. Le remorquage part de 79,99 $ et amène le véhicule directement à l'atelier.",
+        },
+        {
+          question: "Puis-je laisser le véhicule et revenir le lendemain ?",
+          answer:
+            "Oui, c'est ce qu'on recommande quand vous venez de loin. Laissez le véhicule le matin, on vous appelle avec le diagnostic et le prix avant de commencer quoi que ce soit, et vous repassez quand c'est prêt. L'atelier est ouvert du lundi au samedi de 9 h à 18 h.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Garage near Masson-Angers | Mécano Express",
+      metaDescription:
+        "Auto garage serving Masson-Angers via Autoroute 50. Planned work, price confirmed up front, 1-year warranty. Call (819) 921-7869.",
+      eyebrow: "Garage · Masson-Angers",
+      heroTitle: "Garage",
+      heroHighlight: "near Masson-Angers",
+      subtitle:
+        "Masson-Angers is at the far end of the city. We will be straight with you: it is worth the drive for planned work, not for a last-minute oil change.",
+      trustBar: ["Via Autoroute 50", "Price confirmed before work", "1-year warranty"],
+      reasonsTitle: "When the drive is worth it, and when it is not",
+      reasons: [
+        {
+          title: "For work you can plan",
+          text: "Brakes, suspension, air conditioning, bodywork: a quote by phone, a date, one visit. That is where the distance pays for itself.",
+        },
+        {
+          title: "For a vehicle that will not move",
+          text: "Then our tow truck makes the trip, not you. The vehicle reaches the shop and diagnosis follows without a second journey.",
+        },
+        {
+          title: "Not for a five-minute emergency",
+          text: "A flat on a Tuesday evening is sorted faster close to home. We would rather say so than have you cross Gatineau for nothing.",
+        },
+      ],
+      areas: ["Masson-Angers", "Buckingham", "Gatineau"],
+      ctaCardTitle: "Want a quote before making the drive?",
+      ctaCardText: "Describe the problem by phone — we'll tell you if it's worth the trip.",
+      serviceName: "Garage near Masson-Angers",
+      faqTitle: "Frequently Asked Questions — Garage near Masson-Angers",
+      faq: [
+        {
+          question: "How far is Masson-Angers from your shop?",
+          answer:
+            "About thirty kilometres, roughly 35 minutes by Autoroute 50 then boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. It is the furthest area we serve on the garage side, and we will say it plainly: for a small job, a Buckingham shop will be more convenient.",
+        },
+        {
+          question: "So why drive all the way to Aylmer?",
+          answer:
+            "For work that can be planned and where the price matters: full brake jobs, suspension, air conditioning, bodywork. You get the quote by phone at (819) 921-7869, we set a date, and it is all done in one visit. The warranty is one year on parts and labour, wherever you drove in from.",
+        },
+        {
+          question: "Do you cover Masson-Angers for towing as well?",
+          answer:
+            "Yes, and it is often the better way in. The tow truck answers 24 hours a day at (819) 921-7869 and covers the whole sector, postal code J8M, including the Cumberland ferry landing and chemin Montréal Ouest. Towing starts at $79.99 and brings the vehicle straight to the shop.",
+        },
+        {
+          question: "Can I leave the vehicle and come back the next day?",
+          answer:
+            "Yes, and that is what we recommend when you are coming from a distance. Drop it off in the morning, we call you with the diagnosis and the price before anything is started, and you collect it when it is ready. The shop is open Monday to Saturday, 9 AM to 6 PM.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "buckingham",
+    group: "zone",
+    heroImage: { kind: "photo", name: "mecanique.webp" },
+    fr: {
+      metaTitle: "Garage près de Buckingham | Mécano Express",
+      metaDescription:
+        "Garage mécanique desservant Buckingham. Devis au téléphone, une seule visite, garantie 1 an pièces et main-d'œuvre. (819) 921-7869.",
+      eyebrow: "Garage · Buckingham",
+      heroTitle: "Garage",
+      heroHighlight: "près de Buckingham",
+      subtitle:
+        "Buckingham est à trente kilomètres à l'est. Pour un gros travail bien préparé, la route se fait une fois et le prix, lui, est connu d'avance.",
+      trustBar: ["Devis obtenu au téléphone", "Une seule visite", "Garantie 1 an"],
+      reasonsTitle: "Faire venir un véhicule de Buckingham, concrètement",
+      reasons: [
+        {
+          title: "Le devis avant la route",
+          text: "On établit l'estimation au téléphone à partir du symptôme, et elle est confirmée après l'inspection. Vous savez à quoi vous attendez avant de prendre le boulevard Maloney.",
+        },
+        {
+          title: "Tout au même endroit",
+          text: "Mécanique, carrosserie et pneus sont sous le même toit. Un aller-retour, pas trois commerces à visiter dans la même semaine.",
+        },
+        {
+          title: "La dépanneuse fait le trajet",
+          text: "Si le véhicule ne roule plus, c'est notre camion qui monte à Buckingham. Vous ne faites pas la route deux fois.",
+        },
+      ],
+      areas: ["Buckingham", "Masson-Angers", "L'Ange-Gardien"],
+      ctaCardTitle: "Un travail à faire sur votre véhicule ?",
+      ctaCardText: "Appelez de Buckingham — on chiffre avant que vous partiez.",
+      serviceName: "Garage près de Buckingham",
+      faqTitle: "Questions fréquentes — Garage près de Buckingham",
+      faq: [
+        {
+          question: "Ça vaut la peine de venir de Buckingham jusqu'à Aylmer ?",
+          answer:
+            "Pour un travail planifié, oui : un jeu de freins complet, une suspension, une climatisation ou de la carrosserie justifient les trente kilomètres, surtout avec un devis obtenu d'avance au (819) 921-7869. Pour un changement d'huile seul, non — on vous le dira plutôt que de vous faire traverser la ville.",
+        },
+        {
+          question: "Quel est le trajet depuis Buckingham ?",
+          answer:
+            "Une trentaine de kilomètres vers l'ouest : le boulevard Maloney Est puis l'autoroute 50, et enfin le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. Comptez de 35 à 45 minutes selon l'heure. L'atelier est ouvert du lundi au samedi, de 9 h à 18 h, sans rendez-vous.",
+        },
+        {
+          question: "Est-ce que la garantie s'applique si j'habite Buckingham ?",
+          answer:
+            "Oui, la garantie d'un an sur les pièces et la main-d'œuvre ne dépend pas du secteur où vous habitez. Si un problème couvert revient, on le reprend à l'atelier. Et si le véhicule ne roule plus au moment où ça arrive, la dépanneuse va le chercher à Buckingham, code postal J8L, 24 heures sur 24.",
+        },
+        {
+          question: "Pouvez-vous remorquer le véhicule depuis Buckingham jusqu'à l'atelier ?",
+          answer:
+            "Oui, c'est le trajet le plus courant qu'on fait dans ce secteur. Le remorquage commence à 79,99 $, le prix est confirmé au téléphone avant le départ et il couvre le trajet complet jusqu'au 879 chemin Vanier. Le véhicule arrive à l'atelier et le diagnostic enchaîne le jour même ou le lendemain matin.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Garage near Buckingham | Mécano Express",
+      metaDescription:
+        "Auto garage serving Buckingham. Quote by phone, one visit, 1-year parts and labour warranty. Call (819) 921-7869.",
+      eyebrow: "Garage · Buckingham",
+      heroTitle: "Garage",
+      heroHighlight: "near Buckingham",
+      subtitle:
+        "Buckingham is thirty kilometres east. For a big job properly prepared, you make the drive once — and the price is known before you set off.",
+      trustBar: ["Quote agreed by phone", "A single visit", "1-year warranty"],
+      reasonsTitle: "Bringing a vehicle in from Buckingham, practically",
+      reasons: [
+        {
+          title: "The quote before the drive",
+          text: "We build the estimate by phone from the symptom, then confirm it after the inspection. You know where you stand before you get on boulevard Maloney.",
+        },
+        {
+          title: "Everything in one place",
+          text: "Mechanical work, bodywork and tires sit under one roof. One round trip, not three businesses in the same week.",
+        },
+        {
+          title: "The tow truck makes the trip",
+          text: "If the vehicle will not move, our truck drives up to Buckingham. You do not make the journey twice.",
+        },
+      ],
+      areas: ["Buckingham", "Masson-Angers", "L'Ange-Gardien"],
+      ctaCardTitle: "Got work that needs doing?",
+      ctaCardText: "Call from Buckingham — we price it before you leave.",
+      serviceName: "Garage near Buckingham",
+      faqTitle: "Frequently Asked Questions — Garage near Buckingham",
+      faq: [
+        {
+          question: "Is it worth driving from Buckingham to Aylmer?",
+          answer:
+            "For planned work, yes: a full brake job, suspension, air conditioning or bodywork justify the thirty kilometres, especially with a quote agreed beforehand at (819) 921-7869. For an oil change on its own, no — and we will tell you that rather than have you cross the city.",
+        },
+        {
+          question: "What is the drive from Buckingham?",
+          answer:
+            "About thirty kilometres west: boulevard Maloney Est, then Autoroute 50, then boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. Allow 35 to 45 minutes depending on the hour. The shop is open Monday to Saturday, 9 AM to 6 PM, no appointment needed.",
+        },
+        {
+          question: "Does the warranty still apply if I live in Buckingham?",
+          answer:
+            "Yes, the one-year parts and labour warranty does not depend on where you live. If a covered problem comes back, we take the vehicle in again. And if it will not drive when that happens, the tow truck collects it in Buckingham, postal code J8L, around the clock.",
+        },
+        {
+          question: "Can you tow the vehicle from Buckingham to the shop?",
+          answer:
+            "Yes, it is the most common run we make in that sector. Towing starts at $79.99, the price is confirmed by phone before we leave and it covers the complete trip to 879 chemin Vanier. The vehicle reaches the shop and diagnosis follows the same day or the next morning.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "ange-gardien",
+    group: "zone",
+    heroImage: { kind: "photo", name: "mecanique.webp" },
+    fr: {
+      metaTitle: "Garage près de L'Ange-Gardien (Outaouais) | Mécano Express",
+      metaDescription:
+        "Garage desservant L'Ange-Gardien en Outaouais. Suspension et alignement usés par les chemins de rang. Devis d'avance. (819) 921-7869.",
+      eyebrow: "Garage · L'Ange-Gardien",
+      heroTitle: "Garage",
+      heroHighlight: "près de L'Ange-Gardien",
+      subtitle:
+        "Rouler tous les jours sur des chemins de rang, ça se paie en suspension et en alignement. On répare ce genre d'usure — et on chiffre avant que vous fassiez la route.",
+      trustBar: ["Suspension et alignement", "Devis avant le déplacement", "Garantie 1 an"],
+      reasonsTitle: "L'usure typique d'un véhicule de L'Ange-Gardien",
+      reasons: [
+        {
+          title: "La géométrie qui part",
+          text: "Les chemins de rang non asphaltés déréglent le parallélisme. Le symptôme, c'est un volant qui tire et des pneus avant usés d'un seul côté.",
+        },
+        {
+          title: "Des amortisseurs sollicités",
+          text: "Le gravier et les accotements creusés fatiguent la suspension bien plus vite qu'un trajet urbain. Ça s'entend avant que ça se voie.",
+        },
+        {
+          title: "Attention au nom de la municipalité",
+          text: "Il existe un autre L'Ange-Gardien près de Québec. On précise « Outaouais » quand on commande une pièce, pour qu'elle n'atterrisse pas à 400 km d'ici.",
+        },
+      ],
+      areas: ["L'Ange-Gardien", "Buckingham", "Masson-Angers"],
+      ctaCardTitle: "Le volant tire d'un côté ?",
+      ctaCardText: "Décrivez-le au téléphone — on vous dit ce qu'il faut vérifier.",
+      serviceName: "Garage près de L'Ange-Gardien",
+      faqTitle: "Questions fréquentes — Garage près de L'Ange-Gardien",
+      faq: [
+        {
+          question: "Quel trajet depuis L'Ange-Gardien jusqu'à votre atelier ?",
+          answer:
+            "Comptez de 40 à 50 minutes : la route 309 ou la 315 jusqu'à Buckingham, puis l'autoroute 50 vers l'ouest et le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. C'est loin, on ne le cache pas — c'est pour ça qu'on donne le devis au téléphone avant que vous partiez.",
+        },
+        {
+          question: "Pourquoi mes pneus avant s'usent-ils d'un seul côté ?",
+          answer:
+            "C'est presque toujours un problème de géométrie, et les chemins de rang en sont la cause la plus fréquente. Quand le parallélisme est déréglé, le pneu frotte au lieu de rouler droit et l'usure se concentre sur un bord. Un alignement corrigé à temps sauve souvent deux pneus, ce qui coûte moins cher que l'opération elle-même.",
+        },
+        {
+          question: "Desservez-vous bien le L'Ange-Gardien de l'Outaouais ?",
+          answer:
+            "Oui — celui de la MRC de Papineau, au nord de Buckingham, code postal J8L, avec les hameaux de Glen Almond, Neilon et Ribot. Il ne faut pas le confondre avec le L'Ange-Gardien situé près de la ville de Québec. Le nôtre se rejoint par la route 309 ou la route 315 depuis le boulevard Maloney Est.",
+        },
+        {
+          question: "Et si le véhicule ne peut pas faire la route jusqu'à vous ?",
+          answer:
+            "La dépanneuse va le chercher. Elle répond 24 heures sur 24 au (819) 921-7869, elle circule sur les chemins de rang et de gravier de L'Ange-Gardien, et le remorquage commence à 79,99 $. Dites-nous la largeur et l'état du chemin au téléphone, on envoie le camion qui convient et le véhicule arrive directement à l'atelier.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Garage near L'Ange-Gardien (Outaouais) | Mécano Express",
+      metaDescription:
+        "Garage serving L'Ange-Gardien, Outaouais. Suspension and alignment worn by concession roads. Quote up front. Call (819) 921-7869.",
+      eyebrow: "Garage · L'Ange-Gardien",
+      heroTitle: "Garage",
+      heroHighlight: "near L'Ange-Gardien",
+      subtitle:
+        "Driving concession roads every day gets paid for in suspension and alignment. That is the wear we fix — and we price it before you make the drive.",
+      trustBar: ["Suspension and alignment", "Quote before you travel", "1-year warranty"],
+      reasonsTitle: "The wear we typically see from L'Ange-Gardien",
+      reasons: [
+        {
+          title: "Alignment that drifts",
+          text: "Unpaved concession roads pull the toe out of spec. The symptom is a steering wheel that pulls and front tires worn on one edge only.",
+        },
+        {
+          title: "Shocks under load",
+          text: "Gravel and scoured shoulders tire a suspension far faster than city driving does. You hear it before you see it.",
+        },
+        {
+          title: "Mind which L'Ange-Gardien",
+          text: "There is another one near Quebec City. We specify \"Outaouais\" when ordering a part, so it does not land 400 km from here.",
+        },
+      ],
+      areas: ["L'Ange-Gardien", "Buckingham", "Masson-Angers"],
+      ctaCardTitle: "Steering pulling to one side?",
+      ctaCardText: "Describe it by phone — we'll tell you what to have checked.",
+      serviceName: "Garage near L'Ange-Gardien",
+      faqTitle: "Frequently Asked Questions — Garage near L'Ange-Gardien",
+      faq: [
+        {
+          question: "What is the drive from L'Ange-Gardien to your shop?",
+          answer:
+            "Allow 40 to 50 minutes: Route 309 or Route 315 down to Buckingham, then Autoroute 50 west and boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. It is a long way, and we will not pretend otherwise — which is why we give the quote by phone before you set off.",
+        },
+        {
+          question: "Why are my front tires wearing on one edge?",
+          answer:
+            "That is almost always alignment, and concession roads are the most common cause. When the toe is out, the tire scrubs instead of rolling straight and the wear concentrates on one shoulder. Correcting the alignment in time often saves two tires, which costs more than the alignment itself.",
+        },
+        {
+          question: "Do you serve the Outaouais L'Ange-Gardien?",
+          answer:
+            "Yes — the one in the MRC de Papineau, north of Buckingham, postal code J8L, taking in the hamlets of Glen Almond, Neilon and Ribot. It should not be confused with the L'Ange-Gardien near Quebec City. Ours is reached by Route 309 or Route 315 off boulevard Maloney Est.",
+        },
+        {
+          question: "What if the vehicle cannot make the drive to you?",
+          answer:
+            "The tow truck comes and gets it. It answers 24 hours a day at (819) 921-7869, it drives L'Ange-Gardien's concession and gravel roads, and towing starts at $79.99. Tell us the width and condition of the road on the phone, we send the truck that suits, and the vehicle arrives straight at the shop.",
+        },
+      ],
+    },
+  },
+  {
     slug: "near-me",
     indexable: false,
     group: "situation",

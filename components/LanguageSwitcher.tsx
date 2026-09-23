@@ -21,7 +21,14 @@ export function LanguageSwitcher({
 
     // /garage/[slug] uses a different slug per locale (e.g.
     // changement-huile <-> oil-change) — swap it too, or the link 404s.
-    if (segments[2] === "services" && segments[3]) {
+    //
+    // This read "services" until the services moved under /garage, which
+    // silently broke the swap: eight of the nine service pages sent the EN
+    // button to a French slug that has no English page. Only transmission
+    // survived, because the word is the same in both. Area slugs under
+    // /garage/secteurs are locale-independent, and getServiceBySlug returns
+    // nothing for them, so they pass through untouched.
+    if (segments[2] === "garage" && segments[3]) {
       const service = getServiceBySlug(segments[3], currentLocale);
       if (service) segments[3] = service[target].slug;
     }
