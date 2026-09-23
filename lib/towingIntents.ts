@@ -279,6 +279,123 @@ export const towingIntents: TowingIntent[] = [
     },
   },
   {
+    // Every fact here is sourced — see the research notes. Chelsea's hook is
+    // that its road network has almost no redundancy: the municipality
+    // publishes full closures of route 105 with a mandatory detour via the
+    // A-5, chemin Scott and chemin de la Rivière. Nothing about gravel roads
+    // or a distance from Aylmer: neither could be confirmed, so neither is
+    // claimed.
+    slug: "chelsea",
+    group: "zone",
+    heroImage: { kind: "static", src: "/remorquage.webp" },
+    fr: {
+      metaTitle: "Remorquage à Chelsea — A-5, route 105, Old Chelsea",
+      metaDescription:
+        "Remorquage à Chelsea 24h/24 : autoroute 5, route 105, Old Chelsea, Farm Point et Tenaga. À partir de 79,99 $, prix confirmé au téléphone. (819) 921-7869.",
+      eyebrow: "Remorquage · Chelsea",
+      heroTitle: "Remorquage",
+      heroHighlight: "à Chelsea",
+      subtitle:
+        "De l'autoroute 5 au chemin de la Rivière, on couvre Chelsea 24 heures sur 24. Donnez-nous la sortie ou le chemin, on vous confirme le prix au téléphone avant de partir.",
+      trustBar: ["Sorties 8, 12 et 13 de l'A-5", "À partir de 79,99 $", "24 h sur 24, hiver compris"],
+      reasonsTitle: "Ce qui change quand on tombe en panne à Chelsea",
+      reasons: [
+        {
+          title: "Trois sorties, trois secteurs",
+          text: "La sortie 8 mène au chemin d'Old Chelsea et au chemin Scott, la 13 dessert Tenaga. Nous dire laquelle vous avez passée nous fait gagner de vraies minutes.",
+        },
+        {
+          title: "Un réseau à faible redondance",
+          text: "Quand un tronçon de la route 105 ferme, le détour officiel passe par l'A-5, le chemin Scott et le chemin de la Rivière. On connaît ces contournements.",
+        },
+        {
+          title: "60 % du territoire est du parc",
+          text: "Chelsea englobe une grande partie du parc de la Gatineau. Les accès y sont boisés et peu éclairés : un point de repère vaut mieux qu'une adresse approximative.",
+        },
+      ],
+      areas: ["Old Chelsea", "Farm Point", "Tenaga", "Kirk's Ferry", "Hollow Glen", "Larrimac"],
+      ctaCardTitle: "En panne quelque part à Chelsea ?",
+      ctaCardText: "Donnez-nous la sortie d'autoroute ou le nom du chemin — on part de suite.",
+      serviceName: "Remorquage à Chelsea",
+      faqTitle: "Questions fréquentes — Remorquage à Chelsea",
+      faq: [
+        {
+          question: "Combien coûte un remorquage à Chelsea ?",
+          answer:
+            "Un remorquage commence à 79,99 $, et le montant final dépend de l'endroit précis où vous êtes dans Chelsea et de la destination. Entre une panne à Old Chelsea, à deux pas de la sortie 12, et une autre au bout du chemin Kirk's Ferry, la distance n'est pas la même. On calcule le montant exact au téléphone en deux minutes, gratuitement, et le prix annoncé est final.",
+        },
+        {
+          question: "Desservez-vous tout Chelsea, y compris Farm Point et Tenaga ?",
+          answer:
+            "Oui, on couvre l'ensemble de la municipalité de Chelsea : Old Chelsea, Farm Point, Tenaga, Kirk's Ferry, Hollow Glen, Larrimac et Kingsmere, plus les chemins du parc de la Gatineau. Le code postal de Chelsea commence par J9B. Appelez au (819) 921-7869 avec le nom du chemin ou la sortie d'autoroute la plus proche, on vous dit tout de suite le délai.",
+        },
+        {
+          question: "Que faire si je tombe en panne sur l'autoroute 5 ou la route 105 ?",
+          answer:
+            "Allumez vos feux de détresse et sortez du véhicule par la portière opposée à la circulation si vous pouvez le faire en sécurité, puis attendez derrière la glissière — jamais dans l'habitacle sur l'autoroute. Repérez la dernière sortie passée : sur l'A-5 à Chelsea, la 8 mène au chemin Scott et la 13 à Tenaga. Ce seul détail nous fait gagner plusieurs minutes.",
+        },
+        {
+          question: "Est-ce que vous venez à Chelsea la nuit et l'hiver ?",
+          answer:
+            "Oui, la dépanneuse roule 24 heures sur 24, 7 jours sur 7 à Chelsea, jours fériés compris, et le tarif ne change pas la nuit ni la fin de semaine. L'hiver est justement la saison où on y va le plus : les chemins boisés du secteur du parc et les accès à Camp Fortune se prennent mal quand la chaussée est glacée.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Towing in Chelsea — A-5, Route 105, Old Chelsea",
+      metaDescription:
+        "24/7 towing in Chelsea: Autoroute 5, Route 105, Old Chelsea, Farm Point and Tenaga. From $79.99, price confirmed by phone. Call (819) 921-7869.",
+      eyebrow: "Towing · Chelsea",
+      heroTitle: "Towing",
+      heroHighlight: "in Chelsea",
+      subtitle:
+        "From Autoroute 5 to chemin de la Rivière, we cover Chelsea around the clock. Tell us the exit or the road name and we confirm your price by phone before the truck leaves.",
+      trustBar: ["A-5 exits 8, 12 and 13", "From $79.99", "24/7, winter included"],
+      reasonsTitle: "What breaking down in Chelsea actually involves",
+      reasons: [
+        {
+          title: "Three exits, three areas",
+          text: "Exit 8 feeds chemin d'Old Chelsea and chemin Scott; exit 13 serves Tenaga. Telling us which one you passed saves real minutes.",
+        },
+        {
+          title: "A road network with no spare route",
+          text: "When a stretch of Route 105 closes, the official detour runs through the A-5, chemin Scott and chemin de la Rivière. We know those workarounds.",
+        },
+        {
+          title: "Sixty percent of it is parkland",
+          text: "Chelsea takes in a large share of Gatineau Park. Those accesses are wooded and poorly lit, so a landmark beats an approximate address.",
+        },
+      ],
+      areas: ["Old Chelsea", "Farm Point", "Tenaga", "Kirk's Ferry", "Hollow Glen", "Larrimac"],
+      ctaCardTitle: "Stuck somewhere in Chelsea?",
+      ctaCardText: "Give us the highway exit or the road name — we leave right away.",
+      serviceName: "Towing in Chelsea",
+      faqTitle: "Frequently Asked Questions — Towing in Chelsea",
+      faq: [
+        {
+          question: "How much does a tow cost in Chelsea?",
+          answer:
+            "A tow starts at $79.99, and the final amount depends on where you are in Chelsea and where the vehicle is going. A breakdown in Old Chelsea, a minute from exit 12, is not the same distance as one at the far end of chemin Kirk's Ferry. We work the exact figure out by phone in two minutes, free, and the quoted price is the final one.",
+        },
+        {
+          question: "Do you cover all of Chelsea, including Farm Point and Tenaga?",
+          answer:
+            "Yes, we cover the whole municipality of Chelsea: Old Chelsea, Farm Point, Tenaga, Kirk's Ferry, Hollow Glen, Larrimac and Kingsmere, plus the Gatineau Park roads. Chelsea postal codes start with J9B. Call (819) 921-7869 with the road name or the nearest highway exit and we'll tell you the wait right away.",
+        },
+        {
+          question: "What should I do if I break down on Autoroute 5 or Route 105?",
+          answer:
+            "Put your hazard lights on and get out through the door away from traffic if you can do it safely, then wait behind the guardrail — never inside the vehicle on a highway. Note the last exit you passed: on the A-5 through Chelsea, 8 leads to chemin Scott and 13 to Tenaga. That one detail shortens the wait by several minutes.",
+        },
+        {
+          question: "Do you come out to Chelsea at night and in winter?",
+          answer:
+            "Yes, the tow truck runs 24 hours a day, 7 days a week in Chelsea, holidays included, and the rate does not change at night or on weekends. Winter is when we go there most: the wooded roads on the park side and the approaches to Camp Fortune turn awkward once the surface ices over.",
+        },
+      ],
+    },
+  },
+  {
     slug: "prix",
     group: "situation",
     heroImage: { kind: "static", src: "/remorquage.webp" },

@@ -2,23 +2,29 @@ import Link from "next/link";
 import type { Dictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { business } from "@/lib/business";
-import { areas as zones } from "@/lib/areas";
+import { zoneHref, type Branch } from "@/lib/areas";
 import { PinIcon } from "@/components/Icons";
 
 /**
- * The area chips. Pass `locale` and any name that has a zone page under
- * /zones becomes a link to it — that is the return half of the mesh, since
- * every zone page already links out to every service. Names with no page of
- * their own (Gatineau, which the two hub pages own) stay plain text rather
- * than pointing somewhere weaker.
+ * The served-area chips. Pass `locale` and `branch` and any town that has a
+ * zone page on that side of the business becomes a link to it — the return
+ * half of the mesh, since every zone page links out to every service.
+ *
+ * `branch` matters: a towing page's chips link to /remorquage/<town>, a
+ * repair page's to /garage/<town>. Crossing that line would hand Google the
+ * mixed-category signal the two-branch structure exists to avoid. A town with
+ * no page on the current side stays plain text rather than pointing at the
+ * other branch or at something weaker.
  */
 export function AreaServed({
   dict,
   locale,
+  branch,
   areas = business.areasServed,
 }: {
   dict: Dictionary;
   locale?: Locale;
+  branch?: Branch;
   areas?: readonly string[];
 }) {
   const chip =
@@ -38,15 +44,13 @@ export function AreaServed({
         </div>
         <ul className="mt-8 flex flex-wrap gap-3">
           {areas.map((area) => {
-            const zone = locale
-              ? zones.find((z) => z[locale].name.toLowerCase() === area.toLowerCase())
-              : undefined;
+            const href = locale && branch ? zoneHref(area, locale, branch) : undefined;
 
             return (
               <li key={area}>
-                {zone && locale ? (
+                {href ? (
                   <Link
-                    href={`/${locale}/zones/${zone[locale].slug}`}
+                    href={href}
                     className={`${chip} transition-colors hover:border-accent/50 hover:text-accent`}
                   >
                     <PinIcon width={16} height={16} className="text-accent" />

@@ -309,7 +309,7 @@ export default async function RemorquageGatineauPage({
         </div>
       </section>
 
-      <AreaServed dict={dict} locale={l} areas={AREAS} />
+      <AreaServed dict={dict} locale={l} branch="towing" areas={AREAS} />
 
       <FAQ title={c.faqTitle} items={c.faq} />
 

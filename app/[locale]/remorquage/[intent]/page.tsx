@@ -4,7 +4,7 @@ import { locales, isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 import { business, ogBase, towingStartingPrice } from "@/lib/business";
 import { towingIntents, getTowingIntentContent } from "@/lib/towingIntents";
-import { areas } from "@/lib/areas";
+import { zoneNames } from "@/lib/areas";
 import { CallButton } from "@/components/CallButton";
 import { CheckIcon } from "@/components/Icons";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
@@ -82,7 +82,7 @@ export default async function TowingIntentPage({
         description={c.metaDescription}
         url={`${business.domain}/${l}/remorquage/${slug}`}
         serviceType={c.serviceName}
-        areaServed={c.areas ?? ["Gatineau", ...areas.map((a) => a[l].name)]}
+        areaServed={c.areas ?? zoneNames(l)}
         available247
         startingPrice={
           // Only the price intent states a figure on the page, and the schema
@@ -193,7 +193,7 @@ export default async function TowingIntentPage({
         </div>
       </section>
 
-      {c.areas && <AreaServed dict={dict} locale={l} areas={c.areas} />}
+      {c.areas && <AreaServed dict={dict} locale={l} branch="towing" areas={c.areas} />}
 
       <FAQ title={c.faqTitle} items={c.faq} />
 

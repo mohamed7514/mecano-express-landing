@@ -3,7 +3,6 @@ import { locales } from "@/lib/i18n";
 import { services } from "@/lib/services";
 import { towingIntents } from "@/lib/towingIntents";
 import { mechanicIntents } from "@/lib/mechanicIntents";
-import { areas } from "@/lib/areas";
 import { business } from "@/lib/business";
 
 /**
@@ -42,18 +41,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
     entries.push({ url: `${base}/${locale}/services`, lastModified, changeFrequency: "monthly", priority: 0.9 });
-    // The geographic axis. The hub sits with the other section pages; the
-    // town pages rank alongside the service pages because each one targets a
-    // distinct "<service> <town>" query rather than repeating the hub.
-    entries.push({ url: `${base}/${locale}/zones`, lastModified, changeFrequency: "monthly", priority: 0.9 });
-    for (const area of areas) {
-      entries.push({
-        url: `${base}/${locale}/zones/${area[locale].slug}`,
-        lastModified,
-        changeFrequency: "monthly",
-        priority: 0.8,
-      });
-    }
     entries.push({ url: `${base}/${locale}/contact`, lastModified, changeFrequency: "yearly", priority: 0.7 });
     for (const s of services) {
       // The towing service page canonicalizes to /remorquage-gatineau (see

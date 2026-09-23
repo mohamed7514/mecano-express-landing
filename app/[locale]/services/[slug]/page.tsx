@@ -5,7 +5,7 @@ import { locales, isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 import { getServiceBySlug, services } from "@/lib/services";
 import { towingIntents } from "@/lib/towingIntents";
-import { areas } from "@/lib/areas";
+import { zoneNames } from "@/lib/areas";
 import { business, ogBase } from "@/lib/business";
 import { CallButton } from "@/components/CallButton";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
@@ -85,7 +85,7 @@ export default async function ServiceDetailPage({
         name={c.name}
         description={c.metaDescription}
         url={`${business.domain}/${l}/services/${c.slug}`}
-        areaServed={["Gatineau", ...areas.map((a) => a[l].name)]}
+        areaServed={zoneNames(l)}
         available247={service.category === "towing"}
       />
       <FAQJsonLd items={c.faq} />
@@ -269,7 +269,7 @@ export default async function ServiceDetailPage({
           service, so every service page links back to every zone. Gatineau
           leads and stays unlinked — the two hub pages own that term, it has
           no zone page of its own. */}
-      <AreaServed dict={dict} locale={l} areas={["Gatineau", ...areas.map((a) => a[l].name)]} />
+      <AreaServed dict={dict} locale={l} branch="repair" areas={zoneNames(l)} />
 
       <FAQ title={c.faqTitle} items={c.faq} />
 

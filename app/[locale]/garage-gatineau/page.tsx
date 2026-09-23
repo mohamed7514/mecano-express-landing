@@ -203,7 +203,7 @@ export default async function GarageGatineauPage({
       {/* Gatineau-first area coverage — real, original content answering
           the "garage à Gatineau" intent directly, placed before the /garage/*
           hub links so the page reads as a destination, not just a directory. */}
-      <AreaServed dict={dict} locale={l} areas={["Gatineau", "Hull", "Aylmer", "Buckingham"]} />
+      <AreaServed dict={dict} locale={l} branch="repair" areas={["Gatineau", "Hull", "Aylmer", "Buckingham"]} />
 
       {/* Garage hub — surfaces the ad-landing pages under /garage/* that
           otherwise have no link from normal site navigation, grouped by
