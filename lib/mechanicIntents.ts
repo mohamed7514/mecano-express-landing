@@ -83,16 +83,23 @@ export const mechanicIntents: MechanicIntent[] = [
       faq: [
         {
           question: "Puis-je passer sans rendez-vous ?",
-          answer: "Oui, on accepte les visites sans rendez-vous pendant nos heures d'ouverture, du lundi au samedi.",
+          answer:
+            "Oui, les visites sans rendez-vous sont acceptées au 879 chemin Vanier, du lundi au samedi de 9h à 18h. Il y a du stationnement sur place, donc pas besoin de chercher une place dans le secteur Vanier. On inspecte le véhicule, on vous explique ce qu'on a trouvé, et le prix est confirmé avant qu'on touche à quoi que ce soit.",
         },
         {
-          question: "Faites-vous les réparations le jour même ?",
+          question: "Combien de temps ça prend pour une réparation courante ?",
           answer:
-            "Pour la plupart des réparations courantes (freins, huile, diagnostic), oui. Pour les pièces à commander, on vous donne un délai clair.",
+            "La plupart des réparations courantes se règlent dans la même journée : un changement d'huile prend typiquement moins d'une heure et un jeu de plaquettes environ une heure par essieu. Les pièces à commander sont l'exception, et on vous donne le délai avant de passer la commande. L'atelier d'Aylmer est ouvert six jours sur sept, du lundi au samedi, de 9h à 18h.",
         },
         {
           question: "Où êtes-vous situés exactement ?",
-          answer: "Au 879 chemin Vanier à Aylmer, secteur Vanier — facile d'accès depuis tout le secteur ouest de Gatineau.",
+          answer:
+            "Au 879 chemin Vanier, dans le secteur Vanier à Aylmer, avec stationnement sur place. On est ouvert du lundi au samedi, de 9h à 18h, et le même atelier dessert Hull, Gatineau et Buckingham. Le remorquage, lui, roule 24 h sur 24 au (819) 921-7869 si le véhicule ne peut pas se rendre jusqu'à nous.",
+        },
+        {
+          question: "Que faire si mon véhicule ne peut plus rouler jusqu'au garage ?",
+          answer:
+            "Appelez le (819) 921-7869 et on va le chercher : l'assistance routière fonctionne 24 h sur 24, nuits, fins de semaine et jours fériés inclus, et le remorquage débute à 79,99 $. On récupère le véhicule à Aylmer, Hull, Gatineau ou Buckingham et on le ramène au 879 chemin Vanier. Le diagnostic suit, et rien ne se répare avant votre approbation.",
         },
       ],
     },
@@ -129,16 +136,23 @@ export const mechanicIntents: MechanicIntent[] = [
       faq: [
         {
           question: "Can I drop in without an appointment?",
-          answer: "Yes, we accept walk-ins during our opening hours, Monday to Saturday.",
+          answer:
+            "Walk-ins are welcome — no appointment is needed at 879 chemin Vanier, Monday to Saturday from 9 AM to 6 PM. On-site parking means you can leave the car with us instead of hunting for a spot in Aylmer's Vanier area. We inspect first, explain what we found, and confirm the price before any work begins.",
         },
         {
-          question: "Do you do repairs the same day?",
+          question: "How long does a common repair take?",
           answer:
-            "For most common repairs (brakes, oil, diagnostics), yes. For parts that need ordering, we give you a clear timeline.",
+            "Same-day is the norm for routine work: an oil change usually runs under an hour, and a set of brake pads is often about an hour per axle. Parts that have to be ordered are the exception, and we give you the timeline before ordering. The Aylmer shop is open six days a week, Monday to Saturday, 9 AM to 6 PM.",
         },
         {
           question: "Where exactly are you located?",
-          answer: "At 879 chemin Vanier in Aylmer, Vanier area — easy access from all of western Gatineau.",
+          answer:
+            "879 chemin Vanier, in the Vanier area of Aylmer, with parking on site. Hours are Monday to Saturday, 9 AM to 6 PM, and that one shop also serves Hull, Gatineau and Buckingham. Towing runs separately, 24/7 at (819) 921-7869, for the times a vehicle simply cannot be driven to us.",
+        },
+        {
+          question: "What happens if my car can't make it to the garage?",
+          answer:
+            "Call (819) 921-7869 and we tow it in — roadside service runs 24/7, nights, weekends and holidays included, with towing starting at $79.99. We pick up anywhere in Aylmer, Hull, Gatineau or Buckingham and bring the vehicle back to the shop on chemin Vanier. Diagnosis follows, and no repair starts until you have approved the price.",
         },
       ],
     },
@@ -179,16 +193,24 @@ export const mechanicIntents: MechanicIntent[] = [
       faqTitle: "Questions fréquentes — Garage à Hull",
       faq: [
         {
-          question: "Est-ce loin de Hull pour venir vous voir ?",
-          answer: "Non, notre atelier à Aylmer est à quelques minutes de la majorité des secteurs de Hull.",
+          question: "Combien de temps ça prend pour venir de Hull jusqu'à votre garage ?",
+          answer:
+            "Comptez une dizaine de minutes de route depuis la plupart des secteurs de Hull jusqu'au 879 chemin Vanier, à Aylmer. Il y a du stationnement sur place et aucun rendez-vous à prendre : l'atelier est ouvert du lundi au samedi, de 9h à 18h. Si le véhicule ne roule plus du tout, le remorquage répond 24 h sur 24 au (819) 921-7869.",
         },
         {
           question: "Offrez-vous tous les services mécaniques ?",
-          answer: "Oui — huile, freins, pneus, diagnostic, climatisation, suspension et plus.",
+          answer:
+            "Oui : changement d'huile, freins, pneus, diagnostic électronique, climatisation et suspension, tout se fait à l'atelier d'Aylmer qui dessert Hull. Les travaux sont couverts par une garantie d'un an sur les pièces et la main-d'œuvre. Chaque visite commence par une inspection, et rien ne débute avant que vous ayez approuvé le prix.",
         },
         {
-          question: "Puis-je avoir un prix avant de me déplacer ?",
-          answer: "Oui, décrivez-nous le problème au téléphone et on vous donne une idée de prix avant votre visite.",
+          question: "Puis-je avoir une idée du prix avant de me déplacer depuis Hull ?",
+          answer:
+            "Oui — décrivez le symptôme au (819) 921-7869 et on vous explique ce qu'il faudra vérifier avant que vous fassiez le trajet. L'estimation est confirmée après l'inspection, parce qu'un même grincement de frein peut venir d'une plaquette usée ou d'un étrier bloqué. Le montant est arrêté avec vous avant les travaux, et les réparations sont garanties un an, pièces et main-d'œuvre.",
+        },
+        {
+          question: "Comment savoir si mes pneus d'hiver sont encore légaux ?",
+          answer:
+            "Au Québec, les pneus d'hiver sont obligatoires du 1er décembre au 15 mars, et la limite légale d'usure est de 2/32 de pouce de profondeur de sculpture. En pratique, on suggère de remplacer autour de 4/32, parce que l'adhérence sur la neige tassée se perd bien avant la limite légale. Passez à l'atelier d'Aylmer du lundi au samedi : on mesure la profondeur et on vous montre la lecture.",
         },
       ],
     },
@@ -224,16 +246,24 @@ export const mechanicIntents: MechanicIntent[] = [
       faqTitle: "Frequently Asked Questions — Garage Serving Hull",
       faq: [
         {
-          question: "Is it far from Hull to come see you?",
-          answer: "No, our Aylmer shop is a few minutes from most areas of Hull.",
+          question: "How long is the drive from Hull to your shop?",
+          answer:
+            "About ten minutes from most parts of Hull to 879 chemin Vanier in Aylmer. There is parking on site and nothing to book — the garage is open Monday to Saturday, 9 AM to 6 PM. If the vehicle will not move at all, towing answers around the clock at (819) 921-7869 and comes to you in Hull.",
         },
         {
-          question: "Do you offer all mechanical services?",
-          answer: "Yes — oil, brakes, tires, diagnostics, A/C, suspension and more.",
+          question: "Do you handle every kind of mechanical service?",
+          answer:
+            "Yes — oil changes, brakes, tires, electronic diagnostics, air conditioning and suspension are all done at the Aylmer shop that serves Hull. Parts and labour carry a one-year warranty. Every visit opens with an inspection so you hear what is actually wrong, and nothing gets repaired until you have approved the price.",
         },
         {
-          question: "Can I get a price before driving over?",
-          answer: "Yes, describe the issue by phone and we'll give you a price idea before your visit.",
+          question: "Can I get a price idea before driving over from Hull?",
+          answer:
+            "Yes — describe the symptom at (819) 921-7869 and we will tell you what has to be checked before you make the trip. The estimate is confirmed after the inspection, since the same brake noise can be a worn pad or a seized caliper. The figure is agreed with you before work starts, and repairs carry a one-year warranty on parts and labour.",
+        },
+        {
+          question: "How do I know if my winter tires are still legal?",
+          answer:
+            "Quebec requires winter tires from December 1 to March 15, and the legal wear limit is 2/32 of an inch of tread. In practice we suggest replacing closer to 4/32, because grip on packed snow fades long before the legal minimum. Drop by the Aylmer shop any day Monday to Saturday and we will measure the tread and show you the reading.",
         },
       ],
     },
@@ -277,24 +307,27 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Où êtes-vous situés exactement ?",
           answer:
-            "Au 879 chemin Vanier, secteur Vanier à Aylmer, avec stationnement sur place. On est à quelques minutes du centre de Gatineau, de Hull et de tout le secteur ouest.",
+            "Au 879 chemin Vanier, dans le secteur Vanier à Aylmer, avec stationnement sur place. De là, on est à quelques minutes de Hull, du centre de Gatineau et de tout le secteur ouest. L'atelier ouvre six jours sur sept, du lundi au samedi de 9h à 18h, sans rendez-vous, et le remorquage répond 24 h sur 24 au (819) 921-7869.",
         },
         {
           question: "Quels secteurs desservez-vous ?",
           answer:
-            "Aylmer, le secteur Vanier, Gatineau, Hull et Buckingham. Si vous n'êtes pas sûr, appelez-nous — on vous le confirme en trente secondes.",
+            "Aylmer et le secteur Vanier, Hull, Gatineau, Buckingham et l'ensemble de l'Outaouais. Pour la mécanique, vous venez à l'atelier du 879 chemin Vanier, du lundi au samedi de 9h à 18h. Pour le remorquage et l'assistance routière, on se déplace dans ces mêmes secteurs 24 h sur 24 — nuits, fins de semaine et jours fériés — à partir de 79,99 $.",
         },
         {
           question: "Qu'est-ce qui vous différencie d'un concessionnaire ?",
-          answer: "Un prix plus honnête, un service sans rendez-vous, et une explication claire de chaque réparation.",
+          answer:
+            "Un garage de quartier indépendant porte beaucoup moins de frais généraux qu'un concessionnaire, et ça se voit sur la facture. On prend les visites sans rendez-vous, on vous montre la pièce usée, et le prix est confirmé avant de commencer. Les pièces et la main-d'œuvre sont garanties un an, et vous parlez au mécanicien qui travaille sur votre véhicule, pas à un conseiller.",
         },
         {
-          question: "Faites-vous l'inspection avant de réparer ?",
-          answer: "Oui, on inspecte et on vous donne un prix avant de commencer quoi que ce soit.",
+          question: "Faites-vous une inspection avant de réparer ?",
+          answer:
+            "Oui, chaque réparation commence par une inspection ou un diagnostic, et on vous explique les constats avant de proposer quoi que ce soit. Vous approuvez le montant, et seulement après on travaille. Les pièces et la main-d'œuvre sont couvertes un an. Présentez-vous au 879 chemin Vanier à Aylmer, du lundi au samedi de 9h à 18h — aucun rendez-vous requis.",
         },
         {
-          question: "Puis-je venir pour un simple avis, sans réparation ?",
-          answer: "Oui, une inspection ou un deuxième avis, ça ne coûte rien de nous appeler.",
+          question: "Puis-je venir juste pour un deuxième avis, sans réparation ?",
+          answer:
+            "Oui, et ça vaut la peine quand une soumission vous semble grosse. On inspecte, puis on sépare ce qui est urgent de ce qui peut attendre : des plaquettes tiennent en général de 40 000 à 80 000 km selon la conduite et le terrain, donc il en reste souvent. Vous repartez de notre atelier d'Aylmer avec les constats, sans obligation de faire les travaux ici.",
         },
       ],
     },
@@ -330,26 +363,29 @@ export const mechanicIntents: MechanicIntent[] = [
       faqTitle: "Frequently Asked Questions — Mechanic Near Me",
       faq: [
         {
-          question: "Where exactly are you located?",
+          question: "Where exactly is your shop?",
           answer:
-            "At 879 chemin Vanier, Vanier area in Aylmer, with on-site parking. We're minutes from downtown Gatineau, Hull and the whole west end.",
+            "879 chemin Vanier, in the Vanier area of Aylmer, with on-site parking. From there we are minutes from Hull, downtown Gatineau and the whole west end. The garage runs six days a week, Monday to Saturday from 9 AM to 6 PM, walk-ins included, and towing answers 24/7 on (819) 921-7869.",
         },
         {
           question: "Which areas do you serve?",
           answer:
-            "Aylmer, the Vanier area, Gatineau, Hull and Buckingham. Not sure if you're in range? Call us — we'll confirm in thirty seconds.",
+            "Aylmer and the Vanier area, Hull, Gatineau, Buckingham and the wider Outaouais. Mechanical work happens at the shop, 879 chemin Vanier, Monday to Saturday from 9 AM to 6 PM. Towing and roadside assistance come to you across those same areas 24/7 — nights, weekends and holidays — starting at $79.99.",
         },
         {
           question: "What sets you apart from a dealership?",
-          answer: "A more honest price, walk-in service, and a clear explanation of every repair.",
+          answer:
+            "An independent neighbourhood garage carries far less overhead than a dealership, and the invoice shows it. We take walk-ins, we show you the worn part, and the price is confirmed before work starts. Parts and labour are covered for one year, and you speak with the mechanic working on your vehicle rather than with a service advisor.",
         },
         {
-          question: "Do you inspect before repairing?",
-          answer: "Yes, we inspect and give you a price before starting anything.",
+          question: "Do you inspect the vehicle before repairing it?",
+          answer:
+            "Yes — every job opens with an inspection or a diagnostic scan, and we walk you through the findings before suggesting anything. You approve the price first; only then does work begin. Parts and labour carry a one-year warranty. Come to 879 chemin Vanier in Aylmer any day Monday through Saturday between 9 AM and 6 PM, no appointment.",
         },
         {
-          question: "Can I come in for just an opinion, no repair?",
-          answer: "Yes, an inspection or second opinion — it costs nothing to call us.",
+          question: "Can I come in just for a second opinion?",
+          answer:
+            "Yes, and it is worth doing whenever another quote looks heavy. We inspect, then separate what is urgent from what can safely wait — a set of pads typically lasts 40,000 to 80,000 km depending on driving style and terrain, so there is often life left. You leave our Aylmer shop with the findings and no obligation to book the work here.",
         },
       ],
     },
@@ -390,16 +426,24 @@ export const mechanicIntents: MechanicIntent[] = [
       faqTitle: "Questions fréquentes — Prix et confiance",
       faq: [
         {
-          question: "Le prix au téléphone est-il final ?",
-          answer: "On vous donne une estimation par téléphone, confirmée après inspection — jamais de surprise à la fin.",
+          question: "Le prix donné au téléphone est-il final ?",
+          answer:
+            "Le prix au téléphone est une estimation; le montant final est confirmé après l'inspection, qui prend souvent moins d'une heure, et toujours avant que les travaux commencent. Un même symptôme a souvent deux causes de coût très différent : un grincement peut n'être que le témoin d'usure, ou un étrier bloqué. Une fois le montant approuvé, la facture ne le dépasse pas.",
         },
         {
-          question: "Faites-vous un devis gratuit ?",
-          answer: "Oui, l'inspection et l'estimation sont gratuites avant tout travail.",
+          question: "Comment fonctionne votre estimation avant travaux ?",
+          answer:
+            "En trois étapes : on inspecte le véhicule, on vous explique les constats, puis on vous remet une estimation détaillée où les pièces et la main-d'œuvre sont séparées. L'inspection et l'estimation sont gratuites, rien ne commence sans votre accord, et vous pouvez repartir avec le papier. Les réparations faites à notre atelier d'Aylmer sont garanties un an, pièces et main-d'œuvre.",
         },
         {
-          question: "Pourquoi êtes-vous moins chers qu'un concessionnaire ?",
-          answer: "Mêmes pièces et mêmes standards, mais sans les frais généraux d'une grande chaîne.",
+          question: "Pourquoi un garage indépendant coûte-t-il moins cher qu'un concessionnaire ?",
+          answer:
+            "Les frais généraux ne sont pas les mêmes : une seule bâtisse au 879 chemin Vanier, à Aylmer, sans salle d'exposition ni conseillers aux ventes à financer. La garantie reste d'un an complet sur les pièces et la main-d'œuvre. On vous dit aussi quand une réparation peut attendre, ce qui évite de payer aujourd'hui pour une pièce qui a encore des mois devant elle.",
+        },
+        {
+          question: "Que faire si le devis d'un autre garage me semble trop élevé ?",
+          answer:
+            "Apportez-nous le devis : on inspecte le véhicule de notre côté, puis on le reprend ligne par ligne — ce qui doit vraiment se faire maintenant et ce qui peut attendre. Des plaquettes durent en général de 40 000 à 80 000 km et un disque survit souvent à un ou deux jeux de plaquettes, donc tout ne se remplace pas en même temps. Rien ne débute sans votre accord.",
         },
       ],
     },
@@ -434,16 +478,24 @@ export const mechanicIntents: MechanicIntent[] = [
       faqTitle: "Frequently Asked Questions — Pricing & Trust",
       faq: [
         {
-          question: "Is the price on the phone final?",
-          answer: "We give you an estimate by phone, confirmed after inspection — never a surprise at the end.",
+          question: "Is the price you give over the phone final?",
+          answer:
+            "The figure given by phone is an estimate; the final one is confirmed after the inspection, which often takes under an hour, and always before anything is taken apart. One symptom can have two causes with very different costs — a brake squeal may be nothing but the wear indicator, or it may be a seized caliper. Once you approve the number, the invoice does not go past it.",
         },
         {
-          question: "Do you offer a free quote?",
-          answer: "Yes, inspection and estimate are free before any work.",
+          question: "How does your estimate-before-work process go?",
+          answer:
+            "Three steps: we inspect the vehicle, explain the findings, then hand you an itemized estimate with parts and labour listed separately. The inspection and the estimate are free, nothing starts without your go-ahead, and the paperwork is yours to take away. Work done at our Aylmer shop is backed by a one-year warranty on parts and labour.",
         },
         {
-          question: "Why are you cheaper than a dealership?",
-          answer: "Same parts and standards, but without a big chain's overhead.",
+          question: "Why does an independent garage cost less than a dealership?",
+          answer:
+            "Overhead is the main reason: a single building at 879 chemin Vanier in Aylmer, with no showroom and no sales floor to carry. The warranty is still a full year on parts and labour. We will also tell you when a repair can wait, so you are not paying today for a part that has months of service left in it.",
+        },
+        {
+          question: "What should I do if another garage's quote looks too high?",
+          answer:
+            "Bring the quote in and we will inspect the vehicle ourselves, then go through it line by line: what genuinely needs doing now, and what can safely wait. Brake pads generally last 40,000 to 80,000 km, and a rotor often outlasts one or two sets of pads, so the whole corner rarely needs replacing at once. Nothing is started without your approval.",
         },
       ],
     },
@@ -485,15 +537,23 @@ export const mechanicIntents: MechanicIntent[] = [
       faq: [
         {
           question: "Combien coûte une inspection de freins ?",
-          answer: "L'inspection est gratuite. On vous donne un prix seulement si une réparation est nécessaire.",
+          answer:
+            "L'inspection des freins ne coûte rien : on retire la roue, on mesure l'épaisseur des plaquettes, on vérifie l'état du disque et on vous montre les mesures. Un prix n'apparaît que si une pièce doit vraiment être remplacée, et il est confirmé avant les travaux. L'atelier est au 879 chemin Vanier à Aylmer, sans rendez-vous, du lundi au samedi de 9h à 18h.",
         },
         {
-          question: "Puis-je passer le jour même ?",
-          answer: "Dans la majorité des cas, oui — les freins sont une priorité de sécurité qu'on traite rapidement.",
+          question: "Puis-je faire vérifier mes freins le jour même ?",
+          answer:
+            "Oui, les freins passent en priorité et se vérifient habituellement le jour même, sans rendez-vous, entre 9h et 18h du lundi au samedi. Un grincement métallique constant est différent : arrêtez de conduire et appelez le (819) 921-7869, parce que ce bruit signifie souvent que la plaquette est usée jusqu'à la plaque d'appui. Le remorquage roule 24 h sur 24 à partir de 79,99 $.",
         },
         {
           question: "Remplacez-vous seulement les plaquettes ou aussi les disques ?",
-          answer: "Ça dépend de l'usure. On vous explique ce qui est nécessaire avant de remplacer quoi que ce soit.",
+          answer:
+            "Les plaquettes seules suffisent dans bien des cas, car un disque survit souvent à un ou deux jeux de plaquettes. On mesure l'épaisseur du disque et on vérifie le voile avant de décider, et vous voyez les chiffres. Les plaquettes durent en général de 40 000 à 80 000 km selon la conduite et le terrain. Ce qu'on remplace à Aylmer est garanti un an, pièces et main-d'œuvre.",
+        },
+        {
+          question: "Comment savoir si mes freins ont besoin d'attention ?",
+          answer:
+            "Trois signaux comptent surtout. Un sifflement à basse vitesse est habituellement le témoin d'usure qui fait son travail. Un bruit métallique de meulage veut dire que la plaquette est rendue à la plaque d'appui : cessez de rouler. Une pédale molle ou spongieuse pointe vers de l'air ou de l'humidité dans le liquide, qui se change typiquement tous les 2 à 3 ans. N'importe lequel des trois mérite une vérification à Aylmer.",
         },
       ],
     },
@@ -529,15 +589,23 @@ export const mechanicIntents: MechanicIntent[] = [
       faq: [
         {
           question: "How much does a brake inspection cost?",
-          answer: "The inspection is free. We only give you a price if a repair is needed.",
+          answer:
+            "Brake inspections are free — we pull the wheel, measure pad thickness, check the rotor surface and show you the readings. A price only comes up if something genuinely needs replacing, and it is confirmed before any work. The shop sits at 879 chemin Vanier in Aylmer and takes walk-ins Monday to Saturday, 9 AM to 6 PM.",
         },
         {
-          question: "Can I come in the same day?",
-          answer: "In most cases, yes — brakes are a safety priority we handle quickly.",
+          question: "Can I get my brakes looked at the same day?",
+          answer:
+            "Brakes jump the queue, so a same-day check is usually possible any time between 9 AM and 6 PM, Monday to Saturday, with no appointment. Steady metallic grinding is the exception: stop driving and call (819) 921-7869, because that sound often means the pad has worn through to the backing plate. Towing runs 24/7 and starts at $79.99.",
         },
         {
-          question: "Do you replace only pads or rotors too?",
-          answer: "It depends on wear. We explain what's needed before replacing anything.",
+          question: "Do you replace just the pads, or the rotors too?",
+          answer:
+            "Pads alone are often enough, since a rotor frequently outlasts one or two sets of pads. We measure rotor thickness and check for warping before deciding, and you see the numbers. Pads themselves typically last 40,000 to 80,000 km depending on driving style and terrain. Whatever gets replaced at our Aylmer shop is covered for one year, parts and labour.",
+        },
+        {
+          question: "How do I know if my brakes need attention?",
+          answer:
+            "Three signs matter most. A squeal at low speed is usually the wear indicator doing its job. A metallic grinding noise means the pad is down to the backing plate, so stop driving. A soft or spongy pedal suggests air or moisture in the brake fluid, which is normally changed every 2 to 3 years. Any one of the three is worth a check in Aylmer right away.",
         },
       ],
     },
@@ -578,15 +646,23 @@ export const mechanicIntents: MechanicIntent[] = [
       faq: [
         {
           question: "Un grincement de frein est-il toujours dangereux ?",
-          answer: "Pas toujours, mais c'est souvent un signal d'usure à vérifier avant que ça s'aggrave.",
+          answer:
+            "Non : un sifflement bref à basse vitesse est souvent le témoin d'usure qui signale que les plaquettes approchent de leur fin. Un bruit métallique de meulage, lui, est sérieux — la plaquette est probablement usée jusqu'à la plaque d'appui et le disque s'abîme à chaque freinage. Dans ce cas, cessez de rouler et appelez le (819) 921-7869 : le remorquage roule 24 h sur 24.",
         },
         {
           question: "Est-ce que ça peut être autre chose que les plaquettes ?",
-          answer: "Oui — poussière, corrosion sur le disque ou pièce détachée peuvent aussi causer un bruit. On vérifie tout.",
+          answer:
+            "Oui : poussière de frein, corrosion de surface sur un disque après une nuit humide, un caillou coincé ou un étrier qui commence à bloquer font tous du bruit. Un véhicule qui tire d'un côté au freinage pointe justement vers cet étrier bloqué ou vers une usure inégale des plaquettes. On inspecte les quatre roues à l'atelier d'Aylmer avant de conclure, et vous voyez ce qu'on trouve.",
         },
         {
-          question: "Combien coûte l'inspection ?",
-          answer: "L'inspection est gratuite. On vous donne un prix seulement si une réparation est nécessaire.",
+          question: "Est-ce que je peux conduire avec des freins qui grincent ?",
+          answer:
+            "Un sifflement léger permet habituellement de se rendre au garage; un grincement métallique, non — arrêtez-vous. Comme un jeu de plaquettes tient en général de 40 000 à 80 000 km, un bruit qui apparaît bien à l'intérieur de cette fenêtre mérite une vérification rapide. Passez sans rendez-vous au 879 chemin Vanier à Aylmer, du lundi au samedi de 9h à 18h.",
+        },
+        {
+          question: "Combien de temps ça prend pour trouver la cause du bruit ?",
+          answer:
+            "Un diagnostic de bruit de frein prend habituellement moins d'une heure : le véhicule monte sur le pont, les roues sortent, les plaquettes sont mesurées et les disques et étriers vérifiés. Vous repartez avec les mesures et une estimation à approuver avant tout travail. L'atelier d'Aylmer prend les visites sans rendez-vous du lundi au samedi, de 9h à 18h, et dessert aussi Hull et Gatineau.",
         },
       ],
     },
@@ -622,15 +698,23 @@ export const mechanicIntents: MechanicIntent[] = [
       faq: [
         {
           question: "Is a brake squeak always dangerous?",
-          answer: "Not always, but it's often a wear signal worth checking before it gets worse.",
+          answer:
+            "No — a short squeal at low speed is usually the wear indicator telling you the pads are getting close to done. Metallic grinding is the serious one: the pad has likely worn through to the backing plate, and the rotor takes damage with every stop. If you hear that, stop driving and call (819) 921-7869; towing runs 24/7.",
         },
         {
-          question: "Could it be something other than the pads?",
-          answer: "Yes — dust, rotor corrosion or a loose part can also cause noise. We check everything.",
+          question: "Could the noise be something other than the pads?",
+          answer:
+            "Yes. Brake dust, surface rust on a rotor after a damp night, a trapped stone or a caliper starting to seize all make noise. A vehicle that pulls to one side while braking points to exactly that seizing caliper, or to uneven pad wear. We inspect all four corners at the Aylmer shop before drawing a conclusion, and you see what turns up.",
         },
         {
-          question: "How much does the inspection cost?",
-          answer: "The inspection is free. We only give you a price if a repair is needed.",
+          question: "Can I keep driving with squeaking brakes?",
+          answer:
+            "A light squeal normally gets you as far as the shop; metallic grinding does not, so pull over. Since a set of pads typically lasts 40,000 to 80,000 km, a noise that shows up well inside that window is worth checking quickly. Walk in at 879 chemin Vanier in Aylmer, Monday to Saturday between 9 AM and 6 PM, and we will look at it.",
+        },
+        {
+          question: "How long does it take to find the source of the noise?",
+          answer:
+            "Diagnosing a brake noise usually takes under an hour: the vehicle goes up on the lift, the wheels come off, the pads get measured and the rotors and calipers get checked. You leave with the measurements and an estimate to approve before any work happens. The Aylmer shop takes walk-ins Monday to Saturday, 9 AM to 6 PM, and serves Hull and Gatineau too.",
         },
       ],
     },
@@ -670,16 +754,24 @@ export const mechanicIntents: MechanicIntent[] = [
       faqTitle: "Questions fréquentes — Plaquettes de frein",
       faq: [
         {
-          question: "Combien coûte un changement de plaquettes ?",
-          answer: "Le prix varie selon le véhicule. On vous donne un devis gratuit avant de commencer.",
+          question: "Comment établissez-vous le prix d'un changement de plaquettes ?",
+          answer:
+            "On mesure d'abord l'épaisseur des plaquettes et l'état des disques, puis on vous remet une estimation détaillée qui sépare les pièces et la main-d'œuvre. Le montant est confirmé avant qu'on commence et la facture ne le dépasse pas. Le travail est garanti un an, pièces et main-d'œuvre. L'atelier est au 879 chemin Vanier à Aylmer, ouvert du lundi au samedi de 9h à 18h.",
         },
         {
           question: "Dois-je aussi changer les disques ?",
-          answer: "Pas toujours. On inspecte l'usure des disques et on vous le dit honnêtement si un remplacement est nécessaire.",
+          answer:
+            "Pas nécessairement : un disque survit souvent à un ou deux jeux de plaquettes. On mesure son épaisseur par rapport au minimum du fabricant et on vérifie le voile; s'il est encore dans les tolérances, il reste sur le véhicule. Vous voyez la mesure avant qu'on décide. Les plaquettes, elles, durent en général de 40 000 à 80 000 km selon la conduite et le terrain.",
         },
         {
           question: "Combien de temps dure l'installation ?",
-          answer: "En général une heure ou moins pour un changement de plaquettes standard.",
+          answer:
+            "Comptez environ une heure par essieu sur la plupart des véhicules, un peu plus si un étrier est bloqué ou si la quincaillerie est corrodée par le sel de nos hivers. On travaille sans rendez-vous au 879 chemin Vanier à Aylmer, du lundi au samedi de 9h à 18h, avec stationnement sur place. Vous approuvez l'estimation avant qu'on commence.",
+        },
+        {
+          question: "Comment savoir quand mes plaquettes sont à changer ?",
+          answer:
+            "Un sifflement à basse vitesse est le premier indice : c'est le témoin d'usure qui frotte volontairement sur le disque. Un bruit métallique de meulage veut dire que la plaquette est rendue à la plaque d'appui, alors cessez de rouler. Comme un jeu tient en général de 40 000 à 80 000 km, une mesure vers 40 000 km évite les surprises. On vérifie l'épaisseur restante à Aylmer, sans rendez-vous.",
         },
       ],
     },
@@ -714,16 +806,24 @@ export const mechanicIntents: MechanicIntent[] = [
       faqTitle: "Frequently Asked Questions — Brake Pads",
       faq: [
         {
-          question: "How much does a pad replacement cost?",
-          answer: "The price varies by vehicle. We give you a free quote before starting.",
+          question: "How do you set the price for a brake pad replacement?",
+          answer:
+            "We measure pad thickness and rotor condition first, then hand you an itemized estimate with parts and labour listed separately. The figure is confirmed before work starts, and the invoice does not go beyond it. The job carries a one-year warranty on parts and labour. Our shop is at 879 chemin Vanier in Aylmer, open Monday to Saturday from 9 AM to 6 PM.",
         },
         {
-          question: "Do I also need to replace the rotors?",
-          answer: "Not always. We inspect rotor wear and tell you honestly if replacement is needed.",
+          question: "Do the rotors have to be replaced too?",
+          answer:
+            "Not necessarily — a rotor often outlasts one or two sets of pads. We measure it against the manufacturer's minimum thickness and check it for warping; if it is still in spec, it stays on the car. You see the measurement before the call gets made. Pads themselves typically last 40,000 to 80,000 km depending on driving style and terrain.",
         },
         {
-          question: "How long does installation take?",
-          answer: "Generally an hour or less for a standard pad replacement.",
+          question: "How long does the installation take?",
+          answer:
+            "Budget roughly an hour per axle on most vehicles, a little longer when a caliper has seized or the hardware is corroded from road salt. We work on a walk-in basis at 879 chemin Vanier in Aylmer, Monday to Saturday, 9 AM to 6 PM, with parking on site. You approve the estimate before any of it begins.",
+        },
+        {
+          question: "How do I know when my pads need changing?",
+          answer:
+            "A squeal at low speed is the first clue — that is the wear indicator deliberately touching the rotor. Metallic grinding means the pad has reached the backing plate, so stop driving. Because a set generally lasts 40,000 to 80,000 km, having them measured around the 40,000 km mark heads off surprises. We check the remaining thickness in Aylmer, no appointment needed.",
         },
       ],
     },
