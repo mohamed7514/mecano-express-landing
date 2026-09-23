@@ -20,7 +20,10 @@ export default async function HomePage({
     <>
       <Hero locale={l} dict={dict} />
       <CampaignSplit locale={l} dict={dict} />
-      <ServicesGrid locale={l} dict={dict} />
+      {/* Repair only. The towing entry canonicalizes to /remorquage, so a card
+          for it here advertised a page that points elsewhere — and the two
+          campaign cards above already send towing visitors to their own hub. */}
+      <ServicesGrid locale={l} dict={dict} filter="repair" />
       <WhyUs dict={dict} />
       <AreaServed dict={dict} locale={l} />
       <ContactSection locale={l} dict={dict} />

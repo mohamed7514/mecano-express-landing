@@ -222,6 +222,31 @@ export const services: Service[] = [
           answer:
             "Le grincement seul n'est pas toujours dangereux, mais c'est souvent un signal d'usure des plaquettes — on recommande une inspection rapide avant que ça affecte les disques.",
         },
+              {
+          question: "Est-ce que ça peut être autre chose que les plaquettes ?",
+          answer:
+            "Oui : poussière de frein, corrosion de surface sur un disque après une nuit humide, un caillou coincé ou un étrier qui commence à bloquer font tous du bruit. Un véhicule qui tire d'un côté au freinage pointe justement vers cet étrier bloqué ou vers une usure inégale des plaquettes. On inspecte les quatre roues à l'atelier d'Aylmer avant de conclure, et vous voyez ce qu'on trouve.",
+        },
+        {
+          question: "Combien de temps ça prend pour trouver la cause du bruit ?",
+          answer:
+            "Un diagnostic de bruit de frein prend habituellement moins d'une heure : le véhicule monte sur le pont, les roues sortent, les plaquettes sont mesurées et les disques et étriers vérifiés. Vous repartez avec les mesures et une estimation à approuver avant tout travail. L'atelier d'Aylmer prend les visites sans rendez-vous du lundi au samedi, de 9h à 18h, et dessert aussi Hull et Gatineau.",
+        },
+        {
+          question: "Comment établissez-vous le prix d'un changement de plaquettes ?",
+          answer:
+            "On mesure d'abord l'épaisseur des plaquettes et l'état des disques, puis on vous remet une estimation détaillée qui sépare les pièces et la main-d'œuvre. Le montant est confirmé avant qu'on commence et la facture ne le dépasse pas. Le travail est garanti un an, pièces et main-d'œuvre. L'atelier est au 879 chemin Vanier à Aylmer, ouvert du lundi au samedi de 9h à 18h.",
+        },
+        {
+          question: "Dois-je aussi changer les disques ?",
+          answer:
+            "Pas nécessairement : un disque survit souvent à un ou deux jeux de plaquettes. On mesure son épaisseur par rapport au minimum du fabricant et on vérifie le voile; s'il est encore dans les tolérances, il reste sur le véhicule. Vous voyez la mesure avant qu'on décide. Les plaquettes, elles, durent en général de 40 000 à 80 000 km selon la conduite et le terrain.",
+        },
+        {
+          question: "Combien de temps dure l'installation ?",
+          answer:
+            "Comptez environ une heure par essieu sur la plupart des véhicules, un peu plus si un étrier est bloqué ou si la quincaillerie est corrodée par le sel de nos hivers. On travaille sans rendez-vous au 879 chemin Vanier à Aylmer, du lundi au samedi de 9h à 18h, avec stationnement sur place. Vous approuvez l'estimation avant qu'on commence.",
+        },
       ],
     },
     en: {
@@ -257,6 +282,31 @@ export const services: Service[] = [
           question: "Is it dangerous to drive with squeaking brakes?",
           answer:
             "Squeaking alone isn't always dangerous, but it's often a sign of pad wear — we recommend a quick inspection before it affects the rotors.",
+        },
+              {
+          question: "Could the noise be something other than the pads?",
+          answer:
+            "Yes. Brake dust, surface rust on a rotor after a damp night, a trapped stone or a caliper starting to seize all make noise. A vehicle that pulls to one side while braking points to exactly that seizing caliper, or to uneven pad wear. We inspect all four corners at the Aylmer shop before drawing a conclusion, and you see what turns up.",
+        },
+        {
+          question: "How long does it take to find the source of the noise?",
+          answer:
+            "Diagnosing a brake noise usually takes under an hour: the vehicle goes up on the lift, the wheels come off, the pads get measured and the rotors and calipers get checked. You leave with the measurements and an estimate to approve before any work happens. The Aylmer shop takes walk-ins Monday to Saturday, 9 AM to 6 PM, and serves Hull and Gatineau too.",
+        },
+        {
+          question: "How do you set the price for a brake pad replacement?",
+          answer:
+            "We measure pad thickness and rotor condition first, then hand you an itemized estimate with parts and labour listed separately. The figure is confirmed before work starts, and the invoice does not go beyond it. The job carries a one-year warranty on parts and labour. Our shop is at 879 chemin Vanier in Aylmer, open Monday to Saturday from 9 AM to 6 PM.",
+        },
+        {
+          question: "Do the rotors have to be replaced too?",
+          answer:
+            "Not necessarily — a rotor often outlasts one or two sets of pads. We measure it against the manufacturer's minimum thickness and check it for warping; if it is still in spec, it stays on the car. You see the measurement before the call gets made. Pads themselves typically last 40,000 to 80,000 km depending on driving style and terrain.",
+        },
+        {
+          question: "How long does the installation take?",
+          answer:
+            "Budget roughly an hour per axle on most vehicles, a little longer when a caliper has seized or the hardware is corroded from road salt. We work on a walk-in basis at 879 chemin Vanier in Aylmer, Monday to Saturday, 9 AM to 6 PM, with parking on site. You approve the estimate before any of it begins.",
         },
       ],
     },

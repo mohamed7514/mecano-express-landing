@@ -25,10 +25,7 @@ type Cluster = "towing" | "repair" | "neutral";
  */
 function clusterOf(pathname: string, locale: Locale): Cluster {
   if (pathname === `/${locale}` || pathname === `/${locale}/`) return "neutral";
-  // The zone pages cover both trades on purpose — a town page answers "who
-  // do I call here" for towing and for repairs at once — so they belong to
-  // neither cluster and keep the full footer.
-  if (/\/(contact|confidentialite|zones)\b/.test(pathname)) return "neutral";
+  if (/\/(contact|confidentialite)\b/.test(pathname)) return "neutral";
   if (/\/(remorquage|towing)\b/.test(pathname)) return "towing";
   return "repair";
 }
@@ -70,13 +67,6 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     ...(cluster === "repair" || cluster === "neutral"
       ? [{ href: `/${locale}/services`, label: dict.nav.services }]
       : []),
-    // Shown in every cluster: the zones hub is the entry point to the whole
-    // geographic axis, and without it here it would be reachable only from a
-    // breadcrumb on the zone pages themselves.
-    {
-      href: `/${locale}/zones`,
-      label: locale === "fr" ? "Zones desservies" : "Areas served",
-    },
     { href: `/${locale}/contact`, label: dict.nav.contact },
     { href: `/${locale}/confidentialite`, label: dict.footer.privacy },
   ];

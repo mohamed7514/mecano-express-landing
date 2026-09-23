@@ -7,6 +7,8 @@ import type { FAQItem } from "@/lib/faq";
 import { towingIntents } from "@/lib/towingIntents";
 import { ServiceJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { FAQ } from "@/components/sections/FAQ";
+import Link from "next/link";
+import { ArrowIcon } from "@/components/Icons";
 import { RelatedLinks } from "@/components/sections/RelatedLinks";
 import { Photo } from "@/components/PhotoPlaceholder";
 import { BrandBurst } from "@/components/BrandBurst";
@@ -256,6 +258,42 @@ export default async function RemorquageGatineauPage({
         alwaysOpen
       />
 
+      {/* The services, straight under the hero — this is the hub's job. Only
+          services: `zone` entries belong to the areas axis and noindex landing
+          pages belong nowhere a visitor or a crawler follows. */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <h2 className="font-display text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">
+          {l === "fr" ? "Nos services de remorquage" : "Our towing services"}
+        </h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {towingIntents
+            .filter((i) => i.indexable !== false && (i.group === "specialty" || i.group === "situation"))
+            .map((intent, i) => (
+              <Reveal key={intent.slug} delay={(i % 3) * 80}>
+                <Link
+                  href={`/${l}/remorquage/${intent.slug}`}
+                  className="group flex h-full flex-col rounded-2xl border border-steel-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10"
+                >
+                  <h3 className="font-display text-lg font-bold group-hover:text-accent">
+                    {intent[l].serviceName}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-steel-500">
+                    {intent[l].eyebrow}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+                    {dict.services.learnMore}
+                    <ArrowIcon
+                      width={16}
+                      height={16}
+                      className="transition-transform group-hover:translate-x-1"
+                    />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+        </div>
+      </section>
+
       <Testimonials locale={l} />
 
       {/* How it works */}
@@ -313,12 +351,17 @@ export default async function RemorquageGatineauPage({
 
       <FAQ title={c.faqTitle} items={c.faq} />
 
+      {/* The areas axis, kept separate from the services above. Zone pages
+          only — mixing them into one flat list is what made this hub read as
+          an undifferentiated pile of links. */}
       <RelatedLinks
-        title={l === "fr" ? "Remorquage par situation" : "Towing by situation"}
-        links={towingIntents.map((intent) => ({
-          href: `/${l}/remorquage/${intent.slug}`,
-          label: intent[l].serviceName,
-        }))}
+        title={l === "fr" ? "Secteurs desservis" : "Areas we serve"}
+        links={towingIntents
+          .filter((intent) => intent.indexable !== false && intent.group === "zone")
+          .map((intent) => ({
+            href: `/${l}/remorquage/${intent.slug}`,
+            label: intent[l].serviceName,
+          }))}
       />
 
       {/* Secondary CTA before contact */}

@@ -30,6 +30,22 @@ const nextConfig: NextConfig = {
       // path costs two hops: the proxy adds /fr, then the rule above fires.
       { source: "/garage-gatineau", destination: "/fr/garage", permanent: true },
       { source: "/remorquage-gatineau", destination: "/fr/remorquage", permanent: true },
+
+      // "Freins qui grincent" and "changement de plaquettes" were two pages
+      // for one job — confirmed with the client. They are the same visit, the
+      // same bay and the same invoice, so they are one page now. The five
+      // questions they answered that /services/freins did not have moved onto
+      // it; only the URLs are gone.
+      {
+        source: "/:locale(fr|en)/garage/freins-bruit",
+        destination: "/:locale/services/freins",
+        permanent: true,
+      },
+      {
+        source: "/:locale(fr|en)/garage/plaquettes-frein",
+        destination: "/:locale/services/freins",
+        permanent: true,
+      },
     ];
   },
 };
