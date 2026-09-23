@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { locales, isLocale, defaultLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 import { getServiceBySlug, services } from "@/lib/services";
-import { towingIntents } from "@/lib/towingIntents";
+import { mechanicIntents } from "@/lib/mechanicIntents";
 import { zoneNames } from "@/lib/areas";
 import { business, ogBase } from "@/lib/business";
 import { CallButton } from "@/components/CallButton";
@@ -13,7 +13,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { serviceIcons, CheckIcon, ArrowIcon } from "@/components/Icons";
 import { SplitHero } from "@/components/sections/SplitHero";
 import { FAQ } from "@/components/sections/FAQ";
-import { AreaServed } from "@/components/sections/AreaServed";
+import { RelatedLinks } from "@/components/sections/RelatedLinks";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export function generateStaticParams() {
@@ -171,13 +171,22 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      {/* The return half of the mesh: every zone page links out to every
-          service, so every service page links back to every zone. Gatineau
-          leads and stays unlinked — the two hub pages own that term, it has
-          no zone page of its own. */}
-      <AreaServed dict={dict} locale={l} branch="repair" areas={zoneNames(l)} />
-
       <FAQ title={c.faqTitle} items={c.faq} />
+
+      {/* The return half of the mesh: every area page lists every service, so
+          every service page lists every area — of its own branch. These are
+          the garage area pages only; a repair page never links into towing.
+          The list is built from the routes that exist, so each entry is a
+          real link. It grows on its own as the remaining area pages land. */}
+      <RelatedLinks
+        title={l === "fr" ? "Secteurs desservis" : "Areas we serve"}
+        links={mechanicIntents
+          .filter((i) => i.group === "zone" && i.indexable !== false)
+          .map((i) => ({
+            href: `/${l}/garage/secteurs/${i.slug}-qc`,
+            label: i[l].serviceName,
+          }))}
+      />
 
       {/* NAP + map. These pages are Ads landing pages too, and the intent
           pages that score better on Landing Page Experience all carry this

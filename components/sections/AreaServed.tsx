@@ -43,28 +43,29 @@ export function AreaServed({
           <p className="mt-4 text-steel-500">{dict.area.subtitle}</p>
         </div>
         <ul className="mt-8 flex flex-wrap gap-3">
-          {areas.map((area) => {
-            const href = locale && branch ? zoneHref(area, locale, branch) : undefined;
+          {areas
+            .map((area) => {
+              const href = locale && branch ? zoneHref(area, locale, branch) : undefined;
 
-            return (
-              <li key={area}>
-                {href ? (
-                  <Link
-                    href={href}
-                    className={`${chip} transition-colors hover:border-accent/50 hover:text-accent`}
-                  >
-                    <PinIcon width={16} height={16} className="text-accent" />
-                    {area}
-                  </Link>
-                ) : (
-                  <span className={chip}>
-                    <PinIcon width={16} height={16} className="text-accent" />
-                    {area}
-                  </span>
-                )}
-              </li>
-            );
-          })}
+              return (
+                <li key={area}>
+                  {href ? (
+                    <Link
+                      href={href}
+                      className={`${chip} transition-colors hover:border-accent/50 hover:text-accent`}
+                    >
+                      <PinIcon width={16} height={16} className="text-accent" />
+                      {area}
+                    </Link>
+                  ) : (
+                    <span className={chip}>
+                      <PinIcon width={16} height={16} className="text-accent" />
+                      {area}
+                    </span>
+                  )}
+                </li>
+              );
+            })}
         </ul>
       </div>
     </section>
