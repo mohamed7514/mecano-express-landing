@@ -119,12 +119,12 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Est-ce que je peux avoir un prix avant que le camion parte ?",
           answer:
-            "Oui. Décrivez-nous votre position et votre destination au téléphone, on vous confirme le prix avant d'envoyer qui que ce soit.",
+            "Oui. Décrivez-nous votre position dans Aylmer et votre destination au téléphone, on vous confirme le prix avant d'envoyer qui que ce soit.",
         },
         {
           question: "Remorquez-vous aussi les véhicules accidentés ?",
           answer:
-            "Oui, on remorque les véhicules en panne comme les véhicules accidentés, tant qu'ils peuvent être chargés en sécurité.",
+            "Oui, partout dans Aylmer, on remorque les véhicules en panne comme les véhicules accidentés, tant qu'ils peuvent être chargés en sécurité.",
         },
       ],
     },
@@ -167,12 +167,12 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Can I get a price before the truck leaves?",
           answer:
-            "Yes. Tell us your location and destination by phone, and we confirm the price before sending anyone.",
+            "Yes. Tell us where you are in Aylmer and where the vehicle is going, and we confirm the price before sending anyone.",
         },
         {
           question: "Do you tow accident-damaged vehicles too?",
           answer:
-            "Yes, we tow both breakdowns and accident-damaged vehicles, as long as they can be loaded safely.",
+            "Yes, anywhere in Aylmer we tow both breakdowns and accident-damaged vehicles, as long as they can be loaded safely.",
         },
       ],
     },
@@ -337,7 +337,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Intervenez-vous sur les ponts entre Hull et Ottawa ?",
           answer:
-            "Oui, les quatre traversées sont dans notre zone : Portage, Chaudière, Alexandra et Macdonald-Cartier. Sur le Macdonald-Cartier, qui porte environ 70 000 véhicules par jour, restez ceinturé dans le véhicule si la circulation est dense plutôt que d'en sortir. Appelez le (819) 921-7869 en précisant le sens de circulation.",
+            "Oui, les quatre traversées entre Hull et Ottawa sont dans notre zone : Portage, Chaudière, Alexandra et Macdonald-Cartier. Sur le Macdonald-Cartier, qui porte environ 70 000 véhicules par jour, restez ceinturé dans le véhicule si la circulation est dense plutôt que d'en sortir. Appelez le (819) 921-7869 en précisant le sens de circulation.",
         },
         {
           question: "Quels quartiers du secteur Hull desservez-vous ?",
@@ -390,7 +390,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Do you come out onto the bridges between Hull and Ottawa?",
           answer:
-            "Yes, all four crossings are in our area: Portage, Chaudière, Alexandra and Macdonald-Cartier. On the Macdonald-Cartier, which carries roughly 70,000 vehicles a day, stay belted inside the vehicle in heavy traffic rather than stepping out. Call (819) 921-7869 and tell us which direction you were heading.",
+            "Yes, all four Hull crossings are in our area: Portage, Chaudière, Alexandra and Macdonald-Cartier. On the Macdonald-Cartier, which carries roughly 70,000 vehicles a day, stay belted inside the vehicle in heavy traffic rather than stepping out. Call (819) 921-7869 and tell us which direction you were heading.",
         },
         {
           question: "Which Hull neighbourhoods do you serve?",
@@ -453,12 +453,12 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Combien de temps avant l'arrivée de la dépanneuse ?",
           answer:
-            "Comptez en général de 20 à 40 minutes depuis l'atelier d'Aylmer, selon l'heure et le pont emprunté. Le facteur qui pèse le plus ici, c'est l'accès à l'autoroute 50 : aux heures de pointe, l'approche de l'échangeur Maloney est le point le plus lent de tout le trajet.",
+            "Comptez en général de 20 à 40 minutes depuis l'atelier d'Aylmer, selon l'heure et le pont emprunté. Le facteur qui pèse le plus dans le secteur Gatineau, c'est l'accès à l'autoroute 50 : aux heures de pointe, l'approche de l'échangeur Maloney est le point le plus lent de tout le trajet.",
         },
         {
           question: "Intervenez-vous dans les stationnements de centres commerciaux ?",
           answer:
-            "Oui, et c'est une bonne part de nos appels dans ce secteur. Aux Promenades comme dans les commerces du boulevard Gréber, l'appel typique est un survoltage ou un déverrouillage, pas un remorquage. On règle ça sur place quand c'est possible : ça vous coûte moins cher qu'un transport vers un garage.",
+            "Oui, et c'est une bonne part de nos appels dans ce secteur. Aux Promenades comme dans les commerces du boulevard Gréber, en plein secteur Gatineau, l'appel typique est un survoltage ou un déverrouillage, pas un remorquage. On règle ça sur place quand c'est possible : ça vous coûte moins cher qu'un transport vers un garage.",
         },
       ],
     },
@@ -506,12 +506,12 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "How long before the tow truck arrives?",
           answer:
-            "Usually 20 to 40 minutes from the Aylmer shop, depending on the hour and the bridge we take. The biggest variable here is the Autoroute 50 access: at rush hour, the approach to the Maloney interchange is the slowest part of the whole run.",
+            "Usually 20 to 40 minutes from the Aylmer shop, depending on the hour and the bridge we take. The biggest variable in the Gatineau sector is the Autoroute 50 access: at rush hour, the approach to the Maloney interchange is the slowest part of the whole run.",
         },
         {
           question: "Do you come into shopping centre parking lots?",
           answer:
-            "Yes, and it is a good share of our calls in this sector. At Les Promenades and along boulevard Gréber, the typical call is a boost or a lockout, not a tow. We settle it on the spot where we can, which costs you less than moving the car to a garage.",
+            "Yes, and it is a good share of our calls in this sector. At Les Promenades and along boulevard Gréber, in the heart of the Gatineau sector, the typical call is a boost or a lockout, not a tow. We settle it on the spot where we can, which costs you less than moving the car to a garage.",
         },
       ],
     },
@@ -670,12 +670,12 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Quel territoire couvrez-vous à Masson-Angers ?",
           answer:
-            "Tout le secteur, code postal J8M : le village de Masson, celui d'Angers, le chemin Montréal Ouest qui est la route 148, la route 315 vers Buckingham, les sorties de l'autoroute 50 et la traverse de Cumberland. Appelez le (819) 921-7869 avec le nom du chemin et le numéro civique.",
+            "Tout Masson-Angers, code postal J8M : le village de Masson, celui d'Angers, le chemin Montréal Ouest qui est la route 148, la route 315 vers Buckingham, les sorties de l'autoroute 50 et la traverse de Cumberland. Appelez le (819) 921-7869 avec le nom du chemin et le numéro civique.",
         },
         {
           question: "Et si je tombe en panne dans la file du traversier ?",
           answer:
-            "Appelez tout de suite en précisant que vous êtes à la traverse de Cumberland. Le bateau ne prend que quatorze véhicules par voyage et environ mille automobilistes l'empruntent chaque jour : un véhicule immobilisé dans la file retarde tout le monde. On traite ces appels en priorité et on dégage d'abord le véhicule.",
+            "Appelez tout de suite en précisant que vous êtes à la traverse de Cumberland, à Masson-Angers. Le bateau ne prend que quatorze véhicules par voyage et environ mille automobilistes l'empruntent chaque jour : un véhicule immobilisé dans la file retarde tout le monde. On traite ces appels en priorité et on dégage d'abord le véhicule.",
         },
         {
           question: "Que se passe-t-il quand le traversier est fermé ?",
@@ -723,12 +723,12 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "What area do you cover in Masson-Angers?",
           answer:
-            "The whole sector, postal code J8M: the village of Masson, the village of Angers, chemin Montréal Ouest which is Route 148, Route 315 toward Buckingham, the Autoroute 50 exits and the Cumberland ferry landing. Call (819) 921-7869 with the road name and street number.",
+            "All of Masson-Angers, postal code J8M: the village of Masson, the village of Angers, chemin Montréal Ouest which is Route 148, Route 315 toward Buckingham, the Autoroute 50 exits and the Cumberland ferry landing. Call (819) 921-7869 with the road name and street number.",
         },
         {
           question: "What if I break down in the ferry queue?",
           answer:
-            "Call right away and say you are at the Cumberland crossing. The boat takes only fourteen vehicles per trip and roughly a thousand motorists use it each day, so one stalled car holds up everyone behind it. We treat those calls as priority and clear the vehicle first.",
+            "Call right away and say you are at the Cumberland crossing in Masson-Angers. The boat takes only fourteen vehicles per trip and roughly a thousand motorists use it each day, so one stalled car holds up everyone behind it. We treat those calls as priority and clear the vehicle first.",
         },
         {
           question: "What happens when the ferry is closed?",
@@ -781,7 +781,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Desservez-vous tout Cantley, y compris les chemins ruraux ?",
           answer:
-            "Oui, toute la municipalité, code postal J8V, dans la MRC des Collines-de-l'Outaouais : la montée de la Source, le chemin Sainte-Élisabeth, les chemins qui mènent au Mont-Cascades et les chemins de desserte qui en partent. Appelez au (819) 921-7869 avec le nom du chemin, c'est le repère qui compte ici.",
+            "Oui, tout Cantley, code postal J8V, dans la MRC des Collines-de-l'Outaouais : la montée de la Source, le chemin Sainte-Élisabeth, les chemins qui mènent au Mont-Cascades et les chemins de desserte qui en partent. Appelez au (819) 921-7869 avec le nom du chemin, c'est le repère qui compte ici.",
         },
         {
           question: "Que faire si je suis en panne sur la route 307 ?",
@@ -834,7 +834,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Do you serve all of Cantley, back roads included?",
           answer:
-            "Yes, the whole municipality, postal code J8V, in the MRC des Collines-de-l'Outaouais: montée de la Source, chemin Sainte-Élisabeth, the roads up to Mont-Cascades and the side roads branching off them. Call (819) 921-7869 with the road name — that is the landmark that counts out here.",
+            "Yes, all of Cantley, postal code J8V, in the MRC des Collines-de-l'Outaouais: montée de la Source, chemin Sainte-Élisabeth, the roads up to Mont-Cascades and the side roads branching off them. Call (819) 921-7869 with the road name — that is the landmark that counts out here.",
         },
         {
           question: "What should I do if I break down on Route 307?",
@@ -892,12 +892,12 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Desservez-vous les trois secteurs de Val-des-Monts ?",
           answer:
-            "Oui : Perkins, Saint-Pierre-de-Wakefield et Poltimore, les trois anciennes municipalités réunies en 1975, plus le secteur du lac McGregor. Le code postal est J8N et le territoire se rejoint par la route 307 depuis Cantley. Appelez le (819) 921-7869 en nommant le secteur, puis le chemin.",
+            "Oui : Perkins, Saint-Pierre-de-Wakefield et Poltimore, les trois anciennes municipalités réunies en 1975 pour former Val-des-Monts, plus le secteur du lac McGregor. Le code postal est J8N et le territoire se rejoint par la route 307 depuis Cantley. Appelez le (819) 921-7869 en nommant le secteur, puis le chemin.",
         },
         {
           question: "Montez-vous jusqu'aux chalets autour des lacs ?",
           answer:
-            "Oui. Le lac McGregor est le plus grand du territoire, suivi du lac Saint-Pierre et du lac Grand, et les chemins de chalet qui y mènent sont étroits, en pente et parfois en gravier. Donnez le nom du lac et celui du chemin : c'est plus utile qu'une adresse et ça nous dit tout de suite quel camion envoyer.",
+            "Oui. Le lac McGregor est le plus grand de Val-des-Monts, suivi du lac Saint-Pierre et du lac Grand, et les chemins de chalet qui y mènent sont étroits, en pente et parfois en gravier. Donnez le nom du lac et celui du chemin : c'est plus utile qu'une adresse et ça nous dit tout de suite quel camion envoyer.",
         },
         {
           question: "Venez-vous l'hiver, quand les chemins sont glacés ?",
@@ -945,12 +945,12 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Do you serve all three parts of Val-des-Monts?",
           answer:
-            "Yes: Perkins, Saint-Pierre-de-Wakefield and Poltimore, the three former municipalities merged in 1975, plus the Lac McGregor area. The postal code is J8N and the territory is reached by Route 307 through Cantley. Call (819) 921-7869, name the sector first, then the road.",
+            "Yes: Perkins, Saint-Pierre-de-Wakefield and Poltimore, the three former municipalities merged into Val-des-Monts in 1975, plus the Lac McGregor area. The postal code is J8N and the territory is reached by Route 307 through Cantley. Call (819) 921-7869, name the sector first, then the road.",
         },
         {
           question: "Do you go up to the cottages around the lakes?",
           answer:
-            "Yes. Lac McGregor is the largest here, followed by Lac Saint-Pierre and Lac Grand, and the cottage roads serving them are narrow, steep and sometimes gravel. Give us the lake name and the road name: it beats an address and tells us immediately which truck to send.",
+            "Yes. Lac McGregor is the largest in Val-des-Monts, followed by Lac Saint-Pierre and Lac Grand, and the cottage roads serving them are narrow, steep and sometimes gravel. Give us the lake name and the road name: it beats an address and tells us immediately which truck to send.",
         },
         {
           question: "Do you come in winter, when the roads are iced?",
@@ -1013,7 +1013,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Intervenez-vous sur les chemins qui montent vers le parc ?",
           answer:
-            "Oui, avec une réserve : les chemins qui grimpent l'escarpement d'Eardley sont raides et certains se terminent en sentier de randonnée, où aucune dépanneuse ne passe. Dites-nous jusqu'où vous êtes monté et si le véhicule est encore sur une surface carrossable, on vous dit franchement ce qui est faisable.",
+            "Oui, avec une réserve : les chemins qui grimpent l'escarpement d'Eardley sont raides et certains se terminent en sentier de randonnée, où aucune dépanneuse ne passe. Dites-nous jusqu'où vous êtes monté et si le véhicule est encore sur une surface carrossable, on vous dit franchement ce qui est faisable. Le bas de ces chemins, côté Luskville, reste accessible en tout temps.",
         },
       ],
     },
@@ -1066,7 +1066,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Do you come out on the roads climbing toward the park?",
           answer:
-            "Yes, with one caveat: the roads up the Eardley Escarpment are steep and some end as hiking trail, where no tow truck goes. Tell us how far up you got and whether the vehicle is still on a driveable surface, and we will tell you honestly what can be done.",
+            "Yes, with one caveat: the roads up the Eardley Escarpment are steep and some end as hiking trail, where no tow truck goes. Tell us how far up you got and whether the vehicle is still on a driveable surface, and we will tell you honestly what can be done. The lower roads around Luskville stay passable year-round.",
         },
       ],
     },
@@ -1114,7 +1114,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "Quel territoire couvrez-vous à L'Ange-Gardien ?",
           answer:
-            "Toute la municipalité, code postal J8L, qu'on rejoint par la route 309 ou la route 315 depuis Buckingham : les hameaux de Glen Almond, Neilon et Ribot, et les chemins de rang entre les deux routes. Appelez le (819) 921-7869 en donnant la route d'accès puis le nom du chemin.",
+            "Tout L'Ange-Gardien, code postal J8L, qu'on rejoint par la route 309 ou la route 315 depuis Buckingham : les hameaux de Glen Almond, Neilon et Ribot, et les chemins de rang entre les deux routes. Appelez le (819) 921-7869 en donnant la route d'accès puis le nom du chemin.",
         },
         {
           question: "Venez-vous sur les chemins de rang et de gravier ?",
@@ -1167,7 +1167,7 @@ export const towingIntents: TowingIntent[] = [
         {
           question: "What area do you cover in L'Ange-Gardien?",
           answer:
-            "The whole municipality, postal code J8L, reached by Route 309 or Route 315 from Buckingham: the hamlets of Glen Almond, Neilon and Ribot, and the concession roads between the two highways. Call (819) 921-7869, give the highway you came in on, then the road name.",
+            "All of L'Ange-Gardien, postal code J8L, reached by Route 309 or Route 315 from Buckingham: the hamlets of Glen Almond, Neilon and Ribot, and the concession roads between the two highways. Call (819) 921-7869, give the highway you came in on, then the road name.",
         },
         {
           question: "Do you drive concession and gravel roads?",

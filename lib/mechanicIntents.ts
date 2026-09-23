@@ -84,7 +84,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Puis-je passer sans rendez-vous ?",
           answer:
-            "Oui, les visites sans rendez-vous sont acceptées au 879 chemin Vanier, du lundi au samedi de 9h à 18h. Il y a du stationnement sur place, donc pas besoin de chercher une place dans la rue. On inspecte le véhicule, on vous explique ce qu'on a trouvé, et le prix est confirmé avant qu'on touche à quoi que ce soit.",
+            "Oui, les visites sans rendez-vous sont acceptées au 879 chemin Vanier, à Aylmer, du lundi au samedi de 9h à 18h. Il y a du stationnement sur place, donc pas besoin de chercher une place dans la rue. On inspecte le véhicule, on vous explique ce qu'on a trouvé, et le prix est confirmé avant qu'on touche à quoi que ce soit.",
         },
         {
           question: "Combien de temps ça prend pour une réparation courante ?",
@@ -137,7 +137,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Can I drop in without an appointment?",
           answer:
-            "Walk-ins are welcome — no appointment is needed at 879 chemin Vanier, Monday to Saturday from 9 AM to 6 PM. On-site parking means you can leave the car with us instead of hunting for a spot on the street. We inspect first, explain what we found, and confirm the price before any work begins.",
+            "Walk-ins are welcome — no appointment is needed at 879 chemin Vanier in Aylmer, Monday to Saturday from 9 AM to 6 PM. On-site parking means you can leave the car with us instead of hunting for a spot on the street. We inspect first, explain what we found, and confirm the price before any work begins.",
         },
         {
           question: "How long does a common repair take?",
@@ -205,12 +205,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Puis-je avoir une idée du prix avant de me déplacer depuis Hull ?",
           answer:
-            "Oui — décrivez le symptôme au (819) 921-7869 et on vous explique ce qu'il faudra vérifier avant que vous fassiez le trajet. L'estimation est confirmée après l'inspection, parce qu'un même grincement de frein peut venir d'une plaquette usée ou d'un étrier bloqué. Le montant est arrêté avec vous avant les travaux, et les réparations sont garanties un an, pièces et main-d'œuvre.",
+            "Oui — décrivez le symptôme au (819) 921-7869 et on vous explique ce qu'il faudra vérifier avant que vous fassiez le trajet depuis Hull. L'estimation est confirmée après l'inspection, parce qu'un même grincement de frein peut venir d'une plaquette usée ou d'un étrier bloqué. Le montant est arrêté avec vous avant les travaux, et les réparations sont garanties un an, pièces et main-d'œuvre.",
         },
         {
           question: "Comment savoir si mes pneus d'hiver sont encore légaux ?",
           answer:
-            "Au Québec, les pneus d'hiver sont obligatoires du 1er décembre au 15 mars, et la limite légale d'usure est de 2/32 de pouce de profondeur de sculpture. En pratique, on suggère de remplacer autour de 4/32, parce que l'adhérence sur la neige tassée se perd bien avant la limite légale. Passez à l'atelier d'Aylmer du lundi au samedi : on mesure la profondeur et on vous montre la lecture.",
+            "Au Québec, les pneus d'hiver sont obligatoires du 1er décembre au 15 mars, et la limite légale d'usure est de 2/32 de pouce de profondeur de sculpture. En pratique, on suggère de remplacer autour de 4/32, parce que l'adhérence sur la neige tassée se perd bien avant la limite légale. Depuis Hull, passez à l'atelier d'Aylmer du lundi au samedi : on mesure la profondeur et on vous montre la lecture.",
         },
       ],
     },
@@ -258,12 +258,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Can I get a price idea before driving over from Hull?",
           answer:
-            "Yes — describe the symptom at (819) 921-7869 and we will tell you what has to be checked before you make the trip. The estimate is confirmed after the inspection, since the same brake noise can be a worn pad or a seized caliper. The figure is agreed with you before work starts, and repairs carry a one-year warranty on parts and labour.",
+            "Yes — describe the symptom at (819) 921-7869 and we will tell you what has to be checked before you make the trip from Hull. The estimate is confirmed after the inspection, since the same brake noise can be a worn pad or a seized caliper. The figure is agreed with you before work starts, and repairs carry a one-year warranty on parts and labour.",
         },
         {
           question: "How do I know if my winter tires are still legal?",
           answer:
-            "Quebec requires winter tires from December 1 to March 15, and the legal wear limit is 2/32 of an inch of tread. In practice we suggest replacing closer to 4/32, because grip on packed snow fades long before the legal minimum. Drop by the Aylmer shop any day Monday to Saturday and we will measure the tread and show you the reading.",
+            "Quebec requires winter tires from December 1 to March 15, and the legal wear limit is 2/32 of an inch of tread. In practice we suggest replacing closer to 4/32, because grip on packed snow fades long before the legal minimum. Drop by the Aylmer shop, ten minutes from Hull, any day Monday to Saturday and we will measure the tread and show you the reading.",
         },
       ],
     },
@@ -306,17 +306,17 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Combien de temps de route depuis Luskville jusqu'à votre atelier ?",
           answer:
-            "Une vingtaine de minutes par la route 148 vers l'est, soit une vingtaine de kilomètres jusqu'au 879 chemin Vanier à Aylmer. C'est tout droit, sans pont ni échangeur. L'atelier ouvre du lundi au samedi de 9 h à 18 h, sans rendez-vous, et il y a du stationnement sur place.",
+            "Une vingtaine de minutes par la route 148 vers l'est, soit une vingtaine de kilomètres jusqu'au 879 chemin Vanier à Aylmer. C'est tout droit, sans pont ni échangeur : Luskville et Aylmer sont sur la même route. L'atelier ouvre du lundi au samedi de 9 h à 18 h, sans rendez-vous, et il y a du stationnement sur place.",
         },
         {
           question: "Mes chemins sont en gravier — qu'est-ce que je devrais faire vérifier ?",
           answer:
-            "La suspension et la géométrie, en priorité. Rouler régulièrement sur du gravier use les amortisseurs, déséquilibre le parallélisme et mange l'intérieur des pneus avant tout le reste. Si le volant tire d'un côté ou si l'usure des pneus est inégale d'un bord à l'autre, c'est le signe. L'inspection se fait à l'atelier et l'estimation est confirmée avant les travaux.",
+            "La suspension et la géométrie, en priorité — c'est l'usure typique des chemins de Luskville. Rouler régulièrement sur du gravier use les amortisseurs, déséquilibre le parallélisme et mange l'intérieur des pneus avant tout le reste. Si le volant tire d'un côté ou si l'usure des pneus est inégale d'un bord à l'autre, c'est le signe. L'inspection se fait à l'atelier et l'estimation est confirmée avant les travaux.",
         },
         {
           question: "Est-ce que vous venez chercher le véhicule à Luskville s'il ne roule plus ?",
           answer:
-            "Oui. Le service de remorquage répond 24 heures sur 24 au (819) 921-7869 et couvre toute la municipalité de Pontiac, code postal J0X 2G0, le long de la 148 jusque vers Quyon. Le remorquage commence à 79,99 $ et le véhicule est ramené directement à l'atelier d'Aylmer pour le diagnostic.",
+            "Oui. Le service de remorquage répond 24 heures sur 24 au (819) 921-7869 et couvre Luskville et toute la municipalité de Pontiac, code postal J0X 2G0, le long de la 148 jusque vers Quyon. Le remorquage commence à 79,99 $ et le véhicule est ramené directement à l'atelier d'Aylmer pour le diagnostic.",
         },
         {
           question: "Faut-il prendre rendez-vous pour un changement d'huile ?",
@@ -359,17 +359,17 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "How long is the drive from Luskville to your shop?",
           answer:
-            "About twenty minutes east on Route 148, roughly twenty kilometres to 879 chemin Vanier in Aylmer. It is a straight run with no bridge and no interchange. The shop is open Monday to Saturday, 9 AM to 6 PM, no appointment needed, and there is parking on site.",
+            "About twenty minutes east on Route 148, roughly twenty kilometres to 879 chemin Vanier in Aylmer. It is a straight run with no bridge and no interchange — Luskville and Aylmer sit on the same road. The shop is open Monday to Saturday, 9 AM to 6 PM, no appointment needed, and there is parking on site.",
         },
         {
           question: "My roads are gravel — what should I have checked?",
           answer:
-            "Suspension and alignment first. Regular gravel driving wears shocks, pulls the toe out of spec and eats the inner edge of the front tires before anything else shows. A steering wheel that pulls to one side, or tread worn unevenly across the tire, is the tell. The inspection happens at the shop and the estimate is confirmed before any work.",
+            "Suspension and alignment first — that is the wear Luskville roads produce. Regular gravel driving wears shocks, pulls the toe out of spec and eats the inner edge of the front tires before anything else shows. A steering wheel that pulls to one side, or tread worn unevenly across the tire, is the tell. The inspection happens at the shop and the estimate is confirmed before any work.",
         },
         {
           question: "Will you come and get the vehicle in Luskville if it will not move?",
           answer:
-            "Yes. Towing answers 24 hours a day at (819) 921-7869 and covers the whole Municipality of Pontiac, postal code J0X 2G0, along the 148 out toward Quyon. Towing starts at $79.99 and the vehicle comes straight back to the Aylmer shop for diagnosis.",
+            "Yes. Towing answers 24 hours a day at (819) 921-7869 and covers Luskville and the whole Municipality of Pontiac, postal code J0X 2G0, along the 148 out toward Quyon. Towing starts at $79.99 and the vehicle comes straight back to the Aylmer shop for diagnosis.",
         },
         {
           question: "Do I need an appointment for an oil change?",
@@ -427,7 +427,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Faites-vous l'entretien complet ou seulement les freins ?",
           answer:
-            "L'atelier couvre l'ensemble : changement d'huile, freins, pneus et entreposage, diagnostic électronique, climatisation, suspension et alignement, échappement, transmission et carrosserie. Les travaux sont garantis un an, pièces et main-d'œuvre, et rien ne commence avant que le prix soit approuvé avec vous.",
+            "L'atelier couvre l'ensemble pour les clients de Chelsea : changement d'huile, freins, pneus et entreposage, diagnostic électronique, climatisation, suspension et alignement, échappement, transmission et carrosserie. Les travaux sont garantis un an, pièces et main-d'œuvre, et rien ne commence avant que le prix soit approuvé avec vous.",
         },
         {
           question: "Et si la voiture ne redescend pas de Chelsea ?",
@@ -480,7 +480,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Do you do full servicing or only brakes?",
           answer:
-            "The shop covers all of it: oil changes, brakes, tires and storage, electronic diagnostics, air conditioning, suspension and alignment, exhaust, transmission and bodywork. Work carries a one-year warranty on parts and labour, and nothing starts before the price is agreed with you.",
+            "The shop covers all of it for Chelsea customers: oil changes, brakes, tires and storage, electronic diagnostics, air conditioning, suspension and alignment, exhaust, transmission and bodywork. Work carries a one-year warranty on parts and labour, and nothing starts before the price is agreed with you.",
         },
         {
           question: "What if the car will not make it down from Chelsea?",
@@ -538,12 +538,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Pourquoi choisir un indépendant plutôt qu'un concessionnaire de Gréber ?",
           answer:
-            "Pour deux raisons concrètes : le taux horaire d'un atelier indépendant est plus bas que celui d'un réseau de concession, et on ne travaille pas avec des forfaits d'entretien préétablis. On répare ce qui doit l'être, on vous montre pourquoi, et la garantie d'un an couvre les pièces comme la main-d'œuvre.",
+            "Pour deux raisons concrètes, qui valent le trajet depuis le secteur Gatineau : le taux horaire d'un atelier indépendant est plus bas que celui d'un réseau de concession, et on ne travaille pas avec des forfaits d'entretien préétablis. On répare ce qui doit l'être, on vous montre pourquoi, et la garantie d'un an couvre les pièces comme la main-d'œuvre.",
         },
         {
           question: "Pouvez-vous récupérer un véhicule immobilisé dans le secteur ?",
           answer:
-            "Oui, on a notre propre dépanneuse et elle répond 24 heures sur 24 au (819) 921-7869. Elle couvre tout le corridor du boulevard Maloney, les stationnements commerciaux des Promenades et de Gréber, et les accès de l'autoroute 50. Le remorquage commence à 79,99 $ et le véhicule arrive directement à l'atelier.",
+            "Oui, on a notre propre dépanneuse et elle répond 24 heures sur 24 au (819) 921-7869. Elle couvre le secteur Gatineau au complet : le corridor du boulevard Maloney, les stationnements commerciaux des Promenades et de Gréber, et les accès de l'autoroute 50. Le remorquage commence à 79,99 $ et le véhicule arrive directement à l'atelier.",
         },
       ],
     },
@@ -591,12 +591,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Why choose an independent over a dealership on Gréber?",
           answer:
-            "Two concrete reasons: an independent shop's hourly rate is lower than a dealer network's, and we do not work from pre-set maintenance packages. We repair what needs repairing, show you why, and the one-year warranty covers parts as well as labour.",
+            "Two concrete reasons worth the drive from the Gatineau sector: an independent shop's hourly rate is lower than a dealer network's, and we do not work from pre-set maintenance packages. We repair what needs repairing, show you why, and the one-year warranty covers parts as well as labour.",
         },
         {
           question: "Can you recover a vehicle stranded in the sector?",
           answer:
-            "Yes, we run our own tow truck and it answers 24 hours a day at (819) 921-7869. It covers the entire boulevard Maloney corridor, the retail lots at Les Promenades and along Gréber, and the Autoroute 50 accesses. Towing starts at $79.99 and the vehicle comes straight to the shop.",
+            "Yes, we run our own tow truck and it answers 24 hours a day at (819) 921-7869. It covers the whole Gatineau sector: the boulevard Maloney corridor, the retail lots at Les Promenades and along Gréber, and the Autoroute 50 accesses. Towing starts at $79.99 and the vehicle comes straight to the shop.",
         },
       ],
     },
@@ -639,22 +639,22 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Quelle distance entre Masson-Angers et votre atelier ?",
           answer:
-            "Une trentaine de kilomètres, soit environ 35 minutes par l'autoroute 50 puis le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. C'est le secteur le plus éloigné qu'on dessert côté garage, et on le dit franchement : pour une petite intervention, un atelier de Buckingham sera plus commode.",
+            "Une trentaine de kilomètres, soit environ 35 minutes par l'autoroute 50 puis le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. Masson-Angers est le secteur le plus éloigné qu'on dessert côté garage, et on le dit franchement : pour une petite intervention, un atelier de Buckingham sera plus commode.",
         },
         {
           question: "Alors pourquoi venir jusqu'à Aylmer ?",
           answer:
-            "Pour les travaux qui se planifient et où le prix compte : freins complets, suspension, climatisation, carrosserie. Vous obtenez le devis au téléphone au (819) 921-7869, on fixe une date, et tout se fait en une visite. La garantie est d'un an sur les pièces et la main-d'œuvre, peu importe le secteur d'où vous venez.",
+            "Pour les travaux qui se planifient et où le prix compte : freins complets, suspension, climatisation, carrosserie. Vous obtenez le devis au téléphone au (819) 921-7869, on fixe une date, et tout se fait en une visite. La garantie est d'un an sur les pièces et la main-d'œuvre, qu'on vienne de Masson-Angers ou d'à côté de l'atelier.",
         },
         {
           question: "Desservez-vous Masson-Angers en remorquage aussi ?",
           answer:
-            "Oui, et c'est souvent la meilleure porte d'entrée. La dépanneuse répond 24 heures sur 24 au (819) 921-7869 et couvre tout le secteur, code postal J8M, y compris la traverse de Cumberland et le chemin Montréal Ouest. Le remorquage part de 79,99 $ et amène le véhicule directement à l'atelier.",
+            "Oui, et c'est souvent la meilleure porte d'entrée. La dépanneuse répond 24 heures sur 24 au (819) 921-7869 et couvre tout Masson-Angers, code postal J8M, y compris la traverse de Cumberland et le chemin Montréal Ouest. Le remorquage part de 79,99 $ et amène le véhicule directement à l'atelier.",
         },
         {
           question: "Puis-je laisser le véhicule et revenir le lendemain ?",
           answer:
-            "Oui, c'est ce qu'on recommande quand vous venez de loin. Laissez le véhicule le matin, on vous appelle avec le diagnostic et le prix avant de commencer quoi que ce soit, et vous repassez quand c'est prêt. L'atelier est ouvert du lundi au samedi de 9 h à 18 h.",
+            "Oui, c'est ce qu'on recommande quand vous venez de Masson-Angers. Laissez le véhicule le matin, on vous appelle avec le diagnostic et le prix avant de commencer quoi que ce soit, et vous repassez quand c'est prêt. L'atelier est ouvert du lundi au samedi de 9 h à 18 h.",
         },
       ],
     },
@@ -692,22 +692,22 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "How far is Masson-Angers from your shop?",
           answer:
-            "About thirty kilometres, roughly 35 minutes by Autoroute 50 then boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. It is the furthest area we serve on the garage side, and we will say it plainly: for a small job, a Buckingham shop will be more convenient.",
+            "About thirty kilometres, roughly 35 minutes by Autoroute 50 then boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. Masson-Angers is the furthest area we serve on the garage side, and we will say it plainly: for a small job, a Buckingham shop will be more convenient.",
         },
         {
           question: "So why drive all the way to Aylmer?",
           answer:
-            "For work that can be planned and where the price matters: full brake jobs, suspension, air conditioning, bodywork. You get the quote by phone at (819) 921-7869, we set a date, and it is all done in one visit. The warranty is one year on parts and labour, wherever you drove in from.",
+            "For work that can be planned and where the price matters: full brake jobs, suspension, air conditioning, bodywork. You get the quote by phone at (819) 921-7869, we set a date, and it is all done in one visit. The warranty is one year on parts and labour, whether you drove in from Masson-Angers or from next door.",
         },
         {
           question: "Do you cover Masson-Angers for towing as well?",
           answer:
-            "Yes, and it is often the better way in. The tow truck answers 24 hours a day at (819) 921-7869 and covers the whole sector, postal code J8M, including the Cumberland ferry landing and chemin Montréal Ouest. Towing starts at $79.99 and brings the vehicle straight to the shop.",
+            "Yes, and it is often the better way in. The tow truck answers 24 hours a day at (819) 921-7869 and covers all of Masson-Angers, postal code J8M, including the Cumberland ferry landing and chemin Montréal Ouest. Towing starts at $79.99 and brings the vehicle straight to the shop.",
         },
         {
           question: "Can I leave the vehicle and come back the next day?",
           answer:
-            "Yes, and that is what we recommend when you are coming from a distance. Drop it off in the morning, we call you with the diagnosis and the price before anything is started, and you collect it when it is ready. The shop is open Monday to Saturday, 9 AM to 6 PM.",
+            "Yes, and that is what we recommend when you are coming from Masson-Angers. Drop it off in the morning, we call you with the diagnosis and the price before anything is started, and you collect it when it is ready. The shop is open Monday to Saturday, 9 AM to 6 PM.",
         },
       ],
     },
@@ -750,12 +750,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Ça vaut la peine de venir de Buckingham jusqu'à Aylmer ?",
           answer:
-            "Pour un travail planifié, oui : un jeu de freins complet, une suspension, une climatisation ou de la carrosserie justifient les trente kilomètres, surtout avec un devis obtenu d'avance au (819) 921-7869. Pour un changement d'huile seul, non — on vous le dira plutôt que de vous faire traverser la ville.",
+            "Pour un travail planifié, oui : un jeu de freins complet, une suspension, une climatisation ou de la carrosserie justifient les trente kilomètres depuis Buckingham, surtout avec un devis obtenu d'avance au (819) 921-7869. Pour un changement d'huile seul, non — on vous le dira plutôt que de vous faire traverser la ville.",
         },
         {
           question: "Quel est le trajet depuis Buckingham ?",
           answer:
-            "Une trentaine de kilomètres vers l'ouest : le boulevard Maloney Est puis l'autoroute 50, et enfin le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. Comptez de 35 à 45 minutes selon l'heure. L'atelier est ouvert du lundi au samedi, de 9 h à 18 h, sans rendez-vous.",
+            "Une trentaine de kilomètres vers l'ouest depuis Buckingham : le boulevard Maloney Est puis l'autoroute 50, et enfin le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. Comptez de 35 à 45 minutes selon l'heure. L'atelier est ouvert du lundi au samedi, de 9 h à 18 h, sans rendez-vous.",
         },
         {
           question: "Est-ce que la garantie s'applique si j'habite Buckingham ?",
@@ -765,7 +765,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Pouvez-vous remorquer le véhicule depuis Buckingham jusqu'à l'atelier ?",
           answer:
-            "Oui, c'est le trajet le plus courant qu'on fait dans ce secteur. Le remorquage commence à 79,99 $, le prix est confirmé au téléphone avant le départ et il couvre le trajet complet jusqu'au 879 chemin Vanier. Le véhicule arrive à l'atelier et le diagnostic enchaîne le jour même ou le lendemain matin.",
+            "Oui, c'est le trajet le plus courant qu'on fait à Buckingham. Le remorquage commence à 79,99 $, le prix est confirmé au téléphone avant le départ et il couvre le trajet complet jusqu'au 879 chemin Vanier. Le véhicule arrive à l'atelier et le diagnostic enchaîne le jour même ou le lendemain matin.",
         },
       ],
     },
@@ -803,12 +803,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Is it worth driving from Buckingham to Aylmer?",
           answer:
-            "For planned work, yes: a full brake job, suspension, air conditioning or bodywork justify the thirty kilometres, especially with a quote agreed beforehand at (819) 921-7869. For an oil change on its own, no — and we will tell you that rather than have you cross the city.",
+            "For planned work, yes: a full brake job, suspension, air conditioning or bodywork justify the thirty kilometres from Buckingham, especially with a quote agreed beforehand at (819) 921-7869. For an oil change on its own, no — and we will tell you that rather than have you cross the city.",
         },
         {
           question: "What is the drive from Buckingham?",
           answer:
-            "About thirty kilometres west: boulevard Maloney Est, then Autoroute 50, then boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. Allow 35 to 45 minutes depending on the hour. The shop is open Monday to Saturday, 9 AM to 6 PM, no appointment needed.",
+            "About thirty kilometres west from Buckingham: boulevard Maloney Est, then Autoroute 50, then boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. Allow 35 to 45 minutes depending on the hour. The shop is open Monday to Saturday, 9 AM to 6 PM, no appointment needed.",
         },
         {
           question: "Does the warranty still apply if I live in Buckingham?",
@@ -818,7 +818,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Can you tow the vehicle from Buckingham to the shop?",
           answer:
-            "Yes, it is the most common run we make in that sector. Towing starts at $79.99, the price is confirmed by phone before we leave and it covers the complete trip to 879 chemin Vanier. The vehicle reaches the shop and diagnosis follows the same day or the next morning.",
+            "Yes, it is the most common run we make out of Buckingham. Towing starts at $79.99, the price is confirmed by phone before we leave and it covers the complete trip to 879 chemin Vanier. The vehicle reaches the shop and diagnosis follows the same day or the next morning.",
         },
       ],
     },
@@ -861,12 +861,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Quel trajet depuis L'Ange-Gardien jusqu'à votre atelier ?",
           answer:
-            "Comptez de 40 à 50 minutes : la route 309 ou la 315 jusqu'à Buckingham, puis l'autoroute 50 vers l'ouest et le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. C'est loin, on ne le cache pas — c'est pour ça qu'on donne le devis au téléphone avant que vous partiez.",
+            "Comptez de 40 à 50 minutes : la route 309 ou la 315 jusqu'à Buckingham, puis l'autoroute 50 vers l'ouest et le boulevard Alexandre-Taché jusqu'au 879 chemin Vanier, à Aylmer. L'Ange-Gardien est loin, on ne le cache pas — c'est pour ça qu'on donne le devis au téléphone avant que vous partiez.",
         },
         {
           question: "Pourquoi mes pneus avant s'usent-ils d'un seul côté ?",
           answer:
-            "C'est presque toujours un problème de géométrie, et les chemins de rang en sont la cause la plus fréquente. Quand le parallélisme est déréglé, le pneu frotte au lieu de rouler droit et l'usure se concentre sur un bord. Un alignement corrigé à temps sauve souvent deux pneus, ce qui coûte moins cher que l'opération elle-même.",
+            "C'est presque toujours un problème de géométrie, et les chemins de rang de L'Ange-Gardien en sont la cause la plus fréquente. Quand le parallélisme est déréglé, le pneu frotte au lieu de rouler droit et l'usure se concentre sur un bord. Un alignement corrigé à temps sauve souvent deux pneus, ce qui coûte moins cher que l'opération elle-même.",
         },
         {
           question: "Desservez-vous bien le L'Ange-Gardien de l'Outaouais ?",
@@ -914,12 +914,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "What is the drive from L'Ange-Gardien to your shop?",
           answer:
-            "Allow 40 to 50 minutes: Route 309 or Route 315 down to Buckingham, then Autoroute 50 west and boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. It is a long way, and we will not pretend otherwise — which is why we give the quote by phone before you set off.",
+            "Allow 40 to 50 minutes: Route 309 or Route 315 down to Buckingham, then Autoroute 50 west and boulevard Alexandre-Taché to 879 chemin Vanier in Aylmer. L'Ange-Gardien is a long way out, and we will not pretend otherwise — which is why we give the quote by phone before you set off.",
         },
         {
           question: "Why are my front tires wearing on one edge?",
           answer:
-            "That is almost always alignment, and concession roads are the most common cause. When the toe is out, the tire scrubs instead of rolling straight and the wear concentrates on one shoulder. Correcting the alignment in time often saves two tires, which costs more than the alignment itself.",
+            "That is almost always alignment, and the concession roads around L'Ange-Gardien are the most common cause. When the toe is out, the tire scrubs instead of rolling straight and the wear concentrates on one shoulder. Correcting the alignment in time often saves two tires, which costs more than the alignment itself.",
         },
         {
           question: "Do you serve the Outaouais L'Ange-Gardien?",
