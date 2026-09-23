@@ -197,10 +197,51 @@ export default async function TowingIntentPage({
 
       <FAQ title={c.faqTitle} items={c.faq} />
 
+      {/* Two blocks, not one flat pile. An area page names every service and
+          links through to it — the service page is where the job gets
+          explained, once — and links its neighbours separately. A service page
+          gets the reverse. Mixing both into a single list was what made these
+          pages read as an undifferentiated set of links. */}
       <RelatedLinks
-        title={l === "fr" ? "Autres services de remorquage" : "Other towing services"}
+        title={
+          intent.group === "zone"
+            ? l === "fr"
+              ? "Nos services de remorquage"
+              : "Our towing services"
+            : l === "fr"
+              ? "Autres services de remorquage"
+              : "Other towing services"
+        }
         links={towingIntents
-          .filter((other) => other.slug !== slug)
+          .filter(
+            (other) =>
+              other.indexable !== false &&
+              other.group !== "zone" &&
+              other.slug !== slug
+          )
+          .map((other) => ({
+            href: `/${l}/remorquage/${other.slug}`,
+            label: other[l].serviceName,
+          }))}
+      />
+
+      <RelatedLinks
+        title={
+          intent.group === "zone"
+            ? l === "fr"
+              ? "Autres secteurs desservis"
+              : "Other areas we serve"
+            : l === "fr"
+              ? "Secteurs desservis"
+              : "Areas we serve"
+        }
+        links={towingIntents
+          .filter(
+            (other) =>
+              other.indexable !== false &&
+              other.group === "zone" &&
+              other.slug !== slug
+          )
           .map((other) => ({
             href: `/${l}/remorquage/${other.slug}`,
             label: other[l].serviceName,
