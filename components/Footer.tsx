@@ -63,10 +63,10 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const navLinks = [
     { href: `/${locale}`, label: dict.nav.home },
     ...(cluster === "towing" || cluster === "neutral" ? [towingPillar] : []),
+    // One entry, not two: the garage hub is the services hub. They used to be
+    // /garage and /services, and after the merge both links resolved to the
+    // same href — which React flagged, since the href is the list key.
     ...(cluster === "repair" || cluster === "neutral" ? [repairPillar] : []),
-    ...(cluster === "repair" || cluster === "neutral"
-      ? [{ href: `/${locale}/garage`, label: dict.nav.services }]
-      : []),
     { href: `/${locale}/contact`, label: dict.nav.contact },
     { href: `/${locale}/confidentialite`, label: dict.footer.privacy },
   ];

@@ -34,16 +34,16 @@ const nextConfig: NextConfig = {
       // "Freins qui grincent" and "changement de plaquettes" were two pages
       // for one job — confirmed with the client. They are the same visit, the
       // same bay and the same invoice, so they are one page now. The five
-      // questions they answered that /services/freins did not have moved onto
+      // questions they answered that the surviving page did not have moved onto
       // it; only the URLs are gone.
       {
         source: "/:locale(fr|en)/garage/freins-bruit",
-        destination: "/:locale/services/freins",
+        destination: "/:locale/garage/freins",
         permanent: true,
       },
       {
         source: "/:locale(fr|en)/garage/plaquettes-frein",
-        destination: "/:locale/services/freins",
+        destination: "/:locale/garage/freins",
         permanent: true,
       },
 
