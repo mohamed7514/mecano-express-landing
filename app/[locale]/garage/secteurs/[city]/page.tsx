@@ -143,7 +143,7 @@ export default async function GarageAreaPage({
             return (
               <Link
                 key={s.id}
-                href={`/${l}/services/${sc.slug}`}
+                href={`/${l}/garage/${sc.slug}`}
                 className="group flex items-center gap-3 rounded-xl border border-steel-200 bg-white p-4 transition-colors hover:border-accent/40"
               >
                 {Icon && (

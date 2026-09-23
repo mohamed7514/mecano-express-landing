@@ -58,7 +58,7 @@ export type TowingIntent = {
   group: "zone" | "specialty" | "situation";
   /**
    * Ads-only landing pages: their search intent is already owned by a
-   * stronger page (/garage, /remorquage, /services/freins),
+   * stronger page (/garage, /remorquage, /garage/freins),
    * so indexing them would split the signal between near-duplicates. They
    * stay live and linked for paid traffic, but ship robots "noindex, follow"
    * and are kept out of the sitemap. Defaults to true.

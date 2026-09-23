@@ -110,7 +110,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
            </div>
 
            <div className="mt-10 flex flex-wrap items-center gap-4">
-             <Link href={`/${locale}/services`} className="inline-flex items-center justify-center rounded-[var(--radius)] font-bold transition-colors bg-white/10 border border-white/20 text-white hover:bg-white/20 px-6 py-3.5 text-base gap-2.5">
+             <Link href={`/${locale}/garage`} className="inline-flex items-center justify-center rounded-[var(--radius)] font-bold transition-colors bg-white/10 border border-white/20 text-white hover:bg-white/20 px-6 py-3.5 text-base gap-2.5">
                {dict.cta.allServices}
              </Link>
            </div>

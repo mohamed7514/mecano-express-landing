@@ -46,7 +46,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       label: locale === "fr" ? "Garage" : "Garage",
       all: locale === "fr" ? "Tout le garage" : "All garage services",
       items: repairServices.map((s) => ({
-        href: `/${locale}/services/${s[locale].slug}`,
+        href: `/${locale}/garage/${s[locale].slug}`,
         label: s[locale].name,
       })),
     },

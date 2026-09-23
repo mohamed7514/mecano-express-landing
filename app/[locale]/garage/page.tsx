@@ -207,7 +207,7 @@ export default async function GarageGatineauPage({
 
       {/* The areas axis. Only indexable zone pages: the brake block that used
           to sit here is gone with the pages it listed (merged into
-          /services/freins), and the "selon votre situation" block listed
+          /garage/freins), and the "selon votre situation" block listed
           nothing but noindex landing pages — a hub should not spend its links
           on URLs Google is told to ignore. */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">

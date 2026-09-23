@@ -60,6 +60,34 @@ const nextConfig: NextConfig = {
         destination: "/:locale/garage/secteurs/hull-qc",
         permanent: true,
       },
+
+      // The mechanical services moved from /services/<slug> to /garage/<slug>,
+      // so the URL names the trade the page belongs to. Order matters here:
+      // the towing entry is caught before the catch-all, because it does not
+      // go to /garage at all — it was a duplicate of the towing hub and
+      // already canonicalized there.
+      {
+        source: "/:locale(fr|en)/services/remorquage",
+        destination: "/:locale/remorquage",
+        permanent: true,
+      },
+      {
+        source: "/:locale(fr|en)/services/towing",
+        destination: "/:locale/remorquage",
+        permanent: true,
+      },
+      {
+        source: "/:locale(fr|en)/services/:slug",
+        destination: "/:locale/garage/:slug",
+        permanent: true,
+      },
+      // The services hub is the garage hub now.
+      {
+        source: "/:locale(fr|en)/services",
+        destination: "/:locale/garage",
+        permanent: true,
+      },
+      { source: "/services", destination: "/fr/garage", permanent: true },
     ];
   },
 };

@@ -50,7 +50,7 @@ export function ServicesGrid({
           return (
             <Reveal key={s.id} delay={(i % 3) * 80}>
               <Link
-                href={`/${locale}/services/${c.slug}`}
+                href={`/${locale}/garage/${c.slug}`}
                 className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-steel-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10"
               >
                 <div

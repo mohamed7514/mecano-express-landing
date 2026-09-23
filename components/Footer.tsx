@@ -20,8 +20,8 @@ type Cluster = "towing" | "repair" | "neutral";
  * rather than bleed into the other one. Only the home page and /contact are
  * neutral — they act as the switchboard between the two.
  *
- * The towing service detail page lives at /services/remorquage (FR) and
- * /services/towing (EN), so it has to be caught before the /services test.
+ * The test order matters: /remorquage and its children are checked before
+ * anything else, so a towing page never falls through to the repair cluster.
  */
 function clusterOf(pathname: string, locale: Locale): Cluster {
   if (pathname === `/${locale}` || pathname === `/${locale}/`) return "neutral";
@@ -65,7 +65,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     ...(cluster === "towing" || cluster === "neutral" ? [towingPillar] : []),
     ...(cluster === "repair" || cluster === "neutral" ? [repairPillar] : []),
     ...(cluster === "repair" || cluster === "neutral"
-      ? [{ href: `/${locale}/services`, label: dict.nav.services }]
+      ? [{ href: `/${locale}/garage`, label: dict.nav.services }]
       : []),
     { href: `/${locale}/contact`, label: dict.nav.contact },
     { href: `/${locale}/confidentialite`, label: dict.footer.privacy },

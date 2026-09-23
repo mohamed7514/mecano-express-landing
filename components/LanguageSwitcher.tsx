@@ -19,7 +19,7 @@ export function LanguageSwitcher({
     const currentLocale = segments[1] as Locale;
     segments[1] = target; // replace the locale segment
 
-    // /services/[slug] uses a different slug per locale (e.g.
+    // /garage/[slug] uses a different slug per locale (e.g.
     // changement-huile <-> oil-change) — swap it too, or the link 404s.
     if (segments[2] === "services" && segments[3]) {
       const service = getServiceBySlug(segments[3], currentLocale);

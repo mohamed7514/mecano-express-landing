@@ -28,7 +28,7 @@ export type MechanicIntent = {
   group: "zone" | "specialty" | "situation";
   /**
    * Ads-only landing pages: their search intent is already owned by a
-   * stronger page (/garage, /remorquage, /services/freins),
+   * stronger page (/garage, /remorquage, /garage/freins),
    * so indexing them would split the signal between near-duplicates. They
    * stay live and linked for paid traffic, but ship robots "noindex, follow"
    * and are kept out of the sitemap. Defaults to true.
@@ -40,7 +40,7 @@ export type MechanicIntent = {
 
 /**
  * One dedicated landing page per Google Ads "Search-Mechanic" campaign ad
- * group that isn't already well served by an existing /services/[slug] page
+ * group that isn't already well served by an existing /garage/[slug] page
  * (oil change, brakes, tires, etc. keep using those). Served at
  * /garage/<slug>. Mirrors lib/towingIntents.ts's approach for the towing
  * campaign — each keyword theme gets copy matching its exact search intent.
