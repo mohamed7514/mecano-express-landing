@@ -58,7 +58,7 @@ export type TowingIntent = {
   group: "zone" | "specialty" | "situation";
   /**
    * Ads-only landing pages: their search intent is already owned by a
-   * stronger page (/garage-gatineau, /remorquage-gatineau, /services/freins),
+   * stronger page (/garage, /remorquage, /services/freins),
    * so indexing them would split the signal between near-duplicates. They
    * stay live and linked for paid traffic, but ship robots "noindex, follow"
    * and are kept out of the sitemap. Defaults to true.
@@ -72,7 +72,7 @@ export type TowingIntent = {
  * One dedicated landing page per Google Ads "Towing" campaign ad group, so
  * each keyword theme lands on copy that matches its exact search intent
  * (message match / Quality Score). "Remorquage Gatineau FR" and "Towing
- * Gatineau EN" intentionally reuse the existing /remorquage-gatineau page
+ * Gatineau EN" intentionally reuse the existing /remorquage page
  * instead of a near-duplicate here. Served at /remorquage/<slug>.
  */
 export const towingIntents: TowingIntent[] = [

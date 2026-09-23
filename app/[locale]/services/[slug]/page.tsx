@@ -34,9 +34,9 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug, l);
   if (!service) return {};
   const c = service[l];
-  // This page and /remorquage-gatineau shipped the same title and a
+  // This page and /remorquage shipped the same title and a
   // byte-identical description, both indexable, both chasing "remorquage
-  // gatineau". /remorquage-gatineau is the pillar — it holds the hub links
+  // gatineau". /remorquage is the pillar — it holds the hub links
   // and the Ads spend — so the towing entry consolidates into it and drops
   // out of the sitemap. It stays crawlable and linked for users and paid
   // traffic; no noindex, which would contradict the canonical. The hreflang
@@ -47,7 +47,7 @@ export async function generateMetadata({
     title: c.metaTitle,
     description: c.metaDescription,
     alternates: canonicalizedToPillar
-      ? { canonical: `/${l}/remorquage-gatineau` }
+      ? { canonical: `/${l}/remorquage` }
       : {
           canonical: `/${l}/services/${c.slug}`,
           languages: {
@@ -174,7 +174,7 @@ export default async function ServiceDetailPage({
               </h2>
               <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 <Link
-                  href={`/${l}/remorquage-gatineau`}
+                  href={`/${l}/remorquage`}
                   className="group flex items-center justify-between gap-2 rounded-xl border border-steel-200 bg-white p-4 text-sm font-semibold text-ink transition-colors hover:border-accent/40 hover:text-accent"
                 >
                   {l === "fr" ? "Remorquage à Gatineau" : "Towing in Gatineau"}

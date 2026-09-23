@@ -100,7 +100,7 @@ export default async function TowingIntentPage({
           <Breadcrumb
             items={[
               { name: dict.nav.home, url: `/${l}` },
-              { name: dict.nav.towingCategory, url: `/${l}/remorquage-gatineau` },
+              { name: dict.nav.towingCategory, url: `/${l}/remorquage` },
               { name: c.serviceName, url: `/${l}/remorquage/${slug}` },
             ]}
           />

@@ -8,7 +8,7 @@ import { BrandBurst } from "@/components/BrandBurst";
 /**
  * Homepage hub for the two Ads campaigns: gives organic/direct visitors a
  * clear fork and creates a strong internal link into both dedicated
- * landing pages (/remorquage-gatineau and /garage-gatineau).
+ * landing pages (/remorquage and /garage).
  */
 export function CampaignSplit({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const s = dict.campaignSplit;
@@ -22,7 +22,7 @@ export function CampaignSplit({ locale, dict }: { locale: Locale; dict: Dictiona
       <div className="mt-6 grid gap-5 sm:grid-cols-2">
         <Reveal>
           <Link
-            href={`/${locale}/remorquage-gatineau`}
+            href={`/${locale}/remorquage`}
             className="group relative block h-full overflow-hidden rounded-3xl bg-graphite-950 p-8 text-white transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-accent/20"
           >
             <div className="bg-grid absolute inset-0 opacity-40" aria-hidden="true" />
@@ -46,7 +46,7 @@ export function CampaignSplit({ locale, dict }: { locale: Locale; dict: Dictiona
 
         <Reveal delay={100}>
           <Link
-            href={`/${locale}/garage-gatineau`}
+            href={`/${locale}/garage`}
             className="group relative block h-full overflow-hidden rounded-3xl border border-steel-200 bg-white p-8 transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-steel-200/60"
           >
             <div

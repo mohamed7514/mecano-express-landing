@@ -41,11 +41,11 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const isTowing = cluster === "towing";
 
   const towingPillar = {
-    href: `/${locale}/remorquage-gatineau`,
+    href: `/${locale}/remorquage`,
     label: locale === "fr" ? "Remorquage à Gatineau" : "Towing in Gatineau",
   };
   const repairPillar = {
-    href: `/${locale}/garage-gatineau`,
+    href: `/${locale}/garage`,
     label: locale === "fr" ? "Garage à Gatineau" : "Garage in Gatineau",
   };
 

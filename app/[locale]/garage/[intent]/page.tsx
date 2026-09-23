@@ -91,7 +91,7 @@ export default async function MechanicIntentPage({
           <Breadcrumb
             items={[
               { name: dict.nav.home, url: `/${l}` },
-              { name: dict.nav.mechanicCategory, url: `/${l}/garage-gatineau` },
+              { name: dict.nav.mechanicCategory, url: `/${l}/garage` },
               { name: c.serviceName, url: `/${l}/garage/${slug}` },
             ]}
           />

@@ -22,7 +22,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
  * Dedicated Ads landing page for the "Garage Mecanique Outaouais" campaign.
  * H1/trust copy is pulled directly from Keywords/mecanicien/3_garage_annonces.csv
  * so the page message-matches the ad text (Quality Score).
- * Slug is deliberately identical in both locales (garage-gatineau) — this
+ * Slug is deliberately identical in both locales (garage) — this
  * is the exact Final URL already set in that campaign's ad groups; proxy.ts
  * redirects the bare, unprefixed path to /fr or /en by browser language.
  */
@@ -140,14 +140,14 @@ export async function generateMetadata({
     title: c.metaTitle,
     description: c.metaDescription,
     alternates: {
-      canonical: `/${l}/garage-gatineau`,
-      languages: { "fr-CA": "/fr/garage-gatineau", "en-CA": "/en/garage-gatineau", "x-default": "/fr/garage-gatineau" },
+      canonical: `/${l}/garage`,
+      languages: { "fr-CA": "/fr/garage", "en-CA": "/en/garage", "x-default": "/fr/garage" },
     },
     openGraph: {
       ...ogBase(l),
       title: c.metaTitle,
       description: c.metaDescription,
-      url: `${business.domain}/${l}/garage-gatineau`,
+      url: `${business.domain}/${l}/garage`,
     },
   };
 }
@@ -167,7 +167,7 @@ export default async function GarageGatineauPage({
       <ServiceJsonLd
         name={l === "fr" ? "Réparation et entretien automobile" : "Auto repair & maintenance"}
         description={c.metaDescription}
-        url={`${business.domain}/${l}/garage-gatineau`}
+        url={`${business.domain}/${l}/garage`}
         serviceType={l === "fr" ? "Réparation automobile" : "Auto repair"}
         areaServed={["Gatineau", "Hull", "Aylmer", "Buckingham"]}
       />
@@ -179,7 +179,7 @@ export default async function GarageGatineauPage({
           <Breadcrumb
             items={[
               { name: dict.nav.home, url: `/${l}` },
-              { name: dict.nav.mechanicCategory, url: `/${l}/garage-gatineau` },
+              { name: dict.nav.mechanicCategory, url: `/${l}/garage` },
             ]}
           />
         }

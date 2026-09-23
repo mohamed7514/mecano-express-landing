@@ -36,7 +36,7 @@ export const services: Service[] = [
       name: "Remorquage",
       slug: "remorquage",
       tagline: "Remorquage et dépannage rapide",
-      // No city in this h1 on purpose: /remorquage-gatineau is the pillar for
+      // No city in this h1 on purpose: /remorquage is the pillar for
       // "remorquage gatineau" and a third page on that term would split it.
       heroTitle: "Remorquage et",
       heroHighlight: "dépannage routier",

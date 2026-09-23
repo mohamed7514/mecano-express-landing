@@ -19,11 +19,11 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 /**
  * Dedicated Ads landing page for the "Remorquage Outaouais" campaign. No
- * ad copy CSV exists yet for this campaign (unlike garage-gatineau), so
+ * ad copy CSV exists yet for this campaign (unlike garage), so
  * copy is built from the keyword groups in Keywords/towing/1_mots_cles.csv
  * (remorquage/remorqueuse gatineau, towing near me, secteurs Aylmer/Hull/
  * Buckingham) — adjust once real ad copy is finalized.
- * Slug is identical in both locales, mirroring garage-gatineau's pattern
+ * Slug is identical in both locales, mirroring garage's pattern
  * so proxy.ts's bare-path locale redirect keeps working.
  * Ottawa/Ontario are excluded from the area list here (unlike the general
  * site) because both campaigns' negative keyword lists explicitly exclude
@@ -196,18 +196,18 @@ export async function generateMetadata({
     title: c.metaTitle,
     description: c.metaDescription,
     alternates: {
-      canonical: `/${l}/remorquage-gatineau`,
+      canonical: `/${l}/remorquage`,
       languages: {
-        "fr-CA": "/fr/remorquage-gatineau",
-        "en-CA": "/en/remorquage-gatineau",
-        "x-default": "/fr/remorquage-gatineau",
+        "fr-CA": "/fr/remorquage",
+        "en-CA": "/en/remorquage",
+        "x-default": "/fr/remorquage",
       },
     },
     openGraph: {
       ...ogBase(l),
       title: c.metaTitle,
       description: c.metaDescription,
-      url: `${business.domain}/${l}/remorquage-gatineau`,
+      url: `${business.domain}/${l}/remorquage`,
     },
   };
 }
@@ -228,7 +228,7 @@ export default async function RemorquageGatineauPage({
       <ServiceJsonLd
         name={l === "fr" ? "Remorquage" : "Towing"}
         description={c.metaDescription}
-        url={`${business.domain}/${l}/remorquage-gatineau`}
+        url={`${business.domain}/${l}/remorquage`}
         serviceType={l === "fr" ? "Remorquage" : "Towing service"}
         areaServed={AREAS}
         available247
@@ -240,7 +240,7 @@ export default async function RemorquageGatineauPage({
           <Breadcrumb
             items={[
               { name: dict.nav.home, url: `/${l}` },
-              { name: dict.nav.towingCategory, url: `/${l}/remorquage-gatineau` },
+              { name: dict.nav.towingCategory, url: `/${l}/remorquage` },
             ]}
           />
         }

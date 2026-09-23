@@ -29,12 +29,12 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
   const remorquageService = services.find((s) => s.id === "remorquage");
   const towingHubHref = `/${locale}/services/${remorquageService?.[locale].slug ?? "remorquage"}`;
-  const mechanicHubHref = `/${locale}/garage-gatineau`;
+  const mechanicHubHref = `/${locale}/garage`;
 
   // Curated shortlist for the nav — the full set of zone/specialty pages
   // lives on the towing hub page, not crammed into this dropdown.
   const towingLinks = [
-    { href: `/${locale}/remorquage-gatineau`, label: locale === "fr" ? "Remorquage à Gatineau" : "Towing in Gatineau" },
+    { href: `/${locale}/remorquage`, label: locale === "fr" ? "Remorquage à Gatineau" : "Towing in Gatineau" },
     { href: `/${locale}/remorquage/aylmer`, label: locale === "fr" ? "Remorquage à Aylmer" : "Towing in Aylmer" },
     { href: `/${locale}/remorquage/poids-lourd`, label: locale === "fr" ? "Remorquage poids lourd" : "Heavy truck towing" },
     { href: `/${locale}/remorquage/prix`, label: locale === "fr" ? "Prix d'un remorquage" : "Towing cost" },

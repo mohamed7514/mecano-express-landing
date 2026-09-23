@@ -9,7 +9,7 @@ import { business } from "@/lib/business";
  * Only indexable pages belong here — a sitemap entry is a request to index,
  * so listing a noindex URL sends Google two contradictory signals. That rules
  * out /confidentialite, the Ads-only intent pages (`indexable: false`) and
- * /services/remorquage, which canonicalizes to /remorquage-gatineau.
+ * /services/remorquage, which canonicalizes to /remorquage.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = business.domain;
@@ -20,8 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${base}/${locale}`, lastModified, changeFrequency: "monthly", priority: 1 });
     // Dedicated Google Ads landing pages — highest priority, they're the
     // pages paid traffic actually lands on.
-    entries.push({ url: `${base}/${locale}/garage-gatineau`, lastModified, changeFrequency: "weekly", priority: 1 });
-    entries.push({ url: `${base}/${locale}/remorquage-gatineau`, lastModified, changeFrequency: "weekly", priority: 1 });
+    entries.push({ url: `${base}/${locale}/garage`, lastModified, changeFrequency: "weekly", priority: 1 });
+    entries.push({ url: `${base}/${locale}/remorquage`, lastModified, changeFrequency: "weekly", priority: 1 });
     for (const intent of towingIntents) {
       if (intent.indexable === false) continue;
       entries.push({
@@ -43,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${base}/${locale}/services`, lastModified, changeFrequency: "monthly", priority: 0.9 });
     entries.push({ url: `${base}/${locale}/contact`, lastModified, changeFrequency: "yearly", priority: 0.7 });
     for (const s of services) {
-      // The towing service page canonicalizes to /remorquage-gatineau (see
+      // The towing service page canonicalizes to /remorquage (see
       // services/[slug]/page.tsx) — a sitemap entry would ask Google to index
       // a URL that points its canonical somewhere else.
       if (s.category === "towing") continue;
