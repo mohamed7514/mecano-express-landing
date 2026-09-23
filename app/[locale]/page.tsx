@@ -22,7 +22,7 @@ export default async function HomePage({
       <CampaignSplit locale={l} dict={dict} />
       <ServicesGrid locale={l} dict={dict} />
       <WhyUs dict={dict} />
-      <AreaServed dict={dict} />
+      <AreaServed dict={dict} locale={l} />
       <ContactSection locale={l} dict={dict} />
     </>
   );

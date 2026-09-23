@@ -127,7 +127,7 @@ export default async function MechanicIntentPage({
         </div>
       </section>
 
-      {c.areas && <AreaServed dict={dict} areas={c.areas} />}
+      {c.areas && <AreaServed dict={dict} locale={l} areas={c.areas} />}
 
       <FAQ title={c.faqTitle} items={c.faq} />
 
