@@ -102,6 +102,7 @@ export function ServiceJsonLd({
   serviceType,
   available247 = false,
   startingPrice,
+  areaServed,
 }: {
   name: string;
   description: string;
@@ -115,6 +116,14 @@ export function ServiceJsonLd({
    * AutoRepair schema above carries the shop's Mon-Sat hours, so 24/7 has to
    * be declared here on the service itself or the two contradict each other. */
   available247?: boolean;
+  /**
+   * The towns this particular page actually serves. Defaults to the whole
+   * business footprint, which is right for a site-wide service but wrong for
+   * a page about one town: /zones/chelsea was declaring it served Aylmer,
+   * Hull, Gatineau, Buckingham and Ottawa — and not Chelsea. It also let the
+   * site claim Ottawa on every page while the Ads account excludes Ontario.
+   */
+  areaServed?: readonly string[];
 }) {
   const data = {
     "@context": "https://schema.org",
@@ -123,7 +132,10 @@ export function ServiceJsonLd({
     serviceType: serviceType ?? name,
     description,
     provider: { "@id": `${business.domain}/#business` },
-    areaServed: business.areasServed.map((areaName) => ({ "@type": "City", name: areaName })),
+    areaServed: (areaServed ?? business.areasServed).map((areaName) => ({
+      "@type": "City",
+      name: areaName,
+    })),
     url,
     ...(startingPrice
       ? {

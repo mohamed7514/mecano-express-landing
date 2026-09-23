@@ -85,6 +85,8 @@ export default async function ServiceDetailPage({
         name={c.name}
         description={c.metaDescription}
         url={`${business.domain}/${l}/services/${c.slug}`}
+        areaServed={["Gatineau", ...areas.map((a) => a[l].name)]}
+        available247={service.category === "towing"}
       />
       <FAQJsonLd items={c.faq} />
 

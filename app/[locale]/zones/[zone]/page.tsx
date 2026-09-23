@@ -83,6 +83,7 @@ export default async function AreaPage({
         name={`${l === "fr" ? "Remorquage et garage" : "Towing and garage"} — ${c.name}`}
         description={c.metaDescription}
         url={`${business.domain}/${l}/zones/${c.slug}`}
+        areaServed={[c.name]}
         available247
       />
       <FAQJsonLd items={c.faq} />

@@ -169,6 +169,7 @@ export default async function GarageGatineauPage({
         description={c.metaDescription}
         url={`${business.domain}/${l}/garage-gatineau`}
         serviceType={l === "fr" ? "Réparation automobile" : "Auto repair"}
+        areaServed={["Gatineau", "Hull", "Aylmer", "Buckingham"]}
       />
       <FAQJsonLd items={c.faq} />
 

@@ -230,6 +230,7 @@ export default async function RemorquageGatineauPage({
         description={c.metaDescription}
         url={`${business.domain}/${l}/remorquage-gatineau`}
         serviceType={l === "fr" ? "Remorquage" : "Towing service"}
+        areaServed={AREAS}
         available247
       />
 
