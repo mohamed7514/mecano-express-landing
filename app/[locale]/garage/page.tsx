@@ -205,68 +205,33 @@ export default async function GarageGatineauPage({
           hub links so the page reads as a destination, not just a directory. */}
       <AreaServed dict={dict} locale={l} branch="repair" areas={["Gatineau", "Hull", "Aylmer", "Buckingham"]} />
 
-      {/* Garage hub — surfaces the ad-landing pages under /garage/* that
-          otherwise have no link from normal site navigation, grouped by
-          zone / specialty / situation instead of one flat list. */}
-      <section className="mx-auto max-w-6xl space-y-10 px-4 py-16 sm:px-6">
-        <div>
-          <h2 className="font-display text-xl font-bold">
-            {l === "fr" ? "Garage par secteur" : "Garage by area"}
-          </h2>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {mechanicIntents
-              .filter((intent) => intent.group === "zone")
-              .map((intent) => (
-                <Link
-                  key={intent.slug}
-                  href={`/${l}/garage/${intent.slug}`}
-                  className="group flex items-center justify-between gap-2 rounded-xl border border-steel-200 bg-white p-4 text-sm font-semibold text-ink transition-colors hover:border-accent/40 hover:text-accent"
-                >
-                  {intent[l].serviceName}
-                  <ArrowIcon width={16} height={16} className="shrink-0 transition-transform group-hover:translate-x-1" />
-                </Link>
-              ))}
-          </div>
-        </div>
-
-        <div>
-          <h2 className="font-display text-xl font-bold">
-            {l === "fr" ? "Réparation de freins" : "Brake repair"}
-          </h2>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {mechanicIntents
-              .filter((intent) => intent.group === "specialty")
-              .map((intent) => (
-                <Link
-                  key={intent.slug}
-                  href={`/${l}/garage/${intent.slug}`}
-                  className="group flex items-center justify-between gap-2 rounded-xl border border-steel-200 bg-white p-4 text-sm font-semibold text-ink transition-colors hover:border-accent/40 hover:text-accent"
-                >
-                  {intent[l].serviceName}
-                  <ArrowIcon width={16} height={16} className="shrink-0 transition-transform group-hover:translate-x-1" />
-                </Link>
-              ))}
-          </div>
-        </div>
-
-        <div>
-          <h2 className="font-display text-xl font-bold">
-            {l === "fr" ? "Selon votre situation" : "Based on your situation"}
-          </h2>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            {mechanicIntents
-              .filter((intent) => intent.group === "situation")
-              .map((intent) => (
-                <Link
-                  key={intent.slug}
-                  href={`/${l}/garage/${intent.slug}`}
-                  className="group flex items-center justify-between gap-2 rounded-xl border border-steel-200 bg-white p-4 text-sm font-semibold text-ink transition-colors hover:border-accent/40 hover:text-accent"
-                >
-                  {intent[l].serviceName}
-                  <ArrowIcon width={16} height={16} className="shrink-0 transition-transform group-hover:translate-x-1" />
-                </Link>
-              ))}
-          </div>
+      {/* The areas axis. Only indexable zone pages: the brake block that used
+          to sit here is gone with the pages it listed (merged into
+          /services/freins), and the "selon votre situation" block listed
+          nothing but noindex landing pages — a hub should not spend its links
+          on URLs Google is told to ignore. */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <h2 className="font-display text-xl font-bold">
+          {l === "fr" ? "Le garage par secteur" : "The garage, by area"}
+        </h2>
+        <p className="mt-2 max-w-2xl text-sm text-steel-500">
+          {l === "fr"
+            ? "L'atelier ne se déplace pas : il est au 879 chemin Vanier. Voici ce que le trajet donne depuis chaque secteur."
+            : "The shop does not travel — it sits at 879 chemin Vanier. Here is what the drive looks like from each area."}
+        </p>
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {mechanicIntents
+            .filter((intent) => intent.group === "zone" && intent.indexable !== false)
+            .map((intent) => (
+              <Link
+                key={intent.slug}
+                href={`/${l}/garage/secteurs/${intent.slug}-qc`}
+                className="group flex items-center justify-between gap-2 rounded-xl border border-steel-200 bg-white p-4 text-sm font-semibold text-ink transition-colors hover:border-accent/40 hover:text-accent"
+              >
+                {intent[l].serviceName}
+                <ArrowIcon width={16} height={16} className="shrink-0 transition-transform group-hover:translate-x-1" />
+              </Link>
+            ))}
         </div>
       </section>
 

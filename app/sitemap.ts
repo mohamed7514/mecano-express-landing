@@ -33,8 +33,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
     for (const intent of mechanicIntents) {
       if (intent.indexable === false) continue;
+      // Area pages live under their own segment now, with the -qc suffix.
+      // Listing the old /garage/<town> path here would ask Google to index a
+      // URL that 301s away.
       entries.push({
-        url: `${base}/${locale}/garage/${intent.slug}`,
+        url:
+          intent.group === "zone"
+            ? `${base}/${locale}/garage/secteurs/${intent.slug}-qc`
+            : `${base}/${locale}/garage/${intent.slug}`,
         lastModified,
         changeFrequency: "weekly",
         priority: 0.9,

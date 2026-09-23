@@ -17,13 +17,24 @@ import { AreaServed } from "@/components/sections/AreaServed";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 
+/**
+ * Area pages left this route for /garage/secteurs/<town>-qc, so only the
+ * campaign landing pages are served here now. Their URLs are frozen — they
+ * are ad destinations, not SEO pages, and moving them would break live ads
+ * for no gain since they are noindex anyway.
+ */
 export function generateStaticParams() {
   const params: { locale: string; intent: string }[] = [];
   for (const locale of locales) {
-    for (const intent of mechanicIntents) params.push({ locale, intent: intent.slug });
+    for (const intent of mechanicIntents) {
+      if (intent.group === "zone") continue;
+      params.push({ locale, intent: intent.slug });
+    }
   }
   return params;
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,

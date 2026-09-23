@@ -46,6 +46,20 @@ const nextConfig: NextConfig = {
         destination: "/:locale/services/freins",
         permanent: true,
       },
+
+      // Garage area pages moved under their own segment so /garage/<slug> can
+      // carry service slugs. The -qc suffix disambiguates: Québec has two
+      // L'Ange-Gardien.
+      {
+        source: "/:locale(fr|en)/garage/aylmer",
+        destination: "/:locale/garage/secteurs/aylmer-qc",
+        permanent: true,
+      },
+      {
+        source: "/:locale(fr|en)/garage/hull",
+        destination: "/:locale/garage/secteurs/hull-qc",
+        permanent: true,
+      },
     ];
   },
 };
