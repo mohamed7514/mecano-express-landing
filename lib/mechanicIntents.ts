@@ -51,20 +51,20 @@ export const mechanicIntents: MechanicIntent[] = [
     group: "zone",
     heroImage: { kind: "photo", name: "mecanique.webp" },
     fr: {
-      metaTitle: "Garage à Aylmer et secteur Vanier | Mécano Express",
+      metaTitle: "Garage mécanique à Aylmer | Mécano Express",
       metaDescription:
-        "Garage mécanique à Aylmer, secteur Vanier. Diagnostic honnête, prix confirmé avant travaux. Sans rendez-vous. Appelez le (819) 921-7869.",
+        "Garage mécanique à Aylmer. Diagnostic honnête, prix confirmé avant travaux. Sans rendez-vous. Appelez le (819) 921-7869.",
       eyebrow: "Garage · Aylmer",
       heroTitle: "Garage",
       heroHighlight: "à Aylmer",
       subtitle:
-        "Votre garage de quartier au 879 chemin Vanier, secteur Vanier à Aylmer. Diagnostic honnête, prix confirmé avant tout travail.",
+        "Votre garage de quartier au 879 chemin Vanier, à Aylmer. Diagnostic honnête, prix confirmé avant tout travail.",
       trustBar: ["Garage de quartier à Aylmer", "Prix confirmé avant travaux", "Sans rendez-vous"],
       reasonsTitle: "Pourquoi choisir un garage à Aylmer",
       reasons: [
         {
           title: "Un vrai garage de quartier",
-          text: "On est établis à Aylmer, secteur Vanier — pas un atelier de passage. Vous nous reverrez l'année prochaine.",
+          text: "On est établis à Aylmer — pas un atelier de passage. Vous nous reverrez l'année prochaine.",
         },
         {
           title: "Prix confirmé avant les travaux",
@@ -75,7 +75,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "Passez quand ça vous convient, on s'occupe de votre véhicule rapidement.",
         },
       ],
-      areas: ["Aylmer", "Secteur Vanier", "Gatineau", "Hull"],
+      areas: ["Aylmer", "Gatineau", "Hull"],
       ctaCardTitle: "Besoin d'un garage à Aylmer ?",
       ctaCardText: "Passez nous voir au 879 chemin Vanier ou appelez pour un diagnostic honnête.",
       serviceName: "Garage à Aylmer",
@@ -84,7 +84,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Puis-je passer sans rendez-vous ?",
           answer:
-            "Oui, les visites sans rendez-vous sont acceptées au 879 chemin Vanier, du lundi au samedi de 9h à 18h. Il y a du stationnement sur place, donc pas besoin de chercher une place dans le secteur Vanier. On inspecte le véhicule, on vous explique ce qu'on a trouvé, et le prix est confirmé avant qu'on touche à quoi que ce soit.",
+            "Oui, les visites sans rendez-vous sont acceptées au 879 chemin Vanier, du lundi au samedi de 9h à 18h. Il y a du stationnement sur place, donc pas besoin de chercher une place dans la rue. On inspecte le véhicule, on vous explique ce qu'on a trouvé, et le prix est confirmé avant qu'on touche à quoi que ce soit.",
         },
         {
           question: "Combien de temps ça prend pour une réparation courante ?",
@@ -94,7 +94,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Où êtes-vous situés exactement ?",
           answer:
-            "Au 879 chemin Vanier, dans le secteur Vanier à Aylmer, avec stationnement sur place. On est ouvert du lundi au samedi, de 9h à 18h, et le même atelier dessert Hull, Gatineau et Buckingham. Le remorquage, lui, roule 24 h sur 24 au (819) 921-7869 si le véhicule ne peut pas se rendre jusqu'à nous.",
+            "Au 879 chemin Vanier, à Aylmer, avec stationnement sur place. On est ouvert du lundi au samedi, de 9h à 18h, et le même atelier dessert Hull, Gatineau et Buckingham. Le remorquage, lui, roule 24 h sur 24 au (819) 921-7869 si le véhicule ne peut pas se rendre jusqu'à nous.",
         },
         {
           question: "Que faire si mon véhicule ne peut plus rouler jusqu'au garage ?",
@@ -104,20 +104,20 @@ export const mechanicIntents: MechanicIntent[] = [
       ],
     },
     en: {
-      metaTitle: "Garage in Aylmer & Vanier Area | Mécano Express",
+      metaTitle: "Auto Garage in Aylmer | Mécano Express",
       metaDescription:
-        "Auto garage in Aylmer, Vanier area. Honest diagnostic, price confirmed before work. Walk-in welcome. Call (819) 921-7869.",
+        "Auto garage in Aylmer. Honest diagnostic, price confirmed before work. Walk-in welcome. Call (819) 921-7869.",
       eyebrow: "Garage · Aylmer",
       heroTitle: "Garage",
       heroHighlight: "in Aylmer",
       subtitle:
-        "Your neighborhood garage at 879 chemin Vanier, Vanier area in Aylmer. Honest diagnostic, price confirmed before any work.",
+        "Your neighborhood garage at 879 chemin Vanier, Aylmer. Honest diagnostic, price confirmed before any work.",
       trustBar: ["Neighborhood garage in Aylmer", "Price confirmed before work", "Walk-in welcome"],
       reasonsTitle: "Why choose a garage in Aylmer",
       reasons: [
         {
           title: "A real neighborhood garage",
-          text: "We're established in Aylmer, Vanier area — not a drive-through shop. You'll see us again next year.",
+          text: "We're established in Aylmer — not a drive-through shop. You'll see us again next year.",
         },
         {
           title: "Price confirmed before work",
@@ -128,7 +128,7 @@ export const mechanicIntents: MechanicIntent[] = [
           text: "Drop in whenever it suits you, we take care of your vehicle quickly.",
         },
       ],
-      areas: ["Aylmer", "Vanier area", "Gatineau", "Hull"],
+      areas: ["Aylmer", "Gatineau", "Hull"],
       ctaCardTitle: "Need a garage in Aylmer?",
       ctaCardText: "Drop by at 879 chemin Vanier or call for an honest diagnostic.",
       serviceName: "Garage in Aylmer",
@@ -137,7 +137,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Can I drop in without an appointment?",
           answer:
-            "Walk-ins are welcome — no appointment is needed at 879 chemin Vanier, Monday to Saturday from 9 AM to 6 PM. On-site parking means you can leave the car with us instead of hunting for a spot in Aylmer's Vanier area. We inspect first, explain what we found, and confirm the price before any work begins.",
+            "Walk-ins are welcome — no appointment is needed at 879 chemin Vanier, Monday to Saturday from 9 AM to 6 PM. On-site parking means you can leave the car with us instead of hunting for a spot on the street. We inspect first, explain what we found, and confirm the price before any work begins.",
         },
         {
           question: "How long does a common repair take?",
@@ -147,7 +147,7 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Where exactly are you located?",
           answer:
-            "879 chemin Vanier, in the Vanier area of Aylmer, with parking on site. Hours are Monday to Saturday, 9 AM to 6 PM, and that one shop also serves Hull, Gatineau and Buckingham. Towing runs separately, 24/7 at (819) 921-7869, for the times a vehicle simply cannot be driven to us.",
+            "879 chemin Vanier, in Aylmer, with parking on site. Hours are Monday to Saturday, 9 AM to 6 PM, and that one shop also serves Hull, Gatineau and Buckingham. Towing runs separately, 24/7 at (819) 921-7869, for the times a vehicle simply cannot be driven to us.",
         },
         {
           question: "What happens if my car can't make it to the garage?",
@@ -281,13 +281,13 @@ export const mechanicIntents: MechanicIntent[] = [
       heroTitle: "Mécanicien",
       heroHighlight: "Près de Vous",
       subtitle:
-        "On est au 879 chemin Vanier, secteur Vanier à Aylmer — à quelques minutes de Gatineau et de Hull. Un vrai garage de quartier, pas une chaîne : diagnostic honnête, prix confirmé avant tout travail, sans rendez-vous.",
+        "On est au 879 chemin Vanier, à Aylmer — à quelques minutes de Gatineau et de Hull. Un vrai garage de quartier, pas une chaîne : diagnostic honnête, prix confirmé avant tout travail, sans rendez-vous.",
       trustBar: ["879 chemin Vanier, Aylmer", "Sans rendez-vous", "Prix confirmé avant travaux"],
       reasonsTitle: "Pourquoi nous choisir plutôt qu'une chaîne",
       reasons: [
         {
           title: "À quelques minutes de chez vous",
-          text: "Notre garage est au 879 chemin Vanier, secteur Vanier à Aylmer, avec stationnement sur place — facile d'accès depuis Gatineau, Hull et tout le secteur ouest.",
+          text: "Notre garage est au 879 chemin Vanier, à Aylmer, avec stationnement sur place — facile d'accès depuis Gatineau, Hull et tout le secteur ouest.",
         },
         {
           title: "Un mécanicien, pas un vendeur",
@@ -307,12 +307,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Où êtes-vous situés exactement ?",
           answer:
-            "Au 879 chemin Vanier, dans le secteur Vanier à Aylmer, avec stationnement sur place. De là, on est à quelques minutes de Hull, du centre de Gatineau et de tout le secteur ouest. L'atelier ouvre six jours sur sept, du lundi au samedi de 9h à 18h, sans rendez-vous, et le remorquage répond 24 h sur 24 au (819) 921-7869.",
+            "Au 879 chemin Vanier, à Aylmer, avec stationnement sur place. De là, on est à quelques minutes de Hull, du centre de Gatineau et de tout le secteur ouest. L'atelier ouvre six jours sur sept, du lundi au samedi de 9h à 18h, sans rendez-vous, et le remorquage répond 24 h sur 24 au (819) 921-7869.",
         },
         {
           question: "Quels secteurs desservez-vous ?",
           answer:
-            "Aylmer et le secteur Vanier, Hull, Gatineau, Buckingham et l'ensemble de l'Outaouais. Pour la mécanique, vous venez à l'atelier du 879 chemin Vanier, du lundi au samedi de 9h à 18h. Pour le remorquage et l'assistance routière, on se déplace dans ces mêmes secteurs 24 h sur 24 — nuits, fins de semaine et jours fériés — à partir de 79,99 $.",
+            "Aylmer et le chemin Vanier, Hull, Gatineau, Buckingham et l'ensemble de l'Outaouais. Pour la mécanique, vous venez à l'atelier du 879 chemin Vanier, du lundi au samedi de 9h à 18h. Pour le remorquage et l'assistance routière, on se déplace dans ces mêmes secteurs 24 h sur 24 — nuits, fins de semaine et jours fériés — à partir de 79,99 $.",
         },
         {
           question: "Qu'est-ce qui vous différencie d'un concessionnaire ?",
@@ -339,13 +339,13 @@ export const mechanicIntents: MechanicIntent[] = [
       heroTitle: "Mechanic",
       heroHighlight: "Near Me",
       subtitle:
-        "We're at 879 chemin Vanier, Vanier area in Aylmer — minutes from Gatineau and Hull. A real neighborhood garage, not a chain: honest diagnostic, price confirmed before any work, walk-in welcome.",
+        "We're at 879 chemin Vanier, Aylmer — minutes from Gatineau and Hull. A real neighborhood garage, not a chain: honest diagnostic, price confirmed before any work, walk-in welcome.",
       trustBar: ["879 chemin Vanier, Aylmer", "Walk-in welcome", "Price confirmed before work"],
       reasonsTitle: "Why choose us over a chain",
       reasons: [
         {
           title: "Minutes away from you",
-          text: "Our garage is at 879 chemin Vanier, Vanier area in Aylmer, with on-site parking — easy to reach from Gatineau, Hull and the whole west end.",
+          text: "Our garage is at 879 chemin Vanier, Aylmer, with on-site parking — easy to reach from Gatineau, Hull and the whole west end.",
         },
         {
           title: "A mechanic, not a salesperson",
@@ -365,12 +365,12 @@ export const mechanicIntents: MechanicIntent[] = [
         {
           question: "Where exactly is your shop?",
           answer:
-            "879 chemin Vanier, in the Vanier area of Aylmer, with on-site parking. From there we are minutes from Hull, downtown Gatineau and the whole west end. The garage runs six days a week, Monday to Saturday from 9 AM to 6 PM, walk-ins included, and towing answers 24/7 on (819) 921-7869.",
+            "879 chemin Vanier, in Aylmer, with on-site parking. From there we are minutes from Hull, downtown Gatineau and the whole west end. The garage runs six days a week, Monday to Saturday from 9 AM to 6 PM, walk-ins included, and towing answers 24/7 on (819) 921-7869.",
         },
         {
           question: "Which areas do you serve?",
           answer:
-            "Aylmer and the Vanier area, Hull, Gatineau, Buckingham and the wider Outaouais. Mechanical work happens at the shop, 879 chemin Vanier, Monday to Saturday from 9 AM to 6 PM. Towing and roadside assistance come to you across those same areas 24/7 — nights, weekends and holidays — starting at $79.99.",
+            "Aylmer and chemin Vanier, Hull, Gatineau, Buckingham and the wider Outaouais. Mechanical work happens at the shop, 879 chemin Vanier, Monday to Saturday from 9 AM to 6 PM. Towing and roadside assistance come to you across those same areas 24/7 — nights, weekends and holidays — starting at $79.99.",
         },
         {
           question: "What sets you apart from a dealership?",

@@ -74,12 +74,12 @@ export const areas: Area[] = [
       slug: "aylmer",
       metaTitle: "Remorquage et garage à Aylmer | Mécano Express",
       metaDescription:
-        "Remorquage 24h/24 et garage sans rendez-vous au 879 chemin Vanier, secteur Vanier à Aylmer. Remorquage à partir de 79,99 $. (819) 921-7869.",
+        "Remorquage 24h/24 et garage sans rendez-vous au 879 chemin Vanier, à Aylmer. Remorquage à partir de 79,99 $. (819) 921-7869.",
       eyebrow: "Zone desservie · Aylmer",
       heroTitle: "Remorquage et garage",
       heroHighlight: "à Aylmer",
       subtitle:
-        "Le camion et l'atelier sont au même endroit, au 879 chemin Vanier, dans le secteur Vanier. La dépanneuse vient à vous 24h/24; pour la mécanique, c'est à deux pas.",
+        "Le camion et l'atelier sont au même endroit, au 879 chemin Vanier, à Aylmer. La dépanneuse vient à vous 24h/24; pour la mécanique, c'est à deux pas.",
       trustBar: [
         "Basés au 879 chemin Vanier",
         "Dépanneuse 24h/24, à partir de 79,99 $",
@@ -87,7 +87,7 @@ export const areas: Area[] = [
       ],
       towingTitle: "Le remorquage vient à vous, partout à Aylmer",
       towingIntro:
-        "La dépanneuse part du 879 chemin Vanier, dans le secteur Vanier — le même stationnement où vous nous trouvez le jour. Elle roule 24h/24, nuits, fins de semaine et jours fériés, au même tarif, et le délai moyen dans le secteur d'Aylmer tourne autour de 15 minutes. Le remorquage débute à 79,99 $, et le montant exact se confirme au téléphone en environ deux minutes : gratuit, final, rien d'ajouté à l'arrivée du camion.",
+        "La dépanneuse part du 879 chemin Vanier, sur le chemin Vanier — le même stationnement où vous nous trouvez le jour. Elle roule 24h/24, nuits, fins de semaine et jours fériés, au même tarif, et le délai moyen dans le secteur d'Aylmer tourne autour de 15 minutes. Le remorquage débute à 79,99 $, et le montant exact se confirme au téléphone en environ deux minutes : gratuit, final, rien d'ajouté à l'arrivée du camion.",
       garageTitle: "L'atelier, à la même adresse",
       garageIntro:
         "Pour la mécanique, vous venez nous voir — et à Aylmer, c'est une adresse de quartier plutôt qu'un déplacement. L'atelier ouvre du lundi au samedi, de 9h à 18h, sans rendez-vous, avec stationnement sur place. On inspecte, on vous explique ce qu'on a trouvé, et le prix est confirmé avant qu'on touche à quoi que ce soit. Les pièces et la main-d'œuvre sont garanties un an.",
@@ -97,7 +97,7 @@ export const areas: Area[] = [
         {
           question: "Où est le garage à Aylmer et faut-il un rendez-vous ?",
           answer:
-            "Le garage est au 879 chemin Vanier, dans le secteur Vanier à Aylmer, et aucun rendez-vous n'est nécessaire. On ouvre du lundi au samedi, de 9h à 18h, avec stationnement sur place. Passez quand ça vous arrange : on inspecte le véhicule, on vous explique les constats, et le prix est confirmé avant le début des travaux. Les pièces et la main-d'œuvre sont garanties un an.",
+            "Le garage est au 879 chemin Vanier, à Aylmer à Aylmer, et aucun rendez-vous n'est nécessaire. On ouvre du lundi au samedi, de 9h à 18h, avec stationnement sur place. Passez quand ça vous arrange : on inspecte le véhicule, on vous explique les constats, et le prix est confirmé avant le début des travaux. Les pièces et la main-d'œuvre sont garanties un an.",
         },
         {
           question: "Combien de temps avant que la dépanneuse arrive à Aylmer ?",
@@ -121,12 +121,12 @@ export const areas: Area[] = [
       slug: "aylmer",
       metaTitle: "Towing & Auto Garage in Aylmer | Mécano Express",
       metaDescription:
-        "Round-the-clock towing and a walk-in garage at 879 chemin Vanier, Vanier area in Aylmer. Towing from $79.99, price set by phone. Call (819) 921-7869.",
+        "Round-the-clock towing and a walk-in garage at 879 chemin Vanier, Aylmer. Towing from $79.99, price set by phone. Call (819) 921-7869.",
       eyebrow: "Areas served · Aylmer",
       heroTitle: "Towing and garage",
       heroHighlight: "in Aylmer",
       subtitle:
-        "One address for both halves of the business: 879 chemin Vanier, in the Vanier area. The tow truck comes to you around the clock, and the workshop is right there when you need it.",
+        "One address for both halves of the business: 879 chemin Vanier, in chemin Vanier. The tow truck comes to you around the clock, and the workshop is right there when you need it.",
       trustBar: [
         "Based at 879 chemin Vanier",
         "Tow truck 24/7, from $79.99",
@@ -134,7 +134,7 @@ export const areas: Area[] = [
       ],
       towingTitle: "Towing comes to you, anywhere in Aylmer",
       towingIntro:
-        "The tow truck leaves from 879 chemin Vanier in the Vanier area — the same yard you park in during the day. It answers 24/7, nights, weekends and holidays at the same rate, and across Aylmer the average arrival runs around 15 minutes. Towing starts at $79.99, and your exact amount is settled on the phone in about two minutes: free, final, with nothing added once the driver pulls up.",
+        "The tow truck leaves from 879 chemin Vanier in chemin Vanier — the same yard you park in during the day. It answers 24/7, nights, weekends and holidays at the same rate, and across Aylmer the average arrival runs around 15 minutes. Towing starts at $79.99, and your exact amount is settled on the phone in about two minutes: free, final, with nothing added once the driver pulls up.",
       garageTitle: "The workshop, at that same address",
       garageIntro:
         "Mechanical work happens at the shop, which in Aylmer means a neighbourhood errand rather than a trip. Doors are open Monday to Saturday, 9 AM to 6 PM, walk-ins included, and there is parking on site. We inspect the vehicle first, tell you plainly what we found, and confirm the price before anything is taken apart. Parts and labour carry a one-year warranty on whatever we replace.",
@@ -144,7 +144,7 @@ export const areas: Area[] = [
         {
           question: "Do I need an appointment at your Aylmer shop?",
           answer:
-            "No. The garage at 879 chemin Vanier, in Aylmer's Vanier area, takes walk-ins Monday to Saturday from 9 AM to 6 PM, and there is parking on site. Drive in whenever it suits you: we inspect the vehicle, walk you through what we found, and confirm the price before any work starts. Parts and labour are covered for a full year.",
+            "No. The garage at 879 chemin Vanier, in Aylmer's chemin Vanier, takes walk-ins Monday to Saturday from 9 AM to 6 PM, and there is parking on site. Drive in whenever it suits you: we inspect the vehicle, walk you through what we found, and confirm the price before any work starts. Parts and labour are covered for a full year.",
         },
         {
           question: "How fast does a tow truck reach me in Aylmer?",
