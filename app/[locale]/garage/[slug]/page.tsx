@@ -70,7 +70,7 @@ export default async function ServiceDetailPage({
 
   const dict = getDictionary(l);
   const c = service[l];
-  const others = services.filter((s) => s.id !== service.id).slice(0, 3);
+  const others = services.filter((s) => s.category === "repair" && s.id !== service.id);
 
   return (
     <>
@@ -151,7 +151,7 @@ export default async function ServiceDetailPage({
               {dict.serviceDetail.back}<ArrowIcon width={16} height={16} />
             </Link>
           </div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {others.map((s) => {
               const OtherIcon = serviceIcons[s.icon];
               return (

@@ -56,8 +56,12 @@ export type Branch = "towing" | "repair";
 export function zoneHref(name: string, locale: Locale, branch: Branch): string | undefined {
   const zone = zones.find((z) => z.name[locale].toLowerCase() === name.toLowerCase());
   if (!zone) return undefined;
-  const slug = branch === "towing" ? zone.towing : zone.garage;
-  return slug ? `/${locale}/${branch === "towing" ? "remorquage" : "garage"}/${slug}` : undefined;
+  if (branch === "towing") {
+    return zone.towing ? `/${locale}/remorquage/${zone.towing}` : undefined;
+  }
+  // Garage area pages sit under their own segment, with the -qc suffix.
+  // Returning the bare /garage/<town> here pointed every chip at a redirect.
+  return zone.garage ? `/${locale}/garage/secteurs/${zone.garage}-qc` : undefined;
 }
 
 /** Town names for the served-areas chips, in listing order. */
